@@ -18,6 +18,7 @@ const AI_BOTS = [
   "Applebot-Extended",
   "cohere-ai",
   "Bytespider",
+  "CCBot",
 ];
 
 export default function robots() {
