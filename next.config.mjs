@@ -31,6 +31,7 @@ const nextConfig = {
       { source: "/air-ambulance-guide", destination: "/blog", permanent: true },
       { source: "/cost-and-pricing", destination: "/air-ambulance-cost", permanent: true },
       { source: "/medical-support", destination: "/services", permanent: true },
+      { source: "/index", destination: "/", permanent: true },
     ];
   },
 };
