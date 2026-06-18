@@ -3,13 +3,20 @@
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
-// Fires a conversion event to GA4 (gtag) and Meta Pixel (fbq) if present.
+// Sends a conversion event to GA4 (gtag) and Meta Pixel (fbq) if present.
+// No-ops safely until the tags load (NEXT_PUBLIC_GA_ID / NEXT_PUBLIC_FB_PIXEL_ID).
 function track(event, params) {
   try {
     if (typeof window.gtag === "function") window.gtag("event", event, params || {});
     if (typeof window.fbq === "function") {
-      const map = { call_click: "Contact", whatsapp_click: "Contact", generate_lead: "Lead" };
-      window.fbq("track", map[event] || "Lead", params || {});
+      const map = {
+        call_click: "Contact",
+        whatsapp_click: "Contact",
+        email_click: "Contact",
+        generate_lead: "Lead",
+        estimator_quote_click: "Lead",
+      };
+      if (map[event]) window.fbq("track", map[event], params || {});
     }
   } catch {}
 }
@@ -26,7 +33,7 @@ export default function ClientScripts() {
   useEffect(() => {
     const cleanups = [];
 
-    // ---- FAQ accordion ----
+    // ---- FAQ accordion (+ faq_open event) ----
     document.querySelectorAll(".faq-item").forEach((item) => {
       const q = item.querySelector(".faq-q");
       const a = item.querySelector(".faq-a");
@@ -48,6 +55,7 @@ export default function ClientScripts() {
           item.classList.add("open");
           a.style.maxHeight = a.scrollHeight + "px";
           q.setAttribute("aria-expanded", "true");
+          track("faq_open", { question: (q.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100) });
         }
       };
       q.addEventListener("click", handler);
@@ -75,8 +83,23 @@ export default function ClientScripts() {
       revealEls.forEach((el) => el.classList.add("in"));
     }
 
-    // ---- Inquiry form -> capture lead (backend) THEN open WhatsApp ----
+    // ---- Inquiry form: form_start + capture lead (backend) THEN open WhatsApp ----
     document.querySelectorAll("form[data-inquiry]").forEach((form) => {
+      const formName = form.closest(".hero-card") ? "hero" : "contact";
+
+      let started = false;
+      const onStart = () => {
+        if (started) return;
+        started = true;
+        track("form_start", { form: formName });
+      };
+      form.addEventListener("focusin", onStart);
+      form.addEventListener("input", onStart);
+      cleanups.push(() => {
+        form.removeEventListener("focusin", onStart);
+        form.removeEventListener("input", onStart);
+      });
+
       const handler = (e) => {
         e.preventDefault();
         const data = new FormData(form);
@@ -97,7 +120,7 @@ export default function ClientScripts() {
         } catch {}
 
         // 2) Conversion event.
-        track("generate_lead", { method: "whatsapp_form", page: location.pathname });
+        track("generate_lead", { method: "whatsapp_form", form: formName, page: location.pathname });
 
         // 3) Open prefilled WhatsApp (primary UX).
         const text =
@@ -112,39 +135,69 @@ export default function ClientScripts() {
         const ok = form.querySelector(".form-ok");
         if (ok) ok.style.display = "block";
         form.reset();
+        started = false;
       };
       form.addEventListener("submit", handler);
       cleanups.push(() => form.removeEventListener("submit", handler));
     });
 
-    // ---- Click tracking on call + WhatsApp links ----
+    // ---- Global click tracking: call / whatsapp / email / estimator / outbound ----
     const onDocClick = (e) => {
       const a = e.target.closest && e.target.closest("a");
       if (!a) return;
       const href = a.getAttribute("href") || "";
-      if (href.startsWith("tel:")) track("call_click", { loc: a.dataset.loc || "link" });
-      else if (href.includes("wa.me") || href.includes("api.whatsapp"))
-        track("whatsapp_click", { loc: a.dataset.loc || "link" });
+      const loc = a.dataset.loc || "link";
+
+      if (href.startsWith("tel:")) {
+        track("call_click", { loc });
+        if (loc === "estimator") track("estimator_quote_click", { loc });
+      } else if (href.includes("wa.me") || href.includes("api.whatsapp") || href.includes("web.whatsapp")) {
+        track("whatsapp_click", { loc });
+      } else if (href.startsWith("mailto:")) {
+        track("email_click", { loc });
+      } else if (/^https?:\/\//i.test(href) && !href.includes(location.hostname)) {
+        track("outbound_click", { url: href.slice(0, 200) });
+      }
     };
     document.addEventListener("click", onDocClick);
     cleanups.push(() => document.removeEventListener("click", onDocClick));
 
-    // ---- Cost estimator ----
+    // ---- Cost estimator (+ estimator_use event) ----
     document.querySelectorAll("[data-estimator]").forEach((est) => {
       const sel = est.querySelector("[data-est=type]");
       const out = est.querySelector("[data-est-result]");
       if (!sel || !out) return;
-      const render = () => {
+      const render = (fireEvent) => {
         const p = PRICE[sel.value] || PRICE.charter;
         out.innerHTML =
           '<div class="est-amount">USD ' + p.usd + "</div>" +
           '<div class="est-sub">approx. BDT ' + p.bdt + " &middot; " + p.label + "</div>" +
           '<div class="est-note">Indicative only - your exact, all-inclusive quote is free and depends on the patient’s condition. Call <a href="tel:+8801716960770" data-loc="estimator">01716-960770</a>.</div>';
+        if (fireEvent) track("estimator_use", { transfer_type: sel.value });
       };
-      sel.addEventListener("change", render);
-      cleanups.push(() => sel.removeEventListener("change", render));
-      render();
+      const onChange = () => render(true);
+      sel.addEventListener("change", onChange);
+      cleanups.push(() => sel.removeEventListener("change", onChange));
+      render(false);
     });
+
+    // ---- Scroll depth (25/50/75/90%) ----
+    const marks = [25, 50, 75, 90];
+    const hit = new Set();
+    const onScroll = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      if (max <= 0) return;
+      const pct = ((h.scrollTop || window.scrollY) / max) * 100;
+      marks.forEach((m) => {
+        if (pct >= m && !hit.has(m)) {
+          hit.add(m);
+          track("scroll_depth", { percent: m });
+        }
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    cleanups.push(() => window.removeEventListener("scroll", onScroll));
 
     return () => cleanups.forEach((fn) => fn());
   }, [pathname]);
