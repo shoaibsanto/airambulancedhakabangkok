@@ -265,7 +265,8 @@ strong { color: var(--c-text); font-weight: 600; }
 
 /* ---------- GEO answer block (definition-first, AI-citable) ---------- */
 .answer-block { background: linear-gradient(150deg, #f0f7fc, #e7f1f9); border-left: 5px solid var(--c-accent); border-radius: var(--radius-sm); padding: 1.7rem 1.9rem; margin: 0 0 1.6rem; box-shadow: var(--shadow-sm); }
-.answer-block .qa-label { display: inline-flex; align-items: center; gap: .4rem; font-family: var(--ff-head); font-weight: 700; font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; color: var(--c-accent); margin-bottom: .5rem; }
+.answer-block .qa-label { display: inline-flex; align-items: center; gap: .4rem; white-space: nowrap; font-family: var(--ff-head); font-weight: 700; font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; color: var(--c-accent); margin-bottom: .5rem; }
+.answer-block .qa-label svg { width: 15px; height: 15px; flex: none; }
 .answer-block p { color: var(--c-text); font-size: 1.04rem; margin: 0; }
 .answer-block p strong { color: var(--c-primary); }
 
