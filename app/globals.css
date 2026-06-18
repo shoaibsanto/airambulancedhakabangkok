@@ -484,8 +484,3 @@ strong { color: var(--c-text); font-weight: 600; }
 
 /* ---------- Bilingual button label ---------- */
 .btn .bn { font-weight: 700; opacity: .92; font-size: .9em; }
-
-/* ---------- Bangla emergency block ---------- */
-.bn-block { background: linear-gradient(135deg, var(--c-primary), var(--c-primary-dark)); color: #eaf3fa; border-radius: var(--radius-lg); padding: clamp(1.8rem, 4vw, 2.6rem); text-align: center; box-shadow: var(--shadow); }
-.bn-block h2 { color: #fff; }
-.bn-block p { color: #c8dbea; max-width: 640px; margin: .8rem auto 1.5rem; }
