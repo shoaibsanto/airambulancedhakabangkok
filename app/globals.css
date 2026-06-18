@@ -364,18 +364,23 @@ strong { color: var(--c-text); font-weight: 600; }
 .reveal.in { opacity: 1; transform: none; }
 
 /* ---------- Responsive ---------- */
+/* ---------- 980px breakpoint: tablet ---------- */
 @media (max-width: 980px) {
   .hero .container { grid-template-columns: 1fr; }
-  .hero-card { max-width: 460px; }
+  .hero-card { max-width: 100%; margin-top: 0; }
   .split, .contact-grid { grid-template-columns: 1fr; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .steps, .statband { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .hero .hero-text { order: 0; }
+  .hero .hero-card { order: 1; }
 }
+
+/* ---------- 760px breakpoint: mobile ---------- */
 @media (max-width: 760px) {
   body { font-size: 16px; }
 
-  /* Header: compact brand + hamburger only; emergency call lives in the pulsing FAB */
+  /* Header: compact brand + hamburger only */
   .topbar .tb-left { display: none; }
   .topbar .container { justify-content: center; }
   .nav { min-height: 62px; gap: .5rem; }
@@ -395,7 +400,6 @@ strong { color: var(--c-text); font-weight: 600; }
     border-bottom: 1px solid var(--c-line); padding: .7rem; gap: .15rem; box-shadow: var(--shadow);
   }
   .nav-links.open a { padding: .85rem 1rem; border-radius: 8px; }
-  /* CTA buttons (cloned by JS) surfaced inside the mobile dropdown */
   .nav-links.open .nav-mobile-cta {
     display: flex; flex-direction: column; gap: .55rem;
     padding: .7rem .25rem .2rem; margin-top: .4rem; border-top: 1px solid var(--c-line);
@@ -404,21 +408,80 @@ strong { color: var(--c-text); font-weight: 600; }
 
   .grid-2, .grid-3, .grid-4, .steps, .statband, .footer-grid, .form-row { grid-template-columns: 1fr; }
 
-  /* Hero spacing + keep FAB clear of hero text */
-  .hero .container { padding-block: 2.5rem; gap: 1.8rem; }
-  .hero-stats { gap: 1.4rem; }
-  .hero-actions .btn { flex: 1; }
+  /* Hero: full-width card, compact spacing */
+  .hero .container { padding-block: 2rem; gap: 1.5rem; }
+  .hero-text { max-width: 100%; }
+  .hero h1 { font-size: clamp(1.6rem, 6.5vw, 2.2rem); }
+  .hero p.lead { font-size: 1rem; margin: .8rem 0 1.2rem; }
+  .hero-stats { gap: 1.2rem; margin-top: 1.6rem; }
+  .hero-stats .n { font-size: 1.5rem; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .hero-badges { gap: .4rem; }
+  .hero-badges span { font-size: .78rem; padding: .35rem .65rem; }
+  .hero-card { padding: 1.5rem; }
+  .hero-card h3 { font-size: 1.15rem; }
+
+  /* Emergency strip: ensure text wraps properly */
+  .estrip .container { 
+    font-size: .85rem; padding: .7rem 1rem; gap: .5rem; 
+    flex-direction: column; text-align: center;
+  }
+  .estrip a { font-size: .95rem; word-break: break-word; hyphens: auto; }
+
   .fab { right: 14px; bottom: 14px; }
   .fab a { width: 52px; height: 52px; }
 
   .section-head p { font-size: 1rem; }
-  .estrip .container { font-size: .92rem; }
+  .section { padding: clamp(3rem, 8vw, 4rem) 0; }
+  .card { padding: 1.5rem 1.3rem; }
+  .grid { gap: 1.2rem; }
+  .split { gap: 1.8rem; }
+
+  .pagehero { padding: clamp(2rem, 5vw, 3.2rem) 0; }
+  .pagehero h1 { font-size: clamp(1.4rem, 5.5vw, 1.9rem); }
+  .pagehero p { font-size: .98rem; }
+
+  .prose h2 { margin: 2rem 0 1rem; }
+  .prose h3 { margin: 1.4rem 0 .6rem; }
+  .ctable-wrap { margin: .8rem 0; }
+  .ctable { font-size: .85rem; min-width: auto; }
+  .ctable th, .ctable td { padding: .55rem .65rem; }
+
+  .related { grid-template-columns: 1fr; gap: 1rem; }
+  .related a { padding: 1.2rem 1.3rem; }
+  .takeaways { padding: 1.3rem 1.4rem; }
+  .answer-block { padding: 1.2rem 1.3rem; }
+  .estimator { padding: 1.2rem; max-width: 100%; }
+  .contact-grid { gap: 1.5rem; }
+  .form-card { padding: 1.4rem; }
+  .form-row { gap: .7rem; }
+
+  .steps { gap: 1rem; }
+  .step { padding: 2.4rem 1.2rem 1.5rem; }
+  .statband { gap: 1rem; }
+  .logo-strip { gap: .5rem; }
+  .logo-strip .pill { padding: .5rem .8rem; font-size: .85rem; }
+  .trust-chip { font-size: .85rem; padding: .5rem .9rem; }
+  .faq-q { padding: 1rem 1.1rem; font-size: .95rem; }
+  .faq-a-inner { padding: 0 1.1rem 1.1rem; font-size: .92rem; }
+  .byline { font-size: .78rem; padding: .4rem .7rem; }
+  .section-head { margin-bottom: clamp(2rem, 5vw, 3rem); }
+  .media-frame { border-radius: var(--radius); }
+  h2 { font-size: clamp(1.4rem, 5vw, 1.85rem); margin-bottom: .8rem; }
+  h3 { font-size: clamp(1.1rem, 3.5vw, 1.35rem); }
+  .container { padding-inline: clamp(1rem, 4vw, 1.4rem); }
 }
 
 /* Very small phones: drop the brand subtitle so the name never overflows */
 @media (max-width: 400px) {
   .brand { font-size: .95rem; }
   .brand small { display: none; }
+  .hero h1 { font-size: 1.4rem; }
+  .hero-card { padding: 1.2rem; }
+  .hero-card h3 { font-size: 1.05rem; }
+  .estrip .container { font-size: .78rem; padding: .6rem .7rem; }
+  .estrip a { font-size: .88rem; }
 }
 
 /* =========================================================
