@@ -1,0 +1,14 @@
+{
+  "name": "Air Ambulance Dhaka to Bangkok",
+  "short_name": "Air Ambulance",
+  "description": "24/7 ICU air ambulance service from Dhaka to Bangkok with doctor escort and bed-to-bed transfer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a3d62",
+  "theme_color": "#0a3d62",
+  "icons": [
+    { "src": "/assets/img/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" }
+  ]
+}
