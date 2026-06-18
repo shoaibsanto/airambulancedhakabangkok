@@ -180,6 +180,10 @@ strong { color: var(--c-text); font-weight: 600; }
 .flist li svg { width: 22px; height: 22px; flex: none; color: var(--c-teal); margin-top: 2px; }
 .flist.light li { color: #cfe0ee; }
 .flist.light li svg { color: #6fe3c4; }
+/* Definition-style flist items (bold label + description, no icon): bullet + stacked label */
+.flist li:has(> strong:first-child) { display: block; position: relative; padding-left: 1.6rem; }
+.flist li:has(> strong:first-child)::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--c-accent); }
+.flist li > strong:first-child { display: block; color: var(--c-primary); margin-bottom: .15rem; }
 
 /* split two-col */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2.8rem, 6vw, 4.5rem); align-items: center; }
