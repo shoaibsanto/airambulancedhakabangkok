@@ -412,7 +412,7 @@ strong { color: var(--c-text); font-weight: 600; }
   .hero .container { padding-block: 2rem; gap: 1.5rem; }
   .hero-text { max-width: 100%; }
   .hero h1 { font-size: clamp(1.6rem, 6.5vw, 2.2rem); }
-  .hero p.lead { font-size: 1rem; margin: .8rem 0 1.2rem; }
+  .hero p.lead { font-size: 1rem; margin: .8rem 0 1.2rem; max-width: 100%; }
   .hero-stats { gap: 1.2rem; margin-top: 1.6rem; }
   .hero-stats .n { font-size: 1.5rem; }
   .hero-actions { flex-direction: column; }
