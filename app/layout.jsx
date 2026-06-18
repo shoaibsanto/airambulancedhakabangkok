@@ -5,6 +5,8 @@ import Topbar from "@/components/Topbar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Fab from "@/components/Fab";
+import MobileCallBar from "@/components/MobileCallBar";
+import Analytics from "@/components/Analytics";
 import ClientScripts from "@/components/ClientScripts";
 
 const inter = Inter({
@@ -64,6 +66,8 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <Fab />
+        <MobileCallBar />
+        <Analytics />
         <ClientScripts />
       </body>
     </html>
