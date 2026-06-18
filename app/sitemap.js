@@ -21,6 +21,11 @@ const ENTRIES = [
   ["/blog/why-bangladeshi-patients-choose-bangkok", "monthly", 0.7],
   ["/blog/air-ambulance-for-cardiac-and-critical-patients", "monthly", 0.7],
   ["/blog/medical-repatriation-to-bangladesh", "monthly", 0.7],
+  ["/cardiac-emergency-transfer", "monthly", 0.8],
+  ["/stroke-neurology-evacuation", "monthly", 0.8],
+  ["/cancer-treatment-bangkok", "monthly", 0.8],
+  ["/trauma-accident-evacuation", "monthly", 0.8],
+  ["/insurance-coverage", "monthly", 0.7],
 ];
 
 export default function sitemap() {
