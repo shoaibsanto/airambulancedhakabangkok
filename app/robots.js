@@ -19,6 +19,13 @@ const AI_BOTS = [
   "cohere-ai",
   "Bytespider",
   "CCBot",
+  "Mistral",
+  "DeepSeek",
+  "QwenBot",
+  "MetaBot",
+  "GoogleOther",
+  "ia_archiver",
+  "Scoop.it",
 ];
 
 export default function robots() {
