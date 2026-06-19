@@ -2,7 +2,7 @@ import { SITE } from "@/lib/site";
 
 export default function Topbar() {
   return (
-    <div className="topbar">
+    <div className="topbar" role="region" aria-label="Emergency contact bar">
       <div className="container">
         <div className="tb-left">
           <a href={`tel:${SITE.phoneIntl}`}>
