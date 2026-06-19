@@ -35,6 +35,26 @@ function breadcrumbJsonLd(slug) {
   });
 }
 
+/**
+ * Check whether a JSON-LD block already contains a BreadcrumbList
+ * (either as a top-level @type or anywhere inside a @graph array).
+ * Used to avoid duplicating BreadcrumbList when the source HTML
+ * already provides one.
+ */
+function blockHasBreadcrumb(block) {
+  if (!block) return false;
+  try {
+    const data = JSON.parse(block);
+    if (data["@type"] === "BreadcrumbList") return true;
+    if (Array.isArray(data["@graph"])) {
+      return data["@graph"].some((n) => n && n["@type"] === "BreadcrumbList");
+    }
+  } catch (_) {
+    /* ignore parse errors — the source validator handles them */
+  }
+  return false;
+}
+
 export async function generateMetadata({ params }) {
   const { slug = [] } = await params;
   const page = parsePage(slug);
@@ -103,11 +123,15 @@ export default async function Page({ params }) {
           dangerouslySetInnerHTML={{ __html: block }}
         />
       ))}
-      {/* BreadcrumbList — added programmatically for every page */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd(slug) }}
-      />
+      {/* BreadcrumbList — added programmatically only when the source HTML
+          doesn't already provide one. Avoids duplicate BreadcrumbList blocks
+          which inflate schema bloat and provide no extra ranking signal. */}
+      {!page.jsonLd.some(blockHasBreadcrumb) && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd(slug) }}
+        />
+      )}
     </>
   );
 }
