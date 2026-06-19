@@ -14,6 +14,27 @@ function canonicalPath(slug) {
   return parts.length ? "/" + parts.join("/") : "/";
 }
 
+/** Build BreadcrumbList JSON-LD for the current page path */
+function breadcrumbJsonLd(slug) {
+  const parts = Array.isArray(slug) ? slug : [];
+  const crumbs = [{ name: "Home", path: "/" }];
+  let current = "";
+  for (const p of parts) {
+    current += "/" + p;
+    crumbs.push({ name: p.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()), path: current });
+  }
+  return JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.name,
+      item: SITE.baseUrl + c.path,
+    })),
+  });
+}
+
 export async function generateMetadata({ params }) {
   const { slug = [] } = await params;
   const page = parsePage(slug);
@@ -82,6 +103,11 @@ export default async function Page({ params }) {
           dangerouslySetInnerHTML={{ __html: block }}
         />
       ))}
+      {/* BreadcrumbList — added programmatically for every page */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd(slug) }}
+      />
     </>
   );
 }

@@ -1,39 +1,36 @@
 import { SITE } from "@/lib/site";
 
-const LASTMOD = "2026-06-19";
-
-// Mirrors the original sitemap.xml (path, changefreq, priority).
-const ENTRIES = [
-  ["/", "weekly", 1.0],
-  ["/services", "monthly", 0.9],
-  ["/process", "monthly", 0.8],
-  ["/routes", "monthly", 0.8],
-  ["/air-ambulance-cost", "monthly", 0.9],
-  ["/icu-vs-medical-escort", "monthly", 0.8],
-  ["/bangkok-hospitals", "monthly", 0.8],
-  ["/about", "monthly", 0.7],
-  ["/faq", "monthly", 0.8],
-  ["/contact", "monthly", 0.9],
-  ["/blog", "weekly", 0.8],
-  ["/blog/what-is-an-air-ambulance", "monthly", 0.7],
-  ["/blog/air-ambulance-vs-commercial-medical-flight", "monthly", 0.7],
-  ["/blog/emergency-medical-evacuation-dhaka-to-bangkok", "monthly", 0.7],
-  ["/blog/why-bangladeshi-patients-choose-bangkok", "monthly", 0.7],
-  ["/blog/air-ambulance-for-cardiac-and-critical-patients", "monthly", 0.7],
-  ["/blog/medical-repatriation-to-bangladesh", "monthly", 0.7],
-  ["/blog/air-ambulance-dhaka-bangkok-bumrungrad-cost", "monthly", 0.7],
-  ["/cardiac-emergency-transfer", "monthly", 0.8],
-  ["/stroke-neurology-evacuation", "monthly", 0.8],
-  ["/cancer-treatment-bangkok", "monthly", 0.8],
-  ["/trauma-accident-evacuation", "monthly", 0.8],
-  ["/insurance-coverage", "monthly", 0.7],
-  ["/blog/icu-flight-bangladesh-to-bumrungrad-bangkok", "monthly", 0.7],
-];
-
 export default function sitemap() {
+  const now = new Date().toISOString().split("T")[0];
+  const ENTRIES = [
+    ["/", "daily", 1.0],
+    ["/services", "weekly", 0.9],
+    ["/process", "weekly", 0.8],
+    ["/routes", "weekly", 0.8],
+    ["/air-ambulance-cost", "weekly", 0.9],
+    ["/icu-vs-medical-escort", "weekly", 0.8],
+    ["/bangkok-hospitals", "weekly", 0.8],
+    ["/about", "weekly", 0.7],
+    ["/faq", "weekly", 0.8],
+    ["/contact", "weekly", 0.9],
+    ["/blog", "daily", 0.8],
+    ["/blog/what-is-an-air-ambulance", "weekly", 0.7],
+    ["/blog/air-ambulance-vs-commercial-medical-flight", "weekly", 0.7],
+    ["/blog/emergency-medical-evacuation-dhaka-to-bangkok", "weekly", 0.7],
+    ["/blog/why-bangladeshi-patients-choose-bangkok", "weekly", 0.7],
+    ["/blog/air-ambulance-for-cardiac-and-critical-patients", "weekly", 0.7],
+    ["/blog/medical-repatriation-to-bangladesh", "weekly", 0.7],
+    ["/blog/air-ambulance-dhaka-bangkok-bumrungrad-cost", "weekly", 0.7],
+    ["/cardiac-emergency-transfer", "weekly", 0.8],
+    ["/stroke-neurology-evacuation", "weekly", 0.8],
+    ["/cancer-treatment-bangkok", "weekly", 0.8],
+    ["/trauma-accident-evacuation", "weekly", 0.8],
+    ["/insurance-coverage", "weekly", 0.7],
+    ["/blog/icu-flight-bangladesh-to-bumrungrad-bangkok", "weekly", 0.7],
+  ];
   return ENTRIES.map(([path, changeFrequency, priority]) => ({
     url: `${SITE.baseUrl}${path}`,
-    lastModified: LASTMOD,
+    lastModified: now,
     changeFrequency,
     priority,
   }));
