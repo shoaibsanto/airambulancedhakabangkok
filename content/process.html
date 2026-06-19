@@ -41,49 +41,57 @@
 
 {
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How the Air Ambulance Service Dhaka to Bangkok Works",
-  "description": "A step-by-step overview of arranging an ICU air ambulance or medical escort transfer from Dhaka, Bangladesh to Bangkok, Thailand, including assessment, quotation, clearances and bed-to-bed handover.",
-  "totalTime": "PT12H",
-  "supply": [
-    { "@type": "HowToSupply", "name": "Patient medical records and current diagnosis" },
-    { "@type": "HowToSupply", "name": "Valid passports for patient and escorts" },
-    { "@type": "HowToSupply", "name": "Receiving Bangkok hospital admission details" }
+  "@type": "Service",
+  "name": "Air Ambulance Transfer Process from Dhaka to Bangkok",
+  "description": "A structured, end-to-end medical evacuation service encompassing initial assessment, ICU air charter or medical escort, flight and visa clearances, and complete bed-to-bed transfer from Dhaka to Bangkok.",
+  "provider": {
+    "@type": "MedicalBusiness",
+    "name": "Air Ambulance Dhaka to Bangkok",
+    "telephone": "+880****0770",
+    "url": "https://airambulancedhakabangkok.com"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Dhaka" },
+    { "@type": "City", "name": "Bangkok" }
   ],
-  "tool": [
-    { "@type": "HowToTool", "name": "ICU-equipped air ambulance or commercial medical escort" },
-    { "@type": "HowToTool", "name": "Ventilator, multi-parameter monitor and infusion pumps" }
-  ],
-  "step": [
-    {
-      "@type": "HowToStep",
-      "position": 1,
-      "name": "Initial call and free medical assessment",
-      "text": "Contact our 24/7 flight desk. We gather the diagnosis, current hospital, mobility status and destination hospital in Bangkok to assess fitness to fly.",
-      "url": "https://airambulancedhakabangkok.com/process#assess"
-    },
-    {
-      "@type": "HowToStep",
-      "position": 2,
-      "name": "Case planning, aircraft selection and transparent quotation",
-      "text": "Our flight doctor recommends an ICU air ambulance charter or commercial medical escort and issues a clear, itemised quotation.",
-      "url": "https://airambulancedhakabangkok.com/process#plan"
-    },
-    {
-      "@type": "HowToStep",
-      "position": 3,
-      "name": "Mobilisation and clearances",
-      "text": "We secure flight permits, airport slots, medical visa support, and ready the crew, ventilator and equipment while the patient is stabilised.",
-      "url": "https://airambulancedhakabangkok.com/process#mobilise"
-    },
-    {
-      "@type": "HowToStep",
-      "position": 4,
-      "name": "Patient pickup and bed-to-bed transfer",
-      "text": "Ground ambulance pickup in Dhaka, in-flight intensive care to Bangkok, and a receiving ambulance for full bed-to-bed handover at the destination hospital.",
-      "url": "https://airambulancedhakabangkok.com/process#transfer"
-    }
-  ]
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Medical Transfer Process",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Initial Call and Free Medical Assessment",
+          "description": "Contact our 24/7 flight desk. We gather the diagnosis, current hospital, mobility status and destination hospital in Bangkok to assess fitness to fly."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Case Planning, Aircraft Selection and Transparent Quotation",
+          "description": "Our flight doctor recommends an ICU air ambulance charter or commercial medical escort and issues a clear, itemised quotation."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilisation and Clearances",
+          "description": "We secure flight permits, airport slots, medical visa support, and ready the crew, ventilator and equipment while the patient is stabilised."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Patient Pickup and Bed-to-Bed Transfer",
+          "description": "Ground ambulance pickup in Dhaka, in-flight intensive care to Bangkok, and a receiving ambulance for full bed-to-bed handover at the destination hospital."
+        }
+      }
+    ]
+  }
 }
 
 </script>

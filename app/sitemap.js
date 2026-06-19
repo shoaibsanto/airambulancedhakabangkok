@@ -1,6 +1,6 @@
 import { SITE } from "@/lib/site";
 
-const LASTMOD = "2026-06-18";
+const LASTMOD = "2026-06-19";
 
 // Mirrors the original sitemap.xml (path, changefreq, priority).
 const ENTRIES = [
