@@ -27,6 +27,7 @@ const ENTRIES = [
   ["/cancer-treatment-bangkok", "monthly", 0.8],
   ["/trauma-accident-evacuation", "monthly", 0.8],
   ["/insurance-coverage", "monthly", 0.7],
+  ["/blog/icu-flight-bangladesh-to-bumrungrad-bangkok", "monthly", 0.7],
 ];
 
 export default function sitemap() {
