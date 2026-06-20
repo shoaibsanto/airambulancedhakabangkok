@@ -28,6 +28,7 @@ export default function sitemap() {
     ["/trauma-accident-evacuation", "weekly", 0.8],
     ["/insurance-coverage", "weekly", 0.7],
     ["/blog/icu-flight-bangladesh-to-bumrungrad-bangkok", "weekly", 0.7],
+    ["/blog/air-ambulance-insurance-payment-dhaka-bumrungrad", "weekly", 0.7],
     ["/privacy", "monthly", 0.3],
     ["/terms", "monthly", 0.3],
   ];
