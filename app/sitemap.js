@@ -1,7 +1,36 @@
+import { promises as fs } from "fs";
+import path from "path";
 import { SITE } from "@/lib/site";
 
-export default function sitemap() {
-  const now = new Date().toISOString().split("T")[0];
+export default async function sitemap() {
+  const projectRoot = process.cwd();
+
+  // Map URL paths to the underlying content/*.html source files so we can
+  // derive an honest lastModified date from file mtimes instead of the
+  // current date. Hardcoded "today" makes every URL look freshly edited
+  // (and dilutes the signal for static pages like /privacy and /terms).
+  const SOURCE_FOR_PATH = {
+    "/": "content/index.html",
+    "/services": "content/services.html",
+    "/process": "content/process.html",
+    "/routes": "content/routes.html",
+    "/air-ambulance-cost": "content/air-ambulance-cost.html",
+    "/icu-vs-medical-escort": "content/icu-vs-medical-escort.html",
+    "/bangkok-hospitals": "content/bangkok-hospitals.html",
+    "/about": "content/about.html",
+    "/faq": "content/faq.html",
+    "/contact": "content/contact.html",
+    "/blog": "content/blog/index.html",
+    "/cardiac-emergency-transfer": "content/cardiac-emergency-transfer.html",
+    "/stroke-neurology-evacuation": "content/stroke-neurology-evacuation.html",
+    "/cancer-treatment-bangkok": "content/cancer-treatment-bangkok.html",
+    "/trauma-accident-evacuation": "content/trauma-accident-evacuation.html",
+    "/insurance-coverage": "content/insurance-coverage.html",
+    "/privacy": "content/privacy.html",
+    "/terms": "content/terms.html",
+    "/author/tawhid-iqbal": "content/author/tawhid-iqbal.html",
+  };
+
   const ENTRIES = [
     ["/", "daily", 1.0],
     ["/services", "weekly", 0.9],
@@ -34,10 +63,45 @@ export default function sitemap() {
     ["/privacy", "monthly", 0.3],
     ["/terms", "monthly", 0.3],
   ];
-  return ENTRIES.map(([path, changeFrequency, priority]) => ({
-    url: `${SITE.baseUrl}${path}`,
-    lastModified: now,
-    changeFrequency,
-    priority,
-  }));
+
+  // Pre-compute mtimes in one pass so a missing file falls back gracefully.
+  const mtimeCache = new Map();
+  for (const rel of new Set(Object.values(SOURCE_FOR_PATH))) {
+    try {
+      const stat = await fs.stat(path.join(projectRoot, rel));
+      mtimeCache.set(rel, stat.mtime);
+    } catch {
+      // Source file missing — sitemap will fall back to today's date.
+    }
+  }
+
+  const fallback = new Date();
+
+  return ENTRIES.map(([urlPath, changeFrequency, priority]) => {
+    const sourcePath = SOURCE_FOR_PATH[urlPath];
+    let lastModified = fallback;
+    if (sourcePath) {
+      const direct = mtimeCache.get(sourcePath);
+      if (direct) {
+        lastModified = direct;
+      } else if (urlPath.startsWith("/blog/")) {
+        // Blog posts share content/blog/ — use the directory's mtime as
+        // a reasonable proxy so a freshly-edited post still shows "today".
+        try {
+          const dirStat = require("fs").statSync(
+            path.join(projectRoot, "content/blog")
+          );
+          lastModified = dirStat.mtime;
+        } catch {
+          /* keep fallback */
+        }
+      }
+    }
+    return {
+      url: `${SITE.baseUrl}${urlPath}`,
+      lastModified,
+      changeFrequency,
+      priority,
+    };
+  });
 }
