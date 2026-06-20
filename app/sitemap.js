@@ -29,6 +29,7 @@ export default function sitemap() {
     ["/insurance-coverage", "weekly", 0.7],
     ["/blog/icu-flight-bangladesh-to-bumrungrad-bangkok", "weekly", 0.7],
     ["/blog/air-ambulance-insurance-payment-dhaka-bumrungrad", "weekly", 0.7],
+    ["/blog/bangkok-hospital-admission-bangladeshi-patients", "weekly", 0.7],
     ["/privacy", "monthly", 0.3],
     ["/terms", "monthly", 0.3],
   ];
