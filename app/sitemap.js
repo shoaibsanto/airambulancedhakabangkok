@@ -21,6 +21,7 @@ export default function sitemap() {
     ["/blog/air-ambulance-for-cardiac-and-critical-patients", "weekly", 0.7],
     ["/blog/medical-repatriation-to-bangladesh", "weekly", 0.7],
     ["/blog/air-ambulance-dhaka-bangkok-bumrungrad-cost", "weekly", 0.7],
+    ["/blog/what-to-expect-dhaka-bumrungrad-air-ambulance", "weekly", 0.7],
     ["/cardiac-emergency-transfer", "weekly", 0.8],
     ["/stroke-neurology-evacuation", "weekly", 0.8],
     ["/cancer-treatment-bangkok", "weekly", 0.8],
