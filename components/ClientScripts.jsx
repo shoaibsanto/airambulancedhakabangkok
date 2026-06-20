@@ -141,6 +141,81 @@ export default function ClientScripts() {
       cleanups.push(() => form.removeEventListener("submit", handler));
     });
 
+    // ---- Lightbox: click a gallery image to view it enlarged ----
+    const galleryImgs = document.querySelectorAll(".gallery-item img");
+    if (galleryImgs.length) {
+      const lb = document.createElement("div");
+      lb.className = "lightbox";
+      lb.setAttribute("role", "dialog");
+      lb.setAttribute("aria-modal", "true");
+      lb.setAttribute("aria-label", "Enlarged image");
+      lb.innerHTML =
+        '<button class="lightbox-close" aria-label="Close">&times;</button>' +
+        '<img alt="" /><p class="lightbox-cap"></p>';
+      document.body.appendChild(lb);
+      const lbImg = lb.querySelector("img");
+      const lbCap = lb.querySelector(".lightbox-cap");
+      let lastFocus = null;
+
+      const open = (src, alt) => {
+        lbImg.src = src;
+        lbImg.alt = alt || "";
+        lbCap.textContent = alt || "";
+        lb.classList.add("open");
+        document.body.style.overflow = "hidden";
+        lb.querySelector(".lightbox-close").focus();
+      };
+      const close = () => {
+        lb.classList.remove("open");
+        document.body.style.overflow = "";
+        lbImg.src = "";
+        if (lastFocus) lastFocus.focus();
+      };
+
+      galleryImgs.forEach((img) => {
+        img.setAttribute("tabindex", "0");
+        img.setAttribute("role", "button");
+        const trigger = () => {
+          lastFocus = img;
+          // Prefer the 1600w "full" variant (gallery-NN.webp -> gallery-NN-1600.webp)
+          const full = img.getAttribute("src").replace(/\.webp$/, "-1600.webp");
+          open(full, img.getAttribute("alt"));
+        };
+        const onKey = (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            trigger();
+          }
+        };
+        img.addEventListener("click", trigger);
+        img.addEventListener("keydown", onKey);
+        cleanups.push(() => {
+          img.removeEventListener("click", trigger);
+          img.removeEventListener("keydown", onKey);
+        });
+      });
+
+      const onLbClick = (e) => {
+        if (e.target === lb || e.target.classList.contains("lightbox-close")) close();
+      };
+      const onEsc = (e) => {
+        if (e.key === "Escape" && lb.classList.contains("open")) close();
+      };
+      // If the 1600w variant 404s, fall back to the thumbnail's own src.
+      lbImg.addEventListener("error", () => {
+        const t = lastFocus && lastFocus.getAttribute("src");
+        if (t && lbImg.src.indexOf("-1600.webp") !== -1) lbImg.src = t;
+      });
+      lb.addEventListener("click", onLbClick);
+      document.addEventListener("keydown", onEsc);
+      cleanups.push(() => {
+        lb.removeEventListener("click", onLbClick);
+        document.removeEventListener("keydown", onEsc);
+        lb.remove();
+        document.body.style.overflow = "";
+      });
+    }
+
     // ---- Global click tracking: call / whatsapp / email / estimator / outbound ----
     const onDocClick = (e) => {
       const a = e.target.closest && e.target.closest("a");

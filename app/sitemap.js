@@ -30,6 +30,7 @@ export default function sitemap() {
     ["/blog/icu-flight-bangladesh-to-bumrungrad-bangkok", "weekly", 0.7],
     ["/blog/air-ambulance-insurance-payment-dhaka-bumrungrad", "weekly", 0.7],
     ["/blog/bangkok-hospital-admission-bangladeshi-patients", "weekly", 0.7],
+    ["/author/tawhid-iqbal", "monthly", 0.5],
     ["/privacy", "monthly", 0.3],
     ["/terms", "monthly", 0.3],
   ];

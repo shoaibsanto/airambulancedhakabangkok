@@ -50,6 +50,13 @@ export const metadata = {
     "max-snippet": -1,
     "max-video-preview": -1,
   },
+  // Geo-targeting signals for local SEO (business located in Dhaka, Bangladesh).
+  other: {
+    "geo.region": "BD-C",
+    "geo.placename": "Dhaka, Bangladesh",
+    "geo.position": "23.7961;90.4125",
+    ICBM: "23.7961, 90.4125",
+  },
 };
 
 export const viewport = {
@@ -64,7 +71,7 @@ export default function RootLayout({ children }) {
     "@type": ["MedicalBusiness", "EmergencyService"],
     "name": SITE.name,
     "url": SITE.baseUrl,
-    "telephone": "+880****0770",
+    "telephone": "+8801716960770",
     "email": SITE.email,
     "description": "24/7 air ambulance service providing ICU-equipped medical flights from Dhaka, Bangladesh to Bangkok, Thailand with doctor and paramedic escort and bed-to-bed patient transfer.",
     "image": SITE.baseUrl + "/assets/img/og-image.jpg",

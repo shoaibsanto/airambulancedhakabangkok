@@ -72,6 +72,13 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+        <p className="footer-disclaimer">
+          <strong>Medical disclaimer:</strong> Air Ambulance Dhaka to Bangkok provides medical
+          transport coordination. Information on this site is general guidance and not a substitute
+          for professional medical advice, diagnosis or treatment — always consult a qualified
+          clinician. Our guides are written and reviewed by our medical coordination team; see{" "}
+          <Link href="/author/tawhid-iqbal">our author &amp; editorial profile</Link>.
+        </p>
         <div className="footer-bottom">
           <span>© {year} Air Ambulance Dhaka to Bangkok. All rights reserved.</span>
           <span>Emergency Medical Flight Coordination · Dhaka, Bangladesh</span>

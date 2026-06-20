@@ -70,7 +70,13 @@ export async function generateMetadata({ params }) {
     title: meta.title,
     description: meta.description,
     keywords: meta.keywords,
-    alternates: { canonical: path },
+    alternates: {
+      canonical: path,
+      languages: {
+        en: SITE.baseUrl + path,
+        "x-default": SITE.baseUrl + path,
+      },
+    },
     robots: noindex
       ? { index: false, follow: true }
       : {
