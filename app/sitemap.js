@@ -29,6 +29,8 @@ export default async function sitemap() {
     "/privacy": "content/privacy.html",
     "/terms": "content/terms.html",
     "/author/tawhid-iqbal": "content/author/tawhid-iqbal.html",
+    "/guides/air-ambulance-dhaka-bangkok": "content/guides/air-ambulance-dhaka-bangkok.html",
+    "/guides/icu-air-ambulance-dhaka": "content/guides/icu-air-ambulance-dhaka.html",
   };
 
   const ENTRIES = [
@@ -63,6 +65,8 @@ export default async function sitemap() {
     ["/author/tawhid-iqbal", "monthly", 0.5],
     ["/privacy", "monthly", 0.3],
     ["/terms", "monthly", 0.3],
+    ["/guides/air-ambulance-dhaka-bangkok", "monthly", 0.9],
+    ["/guides/icu-air-ambulance-dhaka", "monthly", 0.9],
   ];
 
   // Pre-compute mtimes in one pass so a missing file falls back gracefully.
