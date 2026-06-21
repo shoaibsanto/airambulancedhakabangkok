@@ -29,6 +29,9 @@ yarn-error.log*
 # helper scripts
 *.py
 
+# raw image sources (optimized webp variants are committed instead)
+/scripts/raw/
+
 # typescript
 *.tsbuildinfo
 
