@@ -27,11 +27,11 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata = {
   metadataBase: new URL(SITE.baseUrl),
   title: {
-    default: "Air Ambulance Dhaka to Bangkok | 24/7 ICU Flights",
-    template: "%s",
+    default: "Emergency Air Ambulance Bangladesh → Bangkok | 24/7 ICU Medical Flights",
+    template: "%s | Air Ambulance Dhaka",
   },
   description:
-    "24/7 ICU air ambulance Dhaka to Bangkok with doctor escort & bed-to-bed transfer. Fast evacuation — call 01716-960770 now.",
+    "24/7 emergency air ambulance from Dhaka to Bangkok. ICU-equipped medical flights with doctor escort & bed-to-bed transfer to Bumrungrad Hospital. Call 01716-960770 now.",
   applicationName: SITE.name,
   authors: [{ name: SITE.name }],
   publisher: SITE.name,
