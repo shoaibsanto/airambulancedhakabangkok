@@ -81,7 +81,10 @@ export default function Footer() {
         </p>
         <div className="footer-bottom">
           <span>© {year} Air Ambulance Dhaka to Bangkok. All rights reserved.</span>
-          <span>Emergency Medical Flight Coordination · Dhaka, Bangladesh</span>
+          <ul className="footer-legal">
+            <li><Link href="/privacy">Privacy Policy</Link></li>
+            <li><Link href="/terms">Terms of Service</Link></li>
+          </ul>
           <span>
             SEO &amp; Designed by{" "}
             <a href="https://www.khanit.com.bd/" target="_blank" rel="noopener">
