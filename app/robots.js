@@ -31,7 +31,9 @@ const AI_BOTS = [
 export default function robots() {
   return {
     rules: [
-      { userAgent: "*", allow: "/", disallow: ["/assets/img/og-image.png$"] },
+      // Block dynamic/preview helpers and API endpoints from indexing.
+      // (The static OG image lives at /assets/img/og-image.jpg — keep crawlable.)
+      { userAgent: "*", allow: "/", disallow: ["/api/"] },
       ...AI_BOTS.map((userAgent) => ({ userAgent, allow: "/" })),
     ],
     sitemap: `${SITE.baseUrl}/sitemap.xml`,

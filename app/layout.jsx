@@ -66,36 +66,73 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
+  // Minimal canonical Organization schema for site-wide identity.
+  // Individual pages supply richer @graph blocks via parsePage().jsonLd.
+  // @id values let Google's entity linker connect pages back to this org.
   const orgSchema = {
     "@context": "https://schema.org",
-    "@type": ["MedicalBusiness", "EmergencyService"],
-    "name": SITE.name,
-    "url": SITE.baseUrl,
-    "telephone": "+8801716960770",
-    "email": SITE.email,
-    "description": "24/7 air ambulance service providing ICU-equipped medical flights from Dhaka, Bangladesh to Bangkok, Thailand with doctor and paramedic escort and bed-to-bed patient transfer.",
-    "image": SITE.baseUrl + "/assets/img/og-image.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Ground Floor, Surecell Medical BD Ltd, Plot 2 Rd 21",
-      "addressLocality": "Dhaka",
-      "postalCode": "1212",
-      "addressCountry": "BD"
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Dhaka" },
-      { "@type": "City", "name": "Bangkok" },
-      { "@type": "Country", "name": "Bangladesh" },
-      { "@type": "Country", "name": "Thailand" }
-    ],
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    }
+    "@graph": [
+      {
+        "@type": ["Organization", "MedicalOrganization"],
+        "@id": "https://airambulancedhakabangkok.com/#organization",
+        "name": SITE.name,
+        "alternateName": "AirAmbulanceDhakaBangkok",
+        "url": SITE.baseUrl + "/",
+        "logo": SITE.baseUrl + "/assets/img/apple-touch-icon.png",
+        "image": SITE.baseUrl + "/assets/img/og-image.jpg",
+        "description": "24/7 air ambulance service providing ICU-equipped medical flights from Dhaka, Bangladesh to Bangkok, Thailand with doctor and paramedic escort and bed-to-bed patient transfer.",
+        "telephone": SITE.phoneIntl,
+        "email": SITE.email,
+        "areaServed": [
+          { "@type": "Country", "name": "Bangladesh" },
+          { "@type": "Country", "name": "Thailand" }
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": SITE.phoneIntl,
+          "contactType": "emergency",
+          "availableLanguage": ["English", "Bengali"],
+          "areaServed": ["BD", "TH"],
+          "hoursAvailable": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Ground Floor, Surecell Medical BD Ltd, Plot 2 Rd 21",
+          "addressLocality": "Dhaka",
+          "addressRegion": "Dhaka Division",
+          "postalCode": "1212",
+          "addressCountry": "BD"
+        },
+        "sameAs": [
+          "https://www.facebook.com/airambulancedhakabangkok",
+          "https://www.linkedin.com/company/airambulancedhakabangkok",
+          "https://www.youtube.com/@airambulancedhakabangkok",
+          "https://maps.app.goo.gl/WnxW1HXMyFkzBGuA6"
+        ]
+      },
+      {
+        "@type": ["MedicalBusiness", "EmergencyService"],
+        "@id": "https://airambulancedhakabangkok.com/#business",
+        "name": SITE.name,
+        "url": SITE.baseUrl + "/",
+        "telephone": SITE.phoneIntl,
+        "email": SITE.email,
+        "priceRange": "$$$",
+        "image": SITE.baseUrl + "/assets/img/og-image.jpg",
+        "logo": SITE.baseUrl + "/assets/img/apple-touch-icon.png",
+        "medicalSpecialty": ["Emergency", "CriticalCare", "AeromedicalTransport"],
+        "parentOrganization": { "@id": "https://airambulancedhakabangkok.com/#organization" },
+        "geo": { "@type": "GeoCoordinates", "latitude": 23.7815254, "longitude": 90.4160505 },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      }
+    ]
   };
-  
+
   return (
     <html lang="en" className={`${inter.variable} ${jakarta.variable}`}>
       <body>
