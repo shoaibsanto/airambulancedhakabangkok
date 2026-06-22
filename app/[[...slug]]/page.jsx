@@ -66,8 +66,21 @@ export async function generateMetadata({ params }) {
   const ogImage = meta.ogImage || SITE.baseUrl + SITE.ogImage;
   const isArticle = meta.ogType === "article";
 
+  // BRAND_SUFFIX is added manually to og:title and twitter:title because
+  // Next.js does NOT apply `title.template` to openGraph/twitter fields —
+  // without this, social-share previews show titles that are shorter than
+  // the SERP <title> (verified pitfall on 33 pages, 2026-06-22).
+  // We use `title: { absolute: meta.title }` so the rendered <title> is
+  // exactly the source HTML title (no template bleed), which means most
+  // source titles already fit the 60-char SERP limit on their own.
+  const baseTitle = meta.title;
+  const ogBase = meta.ogTitle || meta.title;
+  const twBase = meta.twitterTitle || meta.ogTitle || meta.title;
+  const BRAND_SUFFIX = " | Air Ambulance Dhaka";
+  const addBrand = (t) => (t.endsWith(BRAND_SUFFIX) ? t : t + BRAND_SUFFIX);
+
   return {
-    title: meta.title,
+    title: { absolute: baseTitle },
     description: meta.description,
     keywords: meta.keywords,
     alternates: {
@@ -88,7 +101,7 @@ export async function generateMetadata({ params }) {
         },
     openGraph: {
       type: isArticle ? "article" : "website",
-      title: meta.ogTitle || meta.title,
+      title: addBrand(ogBase),
       description: meta.ogDescription || meta.description,
       url: path,
       siteName: meta.ogSiteName || SITE.name,
@@ -107,7 +120,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: "summary_large_image",
-      title: meta.twitterTitle || meta.ogTitle || meta.title,
+      title: addBrand(twBase),
       description: meta.twitterDescription || meta.ogDescription || meta.description,
       images: [meta.twitterImage || ogImage],
     },
