@@ -27,7 +27,7 @@ export default function Footer() {
             <h4>Services</h4>
             <ul>
               <li><Link href="/services">ICU Air Ambulance</Link></li>
-              <li><Link href="/air-ambulance-cost">Cost &amp; Pricing</Link></li>
+              <li><Link href="/air-ambulance-cost">Cost & Pricing</Link></li>
               <li><Link href="/icu-vs-medical-escort">ICU vs Medical Escort</Link></li>
               <li><Link href="/bangkok-hospitals">Bangkok Hospitals</Link></li>
               <li><Link href="/services">Repatriation</Link></li>
@@ -38,8 +38,8 @@ export default function Footer() {
             <ul>
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/process">Our Process</Link></li>
-              <li><Link href="/routes">Routes &amp; Coverage</Link></li>
-              <li><Link href="/blog">Guides &amp; Resources</Link></li>
+              <li><Link href="/routes">Routes & Coverage</Link></li>
+              <li><Link href="/blog">Guides & Resources</Link></li>
               <li><Link href="/faq">FAQ</Link></li>
               <li><Link href="/contact">Contact</Link></li>
               <li><Link href="/privacy">Privacy Policy</Link></li>
@@ -77,16 +77,16 @@ export default function Footer() {
           transport coordination. Information on this site is general guidance and not a substitute
           for professional medical advice, diagnosis or treatment — always consult a qualified
           clinician. Our guides are written and reviewed by our medical coordination team; see{" "}
-          <Link href="/author/tawhid-iqbal">our author &amp; editorial profile</Link>.
+          <Link href="/author/tawhid-iqbal">our author & editorial profile</Link>.
         </p>
         <div className="footer-bottom">
-          <span>© {year} Air Ambulance Dhaka to Bangkok. All rights reserved.</span>
+          <span>&copy; {year} Air Ambulance Dhaka to Bangkok. All rights reserved.</span>
           <ul className="footer-legal">
             <li><Link href="/privacy">Privacy Policy</Link></li>
             <li><Link href="/terms">Terms of Service</Link></li>
           </ul>
           <span>
-            SEO &amp; Designed by{" "}
+            SEO & Designed by{" "}
             <a href="https://www.khanit.com.bd/" target="_blank" rel="noopener">
               Khan IT
             </a>

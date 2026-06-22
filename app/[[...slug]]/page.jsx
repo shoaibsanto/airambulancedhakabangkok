@@ -77,7 +77,14 @@ export async function generateMetadata({ params }) {
   const ogBase = meta.ogTitle || meta.title;
   const twBase = meta.twitterTitle || meta.ogTitle || meta.title;
   const BRAND_SUFFIX = " | Air Ambulance Dhaka";
-  const addBrand = (t) => (t.endsWith(BRAND_SUFFIX) ? t : t + BRAND_SUFFIX);
+  // Only suffix OG/Twitter titles that lack brand context — prevents
+  // "Air Ambulance Service Dhaka to Bangkok | 24/7 ICU Flights | Air Ambulance Dhaka"
+  // double-branding while still branding short titles like "Privacy Policy".
+  const addBrand = (t) => {
+    const hasPipe = t.includes("|");
+    const hasBrandName = /\bair\s+ambulance/i.test(t);
+    return hasPipe || hasBrandName ? t : t + BRAND_SUFFIX;
+  };
 
   return {
     title: { absolute: baseTitle },
