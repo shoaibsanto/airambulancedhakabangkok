@@ -1,3 +1,5 @@
+import path from "path";
+
 /** @type {import('next').NextConfig} */
 const securityHeaders = [
   // HSTS — tell browsers to always use HTTPS. preload flag allows
@@ -18,6 +20,10 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   trailingSlash: false,
+  outputFileTracingRoot: path.resolve(process.cwd()),
+  turbopack: {
+    root: path.resolve(process.cwd()),
+  },
   async headers() {
     return [
       {
