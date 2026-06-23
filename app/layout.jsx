@@ -108,7 +108,14 @@ export default function RootLayout({ children }) {
           "https://www.linkedin.com/company/airambulancedhakabangkok",
           "https://www.youtube.com/@airambulancedhakabangkok",
           "https://maps.app.goo.gl/WnxW1HXMyFkzBGuA6"
-        ]
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "137",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
       },
       {
         "@type": ["MedicalBusiness", "EmergencyService"],
