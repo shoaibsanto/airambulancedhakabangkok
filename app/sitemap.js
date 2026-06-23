@@ -36,6 +36,12 @@ export default async function sitemap() {
     ["/terms", "monthly", 0.3],
     ["/guides/air-ambulance-dhaka-bangkok", "monthly", 0.9],
     ["/guides/icu-air-ambulance-dhaka", "monthly", 0.9],
+    ["/blog/bed-to-bed-transfer-dhaka-bangkok", "weekly", 0.7],
+    ["/blog/emergency-air-ambulance-when-to-call", "weekly", 0.7],
+    ["/blog/air-ambulance-cardiac-patients", "weekly", 0.7],
+    ["/blog/bangkok-hospitals-comparison-bangladeshi-patients", "weekly", 0.7],
+    ["/blog/admit-patient-bumrungrad-dhaka-guide", "weekly", 0.7],
+    ["/blog/neonatal-pediatric-air-ambulance-dhaka-bangkok", "weekly", 0.7],
   ];
 
   return ENTRIES.map(([urlPath, changeFrequency, priority]) => ({
