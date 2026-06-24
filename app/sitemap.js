@@ -17,7 +17,6 @@ export default async function sitemap() {
     ["/blog/air-ambulance-vs-commercial-medical-flight", "weekly", 0.7],
     ["/blog/emergency-medical-evacuation-dhaka-to-bangkok", "weekly", 0.7],
     ["/blog/why-bangladeshi-patients-choose-bangkok", "weekly", 0.7],
-    ["/blog/air-ambulance-for-cardiac-and-critical-patients", "weekly", 0.7],
     ["/blog/medical-repatriation-to-bangladesh", "weekly", 0.7],
     ["/blog/air-ambulance-dhaka-bangkok-bumrungrad-cost", "weekly", 0.7],
     ["/blog/what-to-expect-dhaka-bumrungrad-air-ambulance", "weekly", 0.7],

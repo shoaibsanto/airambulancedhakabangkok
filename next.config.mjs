@@ -45,6 +45,13 @@ const nextConfig = {
       { source: "/cost-and-pricing", destination: "/air-ambulance-cost", permanent: true },
       { source: "/medical-support", destination: "/services", permanent: true },
       { source: "/index", destination: "/", permanent: true },
+      // Cardiac cannibalization fix: merge the older broad "cardiac & critical"
+      // blog into the newer, more detailed cardiac-specific guide.
+      {
+        source: "/blog/air-ambulance-for-cardiac-and-critical-patients",
+        destination: "/blog/air-ambulance-cardiac-patients",
+        permanent: true,
+      },
     ];
   },
 };
