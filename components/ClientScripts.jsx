@@ -247,7 +247,7 @@ export default function ClientScripts() {
         out.innerHTML =
           '<div class="est-amount">USD ' + p.usd + "</div>" +
           '<div class="est-sub">approx. BDT ' + p.bdt + " &middot; " + p.label + "</div>" +
-          '<div class="est-note">Indicative only - your exact, all-inclusive quote is free and depends on the patient’s condition. Call <a href="tel:+8801716960770" data-loc="estimator">01716-960770</a>.</div>';
+          '<div class="est-note">Indicative only - your exact, all-inclusive quote is free and depends on the patient\u2019s condition. Call <a href="tel:+880-1716-960770" data-loc="estimator">01716-960770</a>.</div>';
         if (fireEvent) track("estimator_use", { transfer_type: sel.value });
       };
       const onChange = () => render(true);
