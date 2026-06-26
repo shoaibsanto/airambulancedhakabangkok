@@ -53,3 +53,45 @@
 2. Create new content: "Dhaka to India" cluster (expansion route gap)
 3. Backlink proposal: medical directories + BD healthcare portals
 4. Schema check: verify MedicalBusiness + EmergencyService on all condition pages
+
+## 2026-06-26 — Cycle: Daily Pulse & CTR Fixes
+
+### GSC Pulse (7 days: Jun 19-25)
+- **Impressions:** 184 (baseline: 200) — stable
+- **Clicks:** 7 (baseline: 7) — on target
+- **CTR:** 3.8% (baseline: 3.5%) — slightly above baseline
+- **Avg Position:** 7.9
+- **Trend:** Mild improvement in last 3 days (positions improving from 18→5→4.5)
+
+### Indexing Status (Batch Inspection)
+| Page | Status | Referring URLs |
+|---|---|---|
+| `/` | ✅ Indexed | 2 blog posts |
+| `/bangkok-hospitals` | ✅ Indexed (crawled today) | services, blog |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Indexed | blog post |
+| `/air-ambulance-cost` | ✅ Indexed (crawled today) | services |
+| `/cardiac-emergency-transfer` | ✅ Indexed | sitemap only |
+| `/guides/icu-air-ambulance-dhaka` | ✅ Indexed | none |
+| `/services` | ⚠️ Discovered - not indexed | sitemap only |
+| `/process` | ⚠️ Discovered - not indexed | 2 pages |
+| `/stroke-neurology-evacuation` | 🔴 Unknown to Google | none |
+
+**Progress:** `/bangkok-hospitals`, `/air-ambulance-cost`, `/cardiac-emergency-transfer`, `/guides/icu-air-ambulance-dhaka` newly indexed since last cycle.
+
+### Actions Taken
+1. **Added contextual hero link** to `/services` from homepage hero paragraph — stronger than NAV link, above the fold
+2. **Fixed CTR titles & descriptions** on 2 pages:
+   - `/blog/bangkok-hospital-admission-bangladeshi-patients` (16 imps, pos 5.9, 0% CTR) — title 75→58 chars, desc 203→157 chars, added OG+Twitter tags
+   - `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` (11 imps, pos 5.5, 0% CTR) — optimized title & desc, added OG+Twitter tags
+3. **Built & deployed** — `npx next build` (43 pages), git push to main → Vercel auto-deploy
+4. **Post-deploy verification** — sitemap.xml (200), / (200), /services (200) all pass
+
+### Owner Request Indexing List
+Tier 1 (urgent — unknown to Google):  
+1. https://airambulancedhakabangkok.com/stroke-neurology-evacuation
+
+Tier 2 (important — pillar pages, discovered not indexed):  
+2. https://airambulancedhakabangkok.com/services  
+3. https://airambulancedhakabangkok.com/process
+
+GSC Inspection: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
