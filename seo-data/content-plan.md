@@ -15,9 +15,9 @@ Last updated: 2026-06-25
 ## Supportive Blog Posts (content cluster)
 [x] How to Choose IPS for Home in Bangladesh — Complete Checklist
 [x] Lithium IPS vs Tubular Battery — Which Saves More Money?
-[ ] Best IPS for Dhaka Apartments 2026 — Space-Saving Solutions
-[ ] Portable Power Station vs IPS — Which One for Your Need?
-[ ] How Long Do LiFePO4 Batteries Last? Real Lifespan in BD
+[x] Best IPS for Dhaka Apartments 2026 — Space-Saving Solutions
+[x] Portable Power Station vs IPS — Which One for Your Need? (already existed as post ID 35063)
+[x] How Long Do LiFePO4 Batteries Last? Real Lifespan in BD ← published 2026-06-27
 [ ] IPS Buying Guide for Small Business in Bangladesh
 [ ] Best IPS for Heavy Load (Fridge, AC, Motor) in Bangladesh
 [ ] Solar IPS vs Normal IPS — Which is Better for Bangladesh?
