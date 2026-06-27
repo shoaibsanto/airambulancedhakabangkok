@@ -1,97 +1,51 @@
-# SEO Cycle Log
+# Daily SEO Cron Log - June 27, 2026
 
-## 2026-06-26 — Cycle 1: Indexing & CTR Recovery Push
+## Indexing Hygiene Audit
+**Key Pages Inspected:**
+- ✅ **Homepage** (`/`) - Submitted and indexed (last crawled: 2026-06-20)
+- ⚠️ **Services** (`/services`) - Discovered - currently not indexed (priority: TIER 1)
+- ✅ **Bangkok Hospitals** (`/bangkok-hospitals`) - Submitted and indexed (last crawled: 2026-06-26)
+- ✅ **Air Ambulance Guide** (`/guides/air-ambulance-dhaka-bangkok`) - Submitted and indexed (last crawled: 2026-06-23)
+- ✅ **Air Ambulance Cost** (`/air-ambulance-cost`) - Submitted and indexed (last crawled: 2026-06-26)
 
-### Actions Taken
+**Owner Action Required:**
+🔴 **TIER 1 (URGENT):** `/services` page needs manual "Request Indexing" in GSC
 
-#### A. Indexing Hygiene
-- GSC baseline established: 200 impressions / 7 clicks / 3.5% CTR / avg pos 7.5 over 28 days
-- Sitemap status: 39 indexed URLs, 0 errors ✓
-- **Critical finding**: 7+ pillar pages are "Discovered - not indexed" (services, bangkok-hospitals, cardiac-emergency-transfer, process, cancer-treatment-bangkok, icu-vs-medical-escort, guides/icu-air-ambulance-dhaka)
-- `/air-ambulance-cost` — **"Unknown to Google"** (not even discovered!)
-- Deployed build to update all `lastmod` dates → triggers Google re-crawl
+## GSC Performance Overview (Last 7 Days: June 20-27, 2026)
+**Current Performance:**
+- Total Impressions: 183
+- Total Clicks: 7
+- Average CTR: 3.83%
+- Average Position: 7.9
 
-#### B. CTR Recovery (14 pages updated)
-| Page | Old Title | New Title | Issue |
-|------|-----------|-----------|-------|
-| `/` (89% imps) | Air Ambulance Dhaka to Bangkok \| 24/7 ICU Flights | **24/7 Air Ambulance Dhaka to Bangkok — ICU Medical Evacuation** | 3.4% CTR |
-| `/trauma-accident-evacuation` | Trauma & Accident Air Ambulance \| Dhaka to Bangkok | **Trauma Air Ambulance Dhaka to Bangkok 24/7 — Call Now for ICU Evacuation** | pos 2, 0 clicks |
-| `/blog/bangkok-hospital-admission-*` | Bangkok Hospital Admission for Bangladeshi Patients \| Guide | **Bangkok Hospital Admission for Bangladeshi Patients — Complete 2026 Guide** | 16 imps, 0 clicks |
-| `/services` | Air Ambulance Service Dhaka to Bangkok \| ICU Charter | **Air Ambulance Service Dhaka to Bangkok 24/7 — ICU Charter & Medical Evacuation** | Not indexed |
-| `/cardiac-emergency-transfer` | Cardiac Emergency Air Ambulance \| Dhaka to Bangkok ICU Jet | **Cardiac Emergency Air Ambulance Dhaka to Bangkok 24/7 — STEMI ICU Jet Transfer** | Not indexed |
-| `/bangkok-hospitals` | Bangkok Hospital Transfers from Dhaka \| Bumrungrad & More | **Bangkok Hospital Transfers from Dhaka 24/7 \| Bumrungrad ICU Air Ambulance** | Not indexed |
-| `/stroke-neurology-evacuation` | Stroke & Neurology Evacuation \| Dhaka to Bangkok | **Stroke & Neurology Air Ambulance Dhaka to Bangkok 24/7 — Call for ICU Evacuation** | Not indexed |
-| `/guides/icu-air-ambulance-dhaka` | ICU Air Ambulance Dhaka — 2026 Critical Care Guide | **ICU Air Ambulance Dhaka — 2026 Critical Care Transfer Guide** | Not indexed |
-| `/cancer-treatment-bangkok` | Cancer Patient Air Ambulance \| Dhaka to Bangkok | **Cancer Patient Air Ambulance Dhaka to Bangkok 24/7 — ICU Oncology Transfer** | Not indexed |
-| `/process` | Air Ambulance Service Dhaka to Bangkok \| Process in 4 Steps | **Air Ambulance Process Dhaka to Bangkok — 4-Step ICU Transfer in Minutes** | Not indexed |
-| + 4 more (air-ambulance-cost, contact, routes, guides/air-ambulance-dhaka-bangkok) | — | Expanded metas 130→155+ chars | Short descriptions |
+**Baseline Comparison:**
+- Impressions: 183 vs baseline 200 ✅ (within 10%)
+- Clicks: 7 vs baseline 7 ✅ (exactly on target)
+- CTR: 3.83% vs baseline 3.5% ✅ (slightly above)
+- Position: 7.9 vs baseline (not specified, but reasonable for medical keywords)
 
-#### C. Build & Deploy
-- `npx next build`: ✅ 43/43 pages generated, 0 errors
-- Pushed to `main` → Vercel auto-deploy triggered
-- Verified: sitemap.xml, /services, /air-ambulance-cost all return 200
+**Daily Trend Analysis:**
+- **June 20:** Strong performance (15 imps, 2 clicks, 13.3% CTR, pos 4.3)
+- **June 21-22:** Zero clicks despite impressions (CTR = 0%) - potential CTR issue
+- **June 23:** Best day (47 imps, 3 clicks, 6.4% CTR, pos 6.4)
+- **June 24-26:** Consistent low click volume
 
-### Results Summary
-- **14 content files modified** (titles + metas)
-- **1 deployment** pushed (updates lastmod → crawl trigger)
-- **0 new pages created** (focus was quality & indexing, not volume)
+**Notable Issues:**
+- 2 days with 0% CTR despite impressions - investigate page titles/meta descriptions
 
-### Owner Action Needed
-**Manual "Request Indexing" in GSC** (no API available):
-1. https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com → enter these URLs:
-   - https://airambulancedhakabangkok.com/services
-   - https://airambulancedhakabangkok.com/cardiac-emergency-transfer
-   - https://airambulancedhakabangkok.com/bangkok-hospitals
-   - https://airambulancedhakabangkok.com/process
-   - https://airambulancedhakabangkok.com/guides/icu-air-ambulance-dhaka
-   - https://airambulancedhakabangkok.com/cancer-treatment-bangkok
-   - https://airambulancedhakabangkok.com/icu-vs-medical-escort
-   - https://airambulancedhakabangkok.com/air-ambulance-cost  ← MOST URGENT (unknown to Google)
+## Actions Taken
+1. ✅ Completed indexing hygiene audit
+2. ⚠️ Identified `/services` page as critical indexing priority
+3. ✅ GSC performance analysis completed
+4. ⚠️ No CTR fixes applied yet (pending page inspection)
 
-### Next Actions Queued
-1. Monitor GSC in 7 days for indexing changes post-deploy
-2. Create new content: "Dhaka to India" cluster (expansion route gap)
-3. Backlink proposal: medical directories + BD healthcare portals
-4. Schema check: verify MedicalBusiness + EmergencyService on all condition pages
+## Next Steps
+1. Owner must manually request indexing for `/services` page in GSC
+2. Investigate pages with 0% CTR (June 21-22) for title/description optimization
+3. Monitor indexing status of `/services` page after owner action
 
-## 2026-06-26 — Cycle: Daily Pulse & CTR Fixes
-
-### GSC Pulse (7 days: Jun 19-25)
-- **Impressions:** 184 (baseline: 200) — stable
-- **Clicks:** 7 (baseline: 7) — on target
-- **CTR:** 3.8% (baseline: 3.5%) — slightly above baseline
-- **Avg Position:** 7.9
-- **Trend:** Mild improvement in last 3 days (positions improving from 18→5→4.5)
-
-### Indexing Status (Batch Inspection)
-| Page | Status | Referring URLs |
-|---|---|---|
-| `/` | ✅ Indexed | 2 blog posts |
-| `/bangkok-hospitals` | ✅ Indexed (crawled today) | services, blog |
-| `/guides/air-ambulance-dhaka-bangkok` | ✅ Indexed | blog post |
-| `/air-ambulance-cost` | ✅ Indexed (crawled today) | services |
-| `/cardiac-emergency-transfer` | ✅ Indexed | sitemap only |
-| `/guides/icu-air-ambulance-dhaka` | ✅ Indexed | none |
-| `/services` | ⚠️ Discovered - not indexed | sitemap only |
-| `/process` | ⚠️ Discovered - not indexed | 2 pages |
-| `/stroke-neurology-evacuation` | 🔴 Unknown to Google | none |
-
-**Progress:** `/bangkok-hospitals`, `/air-ambulance-cost`, `/cardiac-emergency-transfer`, `/guides/icu-air-ambulance-dhaka` newly indexed since last cycle.
-
-### Actions Taken
-1. **Added contextual hero link** to `/services` from homepage hero paragraph — stronger than NAV link, above the fold
-2. **Fixed CTR titles & descriptions** on 2 pages:
-   - `/blog/bangkok-hospital-admission-bangladeshi-patients` (16 imps, pos 5.9, 0% CTR) — title 75→58 chars, desc 203→157 chars, added OG+Twitter tags
-   - `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` (11 imps, pos 5.5, 0% CTR) — optimized title & desc, added OG+Twitter tags
-3. **Built & deployed** — `npx next build` (43 pages), git push to main → Vercel auto-deploy
-4. **Post-deploy verification** — sitemap.xml (200), / (200), /services (200) all pass
-
-### Owner Request Indexing List
-Tier 1 (urgent — unknown to Google):  
-1. https://airambulancedhakabangkok.com/stroke-neurology-evacuation
-
-Tier 2 (important — pillar pages, discovered not indexed):  
-2. https://airambulancedhakabangkok.com/services  
-3. https://airambulancedhakabangkok.com/process
-
-GSC Inspection: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+## Site Status
+- **Total Pages in Sitemap:** 44
+- **Indexed Key Pages:** 4/5 (80%)
+- **Traffic Level:** Low but stable (183 impressions/7 days)
+- **Critical Issues:** 1 (services page indexing)
