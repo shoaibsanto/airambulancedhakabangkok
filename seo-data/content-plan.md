@@ -19,7 +19,7 @@ Last updated: 2026-06-25
 [x] Portable Power Station vs IPS — Which One for Your Need? (already existed as post ID 35063)
 [x] How Long Do LiFePO4 Batteries Last? Real Lifespan in BD ← published 2026-06-27
 [x] IPS Buying Guide for Small Business in Bangladesh ← published 2026-06-28
-[ ] Best IPS for Heavy Load (Fridge, AC, Motor) in Bangladesh
+[x] Best IPS for Heavy Load (Fridge, AC, Motor) in Bangladesh ← published 2026-06-29
 [ ] Solar IPS vs Normal IPS — Which is Better for Bangladesh?
 [ ] IPS Installation Guide — Step by Step for Bangladeshi Homes
 [ ] Best IPS Under 30,000 BDT in Bangladesh 2026
