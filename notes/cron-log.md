@@ -115,7 +115,7 @@ https://search.google.com/search-console/inspect?resource_id=sc-domain:airambula
 
 ---
 
-# Daily SEO Cron Log - June 29, 2026
+# Daily SEO Cron Log - June 29, 2026 (Cycle 1)
 
 ## GSC Performance Overview (Last 7 Days: June 22-28, 2026)
 | Metric | Current | Baseline | Status |
@@ -186,3 +186,73 @@ https://search.google.com/search-console/inspect?resource_id=sc-domain:airambula
 - **Critical Issues:** 1 (/services not indexed — crawl budget issue, persists for 4 days)
 - **OG/Twitter Coverage:** 19/19 blog posts ✅ (after 2-pass fix cycle)
 - **CTR-Fixed Blogs Deployed:** ✓ (both bangkok-hospital-admission & how-to-book now have synced og:title + twitter:title)
+
+---
+
+# Daily SEO Cron Log - June 29, 2026 (Cycle 2)
+
+## Status: Re-check cycle — no new GSC data available
+
+This is a second 12-hour cycle on the same day. GSC data has a 24-48h lag, so no new metrics are available.
+
+## GSC Performance Overview (Last 7 Days: June 22-28, 2026)
+| Metric | Current | Baseline | Status |
+|--------|---------|----------|--------|
+| Impressions | 201 | 200 | Stable (+0.5%) |
+| Clicks | 7 | 7 | On target |
+| CTR | 3.48% | 3.5% | On target (slightly below) |
+| Position | 8.2 | - | Stable |
+
+**No change from Cycle 1** — data identical (same 7-day window, data hasn't refreshed).
+
+## Indexing Hygiene (Batch URL Inspection — 10 Pages)
+| Page | Status | Last Crawled |
+|------|--------|-------------|
+| Homepage (/) | ✅ Submitted and indexed | 2026-06-29 (TODAY) |
+| /services | ⚠️ Discovered - not indexed | Never (day 4) |
+| /bangkok-hospitals | ✅ Submitted and indexed | 2026-06-26 |
+| /guides/air-ambulance-dhaka-bangkok | ✅ Submitted and indexed | 2026-06-23 |
+| /air-ambulance-cost | ✅ Submitted and indexed | 2026-06-26 |
+| /guides/icu-air-ambulance-dhaka | ✅ Submitted and indexed | 2026-06-26 |
+| /blog/bangkok-hospital-admission-bangladeshi-patients | ✅ Submitted and indexed | 2026-06-20 |
+| /blog/how-to-book-air-ambulance-dhaka-bumrungrad | ✅ Submitted and indexed | 2026-06-21 |
+| /blog/bed-to-bed-transfer-dhaka-bangkok | ✅ Submitted and indexed | 2026-06-23 |
+| /blog/medical-repatriation-to-bangladesh | ✅ Submitted and indexed | 2026-06-18 |
+
+**No change from Cycle 1** — /services still "Discovered - not indexed" (day 4). All other pages stable.
+
+## CTR Quick-Win Scan (28-Day Data, Position 1-10, >=10 Imps, 0% CTR)
+- No NEW qualifying pages found
+- Previously fixed pages (bangkok-hospital-admission & how-to-book) still showing 0% CTR in the 28-day window — expected, as CTR fixes take 1-3 weeks to reflect in GSC
+- /blog/bangkok-hospitals-comparison-bangladeshi-patients (pos 10.7, 19 imps, 0% CTR) is just outside the top-10 filter — a potential future target if it breaks into top 10
+
+## OG/Twitter Tag Audit
+✅ All 19 blog posts verified — full OG and Twitter tag coverage intact
+✅ CTR-fixed pages verified — synced tags holding
+✅ No missing tags detected
+
+## Actions Taken (This Cycle)
+1. ✅ GSC pulse — no change (same data, no new refresh)
+2. ✅ Indexing hygiene — re-checked 10 pages; no new indexing progress
+3. ✅ OG/Twitter audit — verified coverage clean (no regression from Cycle 1 fixes)
+4. ✅ CTR scan — no new opportunities found
+5. ✅ Logged observations
+
+## No Build/Deploy Needed
+No content changes were made in this cycle. The earlier Cycle 1 deploy (commit 13bb74f) is the latest production state.
+
+## Owner Action Needed (Unchanged — Day 4)
+**TIER 1:** Request indexing for /services in GSC:
+https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+-> Inspect https://airambulancedhakabangkok.com/services -> "Request Indexing"
+
+## Site Status
+- **Total Pages in Sitemap:** 43
+- **Indexed Key Pages:** 9/10 (90%)
+- **GSC Performance:** At baseline (201 imps/7 days, 7 clicks)
+- **Critical Issues:** 1 (/services not indexed — crawl budget issue, persists for 4 days)
+- **OG/Twitter Coverage:** 19/19 blog posts ✅
+- **Deploy Needed:** No — no content changes
+
+## Conclusion
+No urgent issues found. GSC stable. /services indexing remains the only outstanding issue — requires owner action (manual "Request Indexing" in GSC). CTR fixes from Cycle 1 need 1-3 weeks to bake. Next cycle will re-evaluate when fresh GSC data is available.

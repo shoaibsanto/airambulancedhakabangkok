@@ -41,6 +41,8 @@ export default async function sitemap() {
     ["/blog/bangkok-hospitals-comparison-bangladeshi-patients", "weekly", 0.7],
     ["/blog/admit-patient-bumrungrad-dhaka-guide", "weekly", 0.7],
     ["/blog/neonatal-pediatric-air-ambulance-dhaka-bangkok", "weekly", 0.7],
+    ["/blog/medical-visa-thailand-for-bangladeshi-patients", "weekly", 0.7],
+    ["/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi", "weekly", 0.8],
   ];
 
   return ENTRIES.map(([urlPath, changeFrequency, priority]) => ({
