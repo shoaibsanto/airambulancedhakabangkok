@@ -256,3 +256,120 @@ https://search.google.com/search-console/inspect?resource_id=sc-domain:airambula
 
 ## Conclusion
 No urgent issues found. GSC stable. /services indexing remains the only outstanding issue — requires owner action (manual "Request Indexing" in GSC). CTR fixes from Cycle 1 need 1-3 weeks to bake. Next cycle will re-evaluate when fresh GSC data is available.
+
+
+---
+
+# Weekly SEO Cron Log — June 29, 2026 (Cycle 3 — WEEKLY DEEP)
+
+## Mode: Weekly cycle — content + CTR + technical sweep
+**Deploy committed:** 94ec64c | **Build:** 45 pages (was 43)
+
+## GSC Pulse (28-Day Snapshot: June 1-29)
+| Metric | 28-Day Total | Notes |
+|---|---|---|
+| Impressions | **274** | First time crossing 200 — qualifies for CTR optimization track |
+| Clicks | 9 | Up from baseline; CTR 3.28% |
+| Position | 7.8 | Strong for new site |
+
+**Top performers (protect):**
+- Homepage at pos 7.0 with 214 imps, 6 clicks (2.8% CTR)
+- `/guides/icu-air-ambulance-dhaka` at pos 6.3 (33% CTR but only 3 imps)
+- `/blog/medical-repatriation-to-bangladesh` pos 3.5 (10% CTR, 10 imps)
+
+**Top queries with 0% CTR despite impressions:**
+- "air ambulance service in bangladesh" — pos 1.6, 16 imps (homepage ranks great, no clicks)
+- "air ambulance bangladesh" — pos 5.1, 11 imps
+
+## Technical Audit Findings & Fixes
+**Pre-fix issues:**
+- 2 titles too long: bangkok-hospital-admission (72c), medical-visa-thailand (68c)
+- 1 meta description over 170c: medical-visa Thailand (178c)
+- OG/Twitter coverage: 100% (no gaps)
+- Canonical tags: 100% present
+- Duplicate OG tags: 0 (clean)
+
+**Fixed:**
+- Both titles cut to 57c and 51c respectively (synced og:title + twitter:title)
+- Medical-visa meta rewritten to 155c (added 24/7 dispatch + phone CTA)
+
+## CTR Quick-Win Rewrites (6 pages)
+| Page | Pos | Imps | New Title (chars) | Hook |
+|---|---|---|---|---|
+| /blog/bangkok-hospitals-comparison-bangladeshi-patients | 10.7 | 19 | "Bumrungrad vs Samitivej vs Bangkok Hospital: 2026 Compare" (56) | Year + "Compare" verb |
+| /blog/how-to-book-air-ambulance-dhaka-bumrungrad | 5.1 | 16 | "How to Book Air Ambulance Dhaka to Bumrungrad: 5 Steps" (54) | Number-driven, "How to" |
+| /blog/medical-repatriation-to-bangladesh | 3.5 | 10 | "Medical Repatriation Bangkok to Bangladesh: ICU Return" (54) | Direction reversed + "ICU" |
+| /blog/bangkok-hospital-admission-bangladeshi-patients | 6.3 | 18 | "Bangkok Hospital Admission Guide for Bangladeshi Patients" (57) | Cleaner + scannable |
+| /blog/medical-visa-thailand-for-bangladeshi-patients | n/a | n/a | "Medical Visa Thailand for Bangladeshi Patients 2026" (51) | Year for freshness |
+| /air-ambulance-cost | 12.7 | 6 | (kept title — added phone 01716-960770 to meta) | Phone in SERP snippet |
+
+All 6 had og:title + twitter:title + og:description + twitter:description synced.
+
+## New Content Asset
+**`/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi`** — **2,495 words**
+
+**Why:** Cluster 5 (Expansion routes) had ZERO content for India despite strategy/master-seo-prompt.md listing Vellore/Chennai/Delhi as priority. GSC shows "air ambulance myanmar/thailand" already pulling impressions (pos 70-81) — India is the largest untapped expansion corridor.
+
+**What it covers:**
+- When air ambulance to India is clinically necessary (5 case categories)
+- Receiving hospitals: CMC Vellore, Apollo Chennai, Medanta Gurgaon, Fortis Escorts Delhi, Tata Memorial Mumbai
+- Flight times for Dhaka → MAA/DEL/BOM/CCU
+- 2026 cost ranges (USD 14K-32K depending on route + aircraft)
+- M-Visa + MX visa process
+- 6-step operational flow
+- India vs Bangkok decision matrix
+
+**Schema:** MedicalWebPage + FAQPage (5 Q&A) + auto BreadcrumbList
+
+**Inbound links added (4 total — meets ≥3 threshold):**
+- `/routes` — new H2 section "Do You Cover Routes Other Than Bangkok?"
+- `/blog/medical-repatriation-to-bangladesh` — related guides
+- `/blog/medical-visa-thailand-for-bangladeshi-patients` — related guides
+- `/blog/index` — listing card
+
+**Sitemap update:** Both new posts added (medical-visa was missing from sitemap before today — caught and fixed)
+
+## Internal Link Audit
+Ran inbound-link counter across all 41 content pages.
+
+**Result: 0 orphans.** Every non-utility page has ≥3 inbound links. Only flag was the brand-new India post (4 inbound — meets the 3+ threshold).
+
+## Build + Deploy
+- `npx next build` → ✅ 45 pages generated (was 43)
+- Commit: 94ec64c — "SEO weekly 2026-06-29 v2: India route post, CTR rewrites, internal links"
+- Push: ✅ origin/main updated
+- Vercel deploy: ✅ live within 35s
+
+## Post-Deploy Validation (HTTP 200)
+- ✅ `/sitemap.xml` (now contains india + medical-visa routes)
+- ✅ `/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi` (NEW)
+- ✅ `/blog/bangkok-hospitals-comparison-bangladeshi-patients` (CTR-rewrite — new title rendering: "Bumrungrad vs Samitivej vs Bangkok Hospital: 2026 Compare")
+- ✅ `/blog/medical-repatriation-to-bangladesh` (new title rendering: "Medical Repatriation Bangkok to Bangladesh: ICU Return")
+- ✅ Homepage
+
+## 🔴 Owner Action List — Request Indexing in GSC
+Click each URL → "Request Indexing" button:
+
+**TIER 1 (Most Urgent):**
+1. https://airambulancedhakabangkok.com/services ← still day 5 unindexed (known crawl-budget issue)
+
+**TIER 2 (New content — accelerate first crawl):**
+2. https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi (NEW — 2,495w, India expansion route)
+3. https://airambulancedhakabangkok.com/blog/medical-visa-thailand-for-bangladeshi-patients (was missing from sitemap before today, now fixed — needs first crawl)
+
+GSC link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+## Site Status
+- **Pages in sitemap:** 45 (+2 from Cycle 2)
+- **Build:** Clean, no errors, no warnings
+- **OG/Twitter coverage:** 100%
+- **Title compliance (50-65c):** 100%
+- **Meta desc compliance (130-170c):** 100% (after today's fixes)
+- **Orphans:** 0
+- **CTR-rewrite expectation:** Bake time 1-3 weeks before GSC reflects new titles
+
+## What to Watch Next Week
+1. Did `/blog/bangkok-hospitals-comparison-bangladeshi-patients` move from pos 10.7 into top 10 after the "2026 Compare" title rewrite?
+2. Did `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` pick up clicks after the "5 Steps" angle?
+3. Did the new India post get crawled and start picking up "air ambulance dhaka to india / vellore / chennai" impressions?
+4. Has `/services` finally moved from "Discovered – not indexed" → "Indexed"?
