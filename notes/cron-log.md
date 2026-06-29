@@ -112,3 +112,71 @@ Two pages with position 1-10, >=10 impressions, 0% CTR -- highest ROI targets:
 **TIER 1:** Request indexing for /services in GSC:
 https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
 -> Inspect https://airambulancedhakabangkok.com/services -> "Request Indexing"
+
+---
+
+# Daily SEO Cron Log - June 29, 2026
+
+## GSC Performance Overview (Last 7 Days: June 22-28, 2026)
+| Metric | Current | Baseline | Status |
+|--------|---------|----------|--------|
+| Impressions | 201 | 200 | Stable (+0.5%) |
+| Clicks | 7 | 7 | On target |
+| CTR | 3.48% | 3.5% | On target (slightly below) |
+| Position | 8.2 | - | Stable |
+
+**Daily Trend:**
+- Jun 22: 25 imps, 0 clicks (pos 18.2)
+- Jun 23: 47 imps, 3 clicks, 6.4% CTR (pos 6.4) <- Best day
+- Jun 24: 33 imps, 1 click (pos 5.0)
+- Jun 25: 30 imps, 1 click (pos 4.7)
+- Jun 26: 25 imps, 2 clicks, 8% CTR (pos 8.4)
+- Jun 27: 27 imps, 0 clicks (pos 9.6)
+- Jun 28: 14 imps, 0 clicks (pos 9.0)
+
+**Comparison to yesterday:** Very stable — impressions 197→201 (+2%), clicks 7→7, CTR 3.55%→3.48%. Within normal variance.
+
+## Indexing Hygiene Audit (Batch URL Inspection)
+| Page | Status | Last Crawled | Change from Yesterday |
+|------|--------|-------------|----------------------|
+| Homepage (/) | ✅ Submitted and indexed | 2026-06-29 (TODAY) | Crawled today! |
+| /services | ⚠️ Discovered - not indexed | Never | Unchanged (day 3) |
+| /bangkok-hospitals | ✅ Submitted and indexed | 2026-06-26 | Stable |
+| /guides/air-ambulance-dhaka-bangkok | ✅ Submitted and indexed | 2026-06-23 | Stable |
+| /air-ambulance-cost | ✅ Submitted and indexed | 2026-06-26 | Stable |
+| /guides/icu-air-ambulance-dhaka | ✅ Submitted and indexed | 2026-06-26 | Stable |
+| /blog/bangkok-hospital-admission-bangladeshi-patients | ✅ Submitted and indexed | 2026-06-20 | Stable |
+| /blog/how-to-book-air-ambulance-dhaka-bumrungrad | ✅ Submitted and indexed | 2026-06-21 | Stable |
+| /blog/bed-to-bed-transfer-dhaka-bangkok | ✅ Submitted and indexed | 2026-06-23 | Stable |
+| /blog/medical-repatriation-to-bangladesh | ✅ Submitted and indexed | 2026-06-18 | Stable |
+
+**Notable:** Homepage crawled TODAY (June 29) — Google's re-crawl frequency is improving. /services still shows "Discovered - not indexed" (day 3). The page has strong contextual links from homepage body, but only sitemap.xml appears as a referring URL in GSC — Google has not yet attempted to crawl it despite having the link from sitemap. This is normal crawl budget behavior for a new site.
+
+## CTR Quick-Win Scan (28-Day Data, Position 1-10, >=10 Imps, 0% CTR)
+- No NEW qualifying pages found beyond the two already fixed yesterday
+- Yesterday's CTR fixes for `/blog/bangkok-hospital-admission-bangladeshi-patients` and `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` are in place with matching OG/Twitter tags verified
+- GSC data will take 1-3 weeks to reflect changes
+
+## OG/Twitter Tag Audit
+✅ All blog posts have OG and Twitter tags (title + description)
+✅ Yesterday's CTR-fixed pages have synced og:title and twitter:title matching the new titles
+✅ No missing tags detected
+
+## Actions Taken
+1. ✅ GSC pulse — stable at baseline (201 imps, 7 clicks, 3.48% CTR)
+2. ✅ Indexing hygiene — 9/10 key pages indexed; /services still waiting
+3. ✅ OG/Twitter tag audit — all clean, no issues
+4. ✅ Build — 43 pages, no errors
+5. ✅ Deploy — git push to origin/main (17 files, 395 insertions)
+6. ✅ Post-deploy validation — sitemap 200, homepage 200, services 200, blog 200
+
+## Owner Action Needed (Unchanged from Yesterday)
+**TIER 1:** Request indexing for /services in GSC:
+https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+-> Inspect https://airambulancedhakabangkok.com/services -> "Request Indexing"
+
+## Site Status
+- **Total Pages in Sitemap:** 43
+- **Indexed Key Pages:** 9/10 (90%)
+- **GSC Performance:** At baseline (201 imps/7 days, 7 clicks)
+- **Critical Issues:** 1 (/services not indexed — crawl budget issue, persists for 3 days)
