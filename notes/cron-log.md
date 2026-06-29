@@ -162,13 +162,17 @@ https://search.google.com/search-console/inspect?resource_id=sc-domain:airambula
 ✅ Yesterday's CTR-fixed pages have synced og:title and twitter:title matching the new titles
 ✅ No missing tags detected
 
-## Actions Taken
-1. ✅ GSC pulse — stable at baseline (201 imps, 7 clicks, 3.48% CTR)
-2. ✅ Indexing hygiene — 9/10 key pages indexed; /services still waiting
-3. ✅ OG/Twitter tag audit — all clean, no issues
-4. ✅ Build — 43 pages, no errors
-5. ✅ Deploy — git push to origin/main (17 files, 395 insertions)
-6. ✅ Post-deploy validation — sitemap 200, homepage 200, services 200, blog 200
+## Actions Taken (Second Pass — OG/Twitter Fix)
+7. ✅ GSC pulse — stable at baseline (201 imps, 7 clicks, 3.48% CTR)
+8. ✅ Indexing hygiene — 9/10 key pages indexed; /services still waiting (day 4)
+9. ⚠️ **DEEP OG/TWITTER AUDIT** — Found 10 blog posts with missing/incomplete tags (earlier audit missed these)
+   - 8 pages: missing both OG & Twitter tags entirely
+   - 2 pages (yesterday's CTR-fix): had OG/Twitter in wrong position (pre-`</head>` instead of canonical area); tags sync-regressed
+10. ✅ **FIXED**: Inserted OG/Twitter tags after canonical link for all 10 affected pages
+11. ✅ **FIXED**: Removed duplicate tags from 2 CTR-fixed pages
+12. ✅ **FIXED**: 19 blog posts now have full OG/Twitter tag coverage — verified by grep audit
+13. ✅ Build — 43 pages, no errors
+14. ✅ Deployed to production — 19 files committed (13bb74f)
 
 ## Owner Action Needed (Unchanged from Yesterday)
 **TIER 1:** Request indexing for /services in GSC:
@@ -179,4 +183,6 @@ https://search.google.com/search-console/inspect?resource_id=sc-domain:airambula
 - **Total Pages in Sitemap:** 43
 - **Indexed Key Pages:** 9/10 (90%)
 - **GSC Performance:** At baseline (201 imps/7 days, 7 clicks)
-- **Critical Issues:** 1 (/services not indexed — crawl budget issue, persists for 3 days)
+- **Critical Issues:** 1 (/services not indexed — crawl budget issue, persists for 4 days)
+- **OG/Twitter Coverage:** 19/19 blog posts ✅ (after 2-pass fix cycle)
+- **CTR-Fixed Blogs Deployed:** ✓ (both bangkok-hospital-admission & how-to-book now have synced og:title + twitter:title)
