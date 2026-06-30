@@ -22,7 +22,7 @@ Last updated: 2026-06-25
 [x] Best IPS for Heavy Load (Fridge, AC, Motor) in Bangladesh ← published 2026-06-29
 [x] Solar IPS vs Normal IPS — Which is Better for Bangladesh? ← published 2026-06-30 (Post ID 35491)
 [x] IPS Installation Guide — Step by Step for Bangladeshi Homes ← published 2026-06-30 (Post ID 35492)
-[ ] Best IPS Under 30,000 BDT in Bangladesh 2026
+[x] Best IPS Under 30,000 BDT in Bangladesh 2026 ← published 2026-07-01 (Post ID 35502)
 [ ] Top 10 IPS Brands in Bangladesh 2026 — Ranked
 [ ] How to Calculate IPS Backup Time for Your Home
 [ ] Lithium Battery Safety — What Bangladeshi Users Must Know
