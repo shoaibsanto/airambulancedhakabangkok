@@ -373,3 +373,85 @@ GSC link: https://search.google.com/search-console/inspect?resource_id=sc-domain
 2. Did `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` pick up clicks after the "5 Steps" angle?
 3. Did the new India post get crawled and start picking up "air ambulance dhaka to india / vellore / chennai" impressions?
 4. Has `/services` finally moved from "Discovered – not indexed" → "Indexed"?
+
+---
+
+## 2026-06-30 — Daily SEO Cycle (Cron)
+
+### GSC Pulse — Last 7 Days (vs. Baseline: 200 imps / 7 clicks / 3.5% CTR)
+
+| Metric | Actual | Baseline | Status |
+|--------|--------|----------|--------|
+| Impressions | 202 | 200 | ✅ At baseline |
+| Clicks | 9 | 7 | ✅ Above baseline |
+| CTR | 4.46% | 3.5% | ✅ Above baseline |
+| Avg Position | 6.7 | — | ✅ Solid |
+
+Daily breakdown: Jun 23 (3 clicks, 47 imps), Jun 24 (1/33), Jun 25 (1/30), Jun 26 (2/25), Jun 27 (0/27), Jun 28 (0/20), Jun 29 (2/20).
+
+### Indexing Status — Key Pages
+
+| Page | Status | Last Crawled | Action |
+|------|--------|-------------|--------|
+| `/` | ✅ Submitted & indexed | 2026-06-29 | — |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Submitted & indexed | 2026-06-23 | — |
+| `/air-ambulance-cost` | ✅ Submitted & indexed | 2026-06-26 | — |
+| `/bangkok-hospitals` | ✅ Submitted & indexed | 2026-06-26 | — |
+| `/services` ⚠️ | **Discovered - not indexed** | Never | See owner task |
+
+**Critical:** `/services` (Cluster 1 pillar) has NEVER been crawled. GSC only sees it from sitemap.xml — JS-rendered nav links aren't being followed. Needs owner to manually "Request Indexing".
+
+### GSC 28-Day Quick-Win Analysis (0 CTR pages, ≥10 impressions)
+
+| Page | Pos | Imps | CTR | Issue |
+|------|-----|------|-----|-------|
+| `/guides/air-ambulance-dhaka-bangkok` | 4.4 | 10 | 0% | Title already CTR-optimized (Jun cycle) — awaiting Google re-crawl |
+| `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` | 5.1 | 16 | 0% | Duplicate twitter:title found → FIXED |
+| `/blog/bangkok-hospital-admission-bangladeshi-patients` | 6.3 | 18 | 0% | Duplicate twitter:title found → FIXED |
+| `/blog/bangkok-hospitals-comparison-bangladeshi-patients` | 10.6 | 21 | 0% | Title 67c (too long) + duplicate twitter:title → FIXED |
+| `/trauma-accident-evacuation` | **2.0** | 5 | 0% | Duplicate twitter:title (2 different values!) → FIXED |
+
+### Actions Taken
+
+**1. Duplicate OG/Twitter Tag Purge (7 files fixed)**
+Found widespread duplicate `twitter:title` and `og:title` tags — stale values from a prior patch cycle were being served alongside new CTR-optimized values. Social crawlers use the LAST value found, so old stale titles were silently overriding optimized ones.
+
+Files fixed:
+- `content/trauma-accident-evacuation.html` — duplicate `twitter:title` removed (stale: "Trauma Accident Air Ambulance Dhaka | 24/7 Emergency Evacuation")
+- `content/blog/air-ambulance-cardiac-patients.html` — stale twitter:title "ICU Heart Jet" removed
+- `content/blog/bangkok-hospital-admission-bangladeshi-patients.html` — stale twitter:title removed
+- `content/blog/how-to-book-air-ambulance-dhaka-bumrungrad.html` — stale twitter:title removed
+- `content/blog/icu-flight-bangladesh-to-bumrungrad-bangkok.html` — 2 og:title + 2 twitter:title → deduplicated to 1 each
+- `content/blog/bangkok-hospitals-comparison-bangladeshi-patients.html` — stale twitter:title + title shortened 67→52 chars
+
+**2. Title / Meta / OG Updates**
+- `/services`: Title: "Air Ambulance Services | ICU Charter Dhaka to Bangkok" → "Air Ambulance Service Dhaka to Bangkok | 24/7 ICU Charter" (keyword-first). OG+Twitter synced.
+- `/blog/bangkok-hospitals-comparison-bangladeshi-patients`: Title shortened from 67 to 52 chars. All 4 meta tags (title, description, og:title, og:description) synced.
+- `/trauma-accident-evacuation`: OG description synced to match meta description (now consistent).
+
+**3. Build & Deploy**
+- Build: ✅ 45 pages generated, no errors
+- Deploy: ✅ Pushed to `origin/main` (commit: 2f6babc)
+- Validation: sitemap.xml, /services, /trauma-accident-evacuation all return HTTP 200
+
+### Verified Clean State
+Ran Python duplicate-tag audit across all 40+ HTML files → `ALL CLEAN — no duplicate OG/Twitter tags`
+
+---
+
+## 🔴 Owner Action Needed — Request Indexing in GSC
+
+**Visit:** https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+Click each URL → "URL Inspection" → "Request Indexing":
+
+**Tier 1 — Pillar Page (MOST URGENT):**
+1. https://airambulancedhakabangkok.com/services ← NEVER BEEN CRAWLED. Cluster 1 pillar. Critical for ranking "Air Ambulance Service Dhaka to Bangkok".
+
+**Note:** Google is not following the JS-rendered nav links to /services. The fix deployed today includes updated meta tags. After requesting indexing, Google should crawl it within 1-3 days.
+
+### What to Watch Next Cycle
+1. Has `/services` moved from "Discovered - not indexed" → indexed after owner's manual Request Indexing?
+2. Did fixing duplicate twitter:title on 5 blog posts lift CTR on pages at pos 5-10?
+3. `/trauma-accident-evacuation` at position 2 with 0 CTR — is this now getting clicks? (May be a very low-volume keyword — watch for impressions pattern.)
+4. Did `/guides/air-ambulance-dhaka-bangkok` at pos 4.4 finally get clicks? (Title already optimized — this may need a fresh Google re-crawl signal from today's deploy.)
