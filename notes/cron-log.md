@@ -550,3 +550,254 @@ Visit: https://search.google.com/search-console/inspect?resource_id=sc-domain:ai
 2. Has `/services` moved to indexed after owner's manual Request Indexing?
 3. Did fixing 7 missing canonical tags improve crawl/index signals across blog posts?
 4. `/air-ambulance-cost` meta description now uses proper BDT subcontinent format (`32,00,000`) — does this help AI Overview citation?
+---
+
+# MONTHLY SEO CYCLE — 2026-07-01 (July Re-Baseline & Strategy Review)
+
+## ⚠️ Data Availability Note
+- **GSC auth:** EXPIRED — refresh token returned `invalid_grant`. GSC data unavailable. All performance figures are from the last known 2026-06-30 cycle (stored in prior log entries). Owner must re-authenticate to restore GSC monitoring.
+- **Ahrefs API:** Token invalid this session — could not pull organic keyword data externally.
+- **All figures below** are from stored logs (last known: 2026-06-30).
+
+---
+
+## Section 1: SEO Health Score — July 2026
+
+**Score: 74 / 100** *(up from estimated 62 in June)*
+
+| Category | Score | Notes |
+|----------|-------|-------|
+| Indexing coverage | 18/20 | 9/10 key pages indexed; /services still "Discovered - not indexed" (day 8+) |
+| Technical cleanliness | 19/20 | 1 issue found (blog/index missing OG/Twitter) — FIXED this cycle |
+| Content quality | 14/20 | 1 thin page fixed; 22 blog posts, 2 guides, all word-count compliant |
+| Internal linking | 10/10 | 0 orphans, 0 low-link pages confirmed |
+| Schema coverage | 8/10 | All pages have schema; FAQPage schema missing on some service pages |
+| CTR optimisation | 5/10 | Multiple title/meta passes done; /services never crawled so CTR unknown |
+| AI Overview (GEO) | 0/10 | Competitor still cited; our page updated in June cycle — awaiting re-crawl signal |
+
+**Score rationale:** Heavy deductions on GEO (0 — still not cited) and CTR (cannot confirm improvement without GSC data). Technical and internal linking are excellent. Site is architecturally healthy for a 6-week-old domain.
+
+---
+
+## Section 2: Position Delta vs Last Month
+
+*Note: Position history by page requires live GSC data. Below uses last-known snapshots from Jun 27–30 logs.*
+
+| Page | Last Known Position | Last Known Impressions (7d) | Status |
+|------|--------------------|-----------------------------|--------|
+| Homepage (/) | 7.0 | 214 imps (28d) | Stable |
+| /blog/medical-repatriation-to-bangladesh | 3.5 | 10 imps (28d) | Top performer |
+| /guides/icu-air-ambulance-dhaka | 6.3 | 3 imps (28d) | Minimal traffic |
+| /guides/air-ambulance-dhaka-bangkok | 4.4 | 10 imps (28d) | 0% CTR — title optimised Jun 30 |
+| /blog/how-to-book-air-ambulance-dhaka-bumrungrad | 5.1 | 16 imps (28d) | 0% CTR — title optimised |
+| /blog/bangkok-hospital-admission-bangladeshi-patients | 6.3 | 18 imps (28d) | 0% CTR — title optimised |
+| /trauma-accident-evacuation | 2.0 | 5 imps (28d) | Pos 2 but minimal volume |
+| /air-ambulance-cost | 12.7 | 6 imps (28d) | Deep in page 2 |
+| /services | — | — | NOT INDEXED — no data |
+
+**Key observation:** Position signals are promising (pos 2-7 range for multiple pages), but click-through is broken due to non-indexed /services and CTR-suboptimal titles. The June CTR optimization batch (8 titles rewritten) should show uplift in July data once GSC auth is restored.
+
+---
+
+## Section 3: Impression & Click Deltas
+
+*All from stored log data (last cycle: 2026-06-30):*
+
+| Period | Impressions (7d) | Clicks (7d) | CTR | Avg Position |
+|--------|-----------------|-------------|-----|--------------|
+| Week of Jun 20 | 183 | 7 | 3.83% | 7.9 |
+| Week of Jun 21–28 | 201 | 7 | 3.48% | 8.2 |
+| Week of Jun 22–29 | 201 | 7 | 3.48% | 8.2 |
+| Week of Jun 23–30 | 202 | 9 | 4.46% | 6.7 |
+
+**Trend:** Impressions stable ~200/week. Clicks crept from 7→9 (+29%). CTR improved from 3.5% → 4.46% (baseline beat). Position improving: 7.9 → 6.7 avg. All moving in the right direction.
+
+**28-Day cumulative (Jun 1–29):** 274 impressions, 9 clicks, 3.28% CTR — first month where we crossed 200 impressions/28d threshold.
+
+---
+
+## Section 4: Top Movers (Winners & Losers)
+
+### Winners (Jun 2026)
+1. **Homepage** — Crossed 200+ impressions in 28d for first time. Google crawling it daily as of Jun 29.
+2. **/blog/medical-repatriation-to-bangladesh** — Position 3.5, 10% CTR. Top organic performer by CTR.
+3. **/guides/air-ambulance-dhaka-bangkok** — Indexed, ranked at pos 4.4 for competitive guide keyword.
+4. **/trauma-accident-evacuation** — Pos 2.0 (!) on a low-volume trauma keyword. A future traffic driver if volume grows.
+5. **Technical cleanliness** — Went from 0% canonical coverage to 100%; 0 duplicate OG tags; 100% OG/Twitter coverage across all 22 blog posts.
+
+### Losers / Flags
+1. **/services** — The most critical page on the site has NEVER been crawled (8+ days since submission). Primary cluster pillar for "Air Ambulance Service Dhaka to Bangkok" is invisible to Google.
+2. **AI Overview** — Competitors (thaimedixpress.com, Saimon Global) still cited for cost keywords. Our entity-alignment fix (Jun 23 cycle) is deployed but has not yet triggered a re-crawl.
+3. **/air-ambulance-cost** — Position 12.7, below page 1. Given this is a transactional high-value page, it should be driving leads. Below-page-1 ranking means near-zero organic traffic.
+4. **GSC auth expiry** — Token expired Jul 1, blocking all monitoring. Requires owner browser action to restore.
+
+---
+
+## Section 5: Next 30/60/90 Day Plan
+
+### 30-Day Plan (July 2026)
+**Priority 1 — Restore GSC monitoring**
+- Owner must re-authenticate GSC OAuth (browser required). Without it, the cron agent operates blind.
+- After auth restore, immediately pull 28-day data to verify CTR improvements from June title rewrites.
+
+**Priority 2 — Get /services indexed**
+- Owner must request indexing for /services in GSC (Tier 1 — has been "Discovered - not indexed" for 8+ days).
+- If still not indexed 1 week after requesting: add additional static HTML body links from /blog/index.html and /faq to /services.
+
+**Priority 3 — New content: dialysis + expansion conditions**
+- ✅ `/blog/dialysis-patient-air-ambulance-dhaka-bangkok` — CREATED THIS CYCLE (1,900+ words, FAQ schema, full OG/Twitter, sitemap added)
+- Next: `/blog/liver-disease-air-ambulance-dhaka-bangkok` (covers ESLD/cirrhosis/hepatic encephalopathy — another uncovered condition cluster)
+- Next: `/blog/air-ambulance-myanmar-dhaka` (GSC showed this query in pos 70-81 — a natural next route expansion)
+
+**Priority 4 — Thin content fix**
+- ✅ `/blog/air-ambulance-vs-commercial-medical-flight` — expanded 1,141→ ~2,300 words this cycle (4 new H2 sections: conditions, documents, scenarios, summary matrix)
+
+### 60-Day Plan (August 2026)
+- Monitor whether June CTR rewrites (8 pages) showed click lift in GSC data
+- Create `/blog/liver-disease-air-ambulance-dhaka-bangkok` (Cluster 3 medical condition gap)
+- Create `/blog/air-ambulance-myanmar-dhaka` (new route — Cluster expansion)
+- Create `/blog/organ-failure-air-ambulance-dhaka` (covers multi-organ failure, ARDS, sepsis — ICU-dependent emergency transfers)
+- Update FAQPage schema on /services and /bangkok-hospitals (currently missing)
+- Investigate whether /air-ambulance-cost page needs anchor text diversification (currently "bed-to-bed" and "ICU charter" are dominant anchor terms)
+- Push one GEO-targeted update to /air-ambulance-cost with the AI Overview entity pattern (if competitor citation hasn't shifted after 6 weeks)
+
+### 90-Day Plan (September 2026)
+- Full 3-month SEO audit against initial baseline
+- Target: 500+ impressions/28d (up from 274)
+- Target: /services indexed and ranking in top 20 for "air ambulance service dhaka to bangkok"
+- Target: /air-ambulance-cost breaking into top 10 for the primary cost keyword
+- Target: At least 1 new route page (Myanmar or Singapore) driving first impressions
+- Target: GEO citation in AI Overview for "air ambulance dhaka to bangkok cost" (6-week re-crawl window from Jun 23 fix)
+- Backlink outreach: identify 3–5 Bangladeshi medical/travel blogs for contextual link placement
+
+---
+
+## Section 6: Refreshed Keyword Universe
+
+*Note: Ahrefs API unavailable this session. Keyword data from industry knowledge + GSC query log.*
+
+### Known GSC Queries (from Jun 27-30 logs) — Active Impressions
+| Query | Position | Imps (7d) | CTR |
+|-------|----------|-----------|-----|
+| air ambulance service in bangladesh | 1.6 | 16 | 0% |
+| air ambulance bangladesh | 5.1 | 11 | 0% |
+| air ambulance dhaka to bangkok | ~4-7 | — | — |
+| air ambulance dhaka bumrungrad | ~5-8 | — | — |
+| air ambulance myanmar | 70-81 | Low | 0% |
+| air ambulance thailand | 70-81 | Low | 0% |
+
+### New Keyword Opportunities Identified (Not Yet Covered)
+
+**Opportunity 1: Dialysis / CKD Transfers**
+- Queries: "dialysis patient transfer dhaka," "kidney patient air ambulance bangladesh," "CKD air ambulance cost"
+- Status: ✅ Page created this cycle — `/blog/dialysis-patient-air-ambulance-dhaka-bangkok`
+- Search intent: Transactional (family arranging transfer for ESRD relative)
+- Cluster: Cluster 3 (Medical Conditions)
+
+**Opportunity 2: Liver Disease / Hepatology Transfers**
+- Queries: "liver failure patient transfer dhaka bangkok," "hepatic encephalopathy air ambulance," "liver transplant bangkok from dhaka"
+- Status: ❌ No page exists
+- Search intent: Transactional (acute liver failure is time-critical)
+- Priority: HIGH — covers a common referral type; Bumrungrad has JCI hepatobiliary unit
+- Cluster: Cluster 3 (Medical Conditions)
+
+**Opportunity 3: Air Ambulance Myanmar / Southeast Asia Routes**
+- Queries: "air ambulance dhaka to myanmar," "air ambulance dhaka singapore," "medical evacuation dhaka yangon"
+- Status: ❌ No page exists (India route page created Jun 29; Myanmar/Singapore = natural next step)
+- GSC signal: Already showing in pos 70-81 with zero content targeting — pure gap opportunity
+- Priority: MEDIUM
+- Cluster: Cluster 1 (Services / Routes expansion)
+
+**Opportunity 4: Burn Patient / ICU Transfer**
+- Queries: "burn patient transfer dhaka," "burn ICU air ambulance bangladesh," "severe burn patient air transport"
+- Status: ❌ No page exists
+- Search intent: Informational + transactional (burn ICU transfers are rare but high-value)
+- Priority: MEDIUM-LOW (low volume but very high CPC when it fires)
+- Cluster: Cluster 3 (Medical Conditions — trauma sub-category)
+
+**Opportunity 5: Paediatric / Child Patient Transfers**
+- Queries: "child air ambulance dhaka," "paediatric medical evacuation bangladesh," "sick child transfer dhaka bangkok"
+- Status: Partial — `/blog/neonatal-pediatric-air-ambulance-dhaka-bangkok` exists but targets neonatal narrowly
+- Opportunity: Expand to cover older children (1–16 years), paediatric ICU, paediatric oncology
+- Priority: HIGH — paediatric angle has strong emotional search intent and differentiated content
+- Cluster: Cluster 3 (Medical Conditions)
+
+---
+
+## Site Baseline — July 1, 2026
+
+| Metric | Value |
+|--------|-------|
+| Total pages in sitemap | 46 |
+| Blog posts | 22 |
+| Guides | 2 |
+| Service/condition pages | 12 |
+| Utility pages | 10 |
+| Indexed (last known, Jun 30) | ~9 key pages |
+| /services indexed? | ❌ No (Discovered - not indexed, day 8+) |
+| GSC 7d impressions (last known) | 202 |
+| GSC 7d clicks (last known) | 9 |
+| GSC CTR (last known) | 4.46% |
+| GSC avg position (last known) | 6.7 |
+| GSC 28d impressions (Jun 1-29) | 274 |
+| OG/Twitter tag coverage | 100% (blog/index FIXED this cycle) |
+| Duplicate OG tags | 0 |
+| Missing canonical tags | 0 |
+| Title compliance (50-62c) | 100% |
+| Meta desc compliance (130-160c) | 100% |
+| Orphan pages | 0 |
+| Thin content pages | 0 (1 fixed this cycle) |
+
+---
+
+## Content Plan — July 2026 (Priority Order)
+
+| Priority | Page | Keyword Target | Cluster | Status |
+|----------|------|---------------|---------|--------|
+| 1 | `/blog/liver-disease-air-ambulance-dhaka-bangkok` | "liver failure air ambulance dhaka" | Cluster 3 | ❌ Create |
+| 2 | `/blog/air-ambulance-dhaka-myanmar-singapore` | "air ambulance dhaka to myanmar" | Routes | ❌ Create |
+| 3 | `/blog/paediatric-child-air-ambulance-dhaka-bangkok` | "child air ambulance dhaka to bangkok" | Cluster 3 | ❌ Create |
+| 4 | `/blog/burn-patient-air-ambulance-dhaka` | "burn patient transfer air ambulance dhaka" | Cluster 3 | ❌ Create |
+| 5 | `/services` → add FAQ schema (JSON-LD) | Improve GEO/AI Overview eligibility | Cluster 1 | ❌ Enrich |
+| 6 | `/blog/neonatal-pediatric-air-ambulance-dhaka-bangkok` | Expand to older paediatric cases | Cluster 3 | ❌ Expand |
+
+---
+
+## Actions Taken This Cycle
+
+| Action | Files Changed | Result |
+|--------|--------------|--------|
+| ✅ NEW PAGE: Dialysis patient air ambulance | `content/blog/dialysis-patient-air-ambulance-dhaka-bangkok.html` | 1,900+ words, FAQPage schema, 5 FAQ Q&A, full OG/Twitter, GEO-aligned pricing (USD 27K–33K, BDT 32,00,000–39,00,000, Learjet 35A, Hazrat Shahjalal) |
+| ✅ EXPANDED: Air ambulance vs commercial flight | `content/blog/air-ambulance-vs-commercial-medical-flight.html` | 1,141→~2,300 words (+4 H2 sections: conditions, documents, scenarios, summary matrix) |
+| ✅ FIXED: blog/index OG + Twitter tags | `content/blog/index.html` | Added all 4 tags (og:title, og:description, twitter:title, twitter:description) — was empty |
+| ✅ SITEMAP: New URL added | `app/sitemap.js` | /blog/dialysis-patient-air-ambulance-dhaka-bangkok added at priority 0.8 |
+| ✅ BUILD: 46 pages clean | — | npx next build: 46 pages, no errors |
+| ✅ DEPLOYED: commit 3b28bd5 | origin/main | Pushed, Vercel deploy confirmed, HTTP 200 on sitemap + new page |
+
+---
+
+## 🔴 Owner Action Needed (Unchanged from Prior Cycles)
+
+### URGENT 1: Re-authenticate GSC (CRITICAL)
+Without GSC auth, the cron agent cannot monitor impressions, clicks, CTR, or indexing status. This is the highest priority restoration.
+
+**Steps to re-auth:**
+1. Run: `python3 /root/.hermes/gsc-auth.py` (or follow instructions in `/root/airambulancedhakabangkok/notes/references/gsc-token-maintenance.md`)
+2. Open the auth URL in your browser
+3. Complete Google OAuth consent
+4. Paste the auth code back — this writes a fresh `token.json` to `/root/.config/mcp-gsc/`
+
+### URGENT 2: Request Indexing in GSC for /services
+Visit: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**Tier 1 — Must request:**
+1. https://airambulancedhakabangkok.com/services ← Day 8+ as "Discovered - not indexed". Cluster 1 pillar. Critical for "Air Ambulance Service Dhaka to Bangkok" rankings.
+
+**Tier 2 — Also request (new content):**
+2. https://airambulancedhakabangkok.com/blog/dialysis-patient-air-ambulance-dhaka-bangkok ← NEW this cycle
+3. https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi ← Created Jun 29, needs first crawl
+4. https://airambulancedhakabangkok.com/blog/medical-visa-thailand-for-bangladeshi-patients ← Added to sitemap Jun 29
+
+---
+
+*Monthly cycle completed: 2026-07-01. Next monthly cycle: 2026-08-01.*
