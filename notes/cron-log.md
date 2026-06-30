@@ -455,3 +455,98 @@ Click each URL → "URL Inspection" → "Request Indexing":
 2. Did fixing duplicate twitter:title on 5 blog posts lift CTR on pages at pos 5-10?
 3. `/trauma-accident-evacuation` at position 2 with 0 CTR — is this now getting clicks? (May be a very low-volume keyword — watch for impressions pattern.)
 4. Did `/guides/air-ambulance-dhaka-bangkok` at pos 4.4 finally get clicks? (Title already optimized — this may need a fresh Google re-crawl signal from today's deploy.)
+
+---
+
+## 2026-07-01 — Daily SEO Cycle (Cron)
+
+### GSC Pulse
+**Status: ⚠️ GSC AUTH EXPIRED**
+Google OAuth refresh token returned `invalid_grant` — the token has been fully revoked or expired (typically after 7 days without use or if revoked via Google account settings). The `token_combined.json` in `/root/.config/mcp-gsc/` uses the wrong key format (`access_token` vs required `token`) and is also expired.
+
+**GSC data unavailable this cycle.** Last known baseline from 2026-06-30: 202 impressions / 9 clicks / 4.46% CTR over 7 days.
+
+**Owner action required:** Re-authenticate GSC OAuth (requires browser). See `/root/.config/mcp-gsc/token_combined.json` for reference credentials; client_secrets in `/root/.hermes/client_secrets.json`.
+
+---
+
+### Technical Audit — 13 Issues Found & Fixed
+
+Ran full technical audit across all 42 HTML files. Found 13 issues:
+
+#### Fixes Applied
+
+| Issue | File | Fix |
+|-------|------|-----|
+| NO_CANONICAL | `content/blog/air-ambulance-cardiac-patients.html` | ✅ Added canonical |
+| NO_CANONICAL | `content/blog/bangkok-hospital-admission-bangladeshi-patients.html` | ✅ Added canonical |
+| NO_CANONICAL | `content/blog/bangkok-hospitals-comparison-bangladeshi-patients.html` | ✅ Added canonical |
+| NO_CANONICAL | `content/blog/how-to-book-air-ambulance-dhaka-bumrungrad.html` | ✅ Added canonical |
+| NO_CANONICAL | `content/blog/icu-flight-bangladesh-to-bumrungrad-bangkok.html` | ✅ Added canonical |
+| NO_CANONICAL | `content/guides/air-ambulance-dhaka-bangkok.html` | ✅ Added canonical |
+| NO_CANONICAL | `content/trauma-accident-evacuation.html` | ✅ Added canonical |
+| TITLE_LONG (66c) | `content/air-ambulance-cost.html` | ✅ Shortened to 61c: "Air Ambulance Cost Dhaka to Bangkok \| USD 27K–33K ICU Charter" |
+| TITLE_LONG (67c) | `content/blog/bangkok-hospital-admission-bangladeshi-patients.html` | ✅ Shortened to 61c: "Bumrungrad Admission for Bangladeshi Patients \| Air Ambulance" |
+| twitter:title MISMATCH | `content/blog/bangkok-hospital-admission-bangladeshi-patients.html` | ✅ Synced all 3 tags (title, og:title, twitter:title) |
+| DESC_LONG (171c) | `content/air-ambulance-cost.html` | ✅ Trimmed to 153c, also converted BDT format to subcontinent style (32,00,000) |
+| DESC_LONG (167c) | `content/guides/icu-air-ambulance-dhaka.html` | ✅ Trimmed to 140c, OG+Twitter synced |
+| DESC_LONG (168c) | `content/services.html` | ✅ Trimmed to 144c, OG+Twitter synced |
+
+**Post-fix audit:** ALL CLEAN — no duplicate OG/Twitter tags, no missing canonicals, no titles >62c. (3 files at 61-62c are borderline-acceptable; Google rarely truncates below ~63-64 chars.)
+
+---
+
+### Build & Deploy
+- ✅ Build: 45 pages generated, no TypeScript errors (Turbopack, 5.7s compile)
+- ✅ Git commit: `3c05e2e` pushed to `origin/main`
+- ✅ Validation: sitemap.xml → HTTP 200, /trauma-accident-evacuation → HTTP 200
+
+---
+
+### Indexing Status (last known from 2026-06-30)
+| Page | Status |
+|------|--------|
+| `/` | ✅ Indexed |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Indexed |
+| `/air-ambulance-cost` | ✅ Indexed |
+| `/bangkok-hospitals` | ✅ Indexed |
+| `/services` | ⚠️ Discovered - not indexed (NEVER crawled) |
+
+*Note: Could not refresh indexing data this cycle due to GSC auth failure.*
+
+---
+
+## 🔴 Owner Actions Needed
+
+### 1. Re-authenticate Google Search Console (URGENT)
+GSC OAuth token has expired. Without it, future cycles cannot:
+- Check impressions/clicks/CTR trends
+- Inspect URL indexing status
+- Monitor which pages moved to indexed/not-indexed
+
+**Steps:**
+1. Run the auth script: `python3 /root/.hermes/gsc-auth.py` (or generate via instructions in `/root/airambulancedhakabangkok/notes/references/gsc-token-maintenance.md`)
+2. Visit the auth URL in your browser
+3. Paste the code back into the terminal
+4. This writes a fresh `token.json` to `/root/.config/mcp-gsc/`
+
+### 2. Request Indexing in GSC for /services (MOST URGENT)
+Visit: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**Tier 1 — Still urgently needed:**
+1. https://airambulancedhakabangkok.com/services ← NEVER crawled. Cluster 1 pillar. Critical for "Air Ambulance Service Dhaka to Bangkok" rankings.
+
+**Also request indexing for newly-canonicalized pages** (they now have proper canonical tags, which helps Google understand the URLs):
+- https://airambulancedhakabangkok.com/trauma-accident-evacuation
+- https://airambulancedhakabangkok.com/guides/air-ambulance-dhaka-bangkok
+- https://airambulancedhakabangkok.com/blog/air-ambulance-cardiac-patients
+- https://airambulancedhakabangkok.com/blog/how-to-book-air-ambulance-dhaka-bumrungrad
+- https://airambulancedhakabangkok.com/blog/icu-flight-bangladesh-to-bumrungrad-bangkok
+
+---
+
+### What to Watch Next Cycle
+1. Has GSC auth been restored? (Required for GSC pulse and indexing checks)
+2. Has `/services` moved to indexed after owner's manual Request Indexing?
+3. Did fixing 7 missing canonical tags improve crawl/index signals across blog posts?
+4. `/air-ambulance-cost` meta description now uses proper BDT subcontinent format (`32,00,000`) — does this help AI Overview citation?
