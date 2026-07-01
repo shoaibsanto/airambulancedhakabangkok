@@ -801,3 +801,93 @@ Visit: https://search.google.com/search-console/inspect?resource_id=sc-domain:ai
 ---
 
 *Monthly cycle completed: 2026-07-01. Next monthly cycle: 2026-08-01.*
+
+---
+
+## Daily Cron Log — 2026-07-02 (Thursday)
+
+### GSC Pulse (7-day: 2026-06-25 → 2026-07-02)
+
+| Metric | 7-day Value | Baseline | Status |
+|--------|------------|---------|--------|
+| Impressions | 166 | 200 | ⚠️ Below baseline |
+| Clicks | 6 | 7 | ⚠️ Slightly below |
+| CTR | 3.61% | 3.5% | ✅ Above baseline |
+| Avg Position | 7.5 | — | OK |
+
+**Day-by-day trend:** Good spikes on Jun 26 (CTR 8%) and Jun 29 (CTR 6.7%). Low days on Jun 27-28 (0 CTR). Overall impressions slightly down this week.
+
+### Indexing Status (5 Key Pages)
+
+| Page | Status | Last Crawled | Action |
+|------|--------|-------------|--------|
+| `/` (homepage) | ✅ Submitted and indexed | 2026-06-30 | None |
+| `/services` | ⚠️ Discovered – not indexed | Never | **Request Indexing** |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Submitted and indexed | 2026-06-23 | None |
+| `/air-ambulance-cost` | ✅ Submitted and indexed | 2026-06-26 | None |
+| `/bangkok-hospitals` | ✅ Submitted and indexed | 2026-06-26 | None |
+
+**Note:** `/services` remains "Discovered – not indexed / last_crawled: Never" despite having static `<a href="/services">` body links on the homepage (lines 295, 448, 499). This is NOT a JS-rendering crawlability issue. Google has found the URL but chosen not to index it. Content is 1017 words with valid canonical and OG tags. Owner must manually "Request Indexing" in GSC.
+
+### Technical Audit
+- ✅ NO duplicate OG/Twitter tags (43 files checked)
+- ✅ NO missing canonicals
+- ✅ NO title length overruns
+- ✅ ALL CLEAN
+
+### GSC 28-Day Quick Wins (Top Opportunities Found)
+
+| Page | Impressions | Position | CTR | Issue |
+|------|------------|---------|-----|-------|
+| `/` | 257 | 6.5 | 2.3% | Below expected CTR; "air ambulance service in bangladesh" (22 imps, pos 1.5, 0 CTR) |
+| `/blog/bangkok-hospitals-comparison-bangladeshi-patients` | 23 | 10.4 | 0% | Title didn't match intent |
+| `/blog/bangkok-hospital-admission-bangladeshi-patients` | 18 | 6.3 | 0% | Watch (already optimized in Jun) |
+| `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` | 16 | 5.1 | 0% | Already optimized in Jun |
+| `/blog/stroke-air-ambulance-dhaka-bumrungrad` | 8 | 4.6 | 0% | Already optimized in Jun |
+| `/guides/air-ambulance-dhaka-bangkok` | 11 | 4.8 | 0% | Already optimized in Jun |
+| `/trauma-accident-evacuation` | 5 | 2.0 | 0% | **Position 2, 0 CTR** — already has optimized title |
+
+**Key insight:** "air ambulance service in bangladesh" is getting 22 impressions at position 1.5 with 0 clicks. Homepage was optimized for "Dhaka to Bangkok" but not for the Bangladesh query. The description needed to capture Bangladesh-language searches.
+
+### Actions Taken This Cycle
+
+1. **Homepage description CTR fix** (`content/index.html`)
+   - OLD: "24/7 ICU air ambulance from Dhaka to Bangkok — flight doctor, bed-to-bed transfer to Bumrungrad Hospital. Fast, safe medical evacuation. Call 01716-960770."
+   - NEW: "Air ambulance service in Bangladesh — 24/7 ICU charter Dhaka to Bangkok with flight doctor, ventilator & Bumrungrad bed-to-bed transfer. Call 01716-960770."
+   - Rationale: 22 impressions at pos 1.5 for "air ambulance service in bangladesh" with 0 CTR. New desc front-loads "Bangladesh" to match query intent.
+   - Also synced: og:description + twitter:description
+
+2. **Bangkok hospitals comparison blog fix** (`content/blog/bangkok-hospitals-comparison-bangladeshi-patients.html`)
+   - Title: "Bumrungrad vs Samitivej vs Bangkok Hospital | Bangladesh Guide" → "Bumrungrad vs Samitivej vs Bangkok Hospital | Air Ambulance from Dhaka"
+   - Description: Added question-frame opener "Which Bangkok hospital is best for Bangladeshi patients?" — improves click-through for comparison searches
+   - Fixed stale duplicate `twitter:description` tag (old stale one removed)
+   - 23 impressions, pos 10.4, 0 CTR → expected uplift as title now includes "Air Ambulance from Dhaka" (action-oriented for searchers)
+
+3. **Build & Deploy**
+   - `npx next build` → 46 pages, no errors
+   - `git push origin main` → commit b1eff09
+   - Post-deploy verified: sitemap.xml 200, homepage 200, comparison blog 200
+   - New description confirmed live on homepage via curl
+
+### Notable Queries from 28-Day GSC
+- "air ambulance dhaka" — 8 imps, pos 1, 0 CTR ← position 1 with 0 clicks is very unusual; may be a Knowledge Panel/AI Overview eating the click
+- "air ambulance service in bangladesh" — 22 imps, pos 1.5, 0 CTR ← same pattern
+- "air ambulance bd" — 3 imps, pos 1, 0 CTR ← very low impressions, but pattern of pos 1 = 0 CTR across multiple queries suggests CTR cannibalization by AI Overviews or rich results
+
+---
+
+## 🔴 Owner Action Needed — Request Indexing in GSC
+
+Visit: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**Tier 1 — URGENT (click "Request Indexing" for each):**
+1. https://airambulancedhakabangkok.com/services ← Still "Discovered – not indexed / never crawled" after multiple weeks. This is Cluster 1 pillar page. MUST get indexed.
+
+**Tier 2 — Important (also request indexing):**
+2. https://airambulancedhakabangkok.com/blog/dialysis-patient-air-ambulance-dhaka-bangkok
+3. https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi
+4. https://airambulancedhakabangkok.com/blog/medical-visa-thailand-for-bangladeshi-patients
+
+---
+
+*Next cron: 2026-07-02 evening / 2026-07-03 morning cycle*
