@@ -118,7 +118,7 @@ export default function RootLayout({ children }) {
         }
       },
       {
-        "@type": ["MedicalBusiness", "EmergencyService"],
+        "@type": ["MedicalBusiness", "EmergencyService", "LocalBusiness"],
         "@id": "https://airambulancedhakabangkok.com/#business",
         "name": SITE.name,
         "url": SITE.baseUrl + "/",
