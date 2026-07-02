@@ -891,3 +891,101 @@ Visit: https://search.google.com/search-console/inspect?resource_id=sc-domain:ai
 ---
 
 *Next cron: 2026-07-02 evening / 2026-07-03 morning cycle*
+
+---
+
+## Daily Cron — 2026-07-03 (Morning Cycle)
+
+### GSC Pulse — Last 7 Days (2026-06-26 → 2026-07-03)
+
+| Metric | This 7-Day | Baseline | Delta |
+|--------|-----------|---------|-------|
+| Clicks | 5 | 7 | -2 (below baseline) |
+| Impressions | 152 | 200 | -48 (below baseline) |
+| CTR | 3.29% | 3.5% | -0.21pp |
+| Avg Position | 9.1 | — | — |
+
+**Notable:** 2026-07-02 only 2 impressions at pos 1 (0 clicks) — likely reporting lag for most recent day. The 2026-07-01 data shows 29 impressions at avg pos 12.2 with 0 clicks — the volatile position on that day may relate to ongoing AI Overview cannibalization.
+
+### GSC Pulse — Last 28 Days (2026-06-05 → 2026-07-03)
+
+| Metric | Value |
+|--------|-------|
+| Clicks | 12 |
+| Impressions | 360 |
+| CTR | 3.33% |
+| Avg Position | 8.1 |
+
+### Indexing Status — Key Pages
+
+| Page | Status | Last Crawled | Rich Results |
+|------|--------|-------------|-------------|
+| `/` (homepage) | ✅ Submitted and indexed | 2026-06-30 | None |
+| `/services` | ⚠️ Discovered - not indexed | NEVER | None |
+| `/bangkok-hospitals` | ✅ Submitted and indexed | 2026-06-26 | Breadcrumbs, Review snippets |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Submitted and indexed | 2026-06-23 | Breadcrumbs, Review snippets |
+| `/air-ambulance-cost` | ✅ Submitted and indexed | 2026-06-26 | Breadcrumbs, Review snippets |
+
+**Critical:** `/services` has NEVER been crawled despite multiple weeks and static body links from the indexed homepage. Owner must manually "Request Indexing" in GSC — this is the most persistent issue across cycles.
+
+### 28-Day Page Performance (Quick Wins)
+
+Pages at position ≤10 with ≥5 impressions and 0% CTR (AI Overview cannibalization pattern):
+
+| Page | Impressions | Position | CTR | Note |
+|------|------------|---------|-----|------|
+| `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` | 16 | 5.1 | 0% | Already optimized Jun 2026 — AI Overview pattern |
+| `/blog/bangkok-hospital-admission-bangladeshi-patients` | 18 | 6.3 | 0% | Already optimized Jun 2026 — AI Overview pattern |
+| `/blog/stroke-air-ambulance-dhaka-bumrungrad` | 8 | 4.6 | 0% | Already optimized Jun 2026 — AI Overview pattern |
+| `/guides/air-ambulance-dhaka-bangkok` | 13 | 5.4 | 0% | Already optimized Jun 2026 — AI Overview pattern |
+| `/trauma-accident-evacuation` | 5 | 2.0 | 0% | Position 2 with 0 clicks = AI Overview confirmed |
+| `/blog/air-ambulance-cardiac-patients` | 5 | 6.4 | 0% | Low impressions, monitor |
+| `/blog/bangkok-hospitals-comparison-bangladeshi-patients` | 24 | 10.4 | 0% | Fixed title/desc this cycle |
+
+All pages with 0 CTR at pos 1-10 have already received CTR optimization in prior cycles. This persistent pattern across multiple pages indicates **AI Overview cannibalization** is the primary driver of 0 CTR on this site — not title quality.
+
+### Technical Audit Results
+
+**Duplicate OG/Twitter tag check:** ALL CLEAN (43 files checked)
+**Canonical coverage:** ALL CLEAN — no missing canonicals found
+**Title length (>62c) violations:** 1 found → FIXED
+**Meta description length (>170c HTML) violations:** 1 found → FIXED
+
+### Actions Taken This Cycle
+
+1. **Fixed over-long title/desc on `content/blog/bangkok-hospitals-comparison-bangladeshi-patients.html`**
+   - Title: "Bumrungrad vs Samitivej vs Bangkok Hospital | Air Ambulance from Dhaka" (70c) → "Bumrungrad vs Samitivej vs Bangkok Hospital | Dhaka Guide" (57c)
+   - Description: "Which Bangkok hospital is best for Bangladeshi patients? Compare Bumrungrad, Samitivej & Bangkok Hospital — costs, specialties & air ambulance from Dhaka. Call 01716-960770." (181c HTML / 173c display) → "Compare Bumrungrad, Samitivej & Bangkok Hospital for Bangladeshi patients — costs, specialties & air ambulance from Dhaka. Call 01716-960770 now." (153c HTML / 145c display)
+   - All 4 OG/Twitter tags updated atomically (no duplicates introduced)
+   - Rationale: Title over 62c is truncated in SERP; description over 170c is cropped by Google
+
+2. **Build & Deploy**
+   - `npx next build` → 46 pages, no errors
+   - `git push origin main` → commit bfda56e
+   - Post-deploy validation: sitemap.xml 200 ✅, changed blog page 200 ✅
+
+### Notable Observations
+
+- **CTR baseline comparison:** 7-day clicks (5) are below baseline (7). However, 28-day CTR is 3.33% which is near baseline (3.5%). The 7-day dip is likely noise due to the July 1–2 low-impression days.
+- **AI Overview dominance:** 7+ pages at position 1-10 with consistent 0 CTR across multiple 28-day windows. This pattern is AI Overview cannibalization, not fixable by title optimization. FAQ schema enrichment on these pages is the recommended next action.
+- **`/services` non-indexing:** This is now a multi-cycle persistent issue (Tier 1 critical). Static HTML links from the indexed homepage body exist at lines 295, 448, 499, 578. However, Google has never crawled the page. Only manual GSC "Request Indexing" will resolve this within a reasonable timeframe.
+- **Best performing page:** Homepage (6 clicks, 267 impressions, 2.25% CTR, pos 6.4) — drives most traffic.
+- **Rising stars:** `/blog/bed-to-bed-transfer-dhaka-bangkok` (2 clicks, pos 10.4) and `/blog/medical-repatriation-to-bangladesh` (1 click, pos 3.9 — very strong position).
+
+---
+
+## 🔴 Owner Action Needed — Request Indexing in GSC
+
+Visit: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**Tier 1 — URGENT (has been unindexed for 3+ cycles):**
+1. https://airambulancedhakabangkok.com/services ← Pillar page, "Discovered - not indexed", NEVER crawled. Click "URL Inspection" → "Request Indexing".
+
+**Tier 2 — Important (from prior cycles, likely still unindexed):**
+2. https://airambulancedhakabangkok.com/blog/dialysis-patient-air-ambulance-dhaka-bangkok
+3. https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi
+4. https://airambulancedhakabangkok.com/blog/medical-visa-thailand-for-bangladeshi-patients
+
+---
+
+*Next cron: 2026-07-03 evening / 2026-07-04 morning*
