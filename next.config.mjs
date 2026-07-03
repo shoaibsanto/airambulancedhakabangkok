@@ -13,6 +13,29 @@ const securityHeaders = [
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   // Restrict feature APIs
   { key: "Permissions-Policy", value: "geolocation=(), microphone=(), camera=()" },
+  // Content-Security-Policy — allow GA4/GTM, Meta Pixel, WhatsApp, Google Fonts,
+  // and inline scripts/styles required by Next.js SSR. 'unsafe-inline' is
+  // necessary for next/script inline blocks; hash-based CSP is impractical for
+  // dynamically generated JSON-LD and inline analytics snippets.
+  {
+    key: "Content-Security-Policy",
+    value: [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://static.hotjar.com https://www.gstatic.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' https://fonts.gstatic.com",
+      "img-src 'self' data: blob: https: http:",
+      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://api.resend.com https://api.telegram.org https://wa.me https://api.whatsapp.com",
+      "frame-src https://www.google.com https://maps.google.com https://www.youtube.com",
+      "media-src 'self'",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self' https://wa.me https://api.whatsapp.com",
+      "upgrade-insecure-requests",
+    ].join("; "),
+  },
+  // Legacy XSS protection for older browsers
+  { key: "X-XSS-Protection", value: "1; mode=block" },
 ];
 
 const nextConfig = {
