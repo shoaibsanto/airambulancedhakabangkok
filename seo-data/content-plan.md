@@ -25,7 +25,7 @@ Last updated: 2026-06-25
 [x] Best IPS Under 30,000 BDT in Bangladesh 2026 ← published 2026-07-01 (Post ID 35502)
 [x] Top 10 IPS Brands in Bangladesh 2026 — Ranked ← published 2026-07-02 (Post ID 35515)
 [x] How to Calculate IPS Backup Time for Your Home ← published 2026-07-03 (Post ID 35518)
-[ ] Lithium Battery Safety — What Bangladeshi Users Must Know
+[x] Lithium Battery Safety — What Bangladeshi Users Must Know ← published 2026-07-04 (Post ID 35521)
 [ ] Best IPS for Village Homes in Bangladesh (Off-Grid)
 [ ] IPS Price Comparison 2026 — Luminous vs HiTHIUM vs Hamko
 [ ] How Many Fans Can a 1000VA IPS Run? Real BD Load Test
