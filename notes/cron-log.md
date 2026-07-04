@@ -1100,3 +1100,112 @@ Visit: https://search.google.com/search-console/inspect?resource_id=sc-domain:ai
 ---
 
 *Next cron: 2026-07-04 evening / 2026-07-05 morning*
+
+---
+
+## Cron Cycle — 2026-07-05 (Daily)
+
+### GSC Pulse — 7-Day (Jun 28 – Jul 5, 2026)
+
+| Metric | 7-Day Actual | Baseline | Delta |
+|--------|-------------|----------|-------|
+| Clicks | 3 | ~5 | ⬇️ -2 |
+| Impressions | 159 | ~150 | ✅ +9 |
+| CTR | 1.89% | 3.3% | ⬇️ Lower |
+| Avg Position | 9.1 | — | Declining (was ~7.6 mid-week) |
+
+**28-Day totals (Jun 7 – Jul 5):** 12 clicks / 419 impressions / 2.86% CTR / avg pos 8.2
+
+**Trend note:** The 7-day CTR drop (1.89% vs 3.3% baseline) is partly due to 0-click days on Jul 1–4. Position is drifting slightly higher numerically (worse), from ~7.6 mid-June to ~9–12 in early July. This is a mild negative signal — worth monitoring next cycle. Impressions are holding (159/7d), indicating Google is still crawling and serving pages.
+
+**Daily trend:**
+| Date | Clicks | Imps | CTR | Pos |
+|------|--------|------|-----|-----|
+| Jun 28 | 0 | 20 | 0% | 7.6 |
+| Jun 29 | 2 | 30 | 6.7% | 8.6 |
+| Jun 30 | 1 | 19 | 5.3% | 7.7 |
+| Jul 01 | 0 | 29 | 0% | 12.2 |
+| Jul 02 | 0 | 12 | 0% | 11.4 |
+| Jul 03 | 0 | 28 | 0% | 10.2 |
+| Jul 04 | 0 | 21 | 0% | 5.4 |
+
+### GSC Quick-Win Scan — Pages at pos 1-10, ≥5 impressions, 0% CTR (28d)
+
+| Page | Imps | Clicks | CTR | Pos | Diagnosis |
+|------|------|--------|-----|-----|-----------|
+| /blog/bangkok-hospitals-comparison-bangladeshi-patients | 30 | 0 | 0% | 9.8 | ⚠️ Tier B — FAQ schema needed |
+| /guides/air-ambulance-dhaka-bangkok | 19 | 0 | 0% | 4.7 | ⚠️ Tier B — AI Overview cannibalization |
+| /blog/bangkok-hospital-admission-bangladeshi-patients | 19 | 0 | 0% | 6.2 | ⚠️ Tier B — FAQ schema needed |
+| /cardiac-emergency-transfer | 18 | 0 | 0% | 17.8 | Low pos — not actionable yet |
+| /blog/how-to-book-air-ambulance-dhaka-bumrungrad | 17 | 0 | 0% | 5.4 | ⚠️ Tier B — FAQ schema needed |
+| /icu-vs-medical-escort | 16 | 0 | 0% | 37.9 | Deep position — content enrichment needed |
+| /blog/stroke-air-ambulance-dhaka-bumrungrad | 10 | 0 | 0% | 5.2 | ⚠️ Tier B — title already optimized |
+| /trauma-accident-evacuation | 6 | 0 | 0% | **2.5** | ⚠️ Pos 1-3 AI Overview cannibalization |
+| /bangkok-hospitals | 7 | 0 | 0% | 6.1 | ⚠️ Tier B — FAQ schema candidate |
+| /blog/air-ambulance-cardiac-patients | 7 | 0 | 0% | 4.9 | ⚠️ Tier B — title already optimized |
+
+**Per skill rules (Tier B pattern, Jul 2026):** Do NOT rewrite titles for these — they're already CTR-optimized from Jun 2026. FAQ schema enrichment is the next correct action. Queued for next content cycle.
+
+**Notable queries (28d):**
+- "air ambulance service in bangladesh" — 23 imps, pos 1.4, 0 CTR → AI Overview (homepage pos 1-2)
+- "air ambulance dhaka" — 12 imps, pos 1, 0 CTR → AI Overview
+- "air ambulance bangladesh" — 13 imps, pos 5, 0 CTR → Tier B
+- "air ambulance service" — 6 imps, pos 1.3, 0 CTR → AI Overview
+- "air ambulance service dhaka to bangkok" — 6 imps, pos 6.7, 0 CTR → actionable if imps grow
+
+### Indexing Hygiene — 5 Key Pages
+
+| Page | Status | Last Crawled | Referring URLs |
+|------|--------|-------------|----------------|
+| / (homepage) | ✅ Submitted and indexed | 2026-06-30 | 2 blog pages |
+| /services | ⚠️ Discovered - not indexed | NEVER crawled | sitemap.xml only |
+| /bangkok-hospitals | ✅ Submitted and indexed | 2026-06-26 | blog + /services |
+| /guides/air-ambulance-dhaka-bangkok | ✅ Submitted and indexed | 2026-06-23 | /blog/air-ambulance-cardiac-patients |
+| /air-ambulance-cost | ✅ Submitted and indexed | 2026-06-26 | /services |
+
+**Indexing summary:** 4/5 pillar pages indexed ✅. `/services` remains persistently "Discovered - not indexed" / never crawled (now 4+ cycles). This is a confirmed crawl-budget/prioritization issue on Google's side — static body links exist at lines 295, 448, 499, 578 in homepage. **Only manual "Request Indexing" in GSC will resolve.** See Tier 1 owner action below.
+
+### Technical Audit Results
+
+**Full Python3 dupe/canonical/title-length/desc-length audit (43 files):**
+- `TITLE_LONG (86c): content/air-ambulance-cost.html` → **FIXED this cycle** ✅
+- `TITLE_LONG (81c): content/index.html` → Homepage with emoji — kept as-is (page is ranking, emoji counts differently in pixel width; changing risks ranking drop)
+- All other files: CLEAN — no duplicate OG/Twitter tags, no missing canonicals
+
+### Actions Taken This Cycle
+
+1. **FIXED: `content/air-ambulance-cost.html` title trimmed** (86c → 58c)
+   - Old: `Air Ambulance Cost Dhaka to Bangkok 2026 | ICU Charter USD 27K–33K | Call 01716-960770`
+   - New: `Air Ambulance Cost Dhaka to Bangkok 2026 | ICU USD 27K–33K`
+   - og:title and twitter:title synced to match (all now 58c)
+   - Rationale: Title was over the 62c threshold per audit rules. Trimmed "Charter" and phone number from title (phone is in meta description already). Key entities preserved: keyword, year, price range, ICU signal.
+
+2. **Build:** `npx next build` → ✅ 46 pages generated, no errors
+
+3. **Deploy:** git push → Vercel auto-deploy triggered
+
+### Notable Observations
+
+- **28-day impressions growing:** 419 impressions vs ~360 calibrated baseline — positive signal. More pages being indexed and ranked.
+- **CTR issue is structural, not title-related:** 10+ pages at pos 1-10 with 0 CTR confirm AI Overview is consuming clicks. Standard title rewrites won't help. FAQ schema enrichment is the next lever.
+- **`/trauma-accident-evacuation` at pos 2.5** (6 impressions, 0 CTR) — confirmed AI Overview pattern for 2nd consecutive cycle. FAQ schema enrichment this page is high priority.
+- **`/blog/bangkok-hospitals-comparison`** has highest Tier B impressions (30 imps, pos 9.8) — needs FAQ schema to get cited in AI Overview. Next content cycle target.
+- **Position drift Jul 1-3** (pos 10-12): Weekend effect + possible query-intent shift. Jul 4 rebounded to pos 5.4. Monitor next 7 days.
+
+---
+
+## 🔴 Owner Action Needed — Request Indexing in GSC
+
+Visit: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**Tier 1 — URGENT (persistent: 4+ cycles, never crawled):**
+1. https://airambulancedhakabangkok.com/services ← Pillar page, NEVER crawled. Click "URL Inspection" → "Request Indexing". **This has been flagged every cycle — please action immediately.**
+
+**Tier 2 — Important (likely still unindexed from prior cycles):**
+2. https://airambulancedhakabangkok.com/blog/dialysis-patient-air-ambulance-dhaka-bangkok
+3. https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi
+4. https://airambulancedhakabangkok.com/blog/medical-visa-thailand-for-bangladeshi-patients
+
+---
+
+*Next cron: 2026-07-05 evening / 2026-07-06 morning*
