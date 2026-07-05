@@ -1,10 +1,10 @@
-keyword,target_page,position,clicks,impressions,ctr,change_from_last,date
-best ips,/what-makes-ips-best-bangladesh/,-,0,0,-,same,2026-07-06
-best ips brand in Bangladesh,/best-ips-in-bangladesh/,7.1,1,12,0.0833,same,2026-07-06
-best portable ips,/best-portable-ips-bangladesh/,-,0,0,-,same,2026-07-06
-intelligent ips,/intelligent-ips-smart-features-bangladesh/,-,0,2,-,NEW impressions,2026-07-06
-lithium battery,/best-lithium-battery-for-ips-in-bangladesh/,5.8,101,1028,0.0983,FIRST DATA - 101 clicks,2026-07-06
-lithium ips,/best-lithium-ips-bangladesh/,-,0,3,-,FIRST DATA,2026-07-06
-top ips brand,/best-ips-in-bangladesh/,7.0,0,1,0.0,same,2026-07-06
-সেরা আইপিএস কোম্পানি,/sher-aips-company-bangladesh/,-,0,8,-,NEW impressions,2026-07-06
-৫০ হাজার টাকায় ভালো আই পি এস,/50-hazar-takar-ips-bangladesh/,-,0,0,-,same,2026-07-06
+keyword,target_page,prev_position,curr_position,clicks,impressions,ctr,change_flag,note,date
+best ips,/what-makes-ips-best-bangladesh/,-,-,0,0,-,NO DATA,Target page /what-makes-ips-best-bangladesh/ still absent from GSC for this keyword. Page may not be indexed correctly or keyword volume too competitive.,2026-07-06
+best ips brand in bangladesh,/best-ips-in-bangladesh/,7.1,7.1,1,16,0.0625,STABLE,Ranking stable at pos 7.1 on correct target page. Cannibalisation ongoing: /top-ips-brand-bangladesh/ (pos 3.9/6 clicks) and /best-ips-brand-bangladesh/ (pos 4.8/4 clicks) dominate this query. Target page is 3rd for own keyword.,2026-07-06
+best portable ips,/best-portable-ips-bangladesh/,-,-,0,0,-,NO DATA,Target page still absent. Related page /best-portable-ips-bangladesh-2026/ ranks at pos 7.3 for 'portable ips' (3 clicks) — possible competing URL issue.,2026-07-06
+intelligent ips,/intelligent-ips-smart-features-bangladesh/,-,-,0,0,-,NO DATA,Page ranks for brand product queries (HiTHIUM HeroEE Light 1 etc.) but zero signal for 'intelligent ips' keyword. On-page focus keyword alignment may be weak.,2026-07-06
+lithium battery,/best-lithium-battery-for-ips-in-bangladesh/,8.5,8.5,1,19,0.0526,STABLE,Exact query 'lithium battery' routes to homepage (pos 8.5) — not target page. Long-tail variants perform well on target page (100+ clicks for combined battery queries). Homepage cannibalising exact keyword.,2026-07-06
+lithium ips,/best-lithium-ips-bangladesh/,-,5.3,1,25,0.0400,WRONG PAGE,Keyword 'lithium ips' (pos 5.3) is routing to /best-lithium-battery-for-ips-in-bangladesh/ not the designated target page /best-lithium-ips-bangladesh/. Target page has zero GSC signal — may not be indexed or lacks internal links.,2026-07-06
+top ips brand,/best-ips-in-bangladesh/,-,-,0,0,-,NO DATA,Zero impressions for exact query. Related query 'top ips brand in bangladesh' shows 1 click at pos 4.2 on /top-ips-brand-bangladesh/. Cannibalisation risk from that URL.,2026-07-06
+সেরা আইপিএস কোম্পানি,/sher-aips-company-bangladesh/,-,-,0,0,-,NO DATA,Bengali target page /sher-aips-company-bangladesh/ shows zero GSC signal. No impressions for the Bengali query. Page may not be indexed or Bengali keyword volume is too low.,2026-07-06
+৫০ হাজার টাকায় ভালো আই পি এস,/50-hazar-takar-ips-bangladesh/,-,-,0,0,-,NO DATA,Zero GSC data. Bengali long-tail price query. Page may be too new or not indexed.,2026-07-06

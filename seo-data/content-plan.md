@@ -27,7 +27,7 @@ Last updated: 2026-06-25
 [x] How to Calculate IPS Backup Time for Your Home ← published 2026-07-03 (Post ID 35518)
 [x] Lithium Battery Safety — What Bangladeshi Users Must Know ← published 2026-07-04 (Post ID 35521)
 [x] Best IPS for Village Homes in Bangladesh (Off-Grid) ← published 2026-07-05 (Post ID 35524)
-[ ] IPS Price Comparison 2026 — Luminous vs HiTHIUM vs Hamko
+[x] IPS Price Comparison 2026 — Luminous vs HiTHIUM vs Hamko ← published 2026-07-06 (Post ID 35525)
 [ ] How Many Fans Can a 1000VA IPS Run? Real BD Load Test
 [ ] Best IPS for Gaming PC in Bangladesh 2026
 [ ] UPS vs IPS for Bangladesh — Which One Do You Need?

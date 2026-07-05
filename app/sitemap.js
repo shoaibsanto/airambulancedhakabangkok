@@ -44,6 +44,7 @@ export default async function sitemap() {
     ["/blog/medical-visa-thailand-for-bangladeshi-patients", "weekly", 0.7],
     ["/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi", "weekly", 0.8],
     ["/blog/dialysis-patient-air-ambulance-dhaka-bangkok", "weekly", 0.8],
+    ["/blog/liver-disease-air-ambulance-dhaka-bangkok", "weekly", 0.8],
   ];
 
   return ENTRIES.map(([urlPath, changeFrequency, priority]) => ({
