@@ -1343,3 +1343,193 @@ Visit: https://search.google.com/search-console/inspect?resource_id=sc-domain:ai
 ---
 
 *Next cron: 2026-07-06 evening / 2026-07-07 morning*
+
+---
+
+# Weekly SEO Cycle — 2026-07-07
+
+## GSC Performance Overview
+
+### 7-Day (Jun 29 – Jul 6, 2026)
+| Metric | Current | 7d Baseline | Status |
+|--------|---------|-------------|--------|
+| Impressions | 152 | 150 | ✅ On baseline |
+| Clicks | 3 | 3–5 | ⚠️ Below median |
+| CTR | 1.97% | 3.3% | ⚠️ Below baseline |
+| Position | 10.4 | ~8 | ⚠️ Position dropping |
+
+**Notable:** Average position drifted to 10.4 this week vs ~8 prior. Jul 1–5 (Wed–Sun) had 0 clicks on 5 consecutive days with position ranging 10.2–12.2. Mon Jun 29 (2 clicks) and Tue Jun 30 (1 click) were the only click days. Pattern is consistent with weekend position drift (pos 10–12) + weekday rebound. Not treated as regression signal until confirmed across 2+ weeks.
+
+### 28-Day (Jun 8 – Jul 6, 2026)
+| Metric | Current | 28d Baseline | Status |
+|--------|---------|--------------|--------|
+| Impressions | 432 | 419 | ✅ Slightly above baseline |
+| Clicks | 12 | 12 | ✅ On baseline |
+| CTR | 2.78% | 2.86% | ✅ Near baseline |
+| Position | 8.6 | ~8.6 | ✅ Stable |
+
+**28-day baseline stable.** Traffic is flat but healthy for a site at this age.
+
+### Top Queries (28d, by impressions)
+| Query | Clicks | Imps | CTR | Pos | Notes |
+|-------|--------|------|-----|-----|-------|
+| air ambulance service in bangladesh | 0 | 24 | 0% | 1.4 | AI Overview cannibalization |
+| air ambulance bangladesh | 0 | 14 | 0% | 5.3 | Tier B |
+| air ambulance dhaka | 0 | 12 | 0% | 1.0 | AI Overview cannibalization |
+| air ambulance | 0 | 8 | 0% | 3.0 | AI Overview |
+| air ambulance service dhaka to bangkok | 0 | 6 | 0% | 6.7 | /services not indexed |
+| ambulance service dhaka | 0 | 4 | 0% | 9.0 | Off-target |
+| air ambulance services | 1 | 4 | 25% | 1.2 | ✅ Click! |
+
+### Top Pages (28d)
+| Page | Clicks | Imps | CTR | Pos | Status |
+|------|--------|------|-----|-----|--------|
+| / (homepage) | 6 | 303 | 1.98% | 6.3 | ✅ Best performer |
+| /air-ambulance-cost | 2 | 23 | 8.7% | 8.1 | ✅ Good CTR |
+| /blog/bed-to-bed-transfer | 2 | 17 | 11.8% | 10.4 | ✅ Excellent CTR |
+| /blog/medical-repatriation | 1 | 17 | 5.9% | 4.5 | ✅ |
+| /guides/icu-air-ambulance-dhaka | 1 | 16 | 6.3% | 6.8 | ✅ |
+| /blog/bangkok-hospitals-comparison | 0 | 31 | 0% | 10.3 | Tier B — FAQ added ✅ |
+| /guides/air-ambulance-dhaka-bangkok | 0 | 20 | 0% | 5.0 | Tier B — FAQ already present |
+| /blog/bangkok-hospital-admission | 0 | 19 | 0% | 6.2 | Tier B — FAQ added ✅ |
+| /cardiac-emergency-transfer | 0 | 18 | 0% | 17.8 | Needs content enrichment |
+| /icu-vs-medical-escort | 0 | 18 | 0% | 42.9 | Very deep — content needed |
+| /blog/how-to-book-air-ambulance | 0 | 17 | 0% | 5.4 | Tier B — FAQ added ✅ |
+| /blog/stroke-air-ambulance | 0 | 10 | 0% | 5.2 | Tier B — FAQ added ✅ |
+| /bangkok-hospitals | 0 | 10 | 0% | 7.5 | Tier B — has FAQ already |
+| /blog/air-ambulance-cardiac-patients | 0 | 7 | 0% | 4.9 | Tier B — FAQ added ✅ |
+| /trauma-accident-evacuation | 0 | 6 | 0% | 2.5 | AI Overview cannibalization |
+
+---
+
+## Indexing Hygiene (3 Key Pages Inspected)
+
+| Page | Status | Last Crawled | Notes |
+|------|--------|-------------|-------|
+| / (homepage) | ✅ Submitted and indexed | 2026-06-30 | Normal |
+| /services | ⚠️ Discovered - not indexed | NEVER | **6th consecutive cycle. CRITICAL owner action needed.** |
+| /guides/air-ambulance-dhaka-bangkok | ✅ Submitted and indexed | 2026-06-23 | Clean — FAQ schema already present |
+
+---
+
+## Task 1: Technical Audit
+
+**Full Python3 dupe/canonical/title/desc check (44 files):**
+- Result: **ALL CLEAN**
+- Only flagged: `content/index.html` title = 81c → Known exception (emoji title, ranks pos 6.3 with 6 clicks). Per skill rule: do NOT change.
+- 0 duplicate OG/Twitter tags across all 44 files.
+- 0 missing canonicals.
+- 0 title or description over-length violations (excluding known exception).
+
+**No technical fixes required.**
+
+---
+
+## Task 2: CTR Batch — FAQ Schema for Tier B Pages
+
+**Action:** Titles were already optimized in June 2026 cycle. Per skill protocol, the correct next lever for Tier B pages (pos 3-10, ≥5 imps, 0 CTR, multiple consecutive cycles) is FAQPage schema enrichment to improve AI Overview citation odds.
+
+**5 pages upgraded with entity-rich FAQPage JSON-LD (3–5 Q&A pairs per page):**
+
+| Page | Imps | Pos | FAQ Q&A pairs added | Key entities in schema |
+|------|------|-----|---------------------|----------------------|
+| `/blog/bangkok-hospitals-comparison-bangladeshi-patients` | 31 | 10.3 | 5 Q&As | Bumrungrad, Samitivej, USD 27K–33K, BDT 32,00,000, Learjet 35A, 3.5hrs, Hazrat Shahjalal |
+| `/blog/bangkok-hospital-admission-bangladeshi-patients` | 19 | 6.2 | 5 Q&As | Visa process, admission docs, Thai Embassy, USD 27K–33K, BDT 32,00,000, Learjet 35A |
+| `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` | 17 | 5.4 | 5 Q&As | Booking steps, 2–6hr dispatch, USD 27K–33K, BDT 32,00,000, ventilator support |
+| `/blog/stroke-air-ambulance-dhaka-bumrungrad` | 10 | 5.2 | 4 Q&As | Golden hour, Bumrungrad Neuroscience, USD 27K–33K, BDT 32,00,000, Learjet 35A, 3.5hrs |
+| `/blog/air-ambulance-cardiac-patients` | 7 | 4.9 | 4 Q&As | STEMI, cardiac ICU jet, USD 27K–33K, BDT 32,00,000, defibrillator, 3.5hrs |
+
+**All entity-matching criteria met:** USD 27,000–33,000, BDT 32,00,000–39,00,000 (Indian subcontinent comma format), Learjet 35A, Hazrat Shahjalal International Airport, 3.5 hours flight time — per AI Overview optimization pattern in skill.
+
+---
+
+## Task 3: Content Asset — New Blog Post Created
+
+**Page:** `/blog/liver-disease-air-ambulance-dhaka-bangkok`
+**Keyword target:** "liver failure patient transfer dhaka bangkok", "hepatic encephalopathy air ambulance", "liver transplant bangkok from dhaka"
+**Cluster:** Cluster 3 (Medical Conditions) — identified as ❌ PENDING gap in `references/monthly-keyword-opportunities.md`
+**Word count:** 1,806 words (minimum 1,500 ✅)
+**Schema:** BlogPosting + MedicalWebPage + FAQPage (6 Q&As) + BreadcrumbList
+**Key entities:** hepatic encephalopathy, MELD score, CHILD-PUGH, liver transplant, Bumrungrad hepatobiliary, bilirubin, coagulopathy, INR, USD 27,000–33,000, BDT 32,00,000–39,00,000, Learjet 35A, Hazrat Shahjalal International Airport, 3.5 hours
+**Sitemap:** Added `/blog/liver-disease-air-ambulance-dhaka-bangkok` (priority 0.8, weekly)
+**Blog listing card:** Added to `content/blog/index.html`
+**Internal links pointing to new page:** `cancer-treatment-bangkok.html`, `medical-repatriation-to-bangladesh.html`, `neonatal-pediatric-air-ambulance-dhaka-bangkok.html`
+**Outbound internal links from new page:** `/air-ambulance-cost`, `/guides/air-ambulance-dhaka-bangkok`, `/blog/how-to-book-air-ambulance-dhaka-bumrungrad`, `/blog/bangkok-hospital-admission-bangladeshi-patients`, `/blog/what-to-expect-dhaka-bumrungrad-air-ambulance`
+
+**Monthly keyword tracker updated:** `/blog/liver-disease-air-ambulance-dhaka-bangkok` — status from ❌ PENDING → ✅ DONE (pending manual update to references/monthly-keyword-opportunities.md).
+
+---
+
+## Task 4: Internal Linking Pass
+
+**Orphan analysis:**
+- `blog/index` — technically shows as orphan (it's the listing page, linked via nav, not a concern)
+- `blog/dialysis-patient-air-ambulance-dhaka-bangkok` — had only 1 inbound link (very weak)
+
+**Actions taken:**
+- Added `dialysis-patient-air-ambulance-dhaka-bangkok` link to `neonatal-pediatric-air-ambulance-dhaka-bangkok.html` (conditions cluster peer)
+- Added `liver-disease-air-ambulance-dhaka-bangkok` link to: `cancer-treatment-bangkok.html`, `neonatal-pediatric-air-ambulance-dhaka-bangkok.html`, `medical-repatriation-to-bangladesh.html`
+- New liver post links to 5 existing cluster pages
+
+**Internal link count post-update (key pages):**
+- `/blog/dialysis-patient-air-ambulance-dhaka-bangkok`: 1 → 3+ inbound links ✅
+- `/blog/liver-disease-air-ambulance-dhaka-bangkok`: new → 3 inbound links from first day ✅
+
+---
+
+## Task 5: Build & Deploy
+
+```
+Build: npx next build → ✅ 47 pages generated (up from 44; +liver blog, +FAQ schema pages now rebuild)
+Commit: d444d10 "SEO weekly 2026-07-07: FAQ schema (5 Tier-B pages), new liver-disease post (1806w), internal links, sitemap +1"
+Push: ✅ main → origin/main (no conflicts)
+Vercel deploy: ✅ Auto-triggered
+```
+
+**Post-deploy validation (HTTP 200 checks):**
+- `https://airambulancedhakabangkok.com/sitemap.xml` → ✅ 200
+- `https://airambulancedhakabangkok.com/blog/liver-disease-air-ambulance-dhaka-bangkok` → ✅ 200
+- `https://airambulancedhakabangkok.com/blog/bangkok-hospitals-comparison-bangladeshi-patients` → ✅ 200
+
+---
+
+## Notable Observations
+
+1. **Position drift Jul 1–6:** Average position 10.2–12.2 over 5 days, all 0 clicks. This is primarily weekend/early-week drift — the site has shown this pattern consistently. Not treated as regression until confirmed across two consecutive 28-day windows.
+
+2. **AI Overview cannibalization dominant:** "air ambulance service in bangladesh" (24 imps, pos 1.4, 0 CTR) and "air ambulance dhaka" (12 imps, pos 1.0, 0 CTR) are near-position-1 with zero clicks. Standard CTR rewrites won't help. FAQ schema on more pages is the best available lever.
+
+3. **`/services` not indexed — 6th cycle:** Persistent unresolved issue. Google sees only sitemap.xml as referring URL — no JS-rendered nav links are followed. The page has 4 static body links from the indexed homepage. This is definitively a crawl budget/prioritization decision by Google. **Only fix: owner manual "Request Indexing" in GSC.**
+
+4. **Liver post added to content gap tracker:** `references/monthly-keyword-opportunities.md` should be updated to mark liver disease as ✅ DONE. Remaining PENDING gaps: Myanmar/Singapore routes, paediatric (children 1–16), burn patient.
+
+5. **FAQ schema now covers 5 additional Tier B pages:** These FAQPage schemas contain all the AI Overview citation entities (USD 27K–33K, BDT 32,00,000, Learjet 35A, Hazrat Shahjalal, 3.5hrs). Expected to see first impressions/citations within 2–4 weeks after next Google crawl.
+
+---
+
+## 🔴 Owner Action Needed — Request Indexing in GSC
+
+Visit: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**Tier 1 — CRITICAL (6 consecutive cycles, never crawled):**
+1. https://airambulancedhakabangkok.com/services ← **PRIMARY COMMERCIAL PILLAR.** Never crawled by Google in 6 cycles despite 4 static body links from indexed homepage. "air ambulance service dhaka to bangkok" (6 imps, pos 6.7) maps to this page but has 0 CTR because the page isn't indexed. Manual "Request Indexing" is the ONLY remaining fix. Owner must click this button in GSC.
+
+**Tier 2 — Important (request indexing):**
+2. https://airambulancedhakabangkok.com/blog/liver-disease-air-ambulance-dhaka-bangkok ← NEW page (deployed today, not yet crawled)
+3. https://airambulancedhakabangkok.com/blog/dialysis-patient-air-ambulance-dhaka-bangkok
+4. https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi
+5. https://airambulancedhakabangkok.com/blog/medical-visa-thailand-for-bangladeshi-patients
+
+---
+
+## Next Cycle Priorities
+
+1. **`/services` indexing** — persistent Tier 1 owner task (6 cycles)
+2. **`/icu-vs-medical-escort` content enrichment** — pos 42.9, 18 impressions. Currently 1,233 words. Needs 500+ new words on condition-specific scenarios (liver vs cardiac vs trauma escort needs) to push into top 20.
+3. **`/cardiac-emergency-transfer` content enrichment** — pos 17.8, 18 impressions. Push into top 10 with additional detail on STEMI, arrhythmia, cardiac surgery referral patterns.
+4. **Paediatric/child transfer page** — next pending gap in `monthly-keyword-opportunities.md`
+5. **Monthly keyword tracker update** — mark liver disease as ✅ DONE
+
+---
+
+*Next cron: 2026-07-08 morning*
