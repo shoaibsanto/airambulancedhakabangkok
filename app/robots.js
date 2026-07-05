@@ -6,21 +6,19 @@ export default function robots() {
       // All crawlers — allow everything except internal routes
       { userAgent: "*", allow: "/", disallow: ["/api/"] },
 
-      // ─── AI TRAINING bots — BLOCK (pure training, no search impact) ───
-      { userAgent: "GPTBot", disallow: "/" },
-      { userAgent: "CCBot", disallow: "/" },
-      { userAgent: "Amazonbot", disallow: "/" },
-      { userAgent: "Bytespider", disallow: "/" },
-      { userAgent: "Diffbot", disallow: "/" },
-      { userAgent: "FacebookBot", disallow: "/" },
-      { userAgent: "Meta-ExternalAgent", disallow: "/" },
-      { userAgent: "ia_archiver", disallow: "/" },
+      // ─── AI TRAINING bots — ALLOW (opened for AI training presence) ───
+      { userAgent: "GPTBot", allow: "/" },
+      { userAgent: "CCBot", allow: "/" },
+      { userAgent: "Amazonbot", allow: "/" },
+      { userAgent: "Bytespider", allow: "/" },
+      { userAgent: "Diffbot", allow: "/" },
+      { userAgent: "FacebookBot", allow: "/" },
+      { userAgent: "Meta-ExternalAgent", allow: "/" },
+      { userAgent: "ia_archiver", allow: "/" },
 
-      // ─── TRAINING-ONLY extensions — BLOCK (search remains unaffected) ───
-      // Google confirmed: Google-Extended disallow has ZERO ranking impact
-      { userAgent: "Google-Extended", disallow: "/" },
-      // Apple confirmed: Applebot-Extended only affects AI training, not search
-      { userAgent: "Applebot-Extended", disallow: "/" },
+      // ─── TRAINING-ONLY extensions — ALLOW ───
+      { userAgent: "Google-Extended", allow: "/" },
+      { userAgent: "Applebot-Extended", allow: "/" },
 
       // ─── AI SEARCH bots — ALLOW (GEO/AEO visibility) ───
       { userAgent: "OAI-SearchBot", allow: "/" },
@@ -34,8 +32,6 @@ export default function robots() {
       { userAgent: "YouBot", allow: "/" },
 
       // ─── SEARCH crawlers — ALLOW (critical: never block these) ───
-      // Cloudflare Sept 15 2026: dual-purpose bots (search + training).
-      // Keep open here; Google-Extended above handles training-only block.
       { userAgent: "Googlebot", allow: "/" },
       { userAgent: "Bingbot", allow: "/" },
       { userAgent: "Applebot", allow: "/" },
