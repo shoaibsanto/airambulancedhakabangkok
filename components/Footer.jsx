@@ -38,6 +38,7 @@ export default function Footer() {
             <ul>
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/process">Our Process</Link></li>
+              <li><Link href="/gallery">Awards & Recognition</Link></li>
               <li><Link href="/routes">Routes & Coverage</Link></li>
               <li><Link href="/blog">Guides & Resources</Link></li>
               <li><Link href="/faq">FAQ</Link></li>

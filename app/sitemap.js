@@ -10,6 +10,7 @@ export default async function sitemap() {
     ["/icu-vs-medical-escort", "weekly", 0.8],
     ["/bangkok-hospitals", "weekly", 0.8],
     ["/about", "weekly", 0.7],
+    ["/gallery", "monthly", 0.6],
     ["/faq", "weekly", 0.8],
     ["/contact", "weekly", 0.9],
     ["/blog", "daily", 0.8],
