@@ -482,21 +482,38 @@ a.author-name:hover { text-decoration: underline; }
 .footer-disclaimer a { color: #cfe0ee; text-decoration: underline; }
 .gallery-cta.center { text-align: center; }
 
-/* ---------- Awards & Recognition gallery ---------- */
-.awards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2.2rem; }
-.awards-grid .gallery-item { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--c-line); }
-.awards-grid .gallery-item img { aspect-ratio: auto; height: auto; object-fit: contain; background: #f4f7fa; }
-.award-cap { padding: .85rem 1rem 1.1rem; }
-.award-cap .t { font-family: var(--ff-head); font-weight: 700; color: var(--c-primary); font-size: .95rem; line-height: 1.35; margin: 0 0 .3rem; }
-.award-cap .m { font-size: .8rem; color: var(--c-text-mute); margin: 0; }
-.award-cap .m strong { color: var(--c-text-soft); font-weight: 600; }
+/* ---------- Awards & Recognition ---------- */
+/* Trust stat strip */
+.awards-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; margin-top: 1.6rem; }
+.awards-stats .stat { flex: 1 1 150px; min-width: 0; max-width: 240px; text-align: center; background: #fff; border: 1px solid var(--c-line); border-radius: var(--radius-md); padding: 1.1rem .9rem; box-shadow: var(--shadow); }
+.awards-stats .stat .n { font-family: var(--ff-head); font-weight: 800; font-size: 1.7rem; line-height: 1; color: var(--c-primary); display: block; }
+.awards-stats .stat .l { font-size: .8rem; color: var(--c-text-mute); margin-top: .4rem; display: block; line-height: 1.4; }
+
+/* Auto-fit card grid — collapses cleanly from 3 → 2 → 1 with no media queries */
+.awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: 1.3rem; margin-top: 2.2rem; align-items: start; }
+.award-card { position: relative; display: flex; flex-direction: column; background: #fff; border: 1px solid var(--c-line); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow); transition: transform .28s ease, box-shadow .28s ease; }
+.award-card:hover { transform: translateY(-4px); box-shadow: 0 20px 48px rgba(27,111,179,.18); }
+.award-frame { position: relative; aspect-ratio: 4 / 3; background: linear-gradient(155deg, #f5f9fd 0%, #e7f0f8 100%); display: flex; align-items: center; justify-content: center; padding: .9rem; }
+.award-frame img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; cursor: zoom-in; border-radius: 6px; box-shadow: 0 4px 14px rgba(10,61,98,.12); transition: transform .4s ease; }
+.award-card:hover .award-frame img { transform: scale(1.045); }
+.award-ribbon { position: absolute; top: .75rem; left: .75rem; z-index: 2; display: inline-flex; align-items: center; gap: .3rem; background: linear-gradient(135deg, #c8952c, #ecc76a); color: #3d2c06; font-size: .68rem; font-weight: 800; letter-spacing: .02em; text-transform: uppercase; padding: .3rem .58rem; border-radius: 50px; box-shadow: 0 3px 10px rgba(0,0,0,.2); }
+.award-ribbon svg { width: 12px; height: 12px; }
+.award-body { padding: .95rem 1.05rem 1.15rem; border-top: 3px solid transparent; border-image: linear-gradient(90deg, var(--c-primary-light), var(--c-primary)) 1; }
+.award-body .t { font-family: var(--ff-head); font-weight: 700; color: var(--c-primary); font-size: .98rem; line-height: 1.35; margin: 0 0 .3rem; }
+.award-body .m { font-size: .8rem; color: var(--c-text-mute); margin: 0; line-height: 1.5; }
+.award-body .m strong { color: var(--c-text-soft); font-weight: 600; }
 .awards-note { text-align: center; font-size: .85rem; color: var(--c-text-mute); margin-top: 1.8rem; }
+
+/* Compact awards band (home / about) */
+.awards-band-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1.1rem; margin-top: 1.8rem; align-items: start; }
+.awards-band-grid .award-card { text-decoration: none; }
+a.award-card .award-frame img { cursor: pointer; }
+
+/* EEAT trust callout */
 .eeat-band { background: var(--c-bg-soft); border: 1px solid var(--c-line); border-radius: var(--radius-md); padding: clamp(1.4rem, 3vw, 2.2rem); margin-top: 1.6rem; }
 .eeat-band h3 { font-size: 1.15rem; margin: 0 0 .6rem; color: var(--c-primary); }
 .eeat-band ul { margin: .8rem 0 0; padding-left: 1.1rem; display: grid; gap: .45rem; }
 .eeat-band ul li { font-size: .92rem; color: var(--c-text-soft); line-height: 1.55; }
-@media (max-width: 900px) { .awards-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .awards-grid { grid-template-columns: 1fr; max-width: 440px; margin-inline: auto; } }
 @media (max-width: 1024px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .gallery-grid { grid-template-columns: 1fr; } }
 

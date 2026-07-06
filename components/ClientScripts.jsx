@@ -142,7 +142,7 @@ export default function ClientScripts() {
     });
 
     // ---- Lightbox: click a gallery image to view it enlarged ----
-    const galleryImgs = document.querySelectorAll(".gallery-item img");
+    const galleryImgs = document.querySelectorAll(".gallery-item img, .js-zoom");
     if (galleryImgs.length) {
       const lb = document.createElement("div");
       lb.className = "lightbox";
