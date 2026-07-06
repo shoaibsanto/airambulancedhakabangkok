@@ -490,22 +490,24 @@ a.author-name:hover { text-decoration: underline; }
 .awards-stats .stat .l { font-size: .8rem; color: var(--c-text-mute); margin-top: .4rem; display: block; line-height: 1.4; }
 
 /* Auto-fit card grid — collapses cleanly from 3 → 2 → 1 with no media queries */
-.awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: 1.3rem; margin-top: 2.2rem; align-items: start; }
+.awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: 1.3rem; margin-top: 2.2rem; align-items: stretch; }
 .award-card { position: relative; display: flex; flex-direction: column; background: #fff; border: 1px solid var(--c-line); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow); transition: transform .28s ease, box-shadow .28s ease; }
 .award-card:hover { transform: translateY(-4px); box-shadow: 0 20px 48px rgba(27,111,179,.18); }
-.award-frame { position: relative; aspect-ratio: 4 / 3; background: linear-gradient(155deg, #f5f9fd 0%, #e7f0f8 100%); display: flex; align-items: center; justify-content: center; padding: .9rem; }
-.award-frame img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; cursor: zoom-in; border-radius: 6px; box-shadow: 0 4px 14px rgba(10,61,98,.12); transition: transform .4s ease; }
+/* Strict 4:3 frame — absolute image so a portrait/landscape source never
+   changes the frame height; every card's image area is identical. */
+.award-frame { position: relative; flex: none; aspect-ratio: 4 / 3; overflow: hidden; background: linear-gradient(155deg, #f5f9fd 0%, #e7f0f8 100%); }
+.award-frame img { position: absolute; inset: 0; margin: auto; max-width: calc(100% - 1.8rem); max-height: calc(100% - 1.8rem); width: auto; height: auto; object-fit: contain; cursor: zoom-in; border-radius: 6px; box-shadow: 0 4px 14px rgba(10,61,98,.12); transition: transform .4s ease; }
 .award-card:hover .award-frame img { transform: scale(1.045); }
 .award-ribbon { position: absolute; top: .75rem; left: .75rem; z-index: 2; display: inline-flex; align-items: center; gap: .3rem; background: linear-gradient(135deg, #c8952c, #ecc76a); color: #3d2c06; font-size: .68rem; font-weight: 800; letter-spacing: .02em; text-transform: uppercase; padding: .3rem .58rem; border-radius: 50px; box-shadow: 0 3px 10px rgba(0,0,0,.2); }
 .award-ribbon svg { width: 12px; height: 12px; }
-.award-body { padding: .95rem 1.05rem 1.15rem; border-top: 3px solid transparent; border-image: linear-gradient(90deg, var(--c-primary-light), var(--c-primary)) 1; }
+.award-body { flex: 1 1 auto; padding: .95rem 1.05rem 1.15rem; border-top: 3px solid transparent; border-image: linear-gradient(90deg, var(--c-primary-light), var(--c-primary)) 1; }
 .award-body .t { font-family: var(--ff-head); font-weight: 700; color: var(--c-primary); font-size: .98rem; line-height: 1.35; margin: 0 0 .3rem; }
 .award-body .m { font-size: .8rem; color: var(--c-text-mute); margin: 0; line-height: 1.5; }
 .award-body .m strong { color: var(--c-text-soft); font-weight: 600; }
 .awards-note { text-align: center; font-size: .85rem; color: var(--c-text-mute); margin-top: 1.8rem; }
 
 /* Compact awards band (home / about) */
-.awards-band-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1.1rem; margin-top: 1.8rem; align-items: start; }
+.awards-band-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1.1rem; margin-top: 1.8rem; align-items: stretch; }
 .awards-band-grid .award-card { text-decoration: none; }
 a.award-card .award-frame img { cursor: pointer; }
 
