@@ -46,6 +46,11 @@ export default async function sitemap() {
     ["/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi", "weekly", 0.8],
     ["/blog/dialysis-patient-air-ambulance-dhaka-bangkok", "weekly", 0.8],
     ["/blog/liver-disease-air-ambulance-dhaka-bangkok", "weekly", 0.8],
+    ["/blog/air-ambulance-cost-bangladesh-2026", "weekly", 0.7],
+    ["/blog/bumrungrad-international-hospital-dhaka-guide", "weekly", 0.7],
+    ["/blog/medical-tourism-thailand-bangladesh", "weekly", 0.7],
+    ["/blog/post-surgery-patient-transfer-dhaka", "weekly", 0.7],
+    ["/blog/ventilator-patient-air-ambulance", "weekly", 0.7],
   ];
 
   return ENTRIES.map(([urlPath, changeFrequency, priority]) => ({
