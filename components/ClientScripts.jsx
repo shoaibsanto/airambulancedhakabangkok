@@ -216,6 +216,28 @@ export default function ClientScripts() {
       });
     }
 
+    // ---- Video testimonials: click-to-play YouTube facade ----
+    document.querySelectorAll(".vt-play").forEach((btn) => {
+      const id = btn.getAttribute("data-yt");
+      if (!id) return;
+      const handler = () => {
+        const iframe = document.createElement("iframe");
+        iframe.src =
+          "https://www.youtube-nocookie.com/embed/" +
+          id +
+          "?autoplay=1&rel=0&playsinline=1&modestbranding=1";
+        iframe.title = btn.getAttribute("aria-label") || "Video testimonial";
+        iframe.allow =
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.allowFullscreen = true;
+        iframe.setAttribute("loading", "lazy");
+        btn.replaceWith(iframe);
+        track("video_play", { video_id: id });
+      };
+      btn.addEventListener("click", handler);
+      cleanups.push(() => btn.removeEventListener("click", handler));
+    });
+
     // ---- Global click tracking: call / whatsapp / email / estimator / outbound ----
     const onDocClick = (e) => {
       const a = e.target.closest && e.target.closest("a");

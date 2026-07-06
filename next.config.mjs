@@ -26,7 +26,7 @@ const securityHeaders = [
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: blob: https: http:",
       "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://api.resend.com https://api.telegram.org https://wa.me https://api.whatsapp.com",
-      "frame-src https://www.google.com https://maps.google.com https://www.youtube.com",
+      "frame-src https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com",
       "media-src 'self'",
       "object-src 'none'",
       "base-uri 'self'",
