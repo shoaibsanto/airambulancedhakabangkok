@@ -1533,3 +1533,132 @@ Visit: https://search.google.com/search-console/inspect?resource_id=sc-domain:ai
 ---
 
 *Next cron: 2026-07-08 morning*
+
+---
+
+## SEO Daily Cron -- 2026-07-08
+
+### Task 1: GSC Pulse (7-day)
+
+| Metric | 7d (Jul 1-7) | Baseline | Delta |
+|--------|-------------|----------|-------|
+| Clicks | 2 | 3-5 | Below baseline |
+| Impressions | 148 | ~150 | On track |
+| CTR | 1.35% | 3.3% | Low |
+| Avg Position | 10.1 | top-10 | Borderline |
+
+**28-day totals (Jun 9 - Jul 7):** 13 clicks / 458 impressions / 2.84% CTR / pos 8.5
+Prior baseline (Jul 5): 419 imps / 12 clicks / 2.86% CTR. 28-day impressions +9% vs baseline, clicks near flat.
+
+**7-day interpretation:** Clicks low (2 vs 3-5 baseline). Position drifted to 10.1 -- consistent with weekend drift pattern (Jul 1-4 all pos 10-12, rebounding to 7.9 on Jul 5). Not a regression signal until confirmed across a full 28-day window. Jun 30: 1 click at pos 7.7; Jul 5: 1 click at pos 7.9 -- weekday positions holding. Jul 6 shows only 4 impressions (partial data).
+
+**28-day top queries (AI Overview cannibalization confirmed):**
+
+| Query | Imps | Pos | Clicks | Note |
+|-------|------|-----|--------|------|
+| air ambulance service in bangladesh | 27 | 1.4 | 1 | AI Overview consuming clicks |
+| air ambulance dhaka | 15 | 1.0 | 0 | Pos 1, 0 CTR -- AI Overview |
+| air ambulance bangladesh | 15 | 5.0 | 0 | Tier B |
+| air ambulance service dhaka to bangkok | 7 | 6.6 | 0 | Maps to /services (NOT indexed) |
+| air ambulance | 9 | 3.1 | 0 | AI Overview |
+| air ambulance dhaka to bangkok | 6 | 11.7 | 0 | Outside top 10 |
+
+**28-day top pages:**
+
+| Page | Imps | Pos | Clicks | Note |
+|------|------|-----|--------|------|
+| / (homepage) | 321 | 6.1 | 7 | Main traffic driver |
+| /air-ambulance-cost | 27 | 8.2 | 2 | Indexed, earning clicks |
+| /blog/bed-to-bed-transfer | 17 | 10.4 | 2 | Good CTR (11.8%) |
+| /blog/bangkok-hospitals-comparison | 32 | 10.2 | 0 | 0 CTR -- FAQ schema added Jul 7 |
+| /guides/air-ambulance-dhaka-bangkok | 21 | 5.2 | 0 | 0 CTR -- FAQ schema added Jul 7 |
+| /blog/bangkok-hospital-admission | 19 | 6.2 | 0 | 0 CTR -- FAQ schema added Jul 7 |
+
+### Task 2: Indexing Status
+
+| Page | Status | Last Crawled |
+|------|--------|-------------|
+| / (homepage) | Indexed | Jun 30 |
+| /air-ambulance-cost | Indexed | Jun 26 |
+| /guides/air-ambulance-dhaka-bangkok | Indexed | Jun 23 |
+| /bangkok-hospitals | Indexed | Jun 26 |
+| /services | Discovered - NOT indexed | Never crawled (7th cycle) |
+
+All pillar pages except /services are indexed. /services remains the persistent Tier 1 owner task -- 7th consecutive cycle with no change. Referring URL: sitemap.xml only. Owner manual "Request Indexing" is the only remaining lever.
+
+### Task 3: Technical Audit Findings + Fixes Applied
+
+**Issues found:**
+- 5 new blog posts (created by Koray semantic SEO session Jul 7) had long titles (71-79c) -- no GSC impressions yet, safe to fix
+- Same 5 posts were missing from content/blog/index.html (blog listing page)
+- Same 5 posts were missing from app/sitemap.js (not being submitted to Google)
+
+Root cause: Sibling agent (Koray session) created HTML files but did not update the blog listing or sitemap.
+
+**Actions Taken:**
+
+1. Titles trimmed (5 posts), all og:title + twitter:title updated to match:
+
+| File | Old (chars) | New Title (chars) |
+|------|------------|-------------------|
+| air-ambulance-cost-bangladesh-2026 | 79c | Air Ambulance Cost Bangladesh 2026 - Dhaka to Bangkok Price (59c) |
+| bumrungrad-international-hospital-dhaka-guide | 71c | Bumrungrad Hospital Guide for Bangladeshi Patients - 2026 (57c) |
+| medical-tourism-thailand-bangladesh | 71c | Medical Tourism Thailand for Bangladeshi Patients - 2026 (56c) |
+| post-surgery-patient-transfer-dhaka | 79c | Post-Surgery Patient Transfer Dhaka to Bangkok - ICU Flight (59c) |
+| ventilator-patient-air-ambulance | 78c | Ventilator Patient Air Ambulance Dhaka to Bangkok - ICU Jet (59c) |
+
+2. Blog listing cards added: All 5 posts now have article cards in content/blog/index.html.
+
+3. Sitemap updated: 5 new URLs added to app/sitemap.js (weekly, 0.7 priority). Sitemap now covers 52 pages.
+
+4. Build: npx next build -> 52 pages generated (up from 47). No errors.
+
+5. Deploy: git push origin main -> pushed (after rebase on remote changes from sibling agent). Commit: 103bcd1
+
+6. Post-deploy validation:
+   - https://airambulancedhakabangkok.com/sitemap.xml -> 200 OK
+   - https://airambulancedhakabangkok.com/blog/ventilator-patient-air-ambulance -> 200 OK
+   - https://airambulancedhakabangkok.com/blog/air-ambulance-cost-bangladesh-2026 -> 200 OK
+
+**Technical health audit (49 content files):**
+- Duplicate OG tags: ALL CLEAN
+- Missing canonicals: ALL CLEAN
+- Long titles: Only content/index.html (81c) -- intentional emoji exception (pos 6.1, 7 clicks in 28d)
+
+### Notable Observations
+
+1. /services = 7th consecutive unindexed cycle. The query "air ambulance service dhaka to bangkok" (7 imps, pos 6.6) maps to this page and earns 0 clicks. This is the #1 commercial loss on the site. Owner must click "Request Indexing" in GSC.
+
+2. AI Overview cannibalization persisting. "air ambulance dhaka" (15 imps, pos 1.0, 0 CTR), "air ambulance service" (6 imps, pos 1.3), "air ambulance bd" (3 imps, pos 1.0) -- all position 1 with zero clicks. Standard CTR fixes won't help. FAQ schema additions from Jul 7 are the current active lever.
+
+3. Impressions trending up: 458 imps / 28d vs 419 baseline = +9%. Site is being shown more. Click gap reflects AI Overview problem, not content quality.
+
+4. 5 new content pages now discoverable. Before this cycle, 5 Koray-session posts were invisible to Google: not in sitemap, not in blog listing. Now corrected.
+
+---
+
+## Owner Action Needed -- Request Indexing in GSC
+
+Visit: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**Tier 1 -- CRITICAL (7 consecutive cycles, never crawled):**
+1. https://airambulancedhakabangkok.com/services -- PRIMARY COMMERCIAL PILLAR. "air ambulance service dhaka to bangkok" (7 imps, pos 6.6) maps here and earns 0 clicks. Owner must click "Request Indexing" in GSC.
+
+**Tier 2 -- New pages (request indexing for faster crawl):**
+2. https://airambulancedhakabangkok.com/blog/air-ambulance-cost-bangladesh-2026
+3. https://airambulancedhakabangkok.com/blog/bumrungrad-international-hospital-dhaka-guide
+4. https://airambulancedhakabangkok.com/blog/medical-tourism-thailand-bangladesh
+5. https://airambulancedhakabangkok.com/blog/post-surgery-patient-transfer-dhaka
+6. https://airambulancedhakabangkok.com/blog/ventilator-patient-air-ambulance
+
+---
+
+## Next Cycle Priorities
+
+1. /services indexing -- still Tier 1 owner task (7 cycles)
+2. Monitor FAQ schema impact -- 5 Tier-B pages had FAQ schema added Jul 7; check if Google cites these in AI Overviews over 2-4 weeks
+3. /cardiac-emergency-transfer content enrichment -- pos 17.8, 18 impressions. Push into top 10.
+4. /icu-vs-medical-escort position improvement -- pos 44.9, 19 impressions. Outside top 20. Needs content expansion.
+5. Paediatric/child transfer page -- next pending content gap
+
+*Next cron: 2026-07-09 morning*
