@@ -1662,3 +1662,81 @@ Visit: https://search.google.com/search-console/inspect?resource_id=sc-domain:ai
 5. Paediatric/child transfer page -- next pending content gap
 
 *Next cron: 2026-07-09 morning*
+
+---
+
+## Daily SEO Cron — 2026-07-08 (Cycle 2 — 12hr)
+
+### GSC Snapshot — Last 7 Days (Jul 1–Jul 8)
+
+| Metric | 7-day Actual | 7-day Baseline | Status |
+|--------|-------------|----------------|--------|
+| Clicks | 2 | 3–5 | BELOW baseline |
+| Impressions | 149 | ~150 | OK |
+| CTR | 1.34% | 3.3% | BELOW baseline |
+| Avg Position | 10.7 | — | Elevated (weekend effect) |
+
+**28-day totals (Jun 10–Jul 8):** 14 clicks / 478 impressions / 2.93% CTR / pos 8.7
+- vs baseline 13 clicks / 458 imps / 2.84% CTR — marginally up
+- Jul 1–7 trend: avg position elevated at 10.7 (weekend skew — pos 12+ on Wed/Thu, rebounding to 7.9 on Sun/Mon)
+- Jul 7 only 4 impressions (weekend noise — normal pattern)
+
+### Indexing Status
+
+| Page | Status | Last Crawled |
+|------|--------|--------------|
+| / (homepage) | OK Indexed | Jul 7 2026 (fresh) |
+| /services | WARN Discovered-not-indexed | Never crawled |
+| /bangkok-hospitals | OK Indexed | Jun 26 2026 |
+| /guides/air-ambulance-dhaka-bangkok | OK Indexed | Jun 23 2026 |
+| /air-ambulance-cost | OK Indexed | Jun 26 2026 |
+
+**Note:** /services persistent non-indexing continues (4+ cycles). Referring URL: sitemap.xml only. Static body links are present. This is a crawl budget prioritization issue — manual "Request Indexing" by owner remains the only reliable fix.
+
+### Technical Audit
+
+- **FIXED: gallery.html description** — trimmed from 207c to 148c; all 3 desc tags (meta, og:description, twitter:description) now consistent at 148c
+- **OK:** All blog posts in sitemap (27 slugs verified — earlier false alarm from grep logic)
+- **OK:** All blog listing cards present
+- **title/OG/Twitter audit:** 1 known exception: index.html title 81c (emoji title, ranking at pos ~6, intentionally skipped per skill rule)
+- **Build: 53 pages** (up from 52 baseline — new posts included)
+
+### GSC Quick-Win Scan (28 days, pos 1-10, >=5 imps, 0 CTR)
+
+| Page | Impressions | Position | CTR | Action |
+|------|-------------|----------|-----|--------|
+| /blog/bangkok-hospitals-comparison-bangladeshi-patients | 34 | 10.1 | 0% | Tier B — FAQ schema priority #1 |
+| /blog/bangkok-hospital-admission-bangladeshi-patients | 20 | 6.2 | 0% | Tier B — FAQ schema priority #3 |
+| /blog/how-to-book-air-ambulance-dhaka-bumrungrad | 17 | 5.4 | 0% | Tier B — FAQ schema priority #4 |
+| /cardiac-emergency-transfer | 19 | 17.6 | 0% | Outside pos 1-10 — skip |
+| /blog/stroke-air-ambulance-dhaka-bumrungrad | 10 | 5.2 | 0% | Tier B — FAQ schema priority #6 |
+| /bangkok-hospitals | 12 | 7.6 | 0% | Tier B — FAQ schema priority #7 |
+| /blog/air-ambulance-cardiac-patients | 7 | 4.9 | 0% | Tier B — FAQ schema priority #8 |
+| /trauma-accident-evacuation | 6 | 2.5 | 0% | AI Overview cannibalization (pos 1-3) |
+
+All Tier B pages have title-optimized titles from Jun 2026 — do NOT rewrite again. Next lever: FAQPage schema enrichment.
+
+### Top Queries (28d)
+- "air ambulance service in bangladesh" — 27 imps, pos 1.4, 1 click (AI Overview cannibalization pattern)
+- "air ambulance dhaka" — 18 imps, pos 1, 0 clicks (AI Overview)
+- "air ambulance bangladesh" — 16 imps, pos 4.8, 0 clicks
+- "air ambulance service dhaka to bangkok" — 11 imps, pos 10.1, 0 clicks
+- "air ambulance dhaka to bangkok" — 6 imps, pos 11.7, 0 clicks (just outside top 10)
+
+### Actions Taken This Cycle
+1. **FIXED: gallery.html description** over-length (207c -> 148c). All 3 desc tags synced.
+2. **Build + Deploy:** 53 pages, git push 113b4be — Vercel auto-deploy triggered
+3. **Post-deploy validation:** sitemap.xml 200 OK, /gallery 200 OK
+
+### No Urgent Issues Found Beyond:
+- /services persistent "Discovered - not indexed" (owner action required — see below)
+- Tier B pages need FAQ schema enrichment (scheduled for next content optimization cycle)
+
+### Owner Action Required
+
+#### Tier 1 — URGENT (manual GSC action needed):
+1. https://airambulancedhakabangkok.com/services — Click "Request Indexing" in GSC
+   URL: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+Note: /services has static HTML links from indexed homepage body (lines 295, 448, 499, 578). This is a crawl budget issue — manual Request Indexing is the only remaining lever.
+
