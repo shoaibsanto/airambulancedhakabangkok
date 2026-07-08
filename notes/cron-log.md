@@ -1740,3 +1740,77 @@ All Tier B pages have title-optimized titles from Jun 2026 — do NOT rewrite ag
 
 Note: /services has static HTML links from indexed homepage body (lines 295, 448, 499, 578). This is a crawl budget issue — manual Request Indexing is the only remaining lever.
 
+---
+
+## Daily SEO Cron — 2026-07-09
+
+### GSC Status
+**AUTH EXPIRED — all GSC MCP calls returned "Authentication failed".**
+All GSC steps (pulse, indexing hygiene, quick-win scan) could not be completed.
+
+Prior 28-day baseline (Jul 8 cycle 2): 14 clicks / 478 impressions / 2.93% CTR / pos 8.7
+Prior 7-day baseline (Jul 8 cycle 2): 2 clicks / 149 impressions / 1.34% CTR / pos 10.7
+
+**Owner action required (Tier 0):** Re-authenticate GSC via browser.
+See: notes/cron-log.md references/gsc-token-maintenance.md
+
+### Technical Audit
+- **CLEAN:** Zero duplicate OG/Twitter tags across all 50 HTML files
+- **CLEAN:** All blog posts present in blog/index.html listing
+- **CLEAN:** All blog posts present in sitemap.js (with /blog/ prefix)
+- **KNOWN EXCEPTION:** content/index.html title 81c (emoji title, ranking ~pos 6 — intentionally skipped per skill rule)
+- **THIN CONTENT:** content/gallery.html — 468 words (min 600). Low-priority page, no GSC impressions — defer.
+- **Build:** 53 pages (stable baseline maintained)
+
+### FAQPage Schema Enrichment — 3 Pages
+
+FAQPage JSON-LD injected into 3 high-value cluster pages that lacked it:
+
+| Page | Cluster | Q&A Count | Entities in Schema |
+|------|---------|-----------|-------------------|
+| /blog/bed-to-bed-transfer-dhaka-bangkok | Cluster 1 (Services) | 4 Q&As | USD 27k-33k, BDT 32,00,000-39,00,000, Learjet 35A, Hazrat Shahjalal, 3.5 hrs |
+| /blog/ventilator-patient-air-ambulance | Cluster 1 (Services) | 4 Q&As | USD 27k-33k, BDT 32,00,000-39,00,000, Learjet 35A, Hazrat Shahjalal, 3.5 hrs |
+| /blog/icu-flight-bangladesh-to-bumrungrad-bangkok | Cluster 1 (Services) | 4 Q&As | USD 27k-33k, BDT 32,00,000-39,00,000, Learjet 35A, Hazrat Shahjalal, 3.5 hrs |
+
+All schemas validated as valid JSON before deploy. All include GEO entity-matching entities (price USD + BDT format, aircraft model, airport, flight time) per AI Overview alignment strategy.
+
+**Pages with FAQPage schema now:** 14 of 50 content pages (up from 11)
+
+### Remaining Tier B FAQ Schema Queue
+Still no FAQPage (low-traffic blog posts — lower priority):
+- admit-patient-bumrungrad-dhaka-guide
+- air-ambulance-cost-bangladesh-2026
+- air-ambulance-dhaka-bangkok-bumrungrad-cost
+- air-ambulance-insurance-payment-dhaka-bumrungrad
+- air-ambulance-vs-commercial-medical-flight
+- bumrungrad-international-hospital-dhaka-guide
+- emergency-air-ambulance-when-to-call
+- emergency-medical-evacuation-dhaka-to-bangkok
+- medical-repatriation-to-bangladesh
+- medical-tourism-thailand-bangladesh
+- medical-visa-thailand-for-bangladeshi-patients
+- neonatal-pediatric-air-ambulance-dhaka-bangkok
+- post-surgery-patient-transfer-dhaka
+- what-is-an-air-ambulance
+- what-to-expect-dhaka-bumrungrad-air-ambulance
+- why-bangladeshi-patients-choose-bangkok
+
+### Deployment
+- Build: 53 pages, no errors
+- Commit: c2823a3 — pushed to main
+- Post-deploy: sitemap.xml 200 OK, /blog/bed-to-bed-transfer-dhaka-bangkok 200 OK
+
+### Owner Action Required
+
+#### Tier 0 — GSC RE-AUTH (URGENT — blocks all GSC monitoring):
+Re-authenticate Google Search Console OAuth token via browser:
+```
+hermes config  # or run the GSC reauthenticate tool from a browser session
+```
+Reference: notes/cron-log.md references/gsc-token-maintenance.md
+
+#### Tier 1 — Manual GSC "Request Indexing":
+1. https://airambulancedhakabangkok.com/services — persistent "Discovered-not-indexed" (4+ cycles)
+   URL: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+*Next cron: 2026-07-09 evening / 2026-07-10 morning*
