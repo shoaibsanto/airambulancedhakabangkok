@@ -1814,3 +1814,84 @@ Reference: notes/cron-log.md references/gsc-token-maintenance.md
    URL: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
 
 *Next cron: 2026-07-09 evening / 2026-07-10 morning*
+
+---
+
+## Cron Cycle — 2026-07-09 (Daily, Cycle 3)
+
+### GSC 7-Day Snapshot (Jul 2–9)
+| Metric | This Week | Baseline (7d) | Delta |
+|--------|-----------|---------------|-------|
+| Clicks | 4 | 2–5 | Normal |
+| Impressions | 159 | ~149 | +10 (improving) |
+| CTR | 2.52% | 1.3–3.3% | Normal range |
+| Avg Position | 10.0 | ~10 | Stable |
+
+### GSC 28-Day Snapshot (Jun 11 – Jul 9)
+| Metric | Value | Prev Baseline |
+|--------|-------|---------------|
+| Clicks | 16 | 14 |
+| Impressions | 517 | 478 |
+| CTR | 3.09% | 2.93% |
+| Avg Position | 8.7 | 8.7 |
+
+**Trend: Impressions +8% (517 vs 478), clicks +2 (16 vs 14), CTR slightly up. Positive direction.**
+
+### Indexing Status (5 Key Pages)
+| Page | Status | Last Crawled |
+|------|--------|--------------|
+| / (homepage) | OK Indexed | 2026-07-07 |
+| /services | WARN Discovered-not-indexed | Never crawled |
+| /bangkok-hospitals | OK Indexed | 2026-06-26 |
+| /guides/air-ambulance-dhaka-bangkok | OK Indexed | 2026-06-23 |
+| /air-ambulance-cost | OK Indexed | 2026-06-26 |
+
+### Top 28d Pages by Performance
+| Page | Clicks | Imps | CTR | Pos |
+|------|--------|------|-----|-----|
+| / (homepage) | 8 | 356 | 2.25% | 5.9 |
+| /air-ambulance-cost | 3 | 37 | 8.11% | 8.6 |
+| /blog/bed-to-bed-transfer | 2 | 17 | 11.76% | 10.4 |
+| /blog/medical-repatriation | 1 | 17 | 5.88% | 4.5 |
+| /guides/air-ambulance-dhaka-bangkok | 1 | 23 | 4.35% | 5.3 |
+| /guides/icu-air-ambulance-dhaka | 1 | 17 | 5.88% | 7.5 |
+
+### Zero-CTR Pages (pos 1-10, >=5 impressions)
+| Page | Imps | Pos | Action |
+|------|------|-----|--------|
+| /blog/bangkok-hospitals-comparison | 38 | 10.0 | FAQPage OK (prior cycle) |
+| /blog/bangkok-hospital-admission | 21 | 6.2 | FAQPage OK (prior cycle) |
+| /cardiac-emergency-transfer | 21 | 17.0 | Pos 17 — outside top-10 threshold |
+| /icu-vs-medical-escort | 22 | 51.2 | ALERT: pos 51 — ranking drop! |
+| /blog/how-to-book-air-ambulance | 19 | 5.0 | FAQPage OK (prior cycle) |
+| /bangkok-hospitals | 13 | 7.7 | FAQPage OK (prior cycle) |
+| /blog/stroke-air-ambulance | 10 | 5.2 | FAQPage OK (prior cycle) |
+
+### Critical Observation: /icu-vs-medical-escort at pos 51.2
+- পূর্বে এই পেজটি ভালো position এ ছিল, এখন pos 51 — সম্ভাব্য কারণ: competitive SERP shift
+- Content ঠিকঠাক (1233 words, FAQPage schema valid, title 54c)
+- এই পেজের keyword "icu vs medical escort" অনেক competitive global term
+- Action: এই মুহূর্তে title/meta পরিবর্তন নিরাপদ নয় (ranking আরো drop করতে পারে)
+- Monitor করতে হবে পরবর্তী ২ সপ্তাহ
+
+### Actions Taken This Cycle
+1. **services.html title fixed** — `<title>` ছিল 74c "ICU Air Ambulance Services — What's Included..." যা og:title (57c) এর সাথে মিলছিল না। Synced করা হয়েছে — সব ৩টি tag এখন "Air Ambulance Service Dhaka to Bangkok | 24/7 ICU Charter" (57c).
+2. **Technical audit clean** — 50 files, 0 duplicate OG/Twitter tags, 0 missing canonicals (শুধু index.html ও services.html-এ long title যা intentional/exempt)
+3. **Blog listing integrity** — সব blog posts listing ও sitemap-এ আছে (no gaps found)
+4. **Build verified** — 53 pages generated (baseline maintained)
+5. **Deploy** — commit `87193a5` pushed, Vercel deployed, both / and /services returning 200
+
+### Owner Action Required (Persistent)
+**TIER 1 — /services এখনও "Discovered - not indexed" (multiple cycles):**
+URL: https://airambulancedhakabangkok.com/services
+Action: GSC URL Inspection তে গিয়ে "Request Indexing" বাটন ক্লিক করুন
+Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com&id=IuMf49_o3SmDpCpuAXCWhw
+
+এই পেজটি সাইটের pillar page — index না হওয়া পর্যন্ত এটি organic traffic generate করতে পারবে না।
+
+### Next Cycle Priorities
+1. /icu-vs-medical-escort pos 51 monitor — যদি পরবর্তী cycle-এও pos 40+ থাকে, content refresh করতে হবে
+2. /cardiac-emergency-transfer pos 17 — top-10 এ আনতে content enrichment করা যেতে পারে
+3. Homepage CTR optimization — 356 impressions কিন্তু মাত্র 2.25% CTR (pos 5.9 এ এটা কম)
+4. /guides/air-ambulance-dhaka-bangkok — last crawled Jun 23, re-crawl trigger দরকার
+
