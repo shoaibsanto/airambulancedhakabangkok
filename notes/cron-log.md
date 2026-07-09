@@ -1895,3 +1895,93 @@ Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:air
 3. Homepage CTR optimization — 356 impressions কিন্তু মাত্র 2.25% CTR (pos 5.9 এ এটা কম)
 4. /guides/air-ambulance-dhaka-bangkok — last crawled Jun 23, re-crawl trigger দরকার
 
+
+---
+
+## air-ambulance-daily -- 2026-07-10 (Cycle 4)
+
+### GSC Status
+**AUTH EXPIRED** -- token_combined.json expiry: 2026-07-09T19:04:51Z (invalid_grant risk confirmed).
+All GSC steps (pulse, URL inspection, quick-win scan) SKIPPED this cycle.
+Last known baselines (Jul 9 cycle 3): 28d: 517 imps / 16 clicks / 3.09% CTR / pos 8.7
+
+### Technical Audit Results
+- Files scanned: 50
+- Duplicate OG/Twitter tags: NONE (ALL CLEAN)
+- Missing canonicals: NONE (ALL CLEAN)
+- Oversized titles (exc. index.html emoji-exception): NONE
+- Thin content: gallery.html (468 words, min 600) -- persistent known issue, no change this cycle
+- index.html title (79c emoji): SKIP per skill rule -- ranking page at pos 6.3 with clicks
+
+### FAQPage Schema -- Injection (6 Blog Posts)
+Tier B FAQ queue extended to cluster-supporting blog posts WITHOUT prior FAQPage schema:
+
+| File | Questions | Cluster | Words |
+|------|-----------|---------|-------|
+| emergency-air-ambulance-when-to-call.html | 5 Qs | Cluster 1 | 3,639 |
+| why-bangladeshi-patients-choose-bangkok.html | 4 Qs | Cluster 2 | 1,318 |
+| medical-repatriation-to-bangladesh.html | 5 Qs | Cluster 3 | 1,443 |
+| admit-patient-bumrungrad-dhaka-guide.html | 5 Qs | Cluster 2 | 3,111 |
+| air-ambulance-dhaka-bangkok-bumrungrad-cost.html | 4 Qs | Cluster 2 | 2,013 |
+| neonatal-pediatric-air-ambulance-dhaka-bangkok.html | 5 Qs | Cluster 3 | 3,121 |
+
+All schemas: VALID JSON (json.loads() verified before write).
+FAQPage coverage after this cycle: 30/47 eligible pages (was 24/47 before).
+
+Key entity pattern used in all Q&A text:
+- Price: $27,000 to $33,000 USD / BDT 32,00,000 to BDT 39,00,000
+- Aircraft: Learjet 35A
+- Airport: Hazrat Shahjalal International Airport
+- Flight time: 3.5 hours
+- Phone: 01716-960770
+
+### Blog Listing + Sitemap Check
+- Blog listing gaps: NONE
+- Sitemap gaps: NONE
+- Build page count: 53 pages (baseline stable)
+
+### Deployment
+- Commit: ee8b547
+- Push: SUCCESS to github.com/shoaibsanto/airambulancedhakabangkok.git (main)
+- Post-deploy validation: sitemap.xml (200 OK), /blog/emergency-air-ambulance-when-to-call (200 OK)
+
+### Pages Still Without FAQPage Schema (17 remaining)
+Non-priority (about, contact, gallery, author, index pages):
+- content/about.html
+- content/author/tawhid-iqbal.html
+- content/blog/air-ambulance-cost-bangladesh-2026.html
+- content/blog/air-ambulance-insurance-payment-dhaka-bumrungrad.html
+- content/blog/air-ambulance-vs-commercial-medical-flight.html
+- content/blog/bumrungrad-international-hospital-dhaka-guide.html
+- content/blog/emergency-medical-evacuation-dhaka-to-bangkok.html
+- content/blog/index.html (listing page -- not applicable)
+- content/blog/medical-tourism-thailand-bangladesh.html
+- content/blog/medical-visa-thailand-for-bangladeshi-patients.html
+- content/blog/post-surgery-patient-transfer-dhaka.html
+- content/blog/what-is-an-air-ambulance.html
+- content/blog/what-to-expect-dhaka-bumrungrad-air-ambulance.html
+- content/contact.html
+- content/gallery.html
+- content/process.html
+- content/routes.html
+
+### TIER 0 -- Owner Action Required
+**GSC Re-authentication URGENT:**
+Token expired: 2026-07-09T19:04:51Z. All GSC monitoring is BLIND until re-auth.
+Steps:
+1. Go to: https://search.google.com/search-console/
+2. Re-run: hermes config mcp gsc reauthenticate (or follow gsc-token-maintenance.md)
+3. Verify token_combined.json at /root/.config/mcp-gsc/ has new expiry
+
+**Request Indexing (still pending from prior cycles):**
+URL: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+- https://airambulancedhakabangkok.com/services -- MOST URGENT (4+ cycles, never crawled)
+- https://airambulancedhakabangkok.com/bangkok-hospitals
+- https://airambulancedhakabangkok.com/guides/air-ambulance-dhaka-bangkok
+
+### Next Cycle Priorities
+1. GSC re-auth -- get fresh data
+2. FAQ injection for remaining cluster blog posts (post-surgery, what-to-expect, bumrungrad-guide)
+3. Monitor impression/click trends once GSC restored
+4. gallery.html thin content (468 words) -- add more content or de-prioritise
+
