@@ -1985,3 +1985,97 @@ URL: https://search.google.com/search-console/inspect?resource_id=sc-domain:aira
 3. Monitor impression/click trends once GSC restored
 4. gallery.html thin content (468 words) -- add more content or de-prioritise
 
+
+---
+
+## air-ambulance-daily SEO Cycle 5 — 2026-07-11
+
+### GSC Pulse (7 দিন: Jul 4–11)
+| Metric | এই সপ্তাহ | Baseline (7d) | Delta |
+|--------|-----------|----------------|-------|
+| Impressions | 149 | 149 | = (stable) |
+| Clicks | 4 | 2-5 | স্বাভাবিক সীমার মধ্যে |
+| CTR | 2.68% | 1.3-3.3% | OK |
+| Position (avg) | 9.9 | ~10.0 | stable |
+
+**28-day totals:** 547 impressions / 16 clicks / 2.93% CTR / pos 8.8
+(Baseline Jul 9: 517/16/3.09%/8.7 — impressions +6%, clicks stable)
+
+### GSC Top Queries (28d) — Notable
+| Query | Impressions | Clicks | CTR | Position |
+|-------|-------------|--------|-----|----------|
+| air ambulance service in bangladesh | 29 | 1 | 3.5% | 1.3 |
+| air ambulance bangladesh | 17 | 0 | 0% | 4.5 |
+| air ambulance dhaka | 19 | 0 | 0% | 1.0 |
+| air ambulance dhaka to bangkok | 12 | 0 | 0% | 13 |
+| air ambulance service dhaka to bangkok | 14 | 0 | 0% | 8.6 |
+| "3 to 7 days" commercial stretcher flight | 8 | 0 | 0% | 2.1 |
+
+**মন্তব্য:** "air ambulance dhaka" pos 1, "air ambulance bd" pos 1 — AI Overview cannibalization চলছে (আগের cycles-এ চিহ্নিত)।
+
+### GSC Page Performance (28d) — Top Movers
+| Page | Impressions | Clicks | CTR | Pos |
+|------|-------------|--------|-----|-----|
+| / (homepage) | 361 | 8 | 2.2% | 6.0 |
+| /air-ambulance-cost | 49 | 3 | 6.1% | 8.4 |
+| /blog/bangkok-hospitals-comparison | 42 | 0 | 0% | 9.6 |
+| /guides/air-ambulance-dhaka-bangkok | 25 | 1 | 4.0% | 5.2 |
+| /cardiac-emergency-transfer | 23 | 0 | 0% | 16.3 |
+| /blog/bangkok-hospital-admission | 22 | 0 | 0% | 6.1 |
+| /blog/how-to-book-air-ambulance | 21 | 0 | 0% | 4.6 |
+| /icu-vs-medical-escort | 23 | 0 | 0% | 52.7 |
+| /trauma-accident-evacuation | 6 | 0 | 0% | 2.5 |
+
+**বিশেষ নোট:** /icu-vs-medical-escort pos 52.7 (আগে ~51.2) — এখনো rank drop, কিন্তু competitive SERP shift। action নেওয়া হয়নি।
+
+### Indexing Status (5 key pages)
+| Page | Status | Last Crawled |
+|------|--------|--------------|
+| / (homepage) | OK Submitted & Indexed | 2026-07-10 |
+| /services | WARN Discovered - not indexed | কখনো crawl হয়নি |
+| /guides/air-ambulance-dhaka-bangkok | OK Submitted & Indexed | 2026-06-23 |
+| /bangkok-hospitals | OK Submitted & Indexed | 2026-06-26 |
+| /air-ambulance-cost | OK Submitted & Indexed | 2026-06-26 |
+
+### Technical Audit
+- Duplicate OG/Twitter tags: NONE (clean)
+- Missing canonical: NONE
+- Long titles (>62c): 1 file (content/index.html, 79c) — EXCEPTION (ranking page, pos 6, 8 clicks)
+- Blog listing gaps: NONE
+- Sitemap gaps: NONE
+- Build page count: 53 pages (stable)
+- Thin content: gallery.html (468 words < 600) — ongoing, non-priority
+
+### Actions Taken
+1. **FAQPage schema injection** — 3 blog posts updated:
+   - `content/blog/post-surgery-patient-transfer-dhaka.html` — 4 Q&As (entity-rich: Learjet 35A, $27k-$33k, BDT 32,00,000, Hazrat Shahjalal, 3.5hrs)
+   - `content/blog/what-to-expect-dhaka-bumrungrad-air-ambulance.html` — 4 Q&As (what to expect, documents, flight management, booking timeline)
+   - `content/blog/bumrungrad-international-hospital-dhaka-guide.html` — 4 Q&As (admission process, specialities, cost, visa requirements)
+   - All schemas JSON-validated before commit (4 Qs each, no double-quote bugs)
+2. **Deploy:** commit 8548603 — pushed to main, Vercel auto-deploy triggered
+3. **Post-deploy validation:** sitemap.xml (200 OK), /blog/post-surgery-patient-transfer-dhaka (200 OK)
+
+### FAQPage Schema Coverage (updated)
+- **33/47 eligible pages** now have FAQPage schema
+- Remaining without FAQ (lower priority): about, contact, gallery, process, routes, author page
+- Blog posts still without FAQ: air-ambulance-cost-bangladesh-2026, air-ambulance-insurance-payment, air-ambulance-vs-commercial-medical-flight, emergency-medical-evacuation-dhaka-to-bangkok, medical-tourism-thailand-bangladesh, medical-visa-thailand-for-bangladeshi-patients, what-is-an-air-ambulance, ventilator-patient-air-ambulance, dialysis-patient-air-ambulance-dhaka-bangkok
+
+### Owner Action Required (Tier 1 — Persistent)
+URL: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**[RED] MOST URGENT — /services (5+ cycles, never crawled):**
+- URL: https://airambulancedhakabangkok.com/services
+- Status: "Discovered - currently not indexed" — never crawled despite 4 static body links from homepage
+- Action: Click "Request Indexing" button in GSC URL Inspection
+
+**[WARN] Indexing pending (pillar/high-value pages):**
+- /guides/air-ambulance-dhaka-bangkok — indexed but last crawled Jun 23 (2+ weeks ago)
+- /air-ambulance-cost — indexed but last crawled Jun 26 (2+ weeks ago)
+- /bangkok-hospitals — indexed but last crawled Jun 26 (2+ weeks ago)
+
+### Next Cycle Priorities
+1. FAQ injection for remaining cluster blog posts: ventilator-patient, dialysis-patient, air-ambulance-vs-commercial-medical-flight, emergency-medical-evacuation
+2. Monitor /icu-vs-medical-escort position (currently pos 52.7) — if still pos 40+ in 2 more cycles, do content refresh
+3. /air-ambulance-cost re-crawl watch — last crawled Jun 26, should be re-crawled after today's deploy
+4. gallery.html thin content — consider adding 200+ words of content to cross 600-word threshold
+
