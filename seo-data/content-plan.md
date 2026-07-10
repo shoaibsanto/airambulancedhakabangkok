@@ -32,4 +32,13 @@ Last updated: 2026-06-25
 [x] Best IPS for Gaming PC in Bangladesh 2026 ← published 2026-07-08 (Post ID 35549)
 [x] UPS vs IPS for Bangladesh — Which One Do You Need? ← published 2026-07-09 (Post ID 35550)
 [x] IPS Noise Level Comparison — Silent Models for Home Use ← published 2026-07-10 (Post ID 35551)
-[ ] Best Inverter Battery for Home in Bangladesh 2026
+[x] Best Inverter Battery for Home in Bangladesh 2026 ← published 2026-07-11 (Post ID 35562)
+
+## New Topics Added 2026-07-11 (plan replenishment)
+[ ] IPS vs Generator for Home in Bangladesh — Cost and Power Comparison
+[ ] How to Extend IPS Battery Life in Bangladesh — 10 Expert Tips
+[ ] Best IPS for Refrigerator in Bangladesh — Which Capacity Do You Need?
+[ ] Solar Panel for Home IPS in Bangladesh — Complete Setup Guide 2026
+[ ] LiFePO4 Battery Charging Guide — How to Charge Properly in Bangladesh
+[ ] IPS Maintenance Checklist for Bangladeshi Homes — Monthly and Annual
+[ ] Best IPS for Dhaka Office — Capacity, Cost, and Recommendations 2026
