@@ -35,7 +35,7 @@ Last updated: 2026-06-25
 [x] Best Inverter Battery for Home in Bangladesh 2026 ← published 2026-07-11 (Post ID 35562)
 
 ## New Topics Added 2026-07-11 (plan replenishment)
-[ ] IPS vs Generator for Home in Bangladesh — Cost and Power Comparison
+[x] IPS vs Generator for Home in Bangladesh — Cost and Power Comparison ← published 2026-07-12 (Post ID 35563)
 [ ] How to Extend IPS Battery Life in Bangladesh — 10 Expert Tips
 [ ] Best IPS for Refrigerator in Bangladesh — Which Capacity Do You Need?
 [ ] Solar Panel for Home IPS in Bangladesh — Complete Setup Guide 2026
