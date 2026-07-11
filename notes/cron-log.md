@@ -2079,3 +2079,99 @@ URL: https://search.google.com/search-console/inspect?resource_id=sc-domain:aira
 3. /air-ambulance-cost re-crawl watch — last crawled Jun 26, should be re-crawled after today's deploy
 4. gallery.html thin content — consider adding 200+ words of content to cross 600-word threshold
 
+
+---
+
+## Cycle 6 — 2026-07-12 (Daily SEO Cron)
+
+### GSC Token Status
+- token_combined.json এ `"type"` field missing ছিল — fix করা হয়েছে
+- Token refresh সফল। New expiry: 2026-07-12 (1 hour)
+- GSC API সরাসরি urllib দিয়ে query করা হয়েছে
+
+### GSC 7-Day Snapshot (Jul 5–12, 2026)
+| Metric | Value | vs Baseline (149/4/2.68%/9.9) |
+|--------|-------|-------------------------------|
+| Impressions | 145 | -4 (stable, within noise) |
+| Clicks | 5 | +1 (improving) |
+| CTR | 3.45% | +0.77pp (improving) |
+| Position | 10.8 | +0.9 (slight drop — normal) |
+
+### GSC 28-Day Snapshot (Jun 14–Jul 12, 2026)
+| Metric | Value | vs Baseline (547/16/2.93%/8.8) |
+|--------|-------|--------------------------------|
+| Impressions | 572 | +25 (+4.6%) — trending up |
+| Clicks | 17 | +1 (+6%) |
+| CTR | 2.97% | +0.04pp (stable) |
+| Position | 9.2 | -0.4 (slight improvement) |
+
+**মন্তব্য:** Impressions ধীরে ধীরে বাড়ছে। Clicks-এও সামান্য বৃদ্ধি। Position 9.2 — previous 8.8 থেকে সামান্য নিচে কিন্তু normal noise range-এ।
+
+### Indexing Status (5 Key Pages)
+| Page | Status | Last Crawled |
+|------|--------|--------------|
+| / (homepage) | OK Indexed | 2026-07-10 |
+| /services | WARN Discovered-not-indexed | Never crawled |
+| /guides/air-ambulance-dhaka-bangkok | OK Indexed | 2026-06-23 |
+| /air-ambulance-cost | OK Indexed | 2026-06-26 |
+| /bangkok-hospitals | OK Indexed | 2026-06-26 |
+
+**Persistent issue:** `/services` এখনও "Discovered - not indexed" এবং কখনো crawl হয়নি। 4+ cycles ধরে এই অবস্থা চলছে। Owner action প্রয়োজন।
+
+### Technical Audit
+- Duplicate OG tags: ALL CLEAN (0 issues)
+- Missing canonicals: ALL CLEAN (0 issues)
+- Title too long: content/index.html (79c — emoji title, ranking page pos 6.2 with 8 clicks — SKIP per emoji exception rule)
+- Total HTML files: 50
+
+### FAQPage Schema Coverage
+- **Before:** 32/41 pages
+- **After:** 39/41 pages (+7 pages this cycle)
+- **Injected into:** air-ambulance-vs-commercial-medical-flight (4 Qs), emergency-medical-evacuation-dhaka-to-bangkok (4 Qs), medical-tourism-thailand-bangladesh (3 Qs), medical-visa-thailand-for-bangladeshi-patients (4 Qs), what-is-an-air-ambulance (3 Qs), air-ambulance-cost-bangladesh-2026 (4 Qs), air-ambulance-insurance-payment-dhaka-bumrungrad (4 Qs)
+- **Still missing:** process, routes (utility pages — lower priority, intentionally deferred)
+- All schema JSON validated before commit
+
+### CTR Quick-Win Analysis (28d)
+Pages pos 1-10, >= 5 impressions, 0 CTR:
+| Page | Pos | Impr | Status |
+|------|-----|------|--------|
+| /blog/bangkok-hospitals-comparison | 9.6 | 43 | FAQPage already injected (prior cycle) |
+| /blog/bangkok-hospital-admission | 6.2 | 23 | FAQPage already injected |
+| /blog/how-to-book-air-ambulance | 4.6 | 21 | FAQPage already injected |
+| /blog/stroke-air-ambulance | 5.2 | 10 | FAQPage already injected |
+| /blog/air-ambulance-cardiac-patients | 4.9 | 9 | FAQPage already injected |
+| /blog/bangkok-hospitals | 7.7 | 13 | FAQPage already injected |
+| /trauma-accident-evacuation | 2.5 | 6 | Tier B — pos 1-3, AI Overview cannibalization |
+
+**সিদ্ধান্ত:** এই পেজগুলোর titles আগেই optimize করা হয়েছে (Jun 2026) এবং FAQPage schema আগেই inject করা হয়েছে। Title পরিবর্তন করা safe নয় — ranking drop হতে পারে। AI Overview cannibalization অব্যাহত রয়েছে।
+
+### Top Performing Queries (28d, notable)
+- "air ambulance service in bangladesh" — pos 1.3, 29 impr, 1 click (3.4%) — AI Overview cannibalization expected
+- "air ambulance dhaka to bangkok" — pos 12.1, 13 impr, 0 clicks — just outside top 10
+- "air ambulance service dhaka to bangkok" — pos 8.6, 14 impr, 0 clicks
+
+### Top Performing Pages (28d)
+- / (homepage) — 8 clicks, 370 impressions, 2.2% CTR, pos 6.2
+- /air-ambulance-cost — 4 clicks, 55 impressions, 7.3% CTR, pos 7.7
+- /blog/bed-to-bed-transfer — 2 clicks, 17 impressions, 11.8% CTR, pos 10.4
+
+### New Content
+None created this cycle. Blog listing and sitemap gaps: ALL CLEAR (no missing entries).
+
+### Build & Deploy
+- Build: SUCCESS — 53 pages generated (baseline stable)
+- Commit: b39d3e1
+- Push: SUCCESS
+- Live validation: sitemap.xml 200, sample pages 200
+
+### Owner Action Required
+**TIER 1 — Urgent (persistent issue):**
+- GSC-এ `/services` পেজের জন্য "Request Indexing" button click করুন:
+  https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+  URL: https://airambulancedhakabangkok.com/services
+  (এই পেজটি ৪+ সপ্তাহ ধরে crawl হচ্ছে না — manual request indexing একমাত্র সমাধান)
+
+**TIER 2 — Recommended:**
+- GSC-এ `/guides/air-ambulance-dhaka-bangkok` পেজের জন্য "Request Indexing" দিন (last crawled Jun 23 — old)
+- GSC-এ `/air-ambulance-cost` পেজের Request Indexing দিন (last crawled Jun 26 — old, high-value page)
+
