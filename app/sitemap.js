@@ -51,6 +51,7 @@ export default async function sitemap() {
     ["/blog/medical-tourism-thailand-bangladesh", "weekly", 0.7],
     ["/blog/post-surgery-patient-transfer-dhaka", "weekly", 0.7],
     ["/blog/ventilator-patient-air-ambulance", "weekly", 0.7],
+    ["/blog/air-ambulance-dhaka-to-singapore", "weekly", 0.8],
   ];
 
   return ENTRIES.map(([urlPath, changeFrequency, priority]) => ({

@@ -36,7 +36,7 @@ Last updated: 2026-06-25
 
 ## New Topics Added 2026-07-11 (plan replenishment)
 [x] IPS vs Generator for Home in Bangladesh — Cost and Power Comparison ← published 2026-07-12 (Post ID 35563)
-[ ] How to Extend IPS Battery Life in Bangladesh — 10 Expert Tips
+[x] How to Extend IPS Battery Life in Bangladesh — 10 Expert Tips ← published 2026-07-13 (Post ID 35564)
 [ ] Best IPS for Refrigerator in Bangladesh — Which Capacity Do You Need?
 [ ] Solar Panel for Home IPS in Bangladesh — Complete Setup Guide 2026
 [ ] LiFePO4 Battery Charging Guide — How to Charge Properly in Bangladesh
