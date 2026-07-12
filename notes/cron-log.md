@@ -2175,3 +2175,144 @@ None created this cycle. Blog listing and sitemap gaps: ALL CLEAR (no missing en
 - GSC-এ `/guides/air-ambulance-dhaka-bangkok` পেজের জন্য "Request Indexing" দিন (last crawled Jun 23 — old)
 - GSC-এ `/air-ambulance-cost` পেজের Request Indexing দিন (last crawled Jun 26 — old, high-value page)
 
+
+---
+
+## Daily SEO Cron Log — July 13, 2026 (Cycle 7)
+
+### GSC Pulse — Last 7 Days (Jul 6–13, 2026)
+
+| Metric | এই সপ্তাহ | Baseline (Jul 11 cycle 5) | Delta |
+|--------|-----------|--------------------------|-------|
+| Impressions | 163 | 149 | +14 (+9.4%) |
+| Clicks | 4 | 4 | 0 |
+| CTR | 2.45% | 2.68% | -0.23pp |
+| Avg. Position | 11.2 | 9.9 | -1.3 (পতন) |
+
+**Jul 10 outlier:** Position 17.7 (single-day spike) — weekday হলেও অস্বাভাবিক। পরদিন Jul 11 তে pos 9.7-এ ফিরে এসেছে। সাধারণ noise হিসেবে বিবেচনা করা হচ্ছে।
+
+### GSC Pulse — Last 28 Days (Jun 15 – Jul 13, 2026)
+
+| Metric | মান | Cycle 6 Baseline (Jul 12) | Delta |
+|--------|-----|--------------------------|-------|
+| Impressions | 617 | 572 | +45 (+7.9%) |
+| Clicks | 17 | 17 | 0 (stable) |
+| CTR | 2.76% | 2.97% | -0.21pp |
+| Avg. Position | 9.2 | 9.2 | stable |
+
+**সার্বিক মন্তব্য:** Impressions ধারাবাহিকভাবে বৃদ্ধি পাচ্ছে (+7.9% vs cycle 6)। Clicks 17-তে স্থিতিশীল। CTR সামান্য হ্রাস — এটি AI Overview cannibalization-এর ফলে (position 1-2 queries: "air ambulance dhaka" pos 1, "air ambulance bd" pos 1.2, "air ambulance service in bangladesh" pos 1.3 — সবগুলোতে 0 বা 1 click)।
+
+---
+
+### Indexing Hygiene — 5 Key Pages
+
+| Page | Status | Last Crawled | Action |
+|------|--------|--------------|--------|
+| `/` (homepage) | OK — Submitted & Indexed | Jul 10, 2026 | None |
+| `/services` | WARN — Discovered, Not Indexed | Never crawled | Owner task (Tier 1 persistent) |
+| `/bangkok-hospitals` | OK — Submitted & Indexed | Jun 26, 2026 | None |
+| `/guides/air-ambulance-dhaka-bangkok` | OK — Submitted & Indexed | Jun 23, 2026 | None |
+| `/air-ambulance-cost` | OK — Submitted & Indexed | Jun 26, 2026 | None |
+
+**Note:** `/services` এখনো "Discovered - not indexed" — 4+ cycles ধরে একই অবস্থা। Title/OG mismatch cycle 3-তে fix করা হয়েছে। শুধুমাত্র owner-এর manual "Request Indexing" দিয়েই এটি সমাধান করা সম্ভব।
+
+---
+
+### GSC Quick-Win Scan — Page Performance (28 days)
+
+**Top Performing Pages:**
+| Page | Clicks | Imps | CTR | Pos |
+|------|--------|------|-----|-----|
+| `/` (homepage) | 8 | 394 | 2.03% | 6.1 |
+| `/air-ambulance-cost` | 4 | 62 | 6.45% | 7.5 |
+| `/blog/bed-to-bed-transfer-dhaka-bangkok` | 2 | 17 | 11.76% | 10.4 |
+| `/blog/medical-repatriation-to-bangladesh` | 1 | 17 | 5.88% | 4.5 |
+| `/guides/air-ambulance-dhaka-bangkok` | 1 | 29 | 3.45% | 4.8 |
+
+**Tier B — 0 CTR কিন্তু ≥5 Impressions (AI Overview Cannibalization — title পরিবর্তন নয়):**
+| Page | Imps | CTR | Pos | Status |
+|------|------|-----|-----|--------|
+| `/blog/bangkok-hospitals-comparison-bangladeshi-patients` | 43 | 0% | 9.6 | FAQPage OK — monitor |
+| `/` (homepage queries) | 394 | 2.03% | 6.1 | AI Overview — ongoing |
+| `/blog/bangkok-hospital-admission-bangladeshi-patients` | 23 | 0% | 6.2 | FAQPage OK — monitor |
+| `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` | 21 | 0% | 4.6 | FAQPage OK — monitor |
+| `/icu-vs-medical-escort` | 27 | 0% | **56.4** | REGRESSION — competitive SERP shift |
+| `/cardiac-emergency-transfer` | 24 | 0% | 17.9 | Just outside top 10 — monitor |
+| `/blog/stroke-air-ambulance-dhaka-bumrungrad` | 10 | 0% | 5.2 | FAQPage OK — monitor |
+
+**Notable Regression:**
+- `/icu-vs-medical-escort`: pos 9.2 (cycle 6) → pos 56.4 (cycle 7) — **হঠাৎ 47 পজিশন পতন**। Skill guidance অনুযায়ী: এটি global competitive SERP shift — title বা meta পরিবর্তন করা হবে না। 2+ cycles আরও monitor করতে হবে। Content মানসম্পন্ন (1233 words, valid FAQPage, title 54c, desc 154c)।
+- `/cardiac-emergency-transfer`: pos 17.9 (0 clicks, 24 imps) — top 10 থেকে বের হয়ে গেছে। Monitor করতে হবে; 2+ cycles পরেও pos 15+ থাকলে content refresh বিবেচনা করা হবে।
+
+---
+
+### Technical Audit Results
+
+- **Duplicate OG/Twitter tags:** None — ALL CLEAN
+- **Missing Canonical:** None
+- **Title >62c (exception):** `content/index.html` (79c emoji title — intentionally skipped, pos 6.1, 8 clicks)
+- **Files checked:** 50 HTML files
+- **Blog listing integrity:** ALL CLEAN — no missing posts
+- **Sitemap integrity:** ALL CLEAN — no missing entries
+- **Build page count baseline:** 53 pages (stable)
+
+---
+
+### FAQPage Schema Coverage
+
+**Status: 39/39 eligible pages — COMPLETE (100%)**
+
+Cycle 6-এ সমস্ত eligible blog/guide/service/condition pages-এ FAQPage schema inject করা হয়েছে। `process` এবং `routes` utility pages ইচ্ছাকৃতভাবে বাদ রাখা হয়েছে।
+
+---
+
+### Top Queries Analysis (28 days)
+
+**AI Overview Cannibalization Pattern (Position 1-3, 0 CTR):**
+- `"air ambulance dhaka"` — 23 imps, pos 1, 0 clicks
+- `"air ambulance bd"` — 5 imps, pos 1.2, 0 clicks
+- `"air ambulance service"` — 6 imps, pos 1.3, 0 clicks
+- `"air ambulance service in bangladesh"` — 29 imps, pos 1.3, 1 click (3.45% CTR)
+- `"air ambulance"` — 9 imps, pos 3.1, 0 clicks
+- `"air ambulance bangladesh"` — 18 imps, pos 4.4, 0 clicks
+
+**Confirmation:** এই queries-গুলো AI Overview consume করছে। Homepage description আগেই "Air ambulance service in Bangladesh —" দিয়ে শুরু করার পরেও CTR 3.45%-এ সীমিত। এটি AI Overview-এর স্বাভাবিক আচরণ — title বা ranking signal পরিবর্তন করা হবে না।
+
+**Target Keyword "air ambulance dhaka to bangkok":** 13 imps, pos 12.1, 0 clicks — top 10-এর ঠিক বাইরে। `/guides/air-ambulance-dhaka-bangkok` pillar page ইতোমধ্যে indexed (pos 4.8)। Homepage-এর pos 6.1 মূল traffic driver।
+
+---
+
+### Actions Taken This Cycle
+
+1. **GSC Pulse collected** — 7d + 28d overview + page + query analytics
+2. **Indexing hygiene** — 5 key pages inspected
+3. **Technical audit** — 50 files scanned, no issues found
+4. **Blog/sitemap integrity** — verified clean
+5. **FAQPage coverage confirmed** — 39/39 (100%) — no further injection needed
+6. **No CTR fixes applied** — title-optimized pages at 0 CTR are AI Overview victims; FAQPage schema is the correct lever (already deployed)
+7. **No deployment needed** — no file changes this cycle
+
+---
+
+### Owner Action List
+
+#### TIER 1 — URGENT (Manual GSC Action Required)
+**Request Indexing for `/services` page:**
+Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com&id=0uXB8vq6lDtM6d98U-cFQQ
+→ Click "Request Indexing" বাটন। এই page-টি 4+ cycles ধরে "Discovered - not indexed" অবস্থায় আছে এবং automatic crawl হচ্ছে না। Manual request-ই একমাত্র সমাধান।
+
+#### TIER 2 — MONITOR (No Action Needed Now)
+- `/icu-vs-medical-escort`: pos 56.4 — competitive SERP shift, 2+ cycles monitor করুন
+- `/cardiac-emergency-transfer`: pos 17.9 — 2+ cycles monitor করুন
+
+---
+
+### Next Cycle Priorities (Cycle 8 — Jul 14, 2026)
+1. GSC pulse — `/guides/air-ambulance-dhaka-bangkok` এবং `/air-ambulance-cost` indexing re-crawl হয়েছে কিনা confirm করুন
+2. `/icu-vs-medical-escort` position monitor (cycle 7: 56.4 — যদি 3 cycles পরেও pos 40+ থাকে, content refresh বিবেচনা)
+3. `/services` indexing status re-check — owner manual request দিয়েছেন কিনা
+4. `/cardiac-emergency-transfer` (pos 17.9) — পরের cycle-এ pos trend দেখুন
+
+---
+
+*Cycle 7 — Jul 13, 2026 | Run by: Hermes SEO Cron Agent | Duration: ~5 min*
