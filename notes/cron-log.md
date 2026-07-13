@@ -2458,3 +2458,103 @@ Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:air
 ### Summary
 Files modified: 11 existing + 1 new
 Key improvements: 4 desc fixes (all in 140-160c range), 5 related-articles sections (internal link building), 1 new 1788-word page (Cluster 5 expansion), routes.html updated with Singapore link, sitemap updated (54 entries), blog listing updated.
+
+---
+
+## Daily SEO Cron — 2026-07-14 (Cycle 9)
+
+### GSC Pulse (7-day: Jul 7–14)
+| Metric | This Week | Baseline (cycle 7) | Delta |
+|--------|-----------|-------------------|-------|
+| Impressions | 165 | 163 | +1.2% |
+| Clicks | 4 | 4 | stable |
+| CTR | 2.42% | 2.45% | -0.03pp (noise) |
+| Position | 11.0 | 11.2 | +0.2 (stable) |
+
+**28-day totals:** 639 impressions / 18 clicks / 2.82% CTR / pos 9.3
+- Prior baseline (cycle 7): 617 imps / 17 clicks / 2.76% CTR
+- Impressions +3.6% vs cycle 7, clicks +5.9% — positive trajectory
+
+**Notable daily pattern:** Jul 10 position spiked to 17.7 (Thursday anomaly), Jul 11 rebounded to 9.7. Normal weekend/weekday noise. Not a regression signal.
+
+### GSC Page Analysis (28-day, top opportunities)
+
+| Page | Clicks | Impressions | CTR | Pos | Status |
+|------|--------|-------------|-----|-----|--------|
+| / (homepage) | 9 | 406 | 2.2% | 6.1 | OK — main driver |
+| /air-ambulance-cost | 4 | 65 | 6.2% | 8.1 | Good CTR |
+| /blog/bed-to-bed-transfer-dhaka-bangkok | 2 | 17 | 11.8% | 10.4 | Excellent CTR |
+| /blog/medical-repatriation-to-bangladesh | 1 | 17 | 5.9% | 4.5 | Good |
+| /guides/air-ambulance-dhaka-bangkok | 1 | 29 | 3.5% | 4.8 | Good |
+| /guides/icu-air-ambulance-dhaka | 1 | 19 | 5.3% | 8.3 | Good |
+| /blog/bangkok-hospitals-comparison-bangladeshi-patients | 0 | 45 | 0% | 9.5 | HIGH PRIORITY — 45 imps 0 CTR |
+| /blog/how-to-book-air-ambulance-dhaka-bumrungrad | 0 | 21 | 0% | 4.6 | AI Overview cannibalization (pos 4.6) |
+| /blog/bangkok-hospital-admission-bangladeshi-patients | 0 | 23 | 0% | 6.2 | AI Overview pattern |
+| /icu-vs-medical-escort | 0 | 29 | 0% | 55.4 | PERSISTENT REGRESSION (monitor, cycle 9) |
+| /cardiac-emergency-transfer | 0 | 24 | 0% | 17.9 | Monitor (pos 17.9, borderline) |
+| /trauma-accident-evacuation | 0 | 6 | 0% | 2.5 | AI Overview cannibalization confirmed |
+
+**Key observations:**
+- `/icu-vs-medical-escort` at pos 55.4 — worsened from 56.4 (cycle 7). Now at 3rd consecutive cycle of pos 40+. **Decision point: content refresh scheduled for next cycle (cycle 10).** Plan: add cost comparison table + Bumrungrad ICU specs + named aircraft.
+- `/blog/bangkok-hospitals-comparison-bangladeshi-patients` (45 impressions, 0 CTR, pos 9.5) — highest impression page with 0 CTR. Already has FAQPage schema. Likely AI Overview cannibalization. No title change needed (already optimized Jun 2026). Monitor.
+- Homepage CTR 2.2% (pos 6.1) — AI Overview consuming clicks on "air ambulance dhaka" and related brand queries. Known pattern.
+
+### Indexing Status
+
+| Page | Status | Last Crawled |
+|------|--------|-------------|
+| / (homepage) | OK - Indexed | 2026-07-10 |
+| /services | WARN - Discovered not indexed | never crawled |
+| /bangkok-hospitals | OK - Indexed | 2026-06-26 |
+| /guides/air-ambulance-dhaka-bangkok | OK - Indexed | 2026-06-23 |
+| /air-ambulance-cost | OK - Indexed | 2026-06-26 |
+
+**Rich results:** Homepage has Breadcrumbs + Review snippets + Videos (PASS). All inspected pages show PASS for detected schema types.
+
+### Technical Audit
+- Files: 51 HTML pages scanned
+- Duplicate OG/Twitter tags: NONE (all clean)
+- Missing canonicals: NONE
+- Title long (>62c): 1 — `content/index.html` (79c, emoji title — known exception, ranking at pos 6.1 with clicks, intentionally skipped per Jul 2026 rule)
+- Desc long: NONE
+
+### Action Taken — Inbound Link Remediation
+**Problem:** 5 low-link pages (only 1 inbound link — blog/index.html card):
+- `blog/air-ambulance-cost-bangladesh-2026`
+- `blog/bumrungrad-international-hospital-dhaka-guide`
+- `blog/medical-tourism-thailand-bangladesh`
+- `blog/post-surgery-patient-transfer-dhaka`
+- `blog/ventilator-patient-air-ambulance`
+
+**Root cause:** Prior cycle (cycle 8) added `related-articles` sections TO these pages (outbound links), but did not add links FROM other pages pointing TO them.
+
+**Fix applied:** Added inbound links to each low-link page from a cluster-relevant source:
+| Low-link page | New inbound link from |
+|---|---|
+| blog/air-ambulance-cost-bangladesh-2026 | content/air-ambulance-cost.html (new related-articles) |
+| blog/bumrungrad-international-hospital-dhaka-guide | content/bangkok-hospitals.html (new related-articles) |
+| blog/medical-tourism-thailand-bangladesh | blog/why-bangladeshi-patients-choose-bangkok.html (new related-articles) |
+| blog/post-surgery-patient-transfer-dhaka | blog/bed-to-bed-transfer-dhaka-bangkok.html (added to existing related-articles) |
+| blog/ventilator-patient-air-ambulance | guides/icu-air-ambulance-dhaka.html (added to existing related-articles) |
+
+**Result:** All pages now 2+ inbound links. Low-link count: 0/51.
+
+### Build & Deploy
+- Build: 54 pages generated (stable), no errors
+- Commit: `a567842` — pushed to origin/main
+- Post-deploy: sitemap.xml HTTP/2 200, homepage HTTP/2 200
+
+### Owner Action Required (Persistent)
+
+**TIER 0 — /services: Discovered-not-indexed (5+ consecutive cycles, never crawled):**
+Owner must click "Request Indexing" manually in Google Search Console:
+`https://airambulancedhakabangkok.com/services`
+URL: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**TIER 2 — New pages from cycle 8 (Singapore page):**
+`https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-singapore` — needs indexing request if not yet submitted
+
+### Next Cycle Priorities (Cycle 10)
+1. **Content refresh: `/icu-vs-medical-escort`** — 3+ cycles at pos 40+, now at decision threshold. Add: cost comparison table, Bumrungrad ICU specs, Learjet 35A entity, named aircraft types. Do NOT change title or canonical.
+2. Monitor `/cardiac-emergency-transfer` (pos 17.9, 24 imps) — if still pos 15+ in cycle 10, add content.
+3. Monitor `/blog/bangkok-hospitals-comparison-bangladeshi-patients` (45 imps, 0 CTR, pos 9.5) — highest impression 0-CTR page. No action yet (AI Overview pattern, all schema done).
