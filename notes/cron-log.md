@@ -2558,3 +2558,88 @@ URL: https://search.google.com/search-console/inspect?resource_id=sc-domain:aira
 1. **Content refresh: `/icu-vs-medical-escort`** — 3+ cycles at pos 40+, now at decision threshold. Add: cost comparison table, Bumrungrad ICU specs, Learjet 35A entity, named aircraft types. Do NOT change title or canonical.
 2. Monitor `/cardiac-emergency-transfer` (pos 17.9, 24 imps) — if still pos 15+ in cycle 10, add content.
 3. Monitor `/blog/bangkok-hospitals-comparison-bangladeshi-patients` (45 imps, 0 CTR, pos 9.5) — highest impression 0-CTR page. No action yet (AI Overview pattern, all schema done).
+
+---
+
+## Cycle 10 — 2026-07-15 (Daily)
+
+### GSC Status
+**AUTH EXPIRED** — `mcp_gsc_*` সকল call "Authentication failed" error return করেছে।
+Token file: `/root/.config/mcp-gsc/token_combined.json`
+Token expiry: `2026-07-14T19:21:48Z` (গতকাল expire হয়েছে)
+refresh_token উপস্থিত কিন্তু MCP server নতুন access token নিতে পারছে না।
+**Last known GSC baseline (cycle 9, Jul 14):** 7d: 165 imps / 4 clicks / 2.42% CTR / pos 11.0 | 28d: 639 imps / 18 clicks / 2.82% CTR / pos 9.3
+
+**TIER 0 OWNER ACTION: GSC re-authentication required.**
+Owner must re-authenticate via browser: https://search.google.com/search-console/
+
+### Technical Audit
+- Files scanned: 51 HTML pages
+- Duplicate OG/Twitter tags: NONE (all clean)
+- Missing canonicals: NONE
+- Title long (>62c): 1 — `content/index.html` (79c, emoji title — known exception, skip per Jul 2026 rule)
+- Desc long: NONE
+- Blog listing gaps: NONE (all blog posts have listing cards)
+- Sitemap gaps: NONE (all blog posts in sitemap.js)
+
+### Low-Link Audit
+- LOW_LINK: `404` (0 inbound) — 404 page intentionally excluded; no action needed
+- All content pages: 2+ inbound links (cycle 9 fix held)
+
+### Thin Content Audit
+- `gallery` — 468 words (min 600) — known gap; gallery page is primarily image-based, low priority
+
+### Primary Action Taken — `/icu-vs-medical-escort` Content Refresh (Cycle 10 Scheduled Task)
+
+**Trigger:** 3-cycle threshold reached (pos 55.4, Jul 14). Content refresh scheduled from cycle 9.
+
+**Changes applied:**
+1. **Aircraft table row enriched** — Added "Learjet 35A or King Air 350 from Hazrat Shahjalal International Airport" to comparison table Aircraft row
+2. **New H2 section added:** "Cost Comparison: ICU Air Ambulance vs Medical Escort Dhaka to Bangkok"
+   - Full cost comparison table with USD + BDT (Indian format) figures
+   - Learjet 35A, King Air 350 aircraft entities
+   - $27,000–$33,000 USD / BDT 32,00,000–39,00,000 for ICU charter
+   - $3,000–$7,000 USD / BDT 3,00,000–8,00,000 for medical escort
+   - 3.5 hours flight time from Hazrat Shahjalal International Airport
+   - Bumrungrad International ICU direct handover note
+3. **FAQPage schema enriched** — 4 Q&As updated with all GEO entities:
+   - Learjet 35A, BDT 32,00,000, Hazrat Shahjalal, Bumrungrad, 3.5 hours, 01716-960770
+   - Added new Q: "How much does ICU air ambulance cost vs medical escort?" — entity-rich answer
+
+**Word count:** 1,233 → 1,485 words
+
+**GEO Entity Verification (live page):**
+- Learjet 35A: YES
+- Hazrat Shahjalal International Airport: YES
+- $27,000 / $33,000 USD: YES
+- BDT 32,00,000 / BDT 3,00,000: YES
+- 3.5 hours: YES
+- Bumrungrad International: YES
+- Cost Comparison (H2): YES
+
+### Build & Deploy
+- Build: 54 pages generated (stable), no errors
+- Commit: `17cc149` — pushed to origin/main
+- Post-deploy: sitemap.xml HTTP/2 200, /icu-vs-medical-escort HTTP/2 200
+
+### Owner Action Required
+
+**TIER 0 — GSC Auth Expired (URGENT):**
+GSC token মেয়াদোত্তীর্ণ (Jul 14, 2026)। Owner must re-authenticate:
+https://search.google.com/search-console/
+Re-auth না হলে next cycle-এও GSC data unavailable থাকবে।
+
+**TIER 0 — /services: Discovered-not-indexed (6+ consecutive cycles, never crawled):**
+Owner must click "Request Indexing" manually in GSC:
+URL: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+Page: `https://airambulancedhakabangkok.com/services`
+
+**TIER 2 — Singapore page:**
+`https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-singapore` — if not yet submitted, request indexing
+
+### Next Cycle Priorities (Cycle 11)
+1. **Monitor `/icu-vs-medical-escort`** — content refresh just deployed; give 2-4 weeks for Google re-crawl. Do NOT change title/canonical.
+2. **Monitor `/cardiac-emergency-transfer`** (pos 17.9, 24 imps) — if still pos 15+ in cycle 11, add content refresh (Bumrungrad cardiac unit entities).
+3. **GSC re-auth** — if still expired, all GSC steps remain blocked. Generate owner reminder.
+4. **Expansion route — Myanmar page** — next Cluster 5 gap (India + Singapore filled Jul 2026).
+
