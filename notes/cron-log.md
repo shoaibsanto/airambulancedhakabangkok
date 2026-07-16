@@ -2643,3 +2643,93 @@ Page: `https://airambulancedhakabangkok.com/services`
 3. **GSC re-auth** — if still expired, all GSC steps remain blocked. Generate owner reminder.
 4. **Expansion route — Myanmar page** — next Cluster 5 gap (India + Singapore filled Jul 2026).
 
+
+---
+
+## Cycle 11 — Daily SEO Report (Jul 16 2026)
+
+### GSC Snapshot
+
+| Period | Impressions | Clicks | CTR | Position | vs Prior |
+|--------|------------|--------|-----|----------|----------|
+| 7-day (Jul 9–16) | 180 | 4 | 2.22% | 11.3 | +10.4% imps vs cycle 7 baseline |
+| 28-day (Jun 18–Jul 16) | 691 | 20 | 2.89% | 9.4 | +12% imps, +18% clicks vs cycle 7 |
+
+**28-day highlights:**
+- Homepage: 10 clicks / 421 imps / pos 6.0 — dominant page (61% of all impressions)
+- `/air-ambulance-cost`: 4 clicks / 75 imps / pos 8.3 / 5.3% CTR — second-best performer
+- `/guides/air-ambulance-dhaka-bangkok`: 1 click / 30 imps / pos 4.9 — pillar stable
+- `/blog/bangkok-hospitals-comparison-bangladeshi-patients`: 49 imps / pos 9.1 / 0 CTR — highest-volume zero-CTR page
+
+**7-day trend:** Impressions climbing steadily (180 vs 163 baseline). Position stable at 11.3 (vs 11.2 baseline). Weekend noise (pos 14.7 on Jul 13) rebounded to pos 7.4 on Jul 14 — normal pattern.
+
+### Indexing Status (5 Pages Inspected)
+
+| Page | Status | Last Crawled | Notes |
+|------|--------|-------------|-------|
+| `/` (homepage) | ✅ Indexed | Jul 10 | Rich results: Breadcrumbs, Review snippets, Videos |
+| `/services` | ⚠️ Discovered-not-indexed | Never | **Persistent Tier 1 owner task** — only sitemap.xml as referring URL |
+| `/bangkok-hospitals` | ✅ Indexed | Jun 26 | Rich results: Breadcrumbs, Review snippets |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Indexed | Jun 23 | Rich results: Breadcrumbs, Review snippets |
+| `/air-ambulance-cost` | ✅ Indexed | Jun 26 | Rich results: Breadcrumbs, Review snippets |
+
+**Note:** Google crawled `/services` to find links (it's the referring URL for `/bangkok-hospitals` and `/air-ambulance-cost`) but chose not to index it. This is a crawl-budget issue — Google has seen the page but deprioritized indexing it. Manual "Request Indexing" is the only reliable fix.
+
+### Technical Audit
+
+- **Files:** 51 HTML content files (28 blog posts)
+- **Build:** 54 static pages — all clean, no errors
+- **OG/Twitter tags:** All clean — zero duplicates across all files
+- **Canonical tags:** All present
+- **Meta descriptions:** All within 165c limit
+- **Titles:** Only 1 flagged — `index.html` at 79c (known emoji exception — page ranks pos 6.0, DO NOT CHANGE)
+- **Blog listing:** All 28 posts present in blog/index.html
+- **Sitemap:** All 51 entries present in app/sitemap.js
+- **Orphan pages:** Zero (only 404 page has 0 inbound, expected)
+- **FAQPage schema:** 100% coverage (39/39 eligible pages) — unchanged from cycle 10
+
+### Position Monitoring
+
+| Page | 28d Position | 28d Impressions | Trend | Action |
+|------|-------------|----------------|-------|--------|
+| `/icu-vs-medical-escort` | 56.1 | 30 | Down from 55.4 (cycle 9) | Content refresh done cycle 10 (Jul 15). Monitor 2-4 weeks. |
+| `/cardiac-emergency-transfer` | 17.6 | 25 | Stable (was 17.9) | Monitor — within threshold for 2+ more cycles |
+| `/blog/bangkok-hospitals-comparison-bangladeshi-patients` | 9.1 | 49 | Stable | Zero-CTR: AI Overview cannibalization (Tier B, FAQ schema already applied) |
+| `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` | 4.5 | 22 | Stable | Zero-CTR: AI Overview (Tier B, FAQ schema already applied) |
+
+### Zero-CTR Pages at Pos 1–10 (AI Overview Pattern)
+
+Pages at positions 1–10 with ≥10 impressions and 0 clicks over 28 days — classic AI Overview cannibalization:
+
+1. `/blog/bangkok-hospitals-comparison-bangladeshi-patients` — 49 imps, pos 9.1
+2. `/blog/bangkok-hospital-admission-bangladeshi-patients` — 24 imps, pos 6.4
+3. `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` — 22 imps, pos 4.5
+4. `/bangkok-hospitals` — 19 imps, pos 7.4
+5. `/blog/air-ambulance-cardiac-patients` — 10 imps, pos 5.6
+6. `/blog/stroke-air-ambulance-dhaka-bumrungrad` — 10 imps, pos 5.2
+
+All have FAQPage schema already applied. Further title rewrites are NOT recommended (per Tier B policy — risk outweighs benefit). These pages serve as AI Overview citation sources even without clicks.
+
+### Actions Taken This Cycle
+- GSC performance audit: ✅ complete
+- Indexing inspection (5 pages): ✅ complete
+- Technical audit (all files): ✅ clean
+- Blog listing + sitemap integrity: ✅ verified
+- Orphan check: ✅ no orphan pages
+- Build verification: ✅ 54 pages, no errors
+- No file changes needed — site is technically clean
+
+### Owner Action Required
+
+**🔴 Tier 1 — Request Indexing (URGENT):**
+- https://airambulancedhakabangkok.com/services — "Discovered - not indexed" since Jun 2026 (never crawled). GSC URL Inspection → "Request Indexing" button.
+  Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com&id=ylidonsMFZbACVIW77GuiA&utm_medium=link&utm_source=api
+
+**🔴 Tier 0 — GSC Token:**
+- Token refresh succeeded this cycle (expiry Jul 15, but refresh_token worked). No action needed now, but monitor next cycle.
+
+### Next Cycle Priorities
+1. Monitor `/icu-vs-medical-escort` position recovery (2-4 weeks post-content refresh)
+2. Continue passive monitoring of zero-CTR Tier B pages
+3. Check GSC token status (may need owner re-auth if refresh fails)
+4. Consider new content: Dhaka to Myanmar route page (keyword "air ambulance myanmar" appeared in GSC — pos 76.5 but shows intent)
