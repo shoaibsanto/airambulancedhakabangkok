@@ -2733,3 +2733,115 @@ All have FAQPage schema already applied. Further title rewrites are NOT recommen
 2. Continue passive monitoring of zero-CTR Tier B pages
 3. Check GSC token status (may need owner re-auth if refresh fails)
 4. Consider new content: Dhaka to Myanmar route page (keyword "air ambulance myanmar" appeared in GSC — pos 76.5 but shows intent)
+## Daily SEO Cron Log — Cycle 12 (2026-07-17)
+
+### GSC Token Status
+- Token expiry: 2026-07-16T19:04:32Z (EXPIRED yesterday)
+- `refresh_token` present: YES
+- GSC calls succeeded: YES (refresh_token still functional)
+- ⚠️ Monitor next cycle — if `invalid_grant` appears, owner must re-authenticate via browser
+
+### GSC Performance — 7-Day (Jul 10–17)
+| Metric | This Cycle | Baseline (Cycle 7) | Delta |
+|--------|-----------|---------------------|-------|
+| Impressions | 168 | 163 | +3% |
+| Clicks | 4 | 4 | flat |
+| CTR | 2.38% | 2.45% | -0.07pp |
+| Position | 11.3 | 11.2 | +0.1 |
+
+**Assessment:** Stable. Within normal range. Jul 16 showed pos 1.9 with only 10 impressions — likely AI Overview cannibalization on a low-volume day.
+
+### GSC Performance — 28-Day (Jun 19 – Jul 17)
+| Metric | This Cycle | Prior Baseline (Cycle 7) | Delta |
+|--------|-----------|--------------------------|-------|
+| Impressions | 693 | 617 | +12.3% |
+| Clicks | 20 | 17 | +17.6% |
+| CTR | 2.89% | 2.76% | +0.13pp |
+| Position | 9.6 | 9.2 | +0.4 |
+
+**Assessment:** POSITIVE TRAJECTORY. Impressions grew +12.3% and clicks +17.6% over the prior 28-day window. CTR slightly improved. Position stable. The site continues its upward trend.
+
+### GSC Queries — AI Overview Cannibalization (Persistent)
+Position 1-3 queries with 0 clicks — AI Overview consuming all traffic:
+- `air ambulance dhaka` — 25 imps, pos 1.1, 0 CTR
+- `air ambulance service in bangladesh` — 34 imps, pos 1.3, 1 click (3% effective CTR)
+- `air ambulance service` — 6 imps, pos 1.3, 0 CTR
+- `ambulance number dhaka` — 2 imps, pos 1, 0 CTR
+- `air ambulance bangladesh dhaka` — 1 imp, pos 1, 0 CTR
+
+**Action:** Continue monitoring. FAQPage schema on homepage is the primary lever.
+
+### GSC Pages — Tier B (Pos 3-10, 0 CTR, ≥5 impressions)
+| Page | Impressions | Position | Note |
+|------|------------|----------|------|
+| `/blog/bangkok-hospitals-comparison-bangladeshi-patients` | 49 | 9.1 | HIGHEST impression count |
+| `/blog/bangkok-hospital-admission-bangladeshi-patients` | 24 | 6.4 | |
+| `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` | 22 | 4.5 | |
+| `/bangkok-hospitals` | 20 | 7.5 | Pillar page |
+| `/blog/air-ambulance-cardiac-patients` | 10 | 5.6 | |
+| `/blog/stroke-air-ambulance-dhaka-bumrungrad` | 10 | 5.2 | |
+| `/trauma-accident-evacuation` | 6 | 2.5 | AI Overview pattern |
+
+**Assessment:** All these pages have FAQPage schema. Further title rewrites not recommended per Tier B policy. AI Overview citation is the expected mechanism for these.
+
+### Notable: Owner Title Shortening (Commit b0038bf, Jul 16)
+The site owner committed a batch title shortening affecting 32+ pages — all titles trimmed to ≤40c (with template suffix " | Air Ambulance Dhaka" = 60c total max).
+
+**Observations (DO NOT OVERRIDE — owner action):**
+- Several Jun 2026 CTR-optimized titles lost medical urgency keywords (STEMI, ICU, ventilator, golden hour, 24/7)
+- Example: `blog/air-ambulance-cardiac-patients` was "Cardiac Air Ambulance Dhaka to Bangkok | STEMI ICU Jet 24/7" → now "Cardiac Air Ambulance Dhaka to Bangkok" (38c)
+- Example: `blog/bangkok-hospitals-comparison-bangladeshi-patients` was "Bumrungrad vs Samitivej Guide for Bangladeshi Patients" → now "Bumrungrad vs Samitivej Guide" (29c)
+- Template suffix adds " | Air Ambulance Dhaka" — creates "Dhaka" repetition in titles that already contain "Dhaka"
+- `/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi` is just "Air Ambulance to India" (22c) — lost all destination specificity
+
+**Monitoring plan:** Watch 2-4 weeks for CTR/click impact. If clicks drop, owner should restore medical differentiators in titles while keeping ≤60c total (template-aware).
+
+### Indexing Status (5 Key Pages Inspected)
+| Page | Status | Last Crawled |
+|------|--------|-------------|
+| Homepage `/` | ✅ Indexed | Recent |
+| `/services` | ⚠️ Discovered - not indexed | Never |
+| `/bangkok-hospitals` | ✅ Indexed | Recent |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Indexed | Recent |
+| `/air-ambulance-cost` | ✅ Indexed | Recent |
+
+### Technical Audit
+- OG/Twitter duplicate tags: ALL CLEAN across 50 content files
+- Missing canonicals: NONE
+- Title length anomalies: 12 pages with titles <30c (due to owner shortening); 1 page (index.html 79c — known exception)
+- Blog listing coverage: 28/28 posts present ✅
+- Sitemap coverage: 28/28 blog posts present ✅
+- Content files: 50 total (stable)
+
+### /icu-vs-medical-escort Monitoring
+- Position: 54.3 (was 55.4 in cycle 9) — slight improvement, still well outside top 10
+- Impressions: 33 — stable
+- Content refresh was completed in cycle 10. Continue monitoring 2 more cycles before further action.
+
+### Actions Taken This Cycle
+- GSC performance audit: ✅ complete (7-day + 28-day)
+- Indexing inspection (5 pages): ✅ complete
+- Technical audit (all files): ✅ clean
+- Blog listing + sitemap integrity: ✅ verified
+- OG/Twitter duplicate check: ✅ clean
+- Title audit: ⚠️ owner-initiated shortening noted — monitoring
+- No file changes needed this cycle
+
+### Owner Action Required
+
+**🔴 Tier 1 — Request Indexing (URGENT):**
+- https://airambulancedhakabangkok.com/services — "Discovered - not indexed" since Jun 2026 (never crawled). GSC URL Inspection → "Request Indexing" button.
+  Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com&id=ylidonsMFZbACVIW77GuiA
+
+**🟡 Tier 0 — GSC Token:**
+- Token refresh succeeded this cycle despite expiry (Jul 16). If next cycle fails with `invalid_grant`, owner must re-authenticate via browser. No immediate action.
+
+**🟢 Informational — Title Shortening Impact:**
+- 32+ pages had titles shortened to ≤40c (commit b0038bf). Monitor CTR/clicks over next 2-4 weeks. If clicks decline, consider restoring medical urgency keywords (STEMI, ICU, ventilator, 24/7) within 60c total budget.
+
+### Next Cycle Priorities
+1. Monitor `/icu-vs-medical-escort` position recovery (2-4 weeks post-content refresh)
+2. Continue passive monitoring of zero-CTR Tier B pages
+3. Check GSC token status (may need owner re-auth if refresh fails)
+4. Monitor title shortening impact on CTR over 2-4 weeks
+5. Consider new content: Dhaka to Myanmar route page (keyword "air ambulance myanmar" appeared — pos 76.5 but shows intent)
