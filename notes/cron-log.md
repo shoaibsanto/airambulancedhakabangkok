@@ -2845,3 +2845,95 @@ The site owner committed a batch title shortening affecting 32+ pages — all ti
 3. Check GSC token status (may need owner re-auth if refresh fails)
 4. Monitor title shortening impact on CTR over 2-4 weeks
 5. Consider new content: Dhaka to Myanmar route page (keyword "air ambulance myanmar" appeared — pos 76.5 but shows intent)
+
+---
+
+## Cycle 13 — Daily SEO Report — Jul 18, 2026
+
+### GSC Performance Snapshot
+
+| Metric | 7-Day (Jul 11-18) | 28-Day (Jun 20 - Jul 18) |
+|--------|-------------------|--------------------------|
+| Impressions | 175 | 697 |
+| Clicks | 5 | 21 |
+| CTR | 2.86% | 3.01% |
+| Position | 10.3 | 9.6 |
+
+**Cycle 12 vs Cycle 13 delta (7-day):**
+- Impressions: 168 → 175 (+4.2%)
+- Clicks: 4 → 5 (+1)
+- CTR: 2.38% → 2.86% (+0.48pp)
+- Position: 11.3 → 10.3 (-1.0, improved)
+
+**Cycle 12 vs Cycle 13 delta (28-day):**
+- Impressions: 693 → 697 (+0.6%)
+- Clicks: 20 → 21 (+1)
+- CTR: 2.89% → 3.01% (+0.12pp)
+- Position: 9.6 → 9.6 (stable)
+
+**Trend:** Positive. Both 7-day and 28-day metrics improved. Impressions crossed 697 (28d) — highest ever recorded. Clicks at 21 (28d) — also highest. CTR above 3% for the first time in 28-day window.
+
+### Indexing Hygiene (5 Pages Inspected)
+
+| Page | Status | Last Crawled |
+|------|--------|-------------|
+| / (homepage) | ✅ Submitted and indexed | 2026-07-17 |
+| /services | ⚠️ Discovered - not indexed | Never |
+| /bangkok-hospitals | ✅ Submitted and indexed | 2026-06-26 |
+| /guides/air-ambulance-dhaka-bangkok | ✅ Submitted and indexed | 2026-06-23 |
+| /air-ambulance-cost | ✅ Submitted and indexed | 2026-06-26 |
+
+**Persistent issue:** `/services` remains "Discovered - not indexed" since site launch. Only referring URL is `sitemap.xml`. JS-rendered nav links not followed by Google. Owner must manually request indexing.
+
+### Technical Audit
+
+- **Duplicate OG/Twitter tags:** ALL CLEAN (0 files with duplicates)
+- **Canonical tags:** All 51 content files have canonical tags
+- **Title length:** Only 1 flag — `content/index.html` (79c emoji title) — known exception, page ranks pos 6 with clicks, DO NOT touch
+- **Meta description length:** All under 165c threshold
+- **Blog listing integrity:** All blog posts present in blog/index.html listing
+- **Sitemap integrity:** All 50 entries verified in sitemap.js
+- **Build:** 54 static pages generated successfully, no errors
+- **File count:** 51 content HTML files (stable)
+
+### GSC Page-Level Analysis (28-Day)
+
+**Pages with clicks (top performers):**
+1. `/` — 11 clicks / 402 imps / pos 6.0
+2. `/air-ambulance-cost` — 4 clicks / 86 imps / pos 8.1
+3. `/blog/bed-to-bed-transfer-dhaka-bangkok` — 2 clicks / 17 imps / pos 10.4
+4. `/guides/air-ambulance-dhaka-bangkok` — 1 click / 30 imps / pos 4.9
+5. `/blog/medical-repatriation-to-bangladesh` — 1 click / 17 imps / pos 4.5
+6. `/cardiac-emergency-transfer` — 1 click / 28 imps / pos 16.5
+7. `/guides/icu-air-ambulance-dhaka` — 1 click / 21 imps / pos 8.5
+
+**Zero-CTR Tier B pages (pos 1-10, ≥5 imps):** 6 pages
+These all have already-optimized titles and complete FAQPage schema. AI Overview cannibalization is the likely cause. No title rewrites recommended.
+
+**Notable changes vs cycle 12:**
+- `/cardiac-emergency-transfer` recovered: pos 17.9 → 16.5 and gained 1 click — no action needed
+- `/icu-vs-medical-escort` steady at pos 51.6 (35 imps, 0 clicks) — content refresh from cycle 10 still settling, monitor 1-2 more cycles
+- `/blog/bangkok-hospitals-comparison-bangladeshi-patients` highest zero-CTR page (50 imps, pos 9.1) — FAQPage already present, AI Overview pattern
+
+### Owner "Request Indexing" Task List
+
+**🔴 TIER 1 (URGENT):**
+- https://airambulancedhakabangkok.com/services — "Discovered - not indexed" since Jun 2026 (never crawled)
+  → GSC URL Inspection → "Request Indexing" button
+  → Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com&id=-eMLRva-eKe97ZHyqBg6rg
+
+### Actions Taken This Cycle
+- GSC performance audit: complete (7-day + 28-day)
+- Indexing inspection (5 pages): complete
+- Technical audit (all files): clean (1 known exception)
+- Blog listing + sitemap integrity: verified
+- OG/Twitter duplicate check: clean
+- Build check: 54 pages, no errors
+- No file changes needed — site in stable, positive-trend state
+
+### Next Cycle Priorities
+1. Continue monitoring `/icu-vs-medical-escort` position recovery (1-2 more cycles)
+2. Passive monitoring of zero-CTR Tier B pages (AI Overview pattern)
+3. Monitor 28-day CTR trend post owner title shortening (commit b0038bf, Jul 17) — if clicks decline, note evidence
+4. Consider Dhaka to Myanmar route page (keyword "air ambulance myanmar" appeared in prior GSC data)
+5. Owner: Request indexing for /services (persistent blocker)
