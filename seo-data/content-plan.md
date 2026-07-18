@@ -40,5 +40,6 @@ Last updated: 2026-06-25
 [x] Best IPS for Refrigerator in Bangladesh — Which Capacity Do You Need? ← published 2026-07-14 (Post ID 35583)
 [x] Solar Panel for Home IPS in Bangladesh — Complete Setup Guide 2026 ← published 2026-07-15 (Post ID 35612)
 [x] LiFePO4 Battery Charging Guide — How to Charge Properly in Bangladesh ← published 2026-07-16 (Post ID 35615)
-[ ] IPS Maintenance Checklist for Bangladeshi Homes — Monthly and Annual
-[ ] Best IPS for Dhaka Office — Capacity, Cost, and Recommendations 2026
+- [x] IPS Maintenance Checklist for Bangladeshi Homes — Monthly and Annual ← published 2026-07-16 (Post ID 35661)
+- [x] Best IPS for Dhaka Office — Capacity, Cost, and Recommendations 2026 ← published 2026-07-18 (Post ID 35665)
+- [x] Industrial UPS vs IPS in Bangladesh — Which to Choose? ← published 2026-07-19 (Post ID 35667)
