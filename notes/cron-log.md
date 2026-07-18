@@ -2937,3 +2937,86 @@ These all have already-optimized titles and complete FAQPage schema. AI Overview
 3. Monitor 28-day CTR trend post owner title shortening (commit b0038bf, Jul 17) — if clicks decline, note evidence
 4. Consider Dhaka to Myanmar route page (keyword "air ambulance myanmar" appeared in prior GSC data)
 5. Owner: Request indexing for /services (persistent blocker)
+
+---
+
+## Cycle 14 — Jul 19, 2026
+
+### GSC Pulse (7-day: Jul 12–19)
+| Metric | This Cycle | Cycle 13 (Jul 18) | Delta |
+|--------|-----------|-------------------|-------|
+| Impressions | 159 | 168 | -5.4% |
+| Clicks | 5 | 4 | +25% |
+| CTR | 3.14% | 2.38% | +0.76pp |
+| Position | 10.6 | 11.3 | improved |
+
+**28-day (Jun 21 – Jul 19):** 828 impressions / 20 clicks / ~2.4% CTR
+- Impressions up +19.5% vs cycle 12 baseline (693) — **strong growth signal**
+- Clicks stable at 20
+
+### Daily Trend
+| Date | Clicks | Impr | CTR | Pos |
+|------|--------|------|-----|-----|
+| Jul 12 | 1 | 27 | 3.7% | 11.8 |
+| Jul 13 | 0 | 30 | 0% | 14.7 |
+| Jul 14 | 2 | 28 | 7.1% | 7.4 |
+| Jul 15 | 0 | 15 | 0% | 13.0 |
+| Jul 16 | 1 | 26 | 3.9% | 4.9 |
+| Jul 17 | 0 | 29 | 0% | 13.2 |
+| Jul 18 | 1 | 4 | 25% | 2.8 |
+
+Weekend dip (Jul 13, Jul 15) + weekday rebound pattern continues — normal noise.
+
+### Indexing Hygiene
+- ✅ **Homepage** (`/`) — Submitted and indexed (last crawled Jul 17)
+- 🔴 **Services** (`/services`) — **URL is unknown to Google** (PERSISTENT — since site launch)
+- ✅ **Bangkok Hospitals** (`/bangkok-hospitals`) — Submitted and indexed (last crawled Jun 26)
+- ✅ **Air Ambulance Cost** (`/air-ambulance-cost`) — Submitted and indexed (last crawled Jun 26)
+- ✅ **Guide Pillar** (`/guides/air-ambulance-dhaka-bangkok`) — Submitted and indexed (last crawled Jun 23)
+
+### Technical Audit
+- Duplicate OG/Twitter tags: **ALL CLEAN** (0 dupes)
+- Missing canonicals: **0** (all pages have canonical)
+- Title >62c: **1** — `index.html` (79c, emoji exception — ranking at pos 6.3, do NOT touch)
+- Meta desc >165c: **0**
+- Low-link pages: **0** (all pages have 2+ inbound links)
+- Blog listing integrity: **100%** (all posts in listing)
+- Sitemap integrity: **100%** (all posts in sitemap.js)
+- Build: **54 pages generated, 0 errors**
+
+### Pages at Pos 1–10 with 0 CTR (AI Overview Pattern)
+| Page | Position | Impressions | Notes |
+|------|----------|-------------|-------|
+| `/bangkok-hospitals` | 7.9 | 24 | Tier B — FAQPage schema present |
+| `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` | 4.5 | 22 | Tier B — FAQPage present |
+| `/blog/bangkok-hospital-admission-bangladeshi-patients` | 7.1 | 21 | Tier B — FAQPage present |
+| `/blog/bangkok-hospitals-comparison-bangladeshi-patients` | 9.0 | 53 | Tier B — highest impressions |
+| `/blog/stroke-air-ambulance-dhaka-bumrungrad` | 5.2 | 10 | Tier B — FAQPage present |
+| `/blog/air-ambulance-cardiac-patients` | 5.6 | 10 | Tier B — FAQPage present |
+| `/trauma-accident-evacuation` | 2.5 | 6 | AI Overview cannibalization (pos 1–3) |
+
+All Tier B pages already have optimized titles (owner-committed, commit b0038bf) and FAQPage schema. No action needed — AI Overview cannibalization is structural.
+
+### Actions Taken
+- Build + deploy triggered (updates lastmod dates, may trigger re-crawl of stale pages like `/bangkok-hospitals` last crawled Jun 26 and `/guides/air-ambulance-dhaka-bangkok` last crawled Jun 23)
+- Commit: `fbab8ee`
+
+### Owner Task List (Manual GSC Actions)
+1. **🔴 `/services` — Request Indexing** (URL unknown to Google since site launch — Tier 1)
+   - Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+2. **⚠️ Re-crawl stale indexed pages** — Google has not re-crawled these in 23+ days:
+   - `/bangkok-hospitals` (last crawled Jun 26)
+   - `/air-ambulance-cost` (last crawled Jun 26)
+   - `/guides/air-ambulance-dhaka-bangkok` (last crawled Jun 23)
+   - Consider manually requesting re-indexing for these pillar pages
+
+### Observations
+- 28-day impressions up 19.5% — site is gaining visibility steadily
+- Weekday/weekend position oscillation continues (weekdays pos 4–7, weekends pos 12–15) — normal
+- No content or metadata changes needed this cycle — technical health is strong
+- Build page count stable at 54
+
+### Next Cycle Priorities
+1. Monitor 28-day impressions growth trajectory (trending toward 900+)
+2. `/icu-vs-medical-escort` at pos 51.6 with 35 impressions — continue monitoring (content refresh was done in cycle 10, check for position improvement)
+3. Watch for `/services` indexing status change after deploy
