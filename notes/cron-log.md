@@ -3020,3 +3020,100 @@ All Tier B pages already have optimized titles (owner-committed, commit b0038bf)
 1. Monitor 28-day impressions growth trajectory (trending toward 900+)
 2. `/icu-vs-medical-escort` at pos 51.6 with 35 impressions — continue monitoring (content refresh was done in cycle 10, check for position improvement)
 3. Watch for `/services` indexing status change after deploy
+
+## Cycle 15 — Jul 20, 2026
+
+### GSC Pulse (7-day: Jul 13–20)
+| Metric | This Cycle | Cycle 14 (Jul 19) | Delta |
+|--------|-----------|-------------------|-------|
+| Impressions | 150 | 159 | -5.7% |
+| Clicks | 4 | 5 | -20% |
+| CTR | 2.67% | 3.14% | -0.47pp |
+| Position | 10.7 | 10.6 | -0.1 (flat) |
+
+**28-day (Jun 22 – Jul 20):** 707 impressions / 20 clicks / 2.83% CTR / pos 9.9
+- 28-day window shifted: Jun 22–Jul 20 vs Jun 21–Jul 19
+- Clicks stable at 20, impressions within normal weekly fluctuation
+- Weekend dip + weekday rebound pattern continues (normal)
+
+### Daily Trend
+| Date | Clicks | Impr | CTR | Pos |
+|------|--------|------|-----|-----|
+| Jul 13 | 0 | 30 | 0% | 14.7 |
+| Jul 14 | 2 | 28 | 7.1% | 7.4 |
+| Jul 15 | 0 | 15 | 0% | 13.0 |
+| Jul 16 | 1 | 26 | 3.9% | 4.9 |
+| Jul 17 | 0 | 29 | 0% | 13.2 |
+| Jul 18 | 1 | 16 | 6.3% | 9.9 |
+| Jul 19 | 0 | 6 | 0% | 15.5 |
+
+Weekend dip pattern observed — Jul 13 (Sun), Jul 15 (Wed low), Jul 17 (Fri), Jul 19 (Sun low) show 0 clicks with elevated positions. This is normal noise for a medical air ambulance site with ~150 weekly impressions.
+
+### Indexing Hygiene
+- ✅ **Homepage** (`/`) — Submitted and indexed (last crawled Jul 19 — fresh)
+- 🔴 **Services** (`/services`) — Discovered - currently not indexed (PERSISTENT — never crawled)
+- ✅ **Bangkok Hospitals** (`/bangkok-hospitals`) — Submitted and indexed (last crawled Jun 26)
+- ✅ **Air Ambulance Cost** (`/air-ambulance-cost`) — Submitted and indexed (last crawled Jun 26)
+- ✅ **Guide Pillar** (`/guides/air-ambulance-dhaka-bangkok`) — Submitted and indexed (last crawled Jun 23)
+
+Notable: Homepage was re-crawled Jul 19 (fresh). Other indexed pages still on Jun 23–26 crawl dates.
+
+### Technical Audit
+- Duplicate OG/Twitter tags: **ALL CLEAN** (0 dupes)
+- Missing canonicals: **0** (all pages have canonical)
+- Title >62c: **1** — `index.html` (79c, emoji exception — ranking page with clicks at pos 6.3, do NOT touch)
+- Meta desc >165c: **0**
+- Low-link pages: **0**
+- Blog listing integrity: **100%** (all posts in listing)
+- Sitemap integrity: **100%** (all posts in sitemap.js)
+- Content files: 48 (stable)
+
+### GSC Token Status
+- Token expiry: 2026-07-17T08:39:29Z (expired)
+- Refresh token: PRESENT
+- MCP `get_performance_overview`: WORKING (token refreshes in-flight)
+- MCP `inspect_url_enhanced`: WORKING (after correct parameter naming)
+- **No re-authentication needed** — refresh_token still functional
+
+### Pages at Pos 1–10 with 0 CTR (AI Overview Pattern)
+| Page | Position | Impressions | Notes |
+|------|----------|-------------|-------|
+| `/bangkok-hospitals` | 7.9 | 24 | Tier B — FAQPage schema present |
+| `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` | 4.7 | 19 | Tier B — FAQPage present |
+| `/blog/bangkok-hospital-admission-bangladeshi-patients` | 7.3 | 19 | Tier B — FAQPage present |
+| `/blog/bangkok-hospitals-comparison-bangladeshi-patients` | 9.0 | 53 | Tier B — highest impressions |
+| `/blog/stroke-air-ambulance-dhaka-bumrungrad` | 5.2 | 10 | Tier B — FAQPage present |
+| `/blog/air-ambulance-cardiac-patients` | 5.6 | 10 | Tier B — FAQPage present |
+| `/blog/ventilator-patient-air-ambulance` | 3.0 | 3 | pos 1–3, 3 imps — very weak signal, FAQPage present |
+
+All have FAQPage schema. No title rewrites needed.
+
+### Actions Taken
+- GSC performance audit: complete (7-day + 28-day)
+- Indexing inspection (5 key pages): complete
+- Technical audit (all 48 files): clean (1 known exception)
+- Blog listing + sitemap integrity: verified
+- OG/Twitter duplicate check: clean
+- Build + deploy triggered (updates lastmod dates for stale pages)
+
+### Owner Task List (Manual GSC Actions)
+1. **🔴 `/services` — Request Indexing** (Discovered - not indexed since site launch — Tier 1)
+   - Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com&id=Q9O5r1f65_c5yHh1_ySLfg
+2. **⚠️ Re-crawl stale indexed pages** (last crawled 23+ days ago):
+   - `/bangkok-hospitals` (Jun 26)
+   - `/air-ambulance-cost` (Jun 26)
+   - `/guides/air-ambulance-dhaka-bangkok` (Jun 23)
+   - Manually Request Indexing in GSC for each
+
+### Observations
+- Site in stable, positive-trend state: 28-day impressions ~700+, clicks 20
+- Technical health is strong across all dimensions
+- `/icu-vs-medical-escort` (36 imps, pos 52.3, 0 CTR) — content refresh from cycle 10 still hasn't improved position. Now 5+ cycles since content refresh. Consider a second intervention if position stays 50+ for 2 more cycles.
+- Homepage re-crawled Jul 19 (fresh) — good sign Google is maintaining crawl on the highest-traffic page
+- Push a build-only deploy to update sitemap lastmod dates → may trigger re-crawl of stale pages
+
+### Next Cycle Priorities
+1. Monitor 28-day impressions trajectory (sustained 700+)
+2. Watch `/icu-vs-medical-escort` position — if still 50+ after 2 more cycles, consider a title/desc refresh
+3. Stat monitoring of zero-CTR Tier B pages (AI Overview pattern — structural, not fixable by meta changes)
+4. Owner: Request indexing for `/services` (persistent Tier 1 blocker)
