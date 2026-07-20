@@ -52,6 +52,11 @@ export default async function sitemap() {
     ["/blog/post-surgery-patient-transfer-dhaka", "weekly", 0.7],
     ["/blog/ventilator-patient-air-ambulance", "weekly", 0.7],
     ["/blog/air-ambulance-dhaka-to-singapore", "weekly", 0.8],
+    ["/air-ambulance-dhaka-to-singapore", "weekly", 0.8],
+    ["/air-ambulance-dhaka-to-delhi-india", "weekly", 0.8],
+    ["/air-ambulance-dhaka-to-chennai-india", "weekly", 0.8],
+    ["/medical-evacuation-cost-bangladesh", "weekly", 0.8],
+    ["/air-ambulance-dhaka-bangkok-complete-faq", "weekly", 0.7],
   ];
 
   return ENTRIES.map(([urlPath, changeFrequency, priority]) => ({
