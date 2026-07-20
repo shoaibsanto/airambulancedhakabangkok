@@ -46,3 +46,14 @@ Last updated: 2026-06-25
 
 ## Replenishment Batch — July 2026
 - [x] IPS Fault Troubleshooting & Error Codes in Bangladesh — Complete Guide ← published 2026-07-20 (Post ID 35669)
+- [x] IPS Earthing and Grounding Guide for Bangladeshi Homes ← published 2026-07-21 (Post ID 35671)
+
+## Replenishment Batch — Late July 2026
+- [ ] How to choose IPS cable size for home
+- [ ] Lithium IPS warranty and service in Bangladesh
+- [ ] IPS for hospital/clinic backup power Bangladesh
+- [ ] IPS for CCTV and security system backup
+- [ ] IPS capacity planning for small factories Bangladesh
+- [ ] IPS vs solar home system — which is better for Bangladesh?
+- [ ] How to clean and maintain lithium IPS battery terminals
+- [ ] Best IPS for apartment buildings Bangladesh (central system)
