@@ -2,5 +2,169 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
   "buildCommand": "next build",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "rewrites": [
+    {
+      "description": "Serve .md files when Accept: text/markdown is present",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ],
+      "destination": "/ai/:path*.md"
+    },
+    {
+      "description": "Serve .md files when Accept: text/plain is present",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/plain.*"
+        }
+      ],
+      "destination": "/ai/:path*.md"
+    },
+    {
+      "description": "Serve .md files when format=markdown query param",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "format",
+          "value": "markdown"
+        }
+      ],
+      "destination": "/ai/:path*.md"
+    },
+    {
+      "description": "Serve .md files when format=md query param",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "format",
+          "value": "md"
+        }
+      ],
+      "destination": "/ai/:path*.md"
+    },
+    {
+      "description": "Serve .md files when output=markdown query param",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "output",
+          "value": "markdown"
+        }
+      ],
+      "destination": "/ai/:path*.md"
+    },
+    {
+      "description": "Serve .md to AI training bots",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*(GPTBot|ChatGPT-User|ClaudeBot|Claude-Web|PerplexityBot|Google-Extended|CCBot|CommonCrawl|Firecrawl|LangChain|CrewAI).*"
+        }
+      ],
+      "destination": "/ai/:path*.md"
+    },
+    {
+      "description": "Serve .md to modern AI crawlers",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*(Anthropic|OpenAI|OAI-SearchBot|Meta-ExternalAgent|Meta-ExternalFetcher|Grok|xAI|Mistral|Cohere|Gemini|DeepSeek).*"
+        }
+      ],
+      "destination": "/ai/:path*.md"
+    },
+    {
+      "description": ".md file extension requests",
+      "source": "/:path*.md",
+      "destination": "/ai/:path*.md"
+    },
+    {
+      "description": "Homepage with Accept: text/markdown",
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ],
+      "destination": "/ai/index.md"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/ai/(.*)\\.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    },
+    {
+      "source": "/llms\\.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=43200"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/ai-sitemap\\.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=43200"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
 }

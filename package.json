@@ -5,9 +5,10 @@
   "description": "Air Ambulance Service Dhaka to Bangkok — 24/7 ICU medical flights. Next.js (App Router) SEO-optimized build.",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run generate-ai && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-ai": "node scripts/generate-ai-markdown.mjs"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

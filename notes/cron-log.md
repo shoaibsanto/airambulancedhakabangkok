@@ -3193,4 +3193,78 @@ All have FAQPage schema. No title rewrites needed.
 3. Weekend position drift (pos 10-13 Fri-Sun) is normal — do not act on single-day spikes
 
 ---
-*Build: 59 pages • Deploy: 5a0d631 • FAQPage: 39/39 • Content files: 56*
+*Build: 59 pages • Deploy: 5a0d631 • FAQPage: 39/39 • Content files: 56*## air-ambulance-daily রিপোর্ট — 2026-07-22
+
+### GSC Pulse (২৮ দিন: ২০২৬-০৬-২৪ — ২০২৬-০৭-২২)
+| মেট্রিক | বর্তমান | বেসলাইন (সাইকেল ১২) | পরিবর্তন |
+|----------|---------|----------------------|----------|
+| Impressions | ৪৯৫ | ৬৯৩ | -১৯৮ (-২৮.৬%) |
+| Clicks | ১৩ | ২০ | -৭ (-৩৫%) |
+| CTR | ২.৬৩% | ২.৮৯% | -০.২৬pp |
+| Avg Position | ৯.৮ | ৯.৬ | +০.২ (ওদের) |
+
+**৭ দিনের ট্রেন্ড (১৬-২২ জুলাই):** ইমপ্রেশন ঝড়ে পড়েছে, ক্লিক কম, পজিশন বাড়ল (ওদের) — নেগেটিভ ট্রেন্ড।
+
+### টপ পেজ পারফরম্যান্স (২৮ দিন)
+
+| পেজ | ইমপ্রেশন | ক্লিক | CTR | পজিশন | স্ট্যাটাস |
+|------|----------|------|-----|--------|----------|
+| / (হোমপেজ) | ৩৫২ | ৮ | ২.২৭% | ৫.৪ | ✅ |
+| /air-ambulance-cost | ১১২ | ৪ | ৩.৫৭% | ৭.১ | ✅ |
+| /blog/bed-to-bed-transfer-dhaka-bangkok | ১৭ | ২ | ১১.৭৬% | ১০.৪ | ✅ |
+| /blog/medical-repatriation-to-bangladesh | ১০ | ১ | ১০% | ৫.৮ | ✅ |
+| /cardiac-emergency-transfer | ৩৩ | ১ | ৩.০৩% | ১৫.৬ | ⚠️ pos 15+ |
+| /guides/air-ambulance-dhaka-bangkok | ৩৩ | ১ | ৩.০৩% | ৫.১ | ✅ |
+| /guides/icu-air-ambulance-dhaka | ২১ | ১ | ৪.৭৬% | ৮.৫ | ✅ |
+| /bangkok-hospitals | ২৪ | ০ | ০% | ৭.৯ | 🔴 **Tier B: 0 CTR** |
+| /blog/air-ambulance-cardiac-patients | ১০ | ০ | ০% | ৫.৬ | 🔴 **Tier B: 0 CTR** |
+| /blog/bangkok-hospital-admission-bangladeshi-patients | ১৩ | ০ | ০% | ৭.৭ | 🔴 **Tier B: 0 CTR** |
+| /blog/bangkok-hospitals-comparison-bangladeshi-patients | ৫৫ | ০ | ০% | ৯.২ | 🔴 **Tier B: 0 CTR (high impr)** |
+| /blog/how-to-book-air-ambulance-dhaka-bumrungrad | ১৪ | ০ | ০% | ৩.৬ | 🔴 **Tier B: 0 CTR (pos 3.6!)** |
+| /blog/stroke-air-ambulance-dhaka-bumrungrad | ৭ | ০ | ০% | ৫.৩ | 🔴 **Tier B: 0 CTR** |
+| /blog/ventilator-patient-air-ambulance | ৩ | ০ | ০% | ৩.০ | 🔴 **Tier B: 0 CTR (pos 3!)** |
+| /icu-vs-medical-escort | ৩৮ | ০ | ০% | ৫০.৯ | 🔴🔴 **Severe regression** |
+
+### Indexing Hygiene
+
+| পেজ | স্ট্যাটাস | লাস্ট ক্রল | রেফারিং URL | টিপস |
+|------|----------|-----------|-------------|-------|
+| / | ✅ Indexed | ২০২৬-০৭-১৯ | ব্লগ পোস্ট (২) | ঠিক আছে |
+| /services | ⚠️ **Discovered - not indexed** | Never | শুধু sitemap.xml | **PERSISTENT ISSUE** (৪+ সাইকেল) |
+| /bangkok-hospitals | ✅ Indexed | ২০২৬-০৭-২১ | services, ব্লগ | ঠিক আছে |
+| /air-ambulance-cost | ✅ Indexed | ২০২৬-০৭-২১ | services | ঠিক আছে |
+| /guides/air-ambulance-dhaka-bangkok | ✅ Indexed | ২০২৬-০৬-২৩ | ব্লগ পোস্ট | **Stale crawl** (১ মাস পুরনো) |
+
+**ক্রিটিক্যাল সমস্যা:** `/services` পেজটি হোমপেজ বডিতে ৪টি স্ট্যাটিক লিংক থাকা সত্ত্বেও কোথাও "Discovered - currently not indexed" থেকে বের হচ্ছে না। রেফারিং URL-এ শুধু `sitemap.xml` দেখাচ্ছে — গুগল হোমপেজ বডি লিংক ফলো করছে না।
+
+### Content Health
+- `/icu-vs-medical-escort` — সাইকেল ১০-এ কন্টেন্ট রিফ্রেশ हुच্ছেছিল (Learjet 35A, BDT 32,00,000, 3.5hrs, Bumrungrad ICU note, FAQPage এনরিচড) কিন্তু পজিশন ৫০.৯-এ আটকে আছে। ৩ সাইকেল থ্রেশহোল্ড পেরেছে — আরো একটি সাইকেল মনিটর করব।
+- Tier B পেজগুলো (pos 3-10, 0 CTR) — FAQPage স্কিমা ১০০% কম্পিট কিন্তু AI Overview ক্যানিবালাইজেশন চালু। টাইটেল রি-রাইট করলে র‍্যাঙ্কিং ড্রপ রিস্ক বেশি।
+- নতুন পেজগুলো (Delhi, Chennai, Singapore, FAQ) সাইটম্যাপে এবং ব্লগ লিস্টিং-এ যোগ করা হয়েছে কিনা — ভেরিফাই করা লাগবে।
+
+### Owner Action List — Request Indexing in GSC
+
+**Tier 1 (Urgent — Unknown to Google):**
+- (কোনো পেজ "Unknown" দেখাচ্ছে না)
+
+**Tier 2 (Important — Pillar pages, Discovered - not indexed):**
+1. `https://airambulancedhakabangkok.com/services` ← **MOST URGENT** (Cluster 1 pillar, 4+ cycles stuck)
+   - Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com&id=qNcVKxA8z4qj1GgAxO9yzw
+
+**Tier 3 (Normal — Supporting pages):**
+- (সবই Indexed)
+
+### Recommended Actions for Next Cycle
+1. **`/services` indexing** — মালিকের GSC-এ "Request Indexing" চাপানোর বাইরে কোনো অটোমেটেড ফিক্স কাজ করে না। পরবর্তী সাইকেলেও যদি ইনডেক্স না হয়, তবে সাইটম্যাপে `changefreq: "daily"` বাদতেছি এবং হোমপেজের আরেকটি CTA ব্লকে লিংক বাড়াব।
+2. **Tier B 0-CTR পেজ** — টাইটেল টাচ না করে FAQPage এনসারকে আরও কোয়েরি-স্পেসিফিক করব (যেমন "air ambulance service in bangladesh" কোয়েরির জন্য হোমপেজ ডেসক্রিপশন আপডেট করা হয়েছিল)।
+3. **Traffic decline investigate** — ইমপ্রেশন ২৮% কমেছে। পেজ কাউন্ট ৫৪-এ স্ট্যাবল, নতুন কন্টেন্ট অ্যাড হলেও ট্রাফিক বাড়ছে না। সামগ্রিক অথোরিটি/ক্রল বাজেট সমস্যা হতে পারে।
+4. **Stale crawl on pillar guide** — `/guides/air-ambulance-dhaka-bangkok` ১ মাস ধরে ক্রল হয়নি। সাইটম্যাপে `monthly` আছে, `weekly` করলে আরও বাজেট দিতে পারে।
+
+### Technical Notes
+- Build page count: 54 (stable)
+- FAQPage coverage: 100% (39/39 eligible)
+- No duplicate OG/Twitter tags detected
+- All canonicals present
+- `/icu-vs-medical-escort` entity enrichment verified live (Learjet 35A, BDT 32,00,000, Hazrat Shahjalal, 3.5hrs)
+
+---

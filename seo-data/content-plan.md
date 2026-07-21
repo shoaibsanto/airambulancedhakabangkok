@@ -49,7 +49,7 @@ Last updated: 2026-06-25
 - [x] IPS Earthing and Grounding Guide for Bangladeshi Homes ← published 2026-07-21 (Post ID 35671)
 
 ## Replenishment Batch — Late July 2026
-- [ ] How to choose IPS cable size for home
+- [x] How to choose IPS cable size for home ← published 2026-07-22 (Post ID 35698)
 - [ ] Lithium IPS warranty and service in Bangladesh
 - [ ] IPS for hospital/clinic backup power Bangladesh
 - [ ] IPS for CCTV and security system backup
