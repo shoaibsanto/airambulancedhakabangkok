@@ -3117,3 +3117,80 @@ All have FAQPage schema. No title rewrites needed.
 2. Watch `/icu-vs-medical-escort` position — if still 50+ after 2 more cycles, consider a title/desc refresh
 3. Stat monitoring of zero-CTR Tier B pages (AI Overview pattern — structural, not fixable by meta changes)
 4. Owner: Request indexing for `/services` (persistent Tier 1 blocker)
+## Cycle 15 — 2026-07-21 (Daily Cron)
+
+### GSC Pulse (7-day: Jul 14–21)
+| Metric | Value | Baseline (Cycle 12) | Delta |
+|--------|-------|---------------------|-------|
+| Impressions | 137 | ~168 | -31 (-18%) |
+| Clicks | 4 | 4 | 0 |
+| CTR | 2.92% | 2.38% | +0.54pp |
+| Avg Position | 9.6 | 11.3 | -1.7 (improved) |
+
+**28-day (Jun 23–Jul 21):**
+- Impressions: 699 (↑ from 693 in cycle 12)
+- Clicks: 20 (stable)
+- CTR: 2.86% (stable)
+- Avg Position: 9.5 (improved from 9.6)
+
+**Observation:** Weekend dip (Jul 19–20) — low impressions (5–18/day) is normal. Weekday recovery expected.
+
+### Indexing Status (5 Key Pages)
+
+| Page | Status | Last Crawled | Referring URLs | Notes |
+|------|--------|--------------|----------------|-------|
+| `/` | ✅ Indexed | 2026-07-19 | 2 blog posts | Healthy |
+| `/services` | 🔴 **Unknown to Google** | Never | None | **PERSISTENT — 15+ cycles** |
+| `/bangkok-hospitals` | ✅ Indexed | 2026-06-26 | Blog post + /services | Good |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Indexed | 2026-06-23 | Blog post | Good |
+| `/air-ambulance-cost` | ✅ Indexed | 2026-06-26 | /services | Good |
+
+**Critical:** `/services` remains "URL is unknown to Google" despite 4 static body links from homepage (confirmed lines 295, 448, 499, 578 in content/index.html). No referring URLs in GSC = Google not following JS-nav links. Static links exist but crawl budget not reaching this pillar page.
+
+### Technical Audit
+- ✅ All 56 content files: canonical tags present
+- ✅ No duplicate OG/Twitter tags (all 4 tags clean)
+- ✅ All titles ≤62 chars (bangkok-hospitals title is 60c — clean)
+- ✅ Meta descriptions ≤165 chars
+- ✅ FAQPage schema: 39/39 eligible pages (100% complete)
+- ✅ Build: 59 pages generated (stable)
+- ✅ Deploy successful: 5a0d631
+
+### GSC Quick-Win Scan (28 days, pos 1-10, ≥5 impressions, 0% CTR)
+
+| Page | Impressions | Position | CTR | Priority |
+|------|-------------|----------|-----|----------|
+| `/bangkok-hospitals` | 24 | 7.9 | 0% | **Tier B — FAQ enriched, monitor** |
+| `/blog/air-ambulance-cardiac-patients` | 10 | 5.6 | 0% | Tier B — FAQ enriched |
+| `/blog/bangkok-hospital-admission-bangladeshi-patients` | 18 | 7.5 | 0% | Tier B — FAQ enriched |
+| `/blog/bangkok-hospitals-comparison-bangladeshi-patients` | 53 | 9.0 | 0% | **Tier B — FAQ enriched, highest imps** |
+| `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` | 17 | 4.4 | 0% | Tier B — FAQ enriched |
+| `/trauma-accident-evacuation` | 4 | 2.8 | 0% | Tier A — pos 1-3, AI Overview likely |
+| `/guides/air-ambulance-dhaka-bangkok` | 32 | 5.1 | 3.1% | Has clicks |
+| `/guides/icu-air-ambulance-dhaka` | 21 | 8.5 | 4.8% | Has clicks |
+
+**Note:** All Tier B pages already have FAQPage schema injected in prior cycles. No further title/meta rewrites recommended (risk of ranking drop > CTR gain). Monitor for 2-4 more weeks.
+
+### Content Refresh Watchlist
+| Page | Current Pos | Issue | Action |
+|------|-------------|-------|--------|
+| `/icu-vs-medical-escort` | 52.1 | Dropped from ~9 to 50+ over 3 cycles | **Content refresh done Cycle 10** — added cost table, Learjet 35A, BDT 32,00,000, Bumrungrad ICU. Monitor cycles 11-13. |
+| `/cardiac-emergency-transfer` | 15.6 | Borderline page 2 | Monitor — title strong ("STEMI ICU Jet") |
+
+### Owner Action Required — Request Indexing in GSC
+
+**Tier 1 (URGENT — Unknown to Google):**
+1. `https://airambulancedhakabangkok.com/services` — Pillar page, 15+ cycles unknown
+
+**Tier 2 (Important — Discovered not indexed):**
+*None currently — all other pillars indexed*
+
+**GSC Link:** https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+### Next Cycle Focus
+1. Monitor `/services` indexing — if still unknown after 2 more cycles, consider adding direct static link from footer or creating a dedicated "hub" page that Google crawls more frequently
+2. Watch `/icu-vs-medical-escort` for position recovery post-refresh (Cycle 10)
+3. Weekend position drift (pos 10-13 Fri-Sun) is normal — do not act on single-day spikes
+
+---
+*Build: 59 pages • Deploy: 5a0d631 • FAQPage: 39/39 • Content files: 56*
