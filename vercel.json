@@ -5,7 +5,6 @@
   "installCommand": "npm install",
   "rewrites": [
     {
-      "description": "Serve .md files when Accept: text/markdown is present",
       "source": "/:path*",
       "has": [
         {
@@ -17,7 +16,6 @@
       "destination": "/ai/:path*.md"
     },
     {
-      "description": "Serve .md files when Accept: text/plain is present",
       "source": "/:path*",
       "has": [
         {
@@ -29,7 +27,6 @@
       "destination": "/ai/:path*.md"
     },
     {
-      "description": "Serve .md files when format=markdown query param",
       "source": "/:path*",
       "has": [
         {
@@ -41,7 +38,6 @@
       "destination": "/ai/:path*.md"
     },
     {
-      "description": "Serve .md files when format=md query param",
       "source": "/:path*",
       "has": [
         {
@@ -53,7 +49,6 @@
       "destination": "/ai/:path*.md"
     },
     {
-      "description": "Serve .md files when output=markdown query param",
       "source": "/:path*",
       "has": [
         {
@@ -65,36 +60,21 @@
       "destination": "/ai/:path*.md"
     },
     {
-      "description": "Serve .md to AI training bots",
       "source": "/:path*",
       "has": [
         {
           "type": "header",
           "key": "user-agent",
-          "value": ".*(GPTBot|ChatGPT-User|ClaudeBot|Claude-Web|PerplexityBot|Google-Extended|CCBot|CommonCrawl|Firecrawl|LangChain|CrewAI).*"
+          "value": ".*(GPTBot|ChatGPT-User|ClaudeBot|Claude-Web|PerplexityBot|Google-Extended|Gemini|CCBot|CommonCrawl|Firecrawl|LangChain|CrewAI|Anthropic|AnthropicClaude|OpenAI|OAI-SearchBot|Meta-ExternalAgent|Meta-ExternalFetcher|AppleBot|Grok|xAI|Mistral|Cohere|DeepSeek|YouBot|DeepSearch|DeepResearch|BingBot|BingPreview|SemanticScholar|Crossref|DataForSEO|Seobility|Browserbase|AutoGPT|BabyAGI|GPT-Research|Notion.*Bot|Slackbot|Discordbot|TelegramBot|WhatsApp|AhrefsBot|SemrushBot|MJ12bot|DotBot|Seobility).*"
         }
       ],
       "destination": "/ai/:path*.md"
     },
     {
-      "description": "Serve .md to modern AI crawlers",
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "header",
-          "key": "user-agent",
-          "value": ".*(Anthropic|OpenAI|OAI-SearchBot|Meta-ExternalAgent|Meta-ExternalFetcher|Grok|xAI|Mistral|Cohere|Gemini|DeepSeek).*"
-        }
-      ],
-      "destination": "/ai/:path*.md"
-    },
-    {
-      "description": ".md file extension requests",
       "source": "/:path*.md",
       "destination": "/ai/:path*.md"
     },
     {
-      "description": "Homepage with Accept: text/markdown",
       "source": "/",
       "has": [
         {
