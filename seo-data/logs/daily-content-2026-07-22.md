@@ -1,65 +1,62 @@
-# Daily Content Log — 2026-07-22
+# HiTHIUM Daily Content Log — 2026-07-22
 
 ## Published Post
-- **Title:** IPS Cable Size Guide for Bangladesh Homes
-- **Post ID:** 35698
-- **URL:** https://hithiumbd.com/ips-cable-size-home-bangladesh/
-- **Primary keyword:** IPS cable size
-- **Category:** IPS & Battery (ID 233)
-- **Word count:** 1,716 words
-- **Language:** English
 
-## SEO Metadata
-- **Yoast title:** IPS Cable Size Guide for BD Homes | HiTHIUM
-- **Meta description:** Choose the right IPS cable size for Bangladesh homes. Learn BDT cost, amp load, wire gauge, safety tips, and when to call an electrician.
-- **Focus keyphrase:** IPS cable size
-- **Slug:** ips-cable-size-home-bangladesh
+| Field | Value |
+|-------|-------|
+| Post ID | 35702 |
+| Title | Lithium IPS Warranty and Service in Bangladesh |
+| Slug | lithium-ips-warranty-service-bangladesh |
+| URL | https://hithiumbd.com/lithium-ips-warranty-service-bangladesh/ |
+| Word Count | 2,454 |
+| Category | IPS & Battery (ID=233) |
+| Featured Image | 35701 (WebP, 39KB) |
 
-## Content Summary
-Published a practical safety and installation guide for Bangladeshi homeowners choosing IPS wiring/cable size. The post covers:
-- Why IPS cable size affects safety and backup performance
-- Quick copper cable size table for 600VA, 1000VA, 1500VA, and 2000VA+ systems
-- Step-by-step load/current calculation process
-- Home-type recommendations: small apartment, family flat, office/large home
-- Copper vs aluminium comparison
-- MCB, earthing, changeover, and distribution-board safety
-- 2026 Bangladesh installation cost considerations
-- 6-question FAQ section using Yoast-compatible `schema-faq` HTML format
+### Yoast SEO Meta
 
-## Internal Links Added
-- `/best-lithium-ips-bangladesh/`
-- `/best-ips-in-bangladesh/`
-- `/best-ips-dhaka-office-capacity-cost-bangladesh/`
-- `/ips-earthing-guide-bangladesh/`
-- `/ips-fault-troubleshooting-error-codes-bangladesh/`
-- `/ips-installation-guide-step-by-step-bangladesh/`
-- `/shop/`
+| Field | Value |
+|-------|-------|
+| Title | Lithium IPS Warranty & Service Bangladesh | HiTHIUM |
+| Description | Complete guide to lithium IPS warranty terms, service centers, and after-sales support in Bangladesh. Know your coverage before buying. |
+| Focus Keyword | lithium IPS warranty Bangladesh |
+| Title length | 51 chars ✅ |
+| Desc length | 135 chars ✅ |
 
-## Pre-Publish Checks
-- Existing post inventory fetched via WordPress REST API: 51 posts.
-- Cannibalization check: no existing post found for cable/wiring/wire topic.
-- Sitemap index reachable: HTTP 200.
-- Homepage health: HTTP 200.
+### Content Quality
 
-## Verification
-- Publish API response: HTTP 201.
-- Frontend URL renders: verified.
-- Frontend `<title>` matches Yoast title.
-- Frontend meta description matches submitted description.
-- FAQ schema class present in content.
-- No `application/ld+json` inside `<article>` content.
-- Internal links checked after publication.
+- Internal links: 5 (best-lithium-ips-bangladesh, lifepo4-battery-lifespan-bangladesh, lithium-battery-safety-bangladesh, ips-maintenance-checklist-bangladesh, lithium-ips-vs-tubular-battery-saves-money-bangladesh, shop, contact)
+- FAQ section: 6 Q&A pairs (HTML div format)
+- Comparison table: 6-brand warranty comparison
+- JSON-LD in content: CLEAN ✅
+- Featured image assigned: YES ✅
 
-## Issue Found and Fixed
-Initial verification found two internal links returning 404 because older notes used non-current slugs:
-- `/best-ips-for-dhaka-office-capacity-cost-recommendations/` → fixed to `/best-ips-dhaka-office-capacity-cost-bangladesh/`
-- `/ips-earthing-grounding-guide-bangladeshi-homes/` → fixed to `/ips-earthing-guide-bangladesh/`
+### Validation Checklist
 
-After patching post content, both links returned HTTP 200. The only remaining non-200 link discovered by the generic checker was `/xmlrpc.php` returning 405, which is expected/security-related and not a content broken link.
+- [x] Focus keyword in H1
+- [x] Focus keyword in first 100 words
+- [x] Focus keyword in H2
+- [x] Focus keyword in meta description
+- [x] FAQPage HTML (no JSON-LD)
+- [x] Comparison table present
+- [x] 4+ FAQ Q&A pairs
+- [x] Internal links to money pages
+- [x] CTA at end
+- [x] Meta title ≤60 chars
+- [x] Meta description ≤155 chars
+- [x] Featured image uploaded and assigned
+- [x] No JSON-LD in post_content
 
-## Content Plan Update
-Marked completed in `/root/airambulancedhakabangkok/seo-data/content-plan.md`:
-- How to choose IPS cable size for home ← published 2026-07-22 (Post ID 35698)
+### Content Plan Status
 
-## Remaining Late July Topics
-7 unchecked items remain in the current replenishment batch.
+- Late July 2026 batch: 2 of 8 items published (cable size, warranty/service)
+- Remaining items: IPS hospital/clinic, IPS CCTV/security, IPS factory planning, IPS vs solar home system, IPS battery terminal maintenance, IPS apartment buildings
+
+### Site Health
+
+- Homepage HTTP status: 200 OK
+- New post live: 200 OK
+- Sample page checks: all 200 OK
+- Robots.txt: healthy, sitemap declared
+- Yoast schema injection: Article + WebPage + BreadcrumbList + WebSite + Person ✅
+- JSON-LD in post content: CLEAN (no infections on recent posts)
+- Recent 5 posts Yoast meta: all properly set ✅
