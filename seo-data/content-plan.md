@@ -55,13 +55,21 @@ Last updated: 2026-07-27
 - [x] IPS for CCTV and security system backup ← published 2026-07-24 (Post ID 35710)
 - [x] IPS capacity planning for small factories Bangladesh ← published 2026-07-26 (Post ID 35714)
 - [x] IPS vs solar home system — which is better for Bangladesh? ← published 2026-07-27 (Post ID 35718)
-- [ ] How to clean and maintain lithium IPS battery terminals
+- [x] How to clean and maintain lithium IPS battery terminals ← published 2026-07-28 (Post ID 35722)
 - [ ] Best IPS for apartment buildings Bangladesh (central system)
 
 ## 2026-07-27 Replenishment Suggestions
-When the remaining 2 items are done, add these fresh topics:
+When the remaining items are done, add these fresh topics:
 - [ ] Best IPS for fish farming / aquaculture Bangladesh
 - [ ] Lithium IPS for restaurant and food business backup
 - [ ] IPS battery disposal and recycling in Bangladesh
 - [ ] How to connect solar panel to existing lithium IPS (DIY guide)
 - [ ] IPS setup for work-from-home: what you need for uninterrupted internet
+
+## 2026-07-28 Replenishment — Battery Maintenance Published
+Fresh topics to maintain pipeline (1 item remaining):
+- [ ] How to test lithium IPS battery health (BMS diagnostics guide)
+- [ ] Lithium IPS for grocery stores and convenience shops Bangladesh
+- [ ] Parallel IPS installation guide: connecting two lithium IPS units
+- [ ] Smart IPS buying guide: WiFi monitoring, auto-switching, LCD features
+- [ ] Lithium battery bus bar wiring: how to connect multiple batteries safely
