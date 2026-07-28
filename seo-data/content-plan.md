@@ -1,5 +1,5 @@
 # HiTHIUM Content Plan — 9 Target Keywords
-Last updated: 2026-07-27
+Last updated: 2026-07-29
 
 ## Pillar Pages (already exist)
 - [x] best ips → /what-makes-ips-best-bangladesh/ (POST)
@@ -56,18 +56,15 @@ Last updated: 2026-07-27
 - [x] IPS capacity planning for small factories Bangladesh ← published 2026-07-26 (Post ID 35714)
 - [x] IPS vs solar home system — which is better for Bangladesh? ← published 2026-07-27 (Post ID 35718)
 - [x] How to clean and maintain lithium IPS battery terminals ← published 2026-07-28 (Post ID 35722)
-- [ ] Best IPS for apartment buildings Bangladesh (central system)
+- [x] Best IPS for apartment buildings Bangladesh (central system) ← published 2026-07-29 (Post ID 35723)
 
-## 2026-07-27 Replenishment Suggestions
-When the remaining items are done, add these fresh topics:
+## 2026-07-29 Replenishment Suggestions
+Fresh topics to maintain pipeline (all previous plan items completed):
 - [ ] Best IPS for fish farming / aquaculture Bangladesh
 - [ ] Lithium IPS for restaurant and food business backup
 - [ ] IPS battery disposal and recycling in Bangladesh
 - [ ] How to connect solar panel to existing lithium IPS (DIY guide)
 - [ ] IPS setup for work-from-home: what you need for uninterrupted internet
-
-## 2026-07-28 Replenishment — Battery Maintenance Published
-Fresh topics to maintain pipeline (1 item remaining):
 - [ ] How to test lithium IPS battery health (BMS diagnostics guide)
 - [ ] Lithium IPS for grocery stores and convenience shops Bangladesh
 - [ ] Parallel IPS installation guide: connecting two lithium IPS units

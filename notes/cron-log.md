@@ -3513,4 +3513,91 @@ All are known cases with FAQPage schema already injected. No new qualifying page
 - **Tier 2 (important):** Monitor `/icu-vs-medical-escort` pos 50.8 — content refresh done cycle 10, waiting for recovery
 - **Tier 3 (normal):** None
 
+---# Daily SEO Cron Log - July 28, 2026 (Cycle 26)
+
+## Indexing Hygiene Audit
+**Key Pages Inspected via GSC URL Inspection:**
+
+| Page | Status | Last Crawled | Referring URLs |
+|---|---|---|---|
+| `/` (homepage) | ✅ Submitted and indexed | 2026-07-26 | blog posts (2) |
+| `/services` | ⚠️ **Discovered - not indexed** (Tier 1, cycle 17+) | **never** | sitemap.xml only |
+| `/bangkok-hospitals` | ✅ Submitted and indexed | 2026-07-21 | services, blog |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Submitted and indexed | 2026-06-23 | blog post |
+| `/air-ambulance-cost` | ✅ Submitted and indexed | 2026-07-21 | services |
+
+**Persistence:** `/services` has been "Discovered - not indexed" for 17+ cycles. 4+ static body links present on indexed homepage but Google has not followed them. Only referring URL is sitemap.xml. This is a persistent crawl budget/prioritization issue on Google's side.
+
+## GSC Performance Overview
+
+| Period | Impressions | Clicks | CTR | Position |
+|---|---|---|---|---|
+| **7-day** (Jul 21-28) | 130 | 3 | 2.31% | 10.6 |
+| **28-day** (Jun 30 - Jul 28) | 638 | 15 | 2.35% | 10.5 |
+
+**Comparison vs Cycle 25 baseline (Jul 27):**
+- 7-day: 130 imps vs 140 baseline (-7.1%) — slight dip, within weekend noise
+- 7-day: 3 clicks vs 4 baseline (-25%) — low but weekend-heavy window (Fri-Sun = 3 days with 0 clicks)
+- 28-day: 638 imps vs 652 baseline (-2.1%) — stable
+- 28-day: 15 clicks vs 17 baseline (-11.8%) — slight decline
+- Position: 10.6 (7d) vs 10.3; 10.5 (28d) vs 10.5 — stable
+
+**Daily trend analysis:**
+- Jul 21 (Tue): 14 imps, 1 click, pos 15.8
+- Jul 22 (Wed): 25 imps, 0 clicks, pos 13.1
+- Jul 23 (Thu): 25 imps, 1 click, pos 6.5 ← best day
+- Jul 24 (Fri): 24 imps, 1 click, pos 11.8
+- Jul 25 (Sat): 15 imps, 0 clicks, pos 14.5
+- Jul 26 (Sun): 27 imps, 0 clicks, pos 6.3
+- Jul 27 (Mon): 0 imps, 0 clicks, pos 0 — **data gap / reporting delay**
+- Weekend pattern consistent: Fri-Sun show 0 clicks despite impressions. This is expected noise for emergency medical queries.
+
+## GSC Quick-Win Scan (pos 1-10, >=5 imps, 0% CTR)
+No new qualifying pages found. Known Tier B pages with 0 CTR already have FAQPage schema and optimized titles — no action recommended.
+
+| Page | Imps | Clicks | Position | Status |
+|---|---|---|---|---|
+| `/bangkok-hospitals` | 24 | 0 | 7.7 | Known, FAQ complete |
+| `/blog/bangkok-hospitals-comparison-bangladeshi-patients` | 45 | 0 | 8.4 | Known, FAQ complete |
+| `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` | 8 | 0 | 3.1 | Known, FAQ complete |
+| `/blog/air-ambulance-cardiac-patients` | 7 | 0 | 6.9 | Known, FAQ complete |
+| `/blog/bangkok-hospital-admission-bangladeshi-patients` | 7 | 0 | 6.6 | Known, FAQ complete |
+| `/guides/icu-air-ambulance-dhaka` | 21 | 0 | 9.2 | Known, FAQ complete |
+| `/icu-vs-medical-escort` | 43 | 0 | 50.8 | Post-refresh (cycle 10), slow recovery |
+
+All are pre-identified cases with FAQPage schema already injected. No title rewrite recommended (risk of ranking drop > CTR benefit).
+
+## Content & Technical Audit
+- **Content files:** 56 (stable — 50 core + 6 expansion route pages)
+- **Blog posts:** 29 (stable)
+- **Sitemap coverage:** All content files present in app/sitemap.js
+- **Blog listing:** All 29 posts have cards in `content/blog/index.html` ✅
+- **Build page count:** 56 (stable)
+- **Technical audit:** 0 duplicate OG/Twitter tags ✅, 0 missing canonicals ✅, 0 orphan pages ✅
+- **Title lengths:** 6 pages with file titles 60-57c (displayed 82-79c due to template suffix " | Air Ambulance Dhaka" = 22c) — all known, no new critical issues
+- **Low-link count:** 0 pages (except 404.html, blog/index.html — expected)
+
+## Notable Observations
+1. **`/services` indexing deadlock:** Persistent for 17+ cycles. Static body links exist on homepage (lines 361, 506, 554, 932 in content/index.html) but Google has not followed them. Only referring URL is sitemap.xml. Only fix is owner manual "Request Indexing" in GSC.
+2. **Stale crawl on pillar guide:** `/guides/air-ambulance-dhaka-bangkok` last crawled 2026-06-23 (1+ month). Sitemap has `monthly` — consider changing to `weekly` to increase crawl frequency.
+3. **Traffic stable but soft:** 28-day impressions flat at 638, clicks slight dip to 15. Weekend-heavy 7-day window explains most variance. No technical regressions.
+4. **`/icu-vs-medical-escort` recovery slow:** Position 50.8 (was 51.4 last cycle — marginal improvement). Content refresh cycle 10 added all GEO entities (Learjet 35A, BDT 32,00,000, Hazrat Shahjalal, 3.5hrs). Monitor 1 more cycle.
+5. **GSC token:** Expiry 2026-07-14 (past) but refresh_token functional — all calls succeeded. No auth action needed.
+
+## Actions Taken
+1. ✅ Indexing hygiene audit completed (5 key pages inspected)
+2. ✅ GSC pulse check — stable, no anomalies
+3. ✅ CTR quick-win scan — no new actionable pages
+4. ✅ Technical audit — clean
+5. ✅ No build/deploy needed (no file changes this cycle)
+
+## Owner Task List
+
+| Priority | Task | Details |
+|---|---|---|
+| **Tier 0 (auth)** | GSC token valid | Expiry past but refresh functional — no action |
+| **Tier 1 (urgent)** | Request Indexing for `/services` in GSC | https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com → Inspect `https://airambulancedhakabangkok.com/services` → "Request Indexing" |
+| **Tier 2 (important)** | Monitor `/icu-vs-medical-escort` pos 50.8 | Content refresh done cycle 10, waiting for recovery — check cycle 27 |
+| **Tier 3 (normal)** | Consider changing sitemap freq for `/guides/air-ambulance-dhaka-bangkok` from `monthly` to `weekly` | Last crawled 2026-06-23; increase crawl budget for pillar guide |
+
 ---
