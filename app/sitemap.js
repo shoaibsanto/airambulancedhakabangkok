@@ -53,7 +53,6 @@ export default async function sitemap() {
     ["/blog/air-ambulance-dhaka-to-chennai-india", "weekly", 0.8],
     ["/blog/air-ambulance-dhaka-to-delhi-india", "weekly", 0.8],
     ["/blog/medical-evacuation-cost-bangladesh", "weekly", 0.8],
-    ["/blog/air-ambulance-dhaka-bangkok-complete-faq", "weekly", 0.7],
     ["/blog/air-ambulance-dhaka-to-singapore", "weekly", 0.8],
     ["/blog/air-ambulance-dhaka-to-myanmar", "weekly", 0.8],
     ["/blog/ventilator-patient-air-ambulance", "weekly", 0.7],
