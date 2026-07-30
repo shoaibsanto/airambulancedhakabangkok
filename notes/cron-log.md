@@ -3600,4 +3600,59 @@ All are pre-identified cases with FAQPage schema already injected. No title rewr
 | **Tier 2 (important)** | Monitor `/icu-vs-medical-escort` pos 50.8 | Content refresh done cycle 10, waiting for recovery — check cycle 27 |
 | **Tier 3 (normal)** | Consider changing sitemap freq for `/guides/air-ambulance-dhaka-bangkok` from `monthly` to `weekly` | Last crawled 2026-06-23; increase crawl budget for pillar guide |
 
+---## Cycle 23 — Jul 30, 2026 (Daily)
+
+### GSC Snapshot (Jul 23–30, 7-day)
+| Metric | This Cycle | Baseline (Cycle 12) | Delta |
+|--------|-----------|-------------------|-------|
+| Impressions | 134 | 168 | -20.2% |
+| Clicks | 3 | 4 | -25.0% |
+| CTR | 2.24% | 2.38% | -0.14pp |
+| Position | 10.2 | 11.3 | +1.1 (better) |
+
+### GSC Snapshot (Jul 2–30, 28-day)
+| Metric | This Cycle | Cycle 12 Baseline | Delta |
+|--------|-----------|------------------|-------|
+| Impressions | 633 | 693 | -8.7% |
+| Clicks | 15 | 20 | -25.0% |
+| CTR | 2.37% | 2.89% | -0.52pp |
+| Position | 10.6 | 9.6 | -1.0 (worse) |
+
+**Note:** Jul 29 partial day (4 imps). Trend is moderate decline vs cycle 12. However, Chennai expansion route page performing well (2 clicks, pos 6.1, 9% CTR). /icu-vs-medical-escort at pos 53.2 (stable at deep page 6). /bangkok-hospitals-comparison at pos 8.7 with 46 impressions and 0 clicks (Tier B — AI Overview cannibalization, FAQ already present).
+
+### Top Pages (28-day)
+1. Homepage: 8 clicks / 298 imps / pos 6.4
+2. /air-ambulance-cost: 3 clicks / 115 imps / pos 7.1
+3. /air-ambulance-dhaka-to-chennai-india: 2 clicks / 22 imps / pos 6.1 ← NEW expansion page performing well
+4. /cardiac-emergency-transfer: 1 click / 35 imps / pos 14.6
+5. /guides/air-ambulance-dhaka-bangkok: 1 click / 27 imps / pos 5.3
+
+### Indexing Status
+| Page | Status | Last Crawled |
+|------|--------|-------------|
+| Homepage (/) | ✅ Submitted and indexed | 2026-07-27 |
+| /services | ⚠️ Discovered - not indexed | Never crawled |
+| /bangkok-hospitals | ✅ Submitted and indexed | 2026-07-21 |
+| /guides/air-ambulance-dhaka-bangkok | ✅ Submitted and indexed | 2026-06-23 |
+| /air-ambulance-cost | ✅ Submitted and indexed | 2026-07-21 |
+
+### Issues Found & Fixed
+1. **CRITICAL: Missing sitemap entry** — `ventilator-patient-air-ambulance` existed as a content file but was NOT in `app/sitemap.js`. Added. Google had no way to discover this page.
+2. **CRITICAL: Wrong canonical URLs on 3 new pages** — `medical-evacuation-cost-bangladesh`, `air-ambulance-dhaka-to-chennai-india`, `air-ambulance-dhaka-to-delhi-india` all had canonicals pointing to `/{slug}` instead of `/blog/{slug}`. Fixed canonical + og:url on all 3.
+3. **CRITICAL: 4 broken internal links** — `air-ambulance-cost.html`, `faq.html`, `air-ambulance-dhaka-bangkok-complete-faq.html`, `icu-vs-medical-escort.html` all linked to `/medical-evacuation-cost-bangladesh` (404) instead of `/blog/medical-evacuation-cost-bangladesh`. Fixed all 4.
+4. **Low-link pages** — 3 expansion route pages (Chennai, Delhi, Medical Evacuation Cost) had only 1 inbound link each. Added 2 links from India omnibus page for Chennai+Delhi. All 3 now have 4-5 inbound links.
+5. **Technical audit** — 2 title-long warnings (bangkok-hospitals 63c, guides 69c) — both owner-committed, not auto-fixing per protocol. No duplicate OG/Twitter tags, no missing canonicals (after fixes).
+
+### Actions This Cycle
+- Fixed 9 files total: 3 canonical URLs, 4 broken internal links, 1 sitemap entry, 1 inbound link section
+- Build: 116 static pages, clean
+- Deploy: commit `a3e36ed`, pushed to GitHub, Vercel auto-deploy triggered
+- Post-deploy: all pages return HTTP 200
+
+### Owner Action Required
+- **Tier 0:** GSC token expires Jul 26 — currently functional but will need re-auth before next cycle
+- **Tier 1:** `/services` page still "Discovered - not indexed" (15+ cycles). Manual "Request Indexing" in GSC required.
+  - https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com&id=R3l3TVs6GgWdctK1e9tJ5A
+- **Tier 3:** Consider requesting indexing for `/guides/air-ambulance-dhaka-bangkok` — last crawled Jun 23, over 1 month without Google re-crawl.
+
 ---
