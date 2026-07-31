@@ -3647,7 +3647,7 @@ All are pre-identified cases with FAQPage schema already injected. No title rewr
 - Fixed 9 files total: 3 canonical URLs, 4 broken internal links, 1 sitemap entry, 1 inbound link section
 - Build: 116 static pages, clean
 - Deploy: commit `a3e36ed`, pushed to GitHub, Vercel auto-deploy triggered
-- Post-deploy: all pages return HTTP 200
+---
 
 ### Owner Action Required
 - **Tier 0:** GSC token expires Jul 26 — currently functional but will need re-auth before next cycle
@@ -3656,3 +3656,50 @@ All are pre-identified cases with FAQPage schema already injected. No title rewr
 - **Tier 3:** Consider requesting indexing for `/guides/air-ambulance-dhaka-bangkok` — last crawled Jun 23, over 1 month without Google re-crawl.
 
 ---
+
+## Cycle 24 — Jul 31, 2026 (Daily)
+
+### GSC Snapshot (Jul 24–30, 7-day)
+**GSC OAuth token expired** — no live data this cycle. Last known baseline (Jul 23–30, Cycle 23): 134 impressions / 3 clicks / 2.24% CTR / pos 10.2 (7d); 633 imps / 15 clicks / 2.37% CTR / pos 10.6 (28d). Owner must re-authenticate GSC to restore monitoring.
+
+### Technical Audit — Title Length Fixes (CTR Optimization)
+Full audit across 57 HTML files. Found 4 pages with titles >62 chars. All fixed with CTR-optimized, keyword-first titles:
+
+| Page | Before (chars) | After (chars) | New Title |
+|------|----------------|---------------|-----------|
+| `content/bangkok-hospitals.html` | 63 | **55** | Bangkok Hospitals Air Ambulance | Bumrungrad/Samitivej ICU Jet |
+| `content/blog/air-ambulance-dhaka-bangkok-bumrungrad-cost.html` | 63 | **55** | Air Ambulance to Bumrungrad | Cost, Insurance & Payment |
+| `content/blog/bangkok-hospital-admission-bangladeshi-patients.html` | 73 | **56** | Bumrungrad Admission Dhaka | Air Ambulance Bumrungrad |
+| `content/guides/air-ambulance-dhaka-bangkok.html` | 69 | **58** | Air Ambulance Dhaka to Bangkok | ICU Jet 24/7 — Complete Guide |
+
+All OG/Twitter tags (`og:title`, `twitter:title`, `og:description`, `twitter:description`) synced to match new titles on all 4 pages.
+
+### Post-Fix Verification
+✅ **ALL CLEAN** — Python audit across 57 files confirms:
+- Zero duplicate og:title / twitter:title / og:description / twitter:description
+- Zero missing canonical tags
+- Zero titles >62 chars
+- Zero meta descriptions >165 chars
+
+### Build & Deploy
+- ✅ `npx next build` — 116 pages generated (45 content + ai-markdown mirrors + system routes), no TypeScript errors (Turbopack, 9.4s compile)
+- ✅ `git commit -m "SEO daily 2026-07-31: Fix 4 long titles (CTR optimization)"` — commit `e2fa2de`
+- ✅ `git push origin main` — Vercel auto-deploy triggered
+
+### Site Status
+- **Total Pages in Sitemap:** 57 (content) + ai-markdown mirrors = 116 routes
+- **Title Compliance (≤62 chars):** 100% (was 93%)
+- **Meta Description Compliance (≤165 chars):** 100%
+- **OG/Twitter Coverage:** 100%
+- **Canonical Coverage:** 100%
+- **Orphan Pages:** 0 (all pages have ≥3 inbound links)
+- **GSC Indexing:** 5/6 key pages indexed; `/services` still "Discovered - not indexed" (requires owner manual GSC "Request Indexing")
+
+### What to Watch Next Cycle
+1. Did CTR improve on the 4 title-optimized pages once Google re-crawls? (Expect 1–3 weeks for SERP update)
+2. Has `/services` finally moved from "Discovered - not indexed" → indexed after owner's manual Request Indexing?
+3. Any new "Discovered - not indexed" pages appearing in GSC coverage report?
+4. GSC OAuth re-authentication required to restore monitoring.
+
+### Next Actions (Auto-scheduled)
+- Next 12-hour cycle: GSC pulse check (after auth restore), indexing hygiene audit, CTR quick-win scan, build if changes

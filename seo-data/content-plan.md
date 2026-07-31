@@ -68,5 +68,5 @@ Fresh topics to maintain pipeline (all previous plan items completed):
 - [ ] IPS setup for work-from-home: what you need for uninterrupted internet
 - [ ] Lithium IPS for grocery stores and convenience shops Bangladesh
 - [ ] Parallel IPS installation guide: connecting two lithium IPS units
-- [ ] Smart IPS buying guide: WiFi monitoring, auto-switching, LCD features
+- [x] Smart IPS buying guide: WiFi monitoring, auto-switching, LCD features ← published 2026-08-01 (Post ID 35730)
 - [ ] Lithium battery bus bar wiring: how to connect multiple batteries safely
