@@ -56,6 +56,7 @@ export default async function sitemap() {
     ["/blog/air-ambulance-dhaka-to-singapore", "weekly", 0.8],
     ["/blog/air-ambulance-dhaka-to-myanmar", "weekly", 0.8],
     ["/blog/ventilator-patient-air-ambulance", "weekly", 0.7],
+    ["/air-ambulance-dhaka-bangkok-complete-faq", "weekly", 0.7],
   ];
 
   return ENTRIES.map(([urlPath, changeFrequency, priority]) => ({
