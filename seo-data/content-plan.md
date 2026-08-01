@@ -66,7 +66,7 @@ Fresh topics to maintain pipeline (all previous plan items completed):
 - [ ] IPS battery disposal and recycling in Bangladesh
 - [ ] How to connect solar panel to existing lithium IPS (DIY guide)
 - [ ] IPS setup for work-from-home: what you need for uninterrupted internet
-- [ ] Lithium IPS for grocery stores and convenience shops Bangladesh
+- [x] Lithium IPS for grocery stores and convenience shops Bangladesh ← published 2026-08-02 (Post ID 35732)
 - [ ] Parallel IPS installation guide: connecting two lithium IPS units
 - [x] Smart IPS buying guide: WiFi monitoring, auto-switching, LCD features ← published 2026-08-01 (Post ID 35730)
 - [ ] Lithium battery bus bar wiring: how to connect multiple batteries safely

@@ -34,7 +34,7 @@ export default async function sitemap() {
     ["/author/tawhid-iqbal", "monthly", 0.5],
     ["/privacy", "monthly", 0.3],
     ["/terms", "monthly", 0.3],
-    ["/guides/air-ambulance-dhaka-bangkok", "monthly", 0.9],
+    ["/guides/air-ambulance-dhaka-bangkok", "weekly", 0.9],
     ["/guides/icu-air-ambulance-dhaka", "monthly", 0.9],
     ["/blog/bed-to-bed-transfer-dhaka-bangkok", "weekly", 0.7],
     ["/blog/emergency-air-ambulance-when-to-call", "weekly", 0.7],
