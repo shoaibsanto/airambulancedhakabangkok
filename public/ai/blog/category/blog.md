@@ -33,6 +33,9 @@ Published: 2026-01-01
 ## [Medical Repatriation to BD](https://airambulancedhakabangkok.com/blog/medical-repatriation-to-bangladesh)
 Published: 2026-01-01
 
+## [Medical Evacuation Cost Bangladesh | 2026](https://airambulancedhakabangkok.com/blog/medical-evacuation-cost-bangladesh)
+Published: 2026-01-01
+
 ## [Liver Disease Air Ambulance](https://airambulancedhakabangkok.com/blog/liver-disease-air-ambulance-dhaka-bangkok)
 Published: 2026-01-01
 
@@ -60,7 +63,7 @@ Published: 2026-01-01
 ## [Bumrungrad vs Samitivej Guide](https://airambulancedhakabangkok.com/blog/bangkok-hospitals-comparison-bangladeshi-patients)
 Published: 2026-01-01
 
-## [Bumrungrad Admission for BD](https://airambulancedhakabangkok.com/blog/bangkok-hospital-admission-bangladeshi-patients)
+## [Bumrungrad Admission Dhaka | Air Ambulance Bumrungrad](https://airambulancedhakabangkok.com/blog/bangkok-hospital-admission-bangladeshi-patients)
 Published: 2026-01-01
 
 ## [Air Ambulance Vs Commercial Flight](https://airambulancedhakabangkok.com/blog/air-ambulance-vs-commercial-medical-flight)
@@ -72,10 +75,19 @@ Published: 2026-01-01
 ## [Air Ambulance to Singapore](https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-singapore)
 Published: 2026-01-01
 
+## [Air Ambulance Dhaka to Myanmar | ICU Medical Evacuation 24/7](https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-myanmar)
+Published: 2026-01-01
+
 ## [Air Ambulance to India](https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi)
 Published: 2026-01-01
 
-## [Air Ambulance Cost Dhaka to Bumrungrad](https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-bangkok-bumrungrad-cost)
+## [Air Ambulance Dhaka to Delhi India | ICU](https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-delhi-india)
+Published: 2026-01-01
+
+## [Air Ambulance Dhaka to Chennai India | ICU](https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-chennai-india)
+Published: 2026-01-01
+
+## [Air Ambulance to Bumrungrad | Cost, Insurance & Payment](https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-bangkok-bumrungrad-cost)
 Published: 2026-01-01
 
 ## [Air Ambulance Cost Bangladesh 2026](https://airambulancedhakabangkok.com/blog/air-ambulance-cost-bangladesh-2026)
