@@ -60,13 +60,21 @@ Last updated: 2026-07-31
 
 ## 2026-07-29 Replenishment Suggestions
 Fresh topics to maintain pipeline (all previous plan items completed):
-- [ ] Best IPS for fish farming / aquaculture Bangladesh
+- [x] Best IPS for fish farming / aquaculture Bangladesh ← published 2026-08-04 (Post ID 35778)
 - [x] How to test lithium IPS battery health (BMS diagnostics guide) ← published 2026-07-31 (Post ID 35727)
 - [ ] Lithium IPS for restaurant and food business backup
 - [ ] IPS battery disposal and recycling in Bangladesh
 - [ ] How to connect solar panel to existing lithium IPS (DIY guide)
-- [ ] IPS setup for work-from-home: what you need for uninterrupted internet
+- [x] IPS setup for work-from-home: what you need for uninterrupted internet ← published 2026-08-04 (Post ID 35738)
 - [x] Lithium IPS for grocery stores and convenience shops Bangladesh ← published 2026-08-02 (Post ID 35732)
 - [x] Parallel IPS installation guide: connecting two lithium IPS units ← published 2026-08-03 (Post ID 35734)
 - [x] Smart IPS buying guide: WiFi monitoring, auto-switching, LCD features ← published 2026-08-01 (Post ID 35730)
 - [ ] Lithium battery bus bar wiring: how to connect multiple batteries safely
+
+## 2026-08-04 Replenishment Suggestions
+- [ ] IPS for poultry farming Bangladesh: ventilation and lighting backup power
+- [ ] Lithium IPS for cold storage and deep freezer Bangladesh
+- [ ] How to choose between single-phase and three-phase IPS for commercial buildings
+- [ ] IPS for water treatment plants and RO systems Bangladesh
+- [ ] Lithium IPS vs diesel generator for rural telecom towers Bangladesh
+- [ ] How to set up IPS monitoring app on your phone (WiFi IPS models)

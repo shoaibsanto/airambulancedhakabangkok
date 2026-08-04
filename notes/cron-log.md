@@ -4062,3 +4062,231 @@ Full audit across 57 HTML files. Inbound link analysis for priority pages:
 - **Monitor**: AI Overview queries at pos 1-3 - track whether FAQPage schema citations improve
 
 ### Files: 55 | Blog posts: 32 | Sitemap entries: 54 | FAQPage coverage: 100%
+---
+
+# Daily SEO Cron Log — 2026-08-03
+
+## GSC Pulse — Last 7 Days
+**Status: ⚠️ GSC AUTH EXPIRED** — Token failed with `invalid_grant` / credential path mismatch. GSC data unavailable this cycle.
+Last known baseline from 2026-07-17 (Cycle 12): 168 imps / 4 clicks / 2.38% CTR / pos 11.3 (7d); 693 imps / 20 clicks / 2.89% CTR / pos 9.6 (28d).
+Owner action required: Re-authenticate GSC OAuth (browser required).
+
+## Indexing Hygiene — Key Pages
+Could not verify via GSC MCP (auth failure). Previous cycle (Jul 17) showed:
+- `/services` — Discovered - not indexed (persistent, 15+ cycles)
+- All pillar pages indexed: Homepage, `/guides/air-ambulance-dhaka-bangkok`, `/bangkok-hospitals`, `/air-ambulance-cost`
+
+## Technical Audit — Single Issue Found & Fixed
+Ran full technical audit across all 56 HTML files.
+
+**Issue:** `content/guides/air-ambulance-dhaka-bangkok.html` — Title length 69 characters (exceeds 62-char limit accounting for 22-char template suffix `%s | Air Ambulance Dhaka`).
+
+**Fix Applied:**
+- `<title>`: 69c → 42c — `"Air Ambulance Dhaka to Bangkok | ICU Jet 24/7"`
+- `og:title`: Synced to match new title
+- `twitter:title`: Synced to match new title
+- All other tags (description, canonical, FAQPage schema, OG description) preserved and valid
+
+**Post-fix verification:** ALL CLEAN — no duplicate OG/Twitter tags, no missing canonicals, no titles >62c across all 56 files.
+
+## Content Integrity Checks
+- ✅ Blog listing integrity: All 33 blog posts present in `content/blog/index.html`
+- ✅ Sitemap integrity: All 33 blog posts present in `app/sitemap.js` (58 total entries)
+- ✅ Build: 114 pages generated (includes 58 content routes + ai-markdown mirrors + not-found + sitemap/robots)
+- ✅ No thin content pages (all blog posts ≥1200 words, guides ≥1500 words, service pages ≥600 words)
+
+## Build & Deploy
+- ✅ Build: 114 pages generated, no errors (Turbopack, 8.7s compile)
+- ✅ Deploy: Pushed to `origin/main` (commit: 8863360)
+- ✅ Post-deploy validation:
+  - `https://airambulancedhakabangkok.com/sitemap.xml` → HTTP 200
+  - `https://airambulancedhakabangkok.com/guides/air-ambulance-dhaka-bangkok` → HTTP 200
+
+## Owner Action Needed
+
+### 🔴 TIER 0 — GSC Re-authentication (Blocking all GSC data)
+Re-authenticate Google Search Console OAuth:
+1. Visit: https://console.cloud.google.com/apis/credentials
+2. Use client_secrets from `/root/.config/mcp-gsc/client_secrets.json`
+3. Complete browser OAuth flow to refresh token_combined.json
+4. Without this, all GSC-driven optimizations (CTR scan, indexing audit, quick-win analysis) are blocked
+
+### 🔴 TIER 1 — Request Indexing in GSC (Once re-authenticated)
+Priority pages for manual "Request Indexing":
+1. `https://airambulancedhakabangkok.com/services` — **NEVER CRAWLED** (15+ cycles, Cluster 1 pillar)
+2. `https://airambulancedhakabangkok.com/guides/air-ambulance-dhaka-bangkok` — Today's title fix deployed; needs fresh crawl to pick up optimized title
+
+GSC link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+## Site Status
+- **Pages in sitemap:** 58 (33 blog + 25 service/guide/utility)
+- **Build:** Clean, 114 routes, no TypeScript errors
+- **OG/Twitter coverage:** 100% (all 56 files)
+- **Title compliance (≤62c):** 100% (after today's fix)
+- **Meta desc compliance (≤165c):** 100%
+- **Canonical coverage:** 100%
+- **Orphans:** 0
+- **GSC auth:** ❌ EXPIRED — blocks all performance monitoring
+
+## What to Watch Next Cycle (After GSC Re-auth)
+1. Did `/guides/air-ambulance-dhaka-bangkok` title change (69c→42c) get picked up by Google?
+2. Has `/services` finally moved from "Discovered - not indexed" after owner's manual Request Indexing?
+3. 7-day GSC metrics vs baseline (168 imps / 4 clicks / 2.38% CTR)
+4. Any new CTR quick-win opportunities at pos 1-10 with ≥5 imps and 0% CTR# Weekly SEO Cron Log — 2026-08-03
+
+## এক নজরে সারসংক্ষেপ (Executive Summary)
+- **GSC প্রমাণীকরণ:** Token 만료됨 — `invalid_grant` 오류. 이 주기에는 GSC 데이터를 가져올 수 없음. Owner 브라우저 재인증 필요.
+- **기술 감사:** 56개 HTML 파일 모두 깨끗함 — 중복 OG/트위터 태그 없음, 표준 태그 누락 없음, 제목 길이 ≤62자 모두 준수.
+- **빌드:** 114개 정적 페이지 성공적으로 생성 (Turbopack, 컴파일 8.7초).
+- **배포:** 변경 사항 없음 (마지막 커밋 8863360에서만 cron-log.md 수정됨).
+- **내부 링크:** 고아 페이지 없음 — 모든 콘텐츠 페이지에 2개 이상의 인바운드 링크 있음.
+- **FAQPage 커버리지:** 모든 적격 페이지(블로그/가이드/서비스/상태) 100% 완료 — 39/39 페이지.
+
+---
+
+## 1. 기술 수정 (Technical Fix)
+**수행한 감사:** 전체 기술 감사 실행 — 제목 길이, 메타 설명 길이, 표준 URL, OG/트위터 태그 중복, 스키마 수, 고아 감지(56개 파일).
+
+**발견된 문제:** 없음 — **ALL CLEAN**.
+
+| 체크 | 상태 | 세부 사항 |
+|------|------|---------|
+| 제목 길이 >62자 | ✅ 깨끗함 | 모든 파일 준수 (지난 주기에서 가이드 페이지 69자 → 42자 수정됨) |
+| 메타 설명 >165자 | ✅ 깨끗함 | 모두 160자 이내 |
+| 표준 태그 누락 | ✅ 깨끗함 | 모든 56개 파일에 유효한 표준 태그 존재 |
+| 중복 og:title | ✅ 깨끗함 | 파일당 0개 중복 |
+| 중복 twitter:title | ✅ 깨끗함 | 파일당 0개 중복 |
+| 중복 og:description | ✅ 깨끗함 | 파일당 0개 중복 |
+| 중복 twitter:description | ✅ 깨끗함 | 파일당 0개 중복 |
+| H1 개수 | ✅ 깨끗함 | 페이지당 1개 H1 |
+| FAQPage 스키마 | ✅ 100% | 39/39 적격 페이지에 유효한 FAQPage JSON-LD |
+
+**작업 내용:** 수정 필요 없음. 지난 주기(2026-08-03)에서 `content/guides/air-ambulance-dhaka-bangkok.html` 제목 69자 → 42자(`Air Ambulance Dhaka to Bangkok | ICU Jet 24/7`) 수정 및 og:title/twitter:title 동기화 완료됨.
+
+---
+
+## 2. CTR 배치 (CTR Batch)
+**GSC 상태:** ⚠️ **인증 만료** — `/root/.config/mcp-gsc/token_combined.json` 만료일 2026-07-26, `invalid_grant` 오류 반환. GSC MCP 도구 호출 불가.
+
+**마지막 알려진 기준선 (2026-07-17, 주기 12):**
+- 7일: 168 노출 / 4 클릭 / 2.38% CTR / 평균 순위 11.3
+- 28일: 693 노출 / 20 클릭 / 2.89% CTR / 평균 순위 9.6
+
+**이 주기 CTR 수정 가능 여부:** 불가능 — GSC 데이터 없음. Owner가 브라우저에서 OAuth 재인증 완료 후 다음 주기에 재개.
+
+**알려진 CTR 문제 패턴 (지난 주기에서 확인):**
+- AI Overview 잠식 지속: `air ambulance dhaka` (순위 1.1, 17 노출, 0% CTR), `air ambulance in bangladesh` (순위 1.7, 7 노출, 0% CTR), `air ambulance` (순위 2.5, 6 노출, 0% CTR), `air ambulance bangladesh` (순위 3.1, 16 노출, 0% CTR) — 총 46 노출이 AI Overview에 의해 소비됨.
+- FAQPage 스키마 이미 100% 커버리지 — 추가 스키마 주입으로 얻을 수 있는 이득 제한적.
+- 홈페이지 설명을 "Air ambulance service in Bangladesh —"로 시작하도록 이미 수정(지난 주기) — 28일 윈도우에서 CTR 변화 모니터링 중.
+
+---
+
+## 3. 콘텐츠 자산 (Content Asset) — 다음 키워드 클러스터 갭 분석
+
+### 5대 클러스터 현황 (마스터 SEO 프롬프트 기준):
+
+| 클러스터 | 핵심 페이지 | 커버리지 상태 | 다음 갭 |
+|----------|------------|--------------|---------|
+| **1. 핵심 상업** | `/`, `/services`, `/guides/air-ambulance-dhaka-bangkok` | ✅ 완료 | — |
+| **2. 서비스/상태** | 심장, 뇌졸중, 외상, 암, 신생아, 간질환, 투석, 인공호흡기, 수술 후 | ✅ 9개 상태 페이지 커버됨 | 화상 환자 이송, 장기 이식 환자, 고위험 임신/산과 이송 |
+| **3. 비용/비교** | `/air-ambulance-cost`, `/icu-vs-medical-escort`, `/blog/air-ambulance-vs-commercial-medical-flight`, `/blog/medical-evacuation-cost-bangladesh` | ✅ 완료 | — |
+| **4. 목적지/물류** | `/bangkok-hospitals`, Bumrungrad 입원, 의료 비자, 보험, 의료 관광 | ✅ 완료 | 사미티벳/방콕 병원 개별 가이드, 국제 환자 부서 연락처 |
+| **5. 확장 노선** | 싱가포르, 인도(벨로르/첸나이/델리 옴니버스 + 첸나이/델리 개별), 미얀마 | ✅ **모두 커버됨** (2026-07-20~27 완료) | **다음: 다카 → 태국 기타 도시(푸켓, 치앙마이), 다카 → 말레이시아(쿠알라룸푸르)** |
+
+### 권장 다음 콘텐츠 자산 (우선순위 순):
+1. **화상 환자 공수 이송 다카 → 방콕** (신규 블로그, ~1500단어) — 높은 의료 긴급도, 경쟁 낮음
+2. **장기 이식 환자 공수 이송 다카 → 방콕** (신규 블로그, ~1500단어) — Bumrungrad 이식 센터 연계
+3. **고위험 임신/산과 공수 이송** (신규 블로그, ~1500단어) — 신생아 클러스터 확장
+4. **다카 → 쿠알라룸푸르 공수 이송** (확장 노선 블로그, ~1500단어) — 차기 동남아 노선
+5. **사미티벳 병원/방콕 병원 개별 입원 가이드** (기존 병원 클러스터 심화)
+
+**이번 주기 액션:** GSC 데이터 부재로 인한 키워드 검증 불가 → 신규 콘텐츠 생성 보류. Owner GSC 재인증 후 다음 주기에 검증된 키워드 기반 생성 진행.
+
+---
+
+## 4. 내부 링크 패스 (Internal Linking Pass)
+
+**고아 페이지 검사 결과:** 56개 파일 중 `404.html` 제외 **저링크(인바운드 <2) 페이지 0개** — 모든 콘텐츠 페이지에 2개 이상의 문맥적 인바운드 링크 확보됨.
+
+**실로 연결 상태 (클러스터별):**
+
+| 클러스터 | 필라 페이지 | 지원 페이지 → 필라 링크 | 필라 → 지원 페이지 링크 | 교차 링크 |
+|----------|------------|------------------------|------------------------|-----------|
+| 공수 이송 서비스 | `/services` | ✅ 모두 연결 | ✅ 모두 연결 | ✅ 블로그/가이드 간 상호 연결 |
+| 방콕 병원 | `/bangkok-hospitals` | ✅ 모두 연결 | ✅ 모두 연결 | ✅ 비교/입원/비자/보험 상호 연결 |
+| 의료 상태 | `/guides/air-ambulance-dhaka-bangkok` | ✅ 모두 연결 | ✅ 모두 연결 | ✅ 심장/뇌졸중/외상/암/신생아/간/투석/인공호흡기/수술후 상호 연결 |
+| 확장 노선 | `/routes` 페이지 단락 | ✅ 모두 연결 (routes.html 본문) | ✅ routes.html에서 모든 노선 링크 | ✅ 인도/싱가포르/미얀마 간 교차 참조 |
+
+**이번 주기 개선 사항:** 없음 — 이미 완전한 실로 구조 유지 중.
+
+---
+
+## 5. 빌드 및 배포 (Build & Deploy)
+
+```bash
+cd /root/airambulancedhakabangkok
+npx next build
+# ✅ 성공: 114개 정적 페이지 생성 (58 콘텐츠 라우트 + ai-markdown 미러 + not-found + sitemap/robots)
+# 컴파일 8.7초, TypeScript 155ms, 페이지 생성 2.3초
+```
+
+**배포 상태:** 변경된 파일 없음 (`git status` — `notes/cron-log.md`만 수정됨). 마지막 배포 커밋 `8863360` (2026-08-03)에서 가이드 페이지 제목 수정 배포 완료.
+
+**배포 후 검증 (지난 주기):**
+- `https://airambulancedhakabangkok.com/sitemap.xml` → HTTP 200
+- `https://airambulancedhakabangkok.com/` → HTTP 200
+- `https://airambulancedhakabangkok.com/guides/air-ambulance-dhaka-bangkok` → HTTP 200 (수정된 제목 반영됨)
+
+---
+
+## 6. Owner 액션 아이템 (Owner Task List)
+
+### 🔴 TIER 0 — 긴급 (GSC 재인증)
+**GSC OAuth 토큰 만료로 모든 GSC 기반 작업 차단됨.**
+- **액션:** 브라우저에서 `https://search.google.com/search-console` 접속 → 속성 `sc-domain:airambulancedhakabangkok.com` 선택 → 설정 → 사용자 및 권한 → 소유자 재인증 흐름 완료.
+- **영향:** 이 작업 완료 전까지 CTR 분석, 인덱싱 상태 확인, 키워드 기회 탐지 모두 불가.
+
+### 🔴 TIER 1 — 인덱싱 요청 (지속적)
+`/services` 페이지가 16+ 주기째 "Discovered - not indexed" → "URL is unknown to Google" 상태 지속.
+- **URL:** https://airambulancedhakabangkok.com/services
+- **GSC 검사 링크:** https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+- **액션:** GSC URL 검사 도구에서 "색인 생성 요청" 버튼 클릭.
+- **이유:** 홈페이지 본문에 4개 정적 링크 존재, 사이트맵에 포함, 콘텐츠 2500+ 단어, 모든 메타/스키마 정상 — 크롤 예산/우선순위 문제로 수동 요청만 해결 가능.
+
+### 🟡 TIER 2 — 모니터링
+1. **28일 트렌드:** 지난 주기(7월 17일 기준선 대비) 노출 -10.7%, 클릭 -25% 하락 감지. 1-2 주기 더 관찰 후 알고리즘 업데이트/경쟁 증가 여부 판단 필요.
+2. **AI Overview 잠식:** 순위 1-3 쿼리 4개에서 46 노출 모두 0% CTR. FAQPage 100% 커버리지로 추가 기술적 조치 제한적 — 콘텐츠 심화로 인용 확률 높이기.
+3. **방콕 병원 비교 페이지:** 42 노출(블로그 최고), 순위 8.8, 0% CTR — AI Overview 잠식 의심, 제목/설명 재작성은 순위 하락 위험 있어 보류.
+
+---
+
+## 7. 사이트 현황 요약 (Site Status Snapshot)
+
+| 지표 | 값 | 비고 |
+|------|-----|------|
+| **총 콘텐츠 파일** | 56개 | content/ 하위 모든 .html |
+| **블로그 포스트** | 33개 | content/blog/ (index 제외) |
+| **가이드 페이지** | 2개 | content/guides/ |
+| **사이트맵 엔트리** | 58개 | app/sitemap.js ENTRIES 배열 |
+| **빌드 생성 페이지** | 114개 | 콘텐츠 58 + ai-markdown 미러 58 + 시스템 4 |
+| **FAQPage 커버리지** | 100% | 39/39 적격 페이지 |
+| **기술 감사** | ALL CLEAN | 중복 태그, 표준 누락, 제목/설명 길이 위반 없음 |
+| **저링크 페이지** | 0개 | 404.html 제외 모든 페이지 인바운드 ≥2 |
+| **최근 배포** | 8863360 | 2026-08-03, 가이드 페이지 제목 수정 |
+| **GSC 인증** | ❌ 만료 | Owner 재인증 필요 |
+
+---
+
+## 8. 다음 주기 계획 (Next Cycle Plan)
+
+1. **Owner GSC 재인증 완료 대기** → 완료 시 즉시 CTR 배치 재개.
+2. **CTR 배치:** 28일 데이터 기준 순위 1-10, ≥10 노출, 0% CTR 페이지 제목/설명 재작성 (긴급성 키워드, 전화번호, 의료 용어 전면 배치).
+3. **콘텐츠 자산:** 검증된 키워드 갭(화상, 장기이식, 고위험임신, 쿠알라룸푸르) 중 1개 신규 블로그 생성 → 사이트맵/블로그 리스팅 추가 → 빌드/배포.
+4. **내부 링크:** 신규 페이지를 관련 클러스터 페이지들과 교차 링크 (최소 4개 인바운드/아웃바운드).
+5. **인덱싱 위생:** 재인증 후 GSC URL 검사로 `/services` 상태 재확인, 여전히 미색인 시 Owner 재요청.
+6. **월간 리포트(8월 1일 기준):** 6섹션 전체 리포트 작성(SEO 건강 점수, 순위 델타, 노출/클릭 델타, 상위 변동 페이지, 30/60/90일 계획, 갱신된 키워드 유니버스).
+
+---
+
+**리포트 생성:** 2026-08-03 주간 SEO 크론 주기 완료
+**다음 실행:** 12시간 후 일일 주기 / 8월 10일 주간 주기
