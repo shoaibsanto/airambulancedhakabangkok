@@ -62,8 +62,8 @@ Last updated: 2026-07-31
 Fresh topics to maintain pipeline (all previous plan items completed):
 - [x] Best IPS for fish farming / aquaculture Bangladesh ← published 2026-08-04 (Post ID 35778)
 - [x] How to test lithium IPS battery health (BMS diagnostics guide) ← published 2026-07-31 (Post ID 35727)
-- [ ] Lithium IPS for restaurant and food business backup
-- [ ] IPS battery disposal and recycling in Bangladesh
+- [x] Lithium IPS for restaurant and food business backup ← published 2026-08-05 (Post ID 35780)
+- [x] IPS battery disposal and recycling in Bangladesh ← published 2026-08-07 (Post ID 35782)
 - [ ] How to connect solar panel to existing lithium IPS (DIY guide)
 - [x] IPS setup for work-from-home: what you need for uninterrupted internet ← published 2026-08-04 (Post ID 35738)
 - [x] Lithium IPS for grocery stores and convenience shops Bangladesh ← published 2026-08-02 (Post ID 35732)

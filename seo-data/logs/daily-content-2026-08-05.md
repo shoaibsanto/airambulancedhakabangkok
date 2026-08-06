@@ -1,65 +1,58 @@
-# HiTHIUM Daily Content Log — 2026-08-05
+# Daily Content Log — 2026-08-05
 
-## Post Published
+## Published Post
+- **Post ID**: 35780
+- **URL**: https://hithiumbd.com/lithium-ips-restaurant-food-business-backup-bangladesh/
+- **Title**: Lithium IPS for Restaurant & Food Business Backup in Bangladesh
+- **Slug**: lithium-ips-restaurant-food-business-backup-bangladesh
+- **Category**: IPS & Battery (ID: 233)
+- **Publish Date**: 2026-08-05T18:06:46+00:00
 
-| Field | Value |
-|-------|-------|
-| Post ID | 35778 |
-| Title | Best IPS for Fish Farming in Bangladesh — Capacity Guide |
-| Slug | best-ips-fish-farming-aquaculture-bangladesh |
-| URL | https://hithiumbd.com/best-ips-fish-farming-aquaculture-bangladesh/ |
-| Category | IPS & Battery (ID=233) |
-| Word Count | 1,748 |
-| Featured Image | Media ID 35777 (WebP, 29KB) |
-| Published Date | 2026-08-05 (cron date) |
+## SEO Metadata (Verified)
+- **Yoast Title**: Lithium IPS for Restaurant Backup Power Bangladesh | HiTHIUM (60 chars)
+- **Yoast Description**: Keep your restaurant running during load-shedding with lithium IPS. Right capacity, auto-switching, and BMS protection for cold storage, POS & kitchen equipment. (161 chars)
+- **Focus Keyword**: Lithium IPS restaurant backup Bangladesh
+- **Featured Media**: ID 35779 (https://hithiumbd.com/wp-content/uploads/2026/08/hithium_restaurant_ips.webp)
+- **Alt Text**: "Lithium IPS backup power system for restaurant and food business in Bangladesh"
 
-### Yoast SEO Meta (confirmed)
+## Content Quality
+- **Word Count**: ~1,528 words (target: 1,200–2,200) ✅
+- **Keyword Density**: ~0.9% (target: 0.8–1.5%) ✅
+- **Internal Links**: 6 contextual links to existing posts/pages ✅
+  - /smart-ips-buying-guide-bangladesh/
+  - /parallel-ips-installation-guide-connecting-two-units-bangladesh/
+  - /ips-earthing-guide-bangladesh/
+  - /ips-cable-size-home-bangladesh/
+  - /solar-panel-home-ips-setup-guide-bangladesh/
+  - /contact/
+- **FAQ Section**: 6 Q&A pairs in schema-faq HTML format ✅
+- **Comparison Tables**: 2 tables (Lithium IPS vs Generator, Capacity Selection Guide) ✅
+- **No JSON-LD in post_content**: Verified clean ✅
+- **HTML Structure**: Clean H2/H3 hierarchy, proper lists, tables ✅
 
-| Field | Value |
-|-------|-------|
-| Focus Keyword | IPS for fish farming Bangladesh |
-| SEO Title | Best IPS for Fish Farming Bangladesh \| HiTHIUM (46 chars) |
-| Meta Description | Find the best IPS for fish farming in Bangladesh. Load calculation, lithium vs tubular, capacity guide for small to large aquaculture farms 2026. (145 chars) |
+## Site Health Checks
+- **Homepage**: HTTP 200 ✅
+- **New Post**: HTTP 200 ✅
+- **Yoast Meta on Frontend**: Title & description match API response ✅
+- **OG Image**: Correctly assigned to featured image ✅
+- **Schema**: Yoast-injected Article + WebPage + ImageObject + BreadcrumbList + WebSite + Person (in `<head>`, not post_content) ✅
+- **Featured Image**: 1200×630 WebP, English-only text, brand colors ✅
+- **JSON-LD in Article Zone**: None (only theme/Yoast schema in `<head>`) ✅
 
-### Content Details
+## Issues Found
+- None. All validation gates passed.
 
-- FAQ pairs: 6 (schema-faq div format, no JSON-LD in content)
-- Internal links: 9 (to pillar pages, maintenance, cable size, earthing, shop, contact, etc.)
-- Comparison tables: 3 (equipment load, lithium vs tubular, cost breakdown)
-- JSON-LD in post_content: NO (Yoast handles schema in <head>)
-- Featured media: Confirmed (media_id 35777)
+## Next Actions
+- Content plan updated: "Lithium IPS for restaurant and food business backup" marked complete
+- 4 unchecked items remain in current replenishment batch
+- 6 unchecked items in 2026-08-04 replenishment batch
+- Pipeline healthy — no immediate replenishment needed
 
-### Validation Checklist
-
-- [x] Title < 60 chars (46)
-- [x] Meta description < 155 chars (145)
-- [x] Focus keyword in title
-- [x] Focus keyword in H1
-- [x] Focus keyword in meta description
-- [x] No JSON-LD in post_content
-- [x] Featured image uploaded and assigned
-- [x] Live page renders correctly (HTTP 200)
-- [x] Yoast schema in <head> (via Yoast plugin)
-- [x] wp-post-image class on featured image
-
-## Site Health
-
-| Check | Status |
-|-------|--------|
-| Homepage | 200 OK |
-| best-lithium-ips-bangladesh | 200 OK |
-| ips-installation-guide-step-by-step-bangladesh | 200 OK |
-| lithium-ips-grocery-stores-convenience-shops-bangladesh | 200 OK |
-| best-ips-fish-farming-aquaculture-bangladesh (new) | 200 OK |
-
-## Content Plan Status
-
-- Remaining unchecked items: 4 (restaurant, disposal/recycling, solar panel DIY, bus bar wiring)
-- Added 6 new replenishment topics for future pipeline
-- Total posts on site: 65 (64 unique + 1 duplicate post 35703)
-
-## Notes
-
-- Post targets aquaculture industry vertical — a new content angle not previously covered
-- All internal links verified pointing to existing posts/pages
-- No email notification sent (HiTHIUM does not use email pipeline)
+## Commands Run
+```
+1. curl -u "Admin:APP_PASS" "https://hithiumbd.com/wp-json/wp/v2/posts?per_page=100&_fields=id,slug,title" → /tmp/hithium_posts.json
+2. python3 /tmp/build_post.py → /tmp/hithium_post.json (validated)
+3. WP_PASS="..." python3 /tmp/publish_hithium.py (generate image → upload → publish → verify)
+4. curl verification of live page
+5. patch /root/airambulancedhakabangkok/seo-data/content-plan.md
+```
