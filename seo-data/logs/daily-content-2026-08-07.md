@@ -1,38 +1,55 @@
-# HiTHIUM Daily Content Log — 2026-08-07
+# HiTHIUM BD Daily Content Log — 2026-08-07
 
-## Published
-- Title: IPS Battery Disposal in Bangladesh: Safe Recycling Guide
-- Post ID: 35782
-- URL: https://hithiumbd.com/ips-battery-disposal-recycling-bangladesh/
-- Category: IPS & Battery (ID 233)
-- Focus keyword: IPS battery disposal Bangladesh
-- Word count: 1,840
-- Featured media: 35781
-- Featured image URL: https://hithiumbd.com/wp-content/uploads/2026/08/ips-battery-disposal-recycling-bangladesh.webp
+## Published Post
+- **Post ID**: 35783
+- **URL**: https://hithiumbd.com/connect-solar-panel-to-lithium-ips-bangladesh/
+- **Title**: How to Connect Solar Panels to Existing Lithium IPS in Bangladesh — DIY Guide
+- **Slug**: connect-solar-panel-to-lithium-ips-bangladesh
+- **Category**: IPS & Battery (ID: 233)
+- **Focus Keyword**: connect solar panel to lithium IPS
+- **Word Count**: 1,853 words
 
-## Yoast SEO
-- SEO title: IPS Battery Disposal Bangladesh | HiTHIUM
-- Meta description: Learn safe IPS battery disposal in Bangladesh, recycling options, lithium safety steps, and how homes and businesses should handle old batteries.
-- Focus keyword confirmed via REST API: yes
+## Yoast SEO Metadata (Confirmed via REST API)
+- **SEO Title**: Add Solar to Lithium IPS | DIY Guide | HiTHIUM Bangladesh (57 chars)
+- **Meta Description**: Guide to adding solar panels to lithium IPS in Bangladesh. Covers solar-ready vs standard IPS, sizing, wiring, MPPT selection, costs, safety. (141 chars)
+- **Focus Keyword**: connect solar panel to lithium IPS
+
+## Content Quality Checks
+- ✅ No JSON-LD in post_content (validated via REST API context=edit)
+- ✅ 8 FAQ schema-faq div pairs (proper HTML format, not raw JSON-LD)
+- ✅ 2 comparison tables (sizing guide, cost breakdown)
+- ✅ Internal links: shop page, contact page
+- ✅ Featured image uploaded and assigned (Media ID: 35784)
+- ✅ Alt text set: "Solar panel connection to lithium IPS Bangladesh DIY guide"
+- ✅ Live page renders correctly (HTTP 200)
+- ✅ Yoast meta renders correctly in frontend <head>
+- ✅ WordPress schema injected by Yoast (Article, WebPage, ImageObject, BreadcrumbList, WebSite, Person)
+
+## Featured Image
+- **Media ID**: 35784
+- **URL**: https://hithiumbd.com/wp-content/uploads/2026/08/connect-solar-panel-lithium-ips.webp
+- **Dimensions**: 1200×630 WebP (85 quality)
+- **Generated via**: Pillow (custom HiTHIUM branded template with solar panel + IPS connection diagram)
 
 ## Internal Links Added
-- https://hithiumbd.com/how-to-extend-ips-battery-life-bangladesh/
-- https://hithiumbd.com/how-to-test-lithium-ips-battery-health-bangladesh/
-- https://hithiumbd.com/shop/
-- https://hithiumbd.com/how-to-calculate-ips-backup-time-home-bangladesh/
-- https://hithiumbd.com/contact/
+1. https://hithiumbd.com/shop/ — "Browse HiTHIUM solar-ready lithium IPS models"
+2. https://hithiumbd.com/contact/ — "contact our technical team for a free sizing consultation"
 
-## Validation
-- Live page HTTP 200: passed
-- Featured media > 0: passed (35781)
-- Word count >= 1500: passed (1,840)
-- FAQ section: passed (5 Q&A pairs, schema-faq HTML format)
-- JSON-LD in post_content: none
-- JSON-LD in article body: none
-- Broken internal links: none
-- Latest 20 posts meta/featured check: no missing Yoast meta descriptions or featured images found
-- Sitemap reachable: HTTP 200 (checked pre-publish)
+## Health Checks
+- ✅ Homepage: HTTP 200
+- ✅ Recent posts (35782, 35780, 35778): HTTP 200
+- ✅ New post: HTTP 200
+- ✅ Sitemap updated (post-sitemap.xml lastmod: 2026-08-07)
+- ✅ No broken links detected in new content
+- ✅ No 404 errors on key pages
+
+## Content Plan Update
+- Marked "[x] How to connect solar panel to existing lithium IPS (DIY guide) ← published 2026-08-07 (Post ID 35783)"
+- Remaining unchecked items: 5 (bus bar wiring, poultry farming, cold storage, single/three-phase IPS, water treatment, telecom towers, monitoring app)
+- Replenishment threshold: 3 unchecked items remaining before next batch needed
 
 ## Notes
-- Content plan updated: “IPS battery disposal and recycling in Bangladesh” marked complete with Post ID 35782.
-- No email notification sent; HiTHIUM workflow does not use the OTO email pipeline.
+- Published via direct REST API (Application Password auth)
+- Featured image generated via Pillow, uploaded via multipart/form-data (files= parameter)
+- Post content validated before publish: word count, title/description length, no JSON-LD, FAQ format, internal links
+- All validations passed pre-publish

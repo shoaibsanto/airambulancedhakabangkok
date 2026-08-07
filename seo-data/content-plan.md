@@ -64,7 +64,7 @@ Fresh topics to maintain pipeline (all previous plan items completed):
 - [x] How to test lithium IPS battery health (BMS diagnostics guide) ← published 2026-07-31 (Post ID 35727)
 - [x] Lithium IPS for restaurant and food business backup ← published 2026-08-05 (Post ID 35780)
 - [x] IPS battery disposal and recycling in Bangladesh ← published 2026-08-07 (Post ID 35782)
-- [ ] How to connect solar panel to existing lithium IPS (DIY guide)
+- [x] How to connect solar panel to existing lithium IPS (DIY guide) ← published 2026-08-07 (Post ID 35783)
 - [x] IPS setup for work-from-home: what you need for uninterrupted internet ← published 2026-08-04 (Post ID 35738)
 - [x] Lithium IPS for grocery stores and convenience shops Bangladesh ← published 2026-08-02 (Post ID 35732)
 - [x] Parallel IPS installation guide: connecting two lithium IPS units ← published 2026-08-03 (Post ID 35734)
