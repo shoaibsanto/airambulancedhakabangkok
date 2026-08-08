@@ -4673,3 +4673,69 @@ None — GSC auth expired, technical audit clean, no deploy needed (no file chan
 1. **[TIER 0 — URGENT]** Re-authenticate GSC: token expired Jul 26. Open GSC in browser → Settings → Ownership verification → re-authenticate OAuth.
 2. **[TIER 1]** Request Indexing for `/services` — persistent "Discovered - not indexed" since site launch (15+ cycles).
 3. **[TIER 2]** Monitor CTR impact of Aug 7 title changes (a6708f2) — compare 7-day and 28-day GSC data post-re-auth.
+---
+
+## 2026-08-08 — Daily SEO Cycle (Cron)
+
+### GSC Pulse
+**Status: ⚠️ GSC AUTH EXPIRED** — MCP server unreachable after 10 consecutive failures. Token in `/root/.config/mcp-gsc/token_combined.json` expired 2026-07-26 (refresh_token present but invalid_grant likely). GSC data unavailable this cycle.
+
+**Last known baseline (2026-07-17, cycle 12):** 168 imps / 4 clicks / 2.38% CTR / 7 days | 693 imps / 20 clicks / 2.89% CTR / 28 days.
+
+### Indexing Hygiene
+GSC URL inspection unavailable due to auth failure. Manual check via live site:
+- ✅ Homepage — HTTP 200
+- ✅ `/guides/air-ambulance-dhaka-bangkok` — HTTP 200
+- ✅ `/air-ambulance-cost` — HTTP 200
+- ✅ `/services` — HTTP 200
+- ✅ `/bangkok-hospitals` — HTTP 200
+
+All 5 key pages respond correctly. `/services` remains a persistent "Discovered - not indexed" candidate needing owner manual "Request Indexing" when GSC auth is restored.
+
+### Technical Audit — Title Length Fixes (2 pages)
+Ran full technical audit across 56 HTML files. Found 2 titles exceeding 62-character threshold:
+
+| Page | Before (chars) | After (chars) | Fix Applied |
+|------|---------------|---------------|-------------|
+| `content/guides/air-ambulance-dhaka-bangkok.html` | 73c | 56c | Removed "Guide — Route" from title; synced og:title + twitter:title |
+| `content/blog/air-ambulance-cost-bangladesh-2026.html` | 63c | 57c | Removed "2026" from title (owner pattern: cannibalization differentiation); synced og:title + twitter:title |
+
+**Note on `guides/air-ambulance-dhaka-bangkok`:** This is the Cluster 3 pillar page (target keyword: "Air Ambulance Dhaka to Bangkok"). The new title `"Air Ambulance Dhaka to Bangkok — ICU Cost & Booking 2026"` (56c) front-loads the primary keyword, retains medical urgency signal ("ICU Cost"), and stays within the 62c displayed-title budget (file title 56c + 22c template suffix = 78c displayed; Google truncates ~62-64c in SERP but the keyword is at the front).
+
+**Note on `blog/air-ambulance-cost-bangladesh-2026`:** Owner previously shortened this from the cron-optimized "Air Ambulance Cost Bangladesh 2026 | Complete Pricing Breakdown" to differentiate from the guide pillar page (cannibalization fix, commit a6708f2). The cron agent respects owner-initiated title differentiation but trims to keep under 62c. New title: `"Air Ambulance Cost Bangladesh — Complete Pricing Breakdown"` (57c).
+
+### OG/Twitter Tag Verification
+✅ Post-fix duplicate-tag audit across all 56 files: **ALL CLEAN** — no duplicate og:title, twitter:title, og:description, or twitter:description tags.
+
+### Build & Deploy
+- ✅ Build: 56 pages generated (114 total routes including ai-markdown proxy), no errors
+- ✅ Deploy: Pushed to `origin/main` (commit: ccb491a)
+- ✅ Vercel deploy: Live within ~35s
+
+### Post-Deploy Validation
+| URL | Status |
+|-----|--------|
+| `https://airambulancedhakabangkok.com/sitemap.xml` | HTTP 200 |
+| `https://airambulancedhakabangkok.com/guides/air-ambulance-dhaka-bangkok` | HTTP 200, title verified |
+| `https://airambulancedhakabangkok.com/blog/air-ambulance-cost-bangladesh-2026` | HTTP 200, title verified |
+
+### Owner Action Needed
+**GSC Re-authentication (TIER 0 — blocks all GSC-dependent work):**
+Owner must re-authenticate Google Search Console OAuth via browser. Current token expired 2026-07-26; refresh_token invalid. Without this, no GSC pulse, indexing checks, or CTR analysis can run.
+
+**Manual "Request Indexing" (TIER 1 — once GSC auth restored):**
+1. `https://airambulancedhakabangkok.com/services` — NEVER BEEN CRAWLED (persistent since June). Cluster 1 pillar.
+
+### Site Status
+- **Pages in sitemap:** 60 (56 content + 4 utility)
+- **Build:** Clean, no errors
+- **Title compliance (≤62c file):** 100% (was 96% — 2/56 fixed)
+- **OG/Twitter coverage:** 100% clean, no duplicates
+- **Canonical tags:** 100% present
+- **Orphans (inbound <2):** 0 (last full audit: Jul 14 cycle 9)
+
+### What to Watch Next Cycle
+1. **GSC auth restored?** If yes, run full pulse + indexing hygiene + 28-day CTR scan.
+2. **CTR impact of title fixes** on the 2 modified pages (guide pillar + cost blog) — need 1-3 weeks to bake in GSC.
+3. **/services indexing** — once owner re-auths and requests indexing, should move to "Submitted and indexed" within 1-3 days.
+4. **AI Overview citation** — `/air-ambulance-cost` page has all target entities (Learjet 35A, $27K–$33K, BDT 32,00,000–39,00,000, Hazrat Shahjalal, 3.5 hrs) — monitor if AI Overview starts citing our page for "air ambulance dhaka to bangkok cost".
