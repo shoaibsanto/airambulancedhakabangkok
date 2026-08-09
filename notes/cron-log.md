@@ -4738,4 +4738,68 @@ Owner must re-authenticate Google Search Console OAuth via browser. Current toke
 1. **GSC auth restored?** If yes, run full pulse + indexing hygiene + 28-day CTR scan.
 2. **CTR impact of title fixes** on the 2 modified pages (guide pillar + cost blog) — need 1-3 weeks to bake in GSC.
 3. **/services indexing** — once owner re-auths and requests indexing, should move to "Submitted and indexed" within 1-3 days.
+4. **AI Overview citation** — `/air-ambulance-cost` page has all target entities (Learjet 35A, $27K–$33K, BDT 32,00,000–39,00,000, Hazrat Shahjalal, 3.5 hrs) — monitor if AI Overview starts citing our page for "air ambulance dhaka to bangkok cost".---
+
+## 2026-08-09 — Daily SEO Cycle (Cron)
+
+### GSC Pulse
+**Status: ⚠️ GSC AUTH EXPIRED** — Token in `/root/.config/mcp-gsc/token_combined.json` expired 2026-07-26 (refresh_token present but invalid_grant likely). GSC API calls fail — no performance data available this cycle.
+
+**Last known baseline (2026-07-17, cycle 12):** 168 imps / 4 clicks / 2.38% CTR / 7 days | 693 imps / 20 clicks / 2.89% CTR / 28 days.
+
+### Indexing Hygiene
+GSC URL inspection unavailable due to auth failure. Manual live-site check:
+- ✅ Homepage — HTTP 200
+- ✅ `/guides/air-ambulance-dhaka-bangkok` — HTTP 200  
+- ✅ `/air-ambulance-cost` — HTTP 200
+- ✅ `/services` — HTTP 200 (persistent "Discovered - not indexed" candidate)
+- ✅ `/bangkok-hospitals` — HTTP 200
+
+All 5 key pages respond correctly. `/services` remains a persistent "Discovered - not indexed" candidate needing owner manual "Request Indexing" when GSC auth is restored.
+
+### Technical Audit
+Ran full technical audit across 56 HTML files via Python3 (duplicate OG/Twitter tags, missing canonicals, title/description lengths):
+
+**Result: ALL CLEAN** — no duplicate og:title, twitter:title, og:description, twitter:description; no missing canonicals; no titles >62c; no descriptions >165c. 56 content files confirmed.
+
+### Blog Listing + Sitemap Integrity Check
+- ✅ All 34 blog posts present in `content/blog/index.html` listing
+- ✅ All 34 blog posts present in `app/sitemap.js` with `/blog/` prefix
+
+No gaps found.
+
+### Build & Deploy
+- ✅ Build: 56 pages generated (114 total routes including ai-markdown proxy), no errors
+- ✅ Deploy: Pushed to `origin/main` (commit: 10d4d51)
+- ✅ Vercel deploy: Live within ~35s
+
+### Post-Deploy Validation
+| URL | Status |
+|-----|--------|
+| `https://airambulancedhakabangkok.com/sitemap.xml` | HTTP 200 |
+| `https://airambulancedhakabangkok.com/services` | HTTP 200 |
+| `https://airambulancedhakabangkok.com/guides/air-ambulance-dhaka-bangkok` | HTTP 200 |
+| `https://airambulancedhakabangkok.com/air-ambulance-cost` | HTTP 200 |
+| `https://airambulancedhakabangkok.com/bangkok-hospitals` | HTTP 200 |
+
+### Owner Action Needed
+
+**GSC Re-authentication (TIER 0 — blocks all GSC-dependent work):**
+Owner must re-authenticate Google Search Console OAuth via browser. Current token expired 2026-07-26; refresh_token invalid. Without this, no GSC pulse, indexing checks, or CTR analysis can run.
+
+**Manual "Request Indexing" (TIER 1 — once GSC auth restored):**
+1. `https://airambulancedhakabangkok.com/services` — NEVER BEEN CRAWLED (persistent since June). Cluster 1 pillar.
+
+### Site Status
+- **Pages in sitemap:** 60 (56 content + 4 utility)
+- **Build:** Clean, no errors
+- **Title compliance (≤62c file):** 100%
+- **OG/Twitter coverage:** 100% clean, no duplicates
+- **Canonical tags:** 100% present
+- **Orphans (inbound <2):** 0 (last full audit: Jul 14 cycle 9)
+
+### What to Watch Next Cycle
+1. **GSC auth restored?** If yes, run full pulse + indexing hygiene + 28-day CTR scan.
+2. **CTR impact of title fixes** on guide pillar + cost blog (from Aug 8 cycle) — need 1-3 weeks to bake in GSC.
+3. **/services indexing** — once owner re-auths and requests indexing, should move to "Submitted and indexed" within 1-3 days.
 4. **AI Overview citation** — `/air-ambulance-cost` page has all target entities (Learjet 35A, $27K–$33K, BDT 32,00,000–39,00,000, Hazrat Shahjalal, 3.5 hrs) — monitor if AI Overview starts citing our page for "air ambulance dhaka to bangkok cost".
