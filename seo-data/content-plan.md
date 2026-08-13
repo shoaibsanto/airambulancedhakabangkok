@@ -72,7 +72,7 @@ Fresh topics to maintain pipeline (all previous plan items completed):
 - [ ] Lithium battery bus bar wiring: how to connect multiple batteries safely
 
 ## 2026-08-04 Replenishment Suggestions
-- [ ] IPS for poultry farming Bangladesh: ventilation and lighting backup power
+- [x] IPS for poultry farming Bangladesh: ventilation and lighting backup power ← published 2026-08-14 (Post ID 35828)
 - [x] Lithium IPS for cold storage and deep freezer Bangladesh ← published 2026-08-09 (Post ID 35788)
 - [ ] How to choose between single-phase and three-phase IPS for commercial buildings
 - [ ] IPS for water treatment plants and RO systems Bangladesh

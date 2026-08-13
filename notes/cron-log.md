@@ -4802,4 +4802,63 @@ Owner must re-authenticate Google Search Console OAuth via browser. Current toke
 1. **GSC auth restored?** If yes, run full pulse + indexing hygiene + 28-day CTR scan.
 2. **CTR impact of title fixes** on guide pillar + cost blog (from Aug 8 cycle) — need 1-3 weeks to bake in GSC.
 3. **/services indexing** — once owner re-auths and requests indexing, should move to "Submitted and indexed" within 1-3 days.
-4. **AI Overview citation** — `/air-ambulance-cost` page has all target entities (Learjet 35A, $27K–$33K, BDT 32,00,000–39,00,000, Hazrat Shahjalal, 3.5 hrs) — monitor if AI Overview starts citing our page for "air ambulance dhaka to bangkok cost".
+4. **AI Overview citation** — `/air-ambulance-cost` page has all target entities (Learjet 35A, $27K–$33K, BDT 32,00,000–39,00,000, Hazrat Shahjalal, 3.5 hrs) — monitor if AI Overview starts citing our page for "air ambulance dhaka to bangkok cost".---
+
+## 2026-08-10 — Daily SEO Cycle (Cron)
+
+### GSC Pulse — Last 7 Days (vs. Baseline: 200 imps / 7 clicks / 3.5% CTR)
+
+| Metric | Actual | Baseline | Status |
+|--------|--------|----------|--------|
+| Impressions | 294 | 200 | ✅ +47% above baseline |
+| Clicks | 6 | 7 | ⚠️ -14% below baseline |
+| CTR | 2.04% | 3.5% | ❌ Below baseline (-42%) |
+| Avg Position | 6.3 | — | ✅ Improved |
+
+**Daily Trend:** Aug 3 (40 imps, 2 clicks, 5.0% CTR, pos 5.5) → Aug 4 (140 imps, 3 clicks, 2.14% CTR, pos 5.4) → **Aug 5-6: 0 clicks** (28/27 imps, pos 9.3/8.6) → Aug 7 (23 imps, 1 click, 4.35% CTR, pos 7.1) → Aug 8-9: 0 clicks (21/15 imps, pos 6.6/5.7).
+
+**Analysis:** Impressions spiked on Aug 4 (140 vs typical 20-40) but CTR dropped to 2.14%. Two consecutive zero-click days (Aug 5-6) at pos 8-9 — position dropped from top 6 to ~9, suggesting SERP volatility or AI Overview cannibalization. Weekend days (Aug 8-9) show normal low traffic. **Key insight:** Position improved to 5.7 by Aug 9 but still 0 clicks — possible AI Overview stealing clicks at pos 1-2 queries.
+
+### Indexing Status — Key Pages (Batch URL Inspection)
+
+| Page | Status | Last Crawled | Referring URLs | Action |
+|------|--------|--------------|----------------|--------|
+| `/` (Homepage) | ✅ Submitted & indexed | 2026-08-02 | 2 blog posts | — |
+| `/services` ⚠️ | **Discovered - not indexed** | **Never** | Only sitemap.xml | **TIER 1 OWNER TASK** |
+| `/bangkok-hospitals` | ✅ Submitted & indexed | 2026-07-21 | 2 internal (blog + /services) | — |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Submitted & indexed | 2026-07-29 | 1 blog post | — |
+| `/air-ambulance-cost` | ✅ Submitted & indexed | 2026-07-21 | /services | — |
+
+**Critical Finding:** `/services` (Cluster 1 pillar, target keyword: "Air Ambulance Service Dhaka to Bangkok") has **NEVER been crawled** — GSC only sees it from sitemap.xml. The JS-rendered nav links are not being followed. This persists across multiple cycles despite homepage body links being present.
+
+**Root cause confirmed:** `referring_urls` only shows `sitemap.xml` — Google has not followed any of the 4+ static body links from the homepage.
+
+### Actions Taken This Cycle
+1. ✅ GSC pulse check — impressions up, CTR down, position improved
+2. ✅ Indexing hygiene audit — 4/5 key pages indexed; `/services` still stuck at "Discovered - not indexed"
+3. ✅ Verified token: expiry 2026-08-09 (1 day past), refresh_token present — GSC calls succeeded via refresh token
+4. ⚠️ No content changes made — `/services` indexing requires owner manual action
+
+### 🔴 Owner Action Needed — Request Indexing in GSC
+
+**Visit:** https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+Click each URL → "URL Inspection" → "Request Indexing":
+
+**Tier 1 — Pillar Page (MOST URGENT, persistent across cycles):**
+1. https://airambulancedhakabangkok.com/services ← NEVER BEEN CRAWLED. Cluster 1 pillar. Critical for ranking "Air Ambulance Service Dhaka to Bangkok".
+
+**Note:** After requesting indexing, Google should crawl within 1-3 days. The page has proper meta tags, canonical, and 4+ static homepage body links deployed.
+
+### What to Watch Next Cycle
+1. Has `/services` moved from "Discovered - not indexed" → indexed after owner's manual Request Indexing?
+2. CTR trend — will the 2.04% recover as position stabilizes at 5-6 range?
+3. Did Aug 4 impression spike (140 imps) correspond to a specific query? (Need 28-day search analytics by query next cycle)
+
+### Site Status
+- **Pages in sitemap:** 60 (stable)
+- **Build pages:** 60 (expected)
+- **Indexed Key Pages:** 4/5 (80%) — `/services` is the only gap
+- **GSC Performance:** Impressions +47%, Clicks -14%, CTR 2.04% (needs recovery)
+- **Critical Issues:** 1 (persistent `/services` indexing — requires owner action)
+- **Deploy Needed:** No — no content changes this cycle
