@@ -4862,3 +4862,43 @@ Click each URL → "URL Inspection" → "Request Indexing":
 - **GSC Performance:** Impressions +47%, Clicks -14%, CTR 2.04% (needs recovery)
 - **Critical Issues:** 1 (persistent `/services` indexing — requires owner action)
 - **Deploy Needed:** No — no content changes this cycle
+---
+
+## air-ambulance-daily — 2026-08-14 (Cycle)
+
+### GSC Pulse (7-day: 2026-08-07 → 08-14)
+| Metric | Value | Baseline (7d) | Note |
+|---|---|---|---|
+| Impressions | 181 | ~168 | +8% vs baseline — stable/slightly up |
+| Clicks | 1 | ~4 | Low; single click on 08-07 (pos 7.1) |
+| CTR | 0.55% | 2.38% | Depressed — AI Overview cannibalization pattern |
+| Avg Position | 8.1 | ~11.3 | Improved (better than baseline) |
+
+28-day totals (context): 12 clicks / 797 impressions / 1.51% CTR / pos 9.0.
+
+### Indexing Hygiene
+| Page | Status | Note |
+|---|---|---|
+| /guides/air-ambulance-dhaka-bangkok | ✅ Indexed | Last crawled 07-29, canonical OK, Breadcrumbs rich result |
+| /icu-vs-medical-escort | ✅ Indexed | Last crawled 07-21, canonical OK (pos regressed to ~42 — competitive SERP) |
+| /services | 🔴 Discovered—not indexed / never crawled | Has 4+ static homepage body links (L327,472,520) + 53 site-wide refs. Google-side crawl budget issue — NOT link presence. Needs manual owner Request Indexing. |
+
+### Technical Audit (56 content files)
+- **FIXED:** `content/air-ambulance-cost.html` meta description 185c → 146c (SERP truncation fix). All three tags (description, og:description, twitter:description) synced. Entities preserved: $27,000–$33,000, BDT 32,00,000–39,00,000, Learjet 35A, phone. (131 imps, 2 clicks, pos 8.3 — high-value transactional page.)
+- **LOGGED (no action — skill rule):** `bangkok-hospitals.html` title 64c and `blog/bangkok-hospitals-comparison-bangladeshi-patients.html` title 69c both flagged as over-length, but both are INDEXED + RANKING (pos 10.4 and pos 9.1, 56 imps). Per skill rule, do NOT rewrite titles on indexed ranking pages to chase length compliance — ranking-drop risk outweighs truncation benefit. Titles are cron-set, entity-rich (Bumrungrad, Samitivej). Monitor.
+- Canonical audit: ALL PASS (no missing canonicals, no duplicate OG/Twitter tags).
+- Blog listing + sitemap integrity: ALL PASS (no gaps).
+
+### Pillar Page Observation
+`/guides/air-ambulance-dhaka-bangkok` — 181 imps, pos 6.0, 0 CTR over 28 days. Title/desc/OG/Twitter all verified correct and CTR-optimized (Learjet 35A, Bumrungrad, phone). This is the AI Overview cannibalization pattern (Tier B). Title NOT rewritten — per skill guidance, further title changes on this ranking page risk drop. Monitored condition.
+
+### Deploy
+- Commit: `ce40ffc` — "SEO daily 2026-08-14: trim air-ambulance-cost meta description 185c→146c"
+- Build: 56 content paths generated, no errors.
+- Post-deploy: sitemap.xml 200, /air-ambulance-cost 200. Meta propagation still in flight at check time (CDN lag; source committed correctly).
+
+### 🔴 Owner Action Needed — Request Indexing in GSC
+Open GSC URL Inspection → click "Request Indexing":
+1. https://airambulancedhakabangkok.com/services ← TIER 1 (persistent, never crawled, 4+ cycles). Only human-only action resolves this.
+
+Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
