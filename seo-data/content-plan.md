@@ -69,12 +69,21 @@ Fresh topics to maintain pipeline (all previous plan items completed):
 - [x] Lithium IPS for grocery stores and convenience shops Bangladesh ← published 2026-08-02 (Post ID 35732)
 - [x] Parallel IPS installation guide: connecting two lithium IPS units ← published 2026-08-03 (Post ID 35734)
 - [x] Smart IPS buying guide: WiFi monitoring, auto-switching, LCD features ← published 2026-08-01 (Post ID 35730)
-- [ ] Lithium battery bus bar wiring: how to connect multiple batteries safely
+- [x] Lithium battery bus bar wiring: how to connect multiple batteries safely ← published 2026-08-11 (Post ID 35819)
 
 ## 2026-08-04 Replenishment Suggestions
 - [x] IPS for poultry farming Bangladesh: ventilation and lighting backup power ← published 2026-08-14 (Post ID 35828)
 - [x] Lithium IPS for cold storage and deep freezer Bangladesh ← published 2026-08-09 (Post ID 35788)
-- [ ] How to choose between single-phase and three-phase IPS for commercial buildings
-- [ ] IPS for water treatment plants and RO systems Bangladesh
+- [x] How to choose between single-phase and three-phase IPS for commercial buildings ← published 2026-08-15 (Post ID 35830)
+- [x] IPS for water treatment plants and RO systems Bangladesh ← published 2026-08-16 (Post ID 35832)
 - [ ] Lithium IPS vs diesel generator for rural telecom towers Bangladesh
 - [ ] How to set up IPS monitoring app on your phone (WiFi IPS models)
+
+## 2026-08-16 Replenishment Suggestions
+Fresh topics to maintain pipeline (backlog dropped to 2):
+- [ ] IPS for garment factory (RMG) production line backup Bangladesh
+- [ ] Lithium IPS for schools and coaching centres Bangladesh — classroom fans, lights, projectors
+- [ ] How to size an IPS for a submersible/deep tube-well pump in Bangladesh
+- [ ] IPS for mobile financial service (bKash/Nagad) agent shops Bangladesh
+- [ ] Winter vs summer IPS backup performance in Bangladesh — what changes and why
+- [ ] Lithium IPS for pharmacy and medicine cold storage Bangladesh

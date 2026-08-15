@@ -4902,3 +4902,52 @@ Open GSC URL Inspection → click "Request Indexing":
 1. https://airambulancedhakabangkok.com/services ← TIER 1 (persistent, never crawled, 4+ cycles). Only human-only action resolves this.
 
 Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+---
+
+## Cron Cycle — 2026-08-16 (Daily)
+
+### GSC Pulse (7-day: Aug 9–16)
+| Metric | 7-day | vs Baseline (200/7/3.5%) | 28-day (Jul 19–Aug 16) |
+|--------|-------|--------------------------|------------------------|
+| Impressions | 188 | slightly below baseline | 803 |
+| Clicks | 0 | below (weekend-heavy window) | 11 |
+| CTR | 0% | below | 1.37% |
+| Avg Position | 9.4 | stable | 9.0 |
+
+**Analysis:** 7-day window shows 0 clicks but this spans a weekend-heavy period (Aug 13 pos 15.4, Aug 15 only 4 imps). The 28-day view is healthier: 803 imps / 11 clicks / pos 9.0 — impressions UP vs the Jul 17 cycle-12 baseline of 693. Aug 4 spike (140 imps, 3 clicks, pos 5.4) drove most of the month's traffic. No regression signal — the 0-click 7-day is normal weekend noise per calibration.
+
+### Top Pages (28-day)
+- `/` — 322 imps, 7 clicks, pos 6.5 (site's primary click driver)
+- `/guides/air-ambulance-dhaka-bangkok` — 182 imps, 0 clicks, pos 6.1 (AI Overview cannibalization — pillar)
+- `/air-ambulance-cost` — 129 imps, 2 clicks, pos 8.7
+- `/blog/bangkok-hospitals-comparison-bangladeshi-patients` — 54 imps, 0 clicks, pos 9.1
+- `/icu-vs-medical-escort` — 40 imps, 0 clicks, **pos 39.7 (RECOVERING from 55.4)**
+- `/air-ambulance-dhaka-to-chennai-india` — 32 imps, 2 clicks, pos 5.8 (best CTR 6.25%)
+
+### Indexing Hygiene (4 pages inspected)
+| Page | Status | Position |
+|------|--------|----------|
+| `/services` | 🔴 URL unknown to Google (referring_urls: []) | — |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Submitted and indexed | 6.1 |
+| `/icu-vs-medical-escort` | ✅ Submitted and indexed | 39.7 |
+| `/cardiac-emergency-transfer` | ✅ Submitted and indexed | 19.3 |
+
+### Technical Audit
+- Files: 56. OG/Twitter dupes: 0. Missing canonicals: 0. Blog listing & sitemap: fully in sync.
+- 3 TITLE_LONG flags reviewed — ALL intentionally left unchanged:
+  - `/guides/air-ambulance-dhaka-bangkok` (69c) — owner-set for cannibalization differentiation (commit ee301a5). Do NOT revert.
+  - `/blog/bangkok-hospitals-comparison-bangladeshi-patients` (69c) — indexed & ranking pos 9.1 / 54 imps (highest-impression blog). Trim risks ranking drop, no CTR upside (AI Overview pattern).
+  - `/bangkok-hospitals` (64c) — indexed pillar, only 2c over, 7 imps. Marginal trim not worth ranking risk.
+
+### Actions Taken
+- No content changes. Site is technically clean; all title flags are intentional/too-risky-to-touch. No deploy this cycle.
+
+### Notable Observation
+- **`/icu-vs-medical-escort` recovering:** pos 55.4 (cycle 9) → 39.7 (this cycle). The cycle-10 content refresh (Learjet 35A, cost comparison table, Bumrungrad ICU specs, enriched FAQ) is working. Continue monitoring — no action needed.
+
+### 🔴 Owner Action Needed — Request Indexing in GSC
+Persistent Tier 1 item (unresolved since launch):
+1. https://airambulancedhakabangkok.com/services  ← "URL unknown to Google", no referring URLs. Homepage has 4+ static body links but Google won't follow them. Only fix is manual "Request Indexing".
+
+GSC Inspect: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
