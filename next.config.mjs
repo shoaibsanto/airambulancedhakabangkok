@@ -75,6 +75,29 @@ const nextConfig = {
         destination: "/blog/air-ambulance-cardiac-patients",
         permanent: true,
       },
+      // Expansion-route pages live under /blog/. Google indexed root-path
+      // variants (from stale internal links in faq/routes) that 404 despite
+      // earning clicks — 301 them to the real blog URLs to preserve equity.
+      {
+        source: "/air-ambulance-dhaka-to-chennai-india",
+        destination: "/blog/air-ambulance-dhaka-to-chennai-india",
+        permanent: true,
+      },
+      {
+        source: "/air-ambulance-dhaka-to-delhi-india",
+        destination: "/blog/air-ambulance-dhaka-to-delhi-india",
+        permanent: true,
+      },
+      {
+        source: "/air-ambulance-dhaka-to-singapore",
+        destination: "/blog/air-ambulance-dhaka-to-singapore",
+        permanent: true,
+      },
+      {
+        source: "/air-ambulance-dhaka-to-myanmar",
+        destination: "/blog/air-ambulance-dhaka-to-myanmar",
+        permanent: true,
+      },
     ];
   },
 };
