@@ -4951,3 +4951,37 @@ Persistent Tier 1 item (unresolved since launch):
 1. https://airambulancedhakabangkok.com/services  ← "URL unknown to Google", no referring URLs. Homepage has 4+ static body links but Google won't follow them. Only fix is manual "Request Indexing".
 
 GSC Inspect: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+---
+
+## Cron Cycle — 2026-08-17 (12:33 AM BST) — Daily
+
+### GSC Pulse
+- 7-day (Aug 9–16): 219 impressions / 0 clicks / 0% CTR / pos 11.3
+- 28-day (Jul 19–Aug 16): 834 impressions / 11 clicks / 1.32% CTR / pos 9.5
+- Baseline: impressions strong (+ vs ~693 Jul), but clicks soft (11 vs 20 prior 28d). 7-day 0 clicks — weekend-heavy window + AI Overview cannibalization on pos 1–3 queries. Not a regression signal on its own; impressions healthy.
+- Top pages: / (340 imp, 7 clk, pos 7.4), /air-ambulance-cost (132 imp, 2 clk, pos 9.9), /guides/air-ambulance-dhaka-bangkok (184 imp, 0 clk, pos 6.0)
+
+### Indexing Hygiene (URL inspection)
+- /guides/air-ambulance-dhaka-bangkok — Submitted and indexed ✅
+- /air-ambulance-cost — Submitted and indexed ✅ (crawled Aug 16)
+- /services — Discovered, not indexed ⚠️ (persistent Tier-1 owner task, never crawled; referring_urls=sitemap only)
+- /air-ambulance-dhaka-to-chennai-india (ROOT path) — Not found (404) 🔴 but earning clicks → FIXED this cycle
+
+### CRITICAL ISSUE FOUND & FIXED — Root-path route 404s
+GSC reported the root-path URL /air-ambulance-dhaka-to-chennai-india earning 2 clicks / 32 imps / pos 5.8 — but that URL returns 404. The real page lives at /blog/air-ambulance-dhaka-to-chennai-india. Root cause: stale internal links (missing /blog/ prefix) in faq.html, routes.html, and two blog posts pointed Google at non-existent root-path route URLs; Google indexed them and clicks landed on 404s.
+- Fixed 9 broken internal links across 4 files (faq.html, routes.html, chennai + delhi blog posts) → now /blog/ paths
+- Added 4 permanent redirects in next.config.mjs for indexed root-path variants (chennai, delhi, singapore, myanmar) → 301/308 to /blog/ equivalents, preserving link equity
+- Verified live: all 4 return 308 → correct /blog/ target; homepage + sitemap 200
+
+### Technical Audit
+- Tag/canonical/dupe audit: CLEAN (no dupes, all canonicals present)
+- 3 long titles (bangkok-hospitals 64c, bangkok-hospitals-comparison 69c, guides/air-ambulance-dhaka-bangkok 69c) — same as Aug 16 no-op; guide title is owner-set for cannibalization differentiation, others indexed/ranking. Left unchanged.
+- Blog listing + sitemap integrity: ALL 56 content files present. No gaps.
+- Build: 56 pages, no errors. Deploy: commit d175dd9 pushed.
+
+### Owner Action Needed — Request Indexing in GSC
+Tier 1: https://airambulancedhakabangkok.com/services (Discovered, never crawled — human-only "Request Indexing")
+Tier 2 (post-deploy re-crawl): the /blog/ route pages now correctly linked — monitor whether chennai click traffic shifts from 404 to the live blog page over next 2–4 weeks.
+
+No other urgent issues — GSC stable, impressions healthy.
