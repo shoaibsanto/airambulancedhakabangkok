@@ -2,15 +2,15 @@
 <!-- This file is auto-generated. Do not edit manually. -->
 
 <!-- source: airambulancedhakabangkok.com/blog/bangkok-hospitals-comparison-bangladeshi-patients -->
-<!-- page-title: Bumrungrad vs Samitivej Guide -->
+<!-- page-title: Bangkok Hospital Comparison for BD Patients | Bumrungrad vs Samitivej -->
 <!-- canonical: https://airambulancedhakabangkok.com/blog/bangkok-hospitals-comparison-bangladeshi-patients -->
 <!-- published: 2026-01-01 -->
 <!-- author: Air Ambulance Dhaka to Bangkok -->
 <!-- category: Blog -->
 
-# Bumrungrad vs Samitivej Guide
+# Bangkok Hospital Comparison for BD Patients | Bumrungrad vs Samitivej
 
-[Home](https://airambulancedhakabangkok.com/) → [Blog](https://airambulancedhakabangkok.com/blog) → Bumrungrad vs Samitivej Guide
+[Home](https://airambulancedhakabangkok.com/) → [Blog](https://airambulancedhakabangkok.com/blog) → Bangkok Hospital Comparison for BD Patients | Bumrungrad vs Samitivej
 
 
 
