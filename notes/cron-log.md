@@ -4985,3 +4985,133 @@ Tier 1: https://airambulancedhakabangkok.com/services (Discovered, never crawled
 Tier 2 (post-deploy re-crawl): the /blog/ route pages now correctly linked — monitor whether chennai click traffic shifts from 404 to the live blog page over next 2–4 weeks.
 
 No other urgent issues — GSC stable, impressions healthy.
+# Daily SEO Cycle — August 18, 2026 (Cron)
+
+## GSC Pulse
+**Status: 🔴 GSC AUTH EXPIRED**
+Token expiry: 2026-08-18T15:53:19Z (3 hours ago). Refresh token present but likely invalid_grant.
+GSC data unavailable this cycle. Last known baseline (from earlier logs): ~693 impressions / 20 clicks / 2.89% CTR per 28 days (July 17 cycle 12).
+Owner must re‑authenticate GSC OAuth via browser.
+
+## Indexing Hygiene
+Unable to inspect URLs due to auth failure. Previous status (August 17):
+- `/services` — Discovered, not indexed ⚠️ (persistent Tier‑1 owner task, never crawled; referring_urls=sitemap only)
+- All other key pages indexed.
+
+## Technical Audit
+Scanned 56 HTML files for canonical tags, duplicate OG/twitter tags, title length, meta description length.
+
+**Findings:**
+- ✅ No missing canonical tags
+- ✅ No duplicate OG/twitter tags
+- ⚠️ 3 titles exceed 62‑character displayed limit (file title + 22‑char suffix):
+  1. `content/bangkok-hospitals.html` — 64c (file title 42c)
+  2. `content/blog/bangkok-hospitals-comparison-bangladeshi-patients.html` — 69c (file title 47c)
+  3. `content/guides/air-ambulance-dhaka-bangkok.html` — 69c (file title 47c)
+
+**Owner‑initiated title changes:** These pages are indexed and ranking; trimming titles now could risk ranking drops. No action taken.
+
+## Internal Linking
+Low‑link detection: only `404.html` has 0 inbound links (expected). All other pages have ≥2 inbound links.
+
+## Blog Listing + Sitemap Integrity
+✅ All 56 content files present in sitemap.js.
+✅ All blog posts listed in `content/blog/index.html`.
+
+## Build & Deploy
+- `npx next build` — ✅ 114 pages generated, no errors.
+- No content changes made this cycle; deploy skipped.
+
+## Owner Action Needed
+**TIER 0 — GSC Re‑authentication**
+1. Re‑authenticate Google Search Console OAuth via browser.
+   - Token file: `/root/.config/mcp-gsc/token_combined.json`
+   - Client secrets: `/root/.hermes/client_secrets.json`
+   - Follow the GSC MCP setup steps in the skill reference.
+
+**TIER 1 — Request Indexing for `/services`**
+2. Visit https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+   - Inspect https://airambulancedhakabangkok.com/services
+   - Click “Request Indexing”
+   - This page has been “Discovered – not indexed” for over a month; manual request is the only reliable fix.
+
+## Next Cycle
+Once GSC auth is restored, resume:
+- 7‑day pulse vs baseline
+- Batch URL inspection for key pages
+- CTR quick‑win scan (position 1‑10, ≥10 impressions, 0% CTR)
+- Monitor `/services` indexing status
+
+---
+
+
+---
+## Daily SEO Cycle — Aug 20, 2026 (Cycle 18)
+
+### GSC Pulse
+**7-day (Aug 13–19):** 170 imps / 1 click / 0.59% CTR / pos 15.6
+**28-day (Jul 23 – Aug 20):** 838 imps / 10 clicks / 1.19% CTR / pos 10.0
+
+**vs Jul 17 baseline (Cycle 12):**
+- 28-day impressions: +21% (693 → 838) ✅ positive
+- 28-day clicks: -50% (20 → 10) ❌ concerning
+- 28-day CTR: -59% (2.89% → 1.19%) ❌ significant drop
+- 28-day position: -0.4 (9.6 → 10.0) — slight regression
+- 7-day clicks: 1 vs baseline 4 — very low
+
+**Assessment:** Impressions growing but clicks collapsing. CTR at 1.19% is well below the 2.5%+ range seen in July. Possible causes: AI Overview cannibalization, SERP feature displacement, or seasonal dip. Monitor 2–3 more cycles before acting.
+
+### Indexing Status
+- ✅ Homepage (`/`) — Submitted and indexed (last crawled: Aug 17)
+- ⚠️ `/services` — Discovered - not indexed (TIER 1 persistent, 5+ months)
+- ✅ `/guides/air-ambulance-dhaka-bangkok` — Submitted and indexed
+- ✅ `/air-ambulance-cost` — Submitted and indexed (last crawled: Aug 16)
+- ✅ `/bangkok-hospitals` — Submitted and indexed
+
+### Top GSC Pages (28-day, ≥3 impressions)
+| Page | Imps | Clicks | CTR | Pos |
+|------|------|--------|-----|-----|
+| / | 331 | 7 | 2.11% | 8.0 |
+| /guides/air-ambulance-dhaka-bangkok | 191 | 0 | 0% | 6.4 |
+| /air-ambulance-cost | 124 | 1 | 0.81% | 11.8 |
+| /blog/bangkok-hospitals-comparison | 62 | 0 | 0% | 8.8 |
+| /icu-vs-medical-escort | 43 | 0 | 0% | 37.3 |
+| /blog/medical-visa-thailand | 45 | 0 | 0% | 11.3 |
+| /cardiac-emergency-transfer | 13 | 0 | 0% | 22.7 |
+| /guides/icu-air-ambulance-dhaka | 12 | 0 | 0% | 8.9 |
+| /air-ambulance-dhaka-to-chennai-india | 31 | 2 | 6.45% | 5.8 |
+
+### Technical Audit
+- **No duplicate OG/Twitter tags** across any content files ✅
+- **All canonical tags present** ✅
+- **FAQPage schema: 39/39 eligible pages complete** ✅
+- **Blog listing integrity: 32/32 posts present** ✅
+- **Sitemap integrity: 54/54 URLs present** ✅
+- **No root-path route link issues** ✅
+- **Build: 114 pages generated, exit code 0** ✅
+
+### Title Length Flags (Owner-Approved, Do Not Touch)
+The following 3 pages have titles >62c — these were owner-committed in cycle 13 (Aug 17, commit 123cf0d) as intentional cannibalization differentiation. Per skill rules, do NOT trim:
+- `guides/air-ambulance-dhaka-bangkok`: 69c — "Air Ambulance Dhaka to Bangkok Guide — Route, ICU Cost & Booking 2026"
+- `blog/bangkok-hospitals-comparison-bangladeshi-patients`: 69c — "Bangkok Hospital Comparison for BD Patients | Bumrungrad vs Samitivej"
+- `bangkok-hospitals`: 64c — "Bangkok Hospitals Air Ambulance | Bumrungrad & Samitivej ICU Jet"
+
+### Low-Link Pages
+Only 1 low-link page detected: `/404` (0 inbound, intentionally excluded from fixing)
+
+### Content Quality
+- `icu-vs-medical-escort`: 1,615 words, all GEO entities present (Learjet 35A, Hazrat Shahjalal, BDT 32,00,000, 3.5 hours) ✅
+- `air-ambulance-cost`: Entities verified ✅
+- `blog/medical-visa-thailand-for-bangladeshi-patients`: Description present, 28c title (short but intentional per owner pattern)
+
+### Actions Taken
+None — no code changes required this cycle. All technical checks passed.
+
+### Owner Action Needed
+🔴 **TIER 1 (Persistent):** `/services` page still "Discovered - not indexed" after 5+ months. Manual "Request Indexing" in GSC remains the only reliable fix.
+- Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+### Next Cycle Focus
+1. Monitor CTR trend — if 28-day CTR stays below 1.5% after 2 more cycles, investigate AI Overview cannibalization on /guides/air-ambulance-dhaka-bangkok (191 imps, 0 clicks, pos 6.4)
+2. Continue `/services` indexing monitoring
+3. No new page creation needed — site at 56 content files, 32 blog posts
