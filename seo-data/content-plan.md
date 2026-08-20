@@ -77,7 +77,7 @@ Fresh topics to maintain pipeline (all previous plan items completed):
 - [x] How to choose between single-phase and three-phase IPS for commercial buildings ← published 2026-08-15 (Post ID 35830)
 - [x] IPS for water treatment plants and RO systems Bangladesh ← published 2026-08-16 (Post ID 35832)
 - [ ] Lithium IPS vs diesel generator for rural telecom towers Bangladesh
-- [ ] How to set up IPS monitoring app on your phone (WiFi IPS models)
+- [x] How to set up IPS monitoring app on your phone (WiFi IPS models) ← published 2026-08-21 (Post ID 35847)
 
 ## 2026-08-16 Replenishment Suggestions
 Fresh topics to maintain pipeline (backlog dropped to 2):
