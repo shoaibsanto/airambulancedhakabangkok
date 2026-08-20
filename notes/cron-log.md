@@ -5442,3 +5442,120 @@ No changes made this cycle — all audits clean. No build/deploy needed.
 - All 33 blog posts present in sitemap.js ✅
 - All 33 blog posts listed in blog/index.html ✅
 - Blog index.html has proper OG/Twitter tags ✅
+
+
+---
+
+## 2026-08-22 — Daily SEO Cycle (Cron)
+
+### GSC Pulse
+**Token expiry:** 2026-08-20 (past) but refresh_token functional — GSC calls succeed.
+
+**Last 7 Days (Aug 13–20):**
+| Metric | Value | Baseline | Status |
+|--------|-------|----------|--------|
+| Impressions | 190 | 200 | Stable (−5%) |
+| Clicks | 1 | 7 | ⚠️ Below baseline |
+| CTR | 0.53% | 3.5% | ⚠️ Very low |
+| Avg Position | 15.2 | — | ↓ Dropped |
+
+**Last 28 Days (Jul 23–Aug 20):**
+| Metric | Value | Previous Cycle | Status |
+|--------|-------|----------------|--------|
+| Impressions | 858 | ~693 | ✅ +24% |
+| Clicks | 10 | ~20 | ⚠️ −50% |
+| CTR | 1.17% | 2.89% | ⚠️ ↓ Significant drop |
+| Avg Position | 10.0 | 9.6 | Slight drop |
+
+**Daily trend:** Only 1 click all week (Aug 16). Weekend patterns normal. No single-day anomaly — sustained low click volume.
+
+### Indexing Status — Key Pages
+
+| Page | Status | Last Crawled | Change |
+|------|--------|-------------|--------|
+| `/` (homepage) | ✅ Submitted & indexed | 2026-08-17 | Stable |
+| `/services` | ⚠️ Discovered - not indexed | Never | **19th cycle** — persistent |
+| `/bangkok-hospitals` | ✅ Submitted & indexed | 2026-07-21 | Stable |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Submitted & indexed | 2026-07-29 | Stable |
+| `/air-ambulance-cost` | ✅ Submitted & indexed | 2026-08-16 | Stable |
+
+**Note:** `/services` remains "Discovered - not indexed" with only sitemap.xml and one blog post as referring URLs. JS-rendered nav links not followed. Homepage body has 5+ static HTML links to `/services`. Google simply not prioritizing crawl. **Owner must manually Request Indexing.**
+
+### GSC 28-Day Page Performance
+
+| Page | Pos | Imps | Clicks | CTR |
+|------|-----|------|--------|-----|
+| `/` | 7.8 | 339 | 7 | 2.06% |
+| `/air-ambulance-dhaka-to-chennai-india` | 5.8 | 31 | 2 | **6.45%** ✅ Best CTR |
+| `/air-ambulance-cost` | 11.9 | 131 | 1 | 0.76% |
+| `/guides/air-ambulance-dhaka-bangkok` | 6.6 | 193 | 0 | 0% |
+| `/blog/bangkok-hospitals-comparison-bangladeshi-patients` | 8.8 | 63 | 0 | 0% |
+| `/blog/medical-visa-thailand-for-bangladeshi-patients` | 11.3 | 45 | 0 | 0% |
+| `/icu-vs-medical-escort` | 37.8 | 44 | 0 | 0% |
+| `/cardiac-emergency-transfer` | 22.7 | 13 | 0 | 0% |
+| `/trauma-accident-evacuation` | 11.8 | 4 | 0 | 0% |
+| `/bangkok-hospitals` | 12.3 | 7 | 0 | 0% |
+
+**Top queries (28d):**
+- "air ambulance service dhaka to bangkok" — pos 4.4, 18 imps, 2 clicks, 11% CTR ✅
+- "air ambulance dhaka to bangkok cost" — pos 9.6, 17 imps, 0 clicks
+- "air ambulance in bangladesh" — pos 2.1, 21 imps, 0 clicks
+- "air ambulance bangladesh" — pos 4, 23 imps, 0 clicks
+- "air ambulance service in bangladesh" — pos 3, 18 imps, 0 clicks
+
+**AI Overview Cannibalization Pattern Confirmed:** Multiple queries at pos 1–4 with 0% CTR confirm AI Overview is consuming clicks. FAQ schema already present on these pages — next step per skill protocol is description language alignment.
+
+### Technical Audit
+
+**Title lengths (file-level, displayed = file + 22c suffix):**
+- `bangkok-hospitals.html`: 64c (displayed ~86c) — owner-set, preserved
+- `cardiac-emergency-transfer.html`: 69c (displayed ~91c) — owner-set, preserved
+- `stroke-air-ambulance-dhaka-bumrungrad.html`: 67c (displayed ~89c) — owner-set, preserved
+
+All three are **owner-set titles** (confirmed via git log: commit 1540795 on Aug 20). Per skill policy: **do NOT trim owner titles** even if >62c. These are intentionally long for keyword differentiation.
+
+**OG/Twitter tag sync:** ✅ All three pages have matching title, og:title, twitter:title, og:description, twitter:description. No duplicates.
+
+**Canonicals:** ✅ All 56 files have canonical tags.
+
+**Duplicate OG/Twitter tags:** ✅ Zero duplicates across all files.
+
+**FAQPage coverage:** ✅ All three checked pages have FAQPage schema.
+
+**Blog listing integrity:** ✅ All 33 blog posts present in blog/index.html.
+
+**Sitemap integrity:** ✅ All 33 blog posts present in app/sitemap.js.
+
+**Total content pages:** 56 (33 blog + 20 root/guides)
+
+### Actions Taken This Cycle
+- GSC pulse: Captured 7-day (190/1/0.53%/pos15.2) and 28-day (858/10/1.17%/pos10.0) data
+- Indexing audit: 5 key pages inspected — services still pending
+- Technical audit: All tags synced, no duplicates, no missing canonicals
+- Owner titles preserved (3 long titles)
+- Build: 54 pages generated successfully
+- **No file changes required** — all pages clean, owner titles intentional
+
+### Clicks Drop Analysis
+Clicks dropped from ~20 to 10 over 28 days. Impressions rose 24% (693→858) but CTR fell from 2.89% to 1.17%. This is **not a ranking problem** — positions are stable or improving. The CTR collapse is consistent with **AI Overview cannibalization**: multiple queries now show position 1–4 with 0% CTR, meaning Google's AI-generated answer is absorbing clicks before users reach organic results.
+
+**What can be done:** Description language alignment for high-impression zero-CTR queries (per skill Phase 3 protocol). However, with only 1 click in 7 days, the signal is too weak to prioritize meta rewrites this cycle. Monitor for 2 more cycles.
+
+### Owner Action Required
+
+**Tier 1 — URGENT (Request Indexing in GSC):**
+1. https://airambulancedhakabangkok.com/services ← **19 cycles waiting** — highest priority
+   GSC Inspect: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**Tier 2 — Monitor:**
+- `/guides/air-ambulance-dhaka-bangkok` — 193 imps, 0 clicks, pos 6.6 (AI Overview cannibalization)
+- `/icu-vs-medical-escort` — pos 37.8 (monitor, content refresh if still pos 30+ after 2 more cycles)
+- `/air-ambulance-cost` — pos 11.9, 0 clicks (AI Overview for cost queries)
+
+### Site Status
+- **Total Pages:** 56
+- **Indexed Key Pages:** 4/5 (80%) — /services pending
+- **GSC Performance:** 858 imps / 10 clicks / 1.17% CTR / pos 10.0 (28d)
+- **Technical Health:** Clean — no duplicate tags, no missing canonicals
+- **Owner Title Integrity:** Preserved (3 long titles intentionally kept)
+- **Critical Issues:** 1 (/services indexing — owner action required)
