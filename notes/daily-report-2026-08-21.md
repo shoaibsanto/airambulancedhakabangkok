@@ -1,50 +1,80 @@
-air-ambulance-daily রিপোর্ট — 2026-08-21
+## Daily SEO Report — 2026-08-21 (Cycle 18)
 
-GSC পালস — শেষ ৭ দিন (Aug 13-20):
-Impressions: 190 (+13% vs baseline)
-Clicks: 1 (-75% vs baseline)
-CTR: 0.53% (খুব কম, কিন্তু শুধু ১টি ক্লিক — স্ট্যাটিস্টিক্যাল নয়েজ হতে পারе)
-Position: 15.2
+### GSC Performance Overview (Last 7 Days: Aug 13–20)
+- Impressions: 190
+- Clicks: 1
+- CTR: 0.53%
+- Average Position: 15.2
 
-GSC পালস — শেষ ২৮ দিন (Jul 23 - Aug 20):
-মোট Impressions: ~661
-মোট Clicks: 10
-CTR: 1.19%
-Average Position: ~10.0
+**Comparison to Baseline (Jul 17 cycle 12):**
+- 7-day baseline was ~168 imps / 4 clicks / 2.38% CTR
+- Current: 190 imps / 1 click / 0.53% CTR
+- Impressions stable (+13%), but clicks dropped -75% (4→1), CTR dropped from 2.38% to 0.53%
 
-ইনডেক্সিং স্ট্যাটাস:
-✅ Homepage (/) — Submitted & indexed (last crawled: Aug 17)
-⚠️ /services — Discovered - not indexed (১৫+ সাইকেল ধরে অপেক্ষমাণ)
-✅ /bangkok-hospitals — Submitted & indexed
-✅ /guides/air-ambulance-dhaka-bangkok — Submitted & indexed
-✅ /air-ambulance-cost — Submitted & indexed (last crawled: Aug 16)
-⚠️ /blog/air-ambulance-dhaka-to-singapore — Discovered - not indexed (নতুন গ্যাপ)
-✅ /blog/air-ambulance-dhaka-to-chennai-india — Submitted & indexed (Aug 19)
+**28-Day Page Data (Jul 23 – Aug 20):**
+- Top page: Homepage — 339 imps, 7 clicks, pos 7.8
+- 2nd: /guides/air-ambulance-dhaka-bangkok — 193 imps, 0 clicks, pos 6.6
+- 3rd: /air-ambulance-cost — 131 imps, 1 click, pos 11.9
+- /blog/bangkok-hospitals-comparison — 63 imps, 0 clicks, pos 8.8
+- /icu-vs-medical-escort — 44 imps, 0 clicks, pos 37.8
+- /blog/medical-visa-thailand — 45 imps, 0 clicks, pos 11.3
 
-টেকনিক্যাল অডিট:
-— সব টাইটেল ≤62c (ঠিক আছе)
-— সব meta description আছе
-— সব OG/Twitter tag sync
-— FAQPage schema সব কন্টেন্ট পেজে আছে
-— 0 orphan pages
-— কোনো stale root-path link নেই
+### Indexing Status (5 Key Pages Inspected)
+| Page | Status | Last Crawled |
+|------|--------|--------------|
+| Homepage (/) | ✅ Indexed | Aug 17, 2026 |
+| /services | 🔴 Unknown to Google | Never |
+| /guides/air-ambulance-dhaka-bangkok | ✅ Indexed | Jul 29, 2026 |
+| /air-ambulance-cost | ✅ Indexed | Aug 16, 2026 |
+| /bangkok-hospitals | ✅ Indexed | Jul 21, 2026 |
 
-বিশেষ পর্যবেক্ষণ:
-1. AI Overview Cannibalization: "air ambulance dhaka" (pos 2.8), "air ambulance in bangladesh" (pos 2.1), "air ambulance service in bangladesh" (pos 3) — এই কুয়েরিগুলিতে	pos 1-3 এ থাকা সত্বেও 0 CTR। AI Overview ক্লিক নিয়ে যাচ্ছে। FAQ schema ইতোমধ্যে আছে, আর কিছু করা যাবে না।
+**Sitemap:** Valid, 55 indexed URLs, 0 errors
 
-2. Chennai India Page: 6.45% CTR (2 clicks/31 impressions) — সবচেয়ে ভালো পারফরমেন্স, এই পেজটা কাজ করছে।
+### Technical Audit Results
+- **Titles >62c:** 3 pages (bangkok-hospitals 64c, stroke blog 67c, cardiac-emergency 69c) — owner-initiated titles from Aug 7 commit, NOT fixing per skill rules
+- **OG/Twitter duplicates:** None found
+- **Missing canonicals:** None
+- **Long descriptions:** None
+- **Root-path blog links:** Clean (no stale /slug links)
+- **Low-link pages:** None (all content pages have 2+ inbound links)
+- **FAQPage coverage:** 46/56 pages (10 non-content pages correctly excluded: 404, about, author, blog/index, contact, gallery, privacy, process, routes, terms)
 
-3. Cardiac Emergency title 69c — SERP-এ truncate হতে পারে, পরবর্তী ২ সাইকেল monitor করব।
+### Key Observations
 
-4. "emergency department" "22,000-32,000" query — 115 impressions, pos 3.9 — অসাধারণভাবে বেশি impressions একটি সম্পূর্ণ unrelated query-তে, সম্ভবত আমাদের cost page-এর price formatting-এর কারণে Google এটা match করছে। monitor করতে হবে।
+1. **Clicks dropped significantly** — From 4 clicks/7days (Jul baseline) to 1 click/7days (Aug). CTR dropped from 2.38% to 0.53%. Impressions remained stable at ~190. This suggests AI Overview or rich results are consuming more clicks.
 
-অ্যাকশন প্রয়োজন:
-মালিককে GSC-তে দুইটি পেজের জন্য "Request Indexing" করতে বলতে হবে:
-1. https://airambulancedhakabangkok.com/services — ১৫+ সাইকেল ধরে অপেক্ষা করছে
-2. https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-singapore — নতুন পেজ, এখনো ইনডেক্স হয়নি
+2. **AI Overview Cannibalization Pattern Continues:**
+   - "air ambulance dhaka" — pos 1, 0 CTR (1 imp in 7d)
+   - "air ambulance in bangladesh" — pos 2.1, 0 CTR (21 imps in 28d)
+   - "air ambulance service in bangladesh" — pos 2, 0 CTR (18 imps in 28d)
+   - "air ambulance bangladesh" — pos 4, 0 CTR (23 imps in 28d)
+   
+   These pos 1-4 queries with 0 CTR confirm AI Overview is stealing clicks. FAQ schema already present on homepage — next step would be matching description language to query exact phrases.
 
-GSC Inspect Link:
-https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+3. **Guides pillar page (pos 6.6, 193 imps, 0 clicks):** High impressions but zero clicks — likely AI Overview citing content without sending traffic. Monitor for 2 more cycles before content refresh.
 
-সারসংক্ষেপ:
-গত সাইকেলের মতো এই সাইকেলেও কোনো ক্রিটিক্যাল সমস্যা নেই। GSC ডেটা স্থিতিশীল, টেকনিক্যাল SEO Clean আছে। মূল সমস্যা — /services পেজ ইনডেক্স হচ্ছে না (১৫+ সাইকেল ধরে) এবং Singapore ব্লগ পোস্টটি নতুন করে ইনডেক্স লাগবে। মালিকের manually "Request Indexing" করতে হবে। কোনো file edit বা deploy প্রয়োজন হয়নি।
+4. **/services still unknown to Google (18th consecutive cycle):** Despite 5+ static body links from homepage, Google has never crawled this URL. Owner must manually Request Indexing.
+
+5. **Chennai India page performing best** — 6.45% CTR, pos 5.8. Only page with strong CTR outside homepage.
+
+### Owner Action Required
+
+**Tier 1 — URGENT (Request Indexing in GSC):**
+1. https://airambulancedhakabangkok.com/services ← **18 cycles waiting**
+   GSC Inspect: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**Tier 2 — Monitor (No action needed yet):**
+- /guides/air-ambulance-dhaka-bangkok — 193 imps, 0 clicks, pos 6.6 (AI Overview cannibalization)
+- /icu-vs-medical-escort — pos 37.8 (monitor, content refresh if still pos 30+ after 2 more cycles)
+
+### Actions Taken This Cycle
+- GSC pulse: Captured 7-day and 28-day performance data
+- Indexing audit: Inspected 5 key pages
+- Technical audit: Verified titles, OG/Twitter tags, canonicals, FAQ coverage
+- No file changes required (owner titles preserved, no critical issues found)
+- Build: 54 pages generated successfully
+
+### Sitemap & Blog Listing Integrity
+- All 33 blog posts present in sitemap.js ✅
+- All 33 blog posts listed in blog/index.html ✅
+- Blog index.html has proper OG/Twitter tags ✅
