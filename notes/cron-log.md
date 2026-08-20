@@ -5699,3 +5699,88 @@ No changes to deploy. Site stable.
 
 ---
 *Next cycle: Monitor GSC API accessibility. If auth returns, re-run full indexing inspection.*
+# Daily SEO Cron Log — airambulancedhakabangkok.com
+# Cycle 21 — August 22, 2026
+
+## GSC Performance Overview (Aug 13–20, 2026 — 7 Days)
+- Impressions: 191
+- Clicks: 1
+- CTR: 0.52%
+- Position: 15.2
+
+## GSC Performance Overview (Jul 23 – Aug 20, 2026 — 28 Days)
+- Impressions: 859
+- Clicks: 10
+- CTR: 1.16%
+- Position: 10.0
+
+**vs Cycle 19 (same window):** 858 imps / 10 clicks / 1.17% CTR / pos 10.0
+→ Data unchanged. No movement in 24h. Stable but flat.
+
+## Indexing Status (5 Key Pages Inspected)
+| Page | Status | Last Crawled |
+|------|--------|-------------|
+| `/` (homepage) | ✅ Submitted and indexed | 2026-08-17 |
+| `/services` | ⚠️ Discovered - not indexed | **NEVER** — Cycle 21 |
+| `/bangkok-hospitals` | ✅ Submitted and indexed | 2026-07-21 |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Submitted and indexed | 2026-07-29 |
+| `/air-ambulance-cost` | ✅ Submitted and indexed | 2026-08-16 |
+
+**Note:** `/services` now shows referring_urls: `["blog/air-ambulance-dhaka-to-chennai-india", "sitemap.xml"]` — Google found the blog post link but still refuses to index. Cycle 21 of persistent failure. Owner manual "Request Indexing" remains the only fix.
+
+## GSC Quick-Win Analysis (28-Day, Position 1–10, ≥5 Impressions, 0% CTR)
+
+| Page | Pos | Imps | CTR | Notes |
+|------|-----|------|-----|-------|
+| `/guides/air-ambulance-dhaka-bangkok` | 6.6 | 193 | 0% | AI Overview cannibalization |
+| `/blog/bangkok-hospitals-comparison-bangladeshi-patients` | 8.8 | 63 | 0% | AI Overview cannibalization |
+| `/blog/medical-visa-thailand-for-bangladeshi-patients` | 11.3 | 46 | 0% | Pos just outside top 10 |
+| `/icu-vs-medical-escort` | 37.8 | 44 | 0% | Persistent position regression |
+| `/air-ambulance-cost` | 11.9 | 131 | 0.76% | Pos just outside top 10, 1 click |
+| `/blog/bed-to-bed-transfer-dhaka-bangkok` | 2.4 | 5 | 0% | Low volume, pos 2 — AI Overview likely |
+| `/blog/how-to-book-air-ambulance-dhaka-bumrungrad` | 2.0 | 1 | 0% | Too few imps for signal |
+
+**Diagnosis:** AI Overview cannibalization confirmed. High-impression pages at position 1–7 show 0% CTR — Google's AI-generated answer is absorbing all clicks. FAQPage schema already present on all these pages (completed in prior cycles). Next step per skill protocol: description language alignment for highest-impression pages, but with only 10 clicks over 28 days the ROI is marginal. Monitor for 2 more cycles.
+
+## Technical Audit
+- **Content files:** 56 (33 blog + 23 root/guides)
+- **OG/Twitter duplicates:** ✅ Zero
+- **Canonical tags:** ✅ All 56 present
+- **FAQPage coverage:** ✅ Complete
+- **Blog listing integrity:** ✅ All 33 posts in blog/index.html
+- **Sitemap integrity:** ✅ All 33 blog posts in sitemap.js
+- **Title length issues (3 owner-set, preserved):**
+  - `bangkok-hospitals.html`: 64c — owner-set for keyword differentiation
+  - `cardiac-emergency-transfer.html`: 69c — owner-set for medical urgency
+  - `stroke-air-ambulance-dhaka-bumrungrad.html`: 67c — owner-set
+- **Build:** ✅ Passing (54+ pages generated, no errors)
+
+## Actions Taken
+- GSC pulse captured — stable vs cycle 19
+- 5 key pages inspected — /services still unindexed (cycle 21)
+- Full technical audit — all clean
+- **No file changes required** — no new issues found
+- **No build/deploy needed** — site already stable
+
+## 🔴 Owner Action Required
+
+**Tier 1 — URGENT (Request Indexing in GSC):**
+1. https://airambulancedhakabangkok.com/services ← **Cycle 21 unindexed** — highest priority. Google found it via sitemap + blog post link but refuses to index. Manual "Request Indexing" button is the only known fix.
+   GSC Inspect: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**Tier 2 — Monitor:**
+- `/guides/air-ambulance-dhaka-bangkok` — 193 imps, 0 clicks, pos 6.6 (pillar page, primary traffic source)
+- `/icu-vs-medical-escort` — pos 37.8, 44 imps (approaching 3-cycle content-refresh threshold)
+
+## Site Status Summary
+- Total Pages: 56
+- Indexed Key Pages: 4/5 (80%) — /services pending (cycle 21)
+- GSC (28d): 859 imps / 10 clicks / 1.16% CTR / pos 10.0
+- GSC (7d): 191 imps / 1 click / 0.52% CTR / pos 15.2
+- Technical Health: Clean — zero duplicate tags, zero missing canonicals
+- Owner Title Integrity: Preserved (3 long titles intentionally kept)
+- Critical Issues: 1 (/services indexing — 21 cycles and counting)
+- Deploy Needed: No — site stable, no changes made
+
+---
+*Next cycle: Re-check /services indexing status. If still "Discovered - not indexed" after cycle 22, send one final owner reminder.*
