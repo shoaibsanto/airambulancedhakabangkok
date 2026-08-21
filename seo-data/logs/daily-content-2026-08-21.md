@@ -1,74 +1,58 @@
-# BD Doctor List — Daily Content Publishing Log
+# Daily Content Log — 2026-08-21
 
-**Date:** 2026-08-21  
-**Job:** DAILY_CONTENT  
-**Status:** ✅ SUCCESS
-
----
-
-## Published Draft Posts
-
-| Post ID | Slug | Title (Bengali) | Category | Keyword |
-|---------|------|-----------------|----------|---------|
-| 3118 | thyroid-symptoms-bangladesh | থাইরয়েড রোগের লক্ষণ - বাংলাদেশে চিকিৎসার সম্পূর্ণ গাইড | নারী স্বাস্থ্য (ID:1) | থাইরয়েড রোগের লক্ষণ |
-| 3119 | depression-symptoms-treatment-bangladesh | ডিপ্রেশন রোগ - লক্ষণ, কারণ ও চিকিৎসা সম্পূর্ণ গাইড | স্বাস্থ্যবিন্ধি (ID:33) | ডিপ্রেশন |
-| 3120 | liver-disease-symptoms-bangladesh | লিভার রোগ - লক্ষণ, কারণ ও চিকিৎসা সম্পূর্ণ গাইড | স্বাস্থ্যবিন্ধি (ID:33) | লিভার রোগ |
-
----
-
-## Content Summary
-
-All 3 posts created as DRAFTS with the following compliance:
-
-| Rule | Post 3118 | Post 3119 | Post 3120 |
-|------|-----------|-----------|-----------|
-| Bengali content | ✅ | ✅ | ✅ |
-| ≥1000 words | ✅ ~1200 | ✅ ~1100 | ✅ ~1150 |
-| Medical disclaimer | ✅ | ✅ | ✅ |
-| Yoast title ≤60 chars | ✅ | ✅ | ✅ |
-| Yoast description 70-155 chars | ✅ | ✅ | ✅ |
-| Focus keyword set | ✅ | ✅ | ✅ |
-| H2/H3 structure | ✅ | ✅ | ✅ |
-| Specialist /doctor/ link | ✅ | ✅ | ✅ |
-| FAQ section | ✅ | ✅ | ✅ |
-
----
+## Post Published
+- **Post ID**: 35855
+- **Title**: How to Maintain Lithium IPS Battery in Bangladesh — Monsoon, Summer & Winter Care Tips
+- **Slug**: maintain-lithium-ips-battery-bangladesh-monsoon-summer-winter
+- **URL**: https://hithiumbd.com/maintain-lithium-ips-battery-bangladesh-monsoon-summer-winter/
+- **Category**: IPS & Battery (ID=233)
+- **Word count**: 2,425 words
+- **Featured media ID**: 35854
+- **Featured image**: /wp-content/uploads/2026/08/maintain-lithium-ips-battery-bangladesh-monsoon-summer-winter.webp (23 KB, Pillow-generated)
 
 ## Yoast SEO Meta
+- **Title**: Lithium IPS Battery Care Guide Bangladesh — All Seasons (55 chars)
+- **Description**: Learn how to maintain your lithium IPS battery in Bangladesh through monsoon, summer, and winter. Expert tips to extend battery life and prevent damage. (152 chars)
+- **Focus keyword**: maintain lithium IPS battery Bangladesh
+- **JSON-LD**: Clean (none in post_content, Yoast auto-injects into <head>)
 
-### Post 3118 — Thyroid
-- **Title:** থাইরয়েড রোগের লক্ষণ - সম্পূর্ণ গাইড | BD Doctor List (54 chars)
-- **Description:** থাইরয়েড রোগের লক্ষণ, কারণ ও বাংলাদেশে চিকিৎসার সব তথ্য। এন্ডোক্রিনোলজিস্টের পরামর্শ। (119 chars)
-- **Focus Keyword:** থাইরয়েড রোগের লক্ষণ
+## Product Links Included
+1. HeroEE Light 1 — https://hithiumbd.com/product/hithium-heroee-light-1-portable-intelligent-ips/ ✅
+2. HeroEE 2 — https://hithiumbd.com/product/hithium-heroee-2-portable-ips-station-2-kwh/ ✅
+3. MaxPower 8 AIO — https://hithiumbd.com/product/hithium-heroee-maxpower-8-aio/ ✅ (x2)
+4. Shop CTA — https://hithiumbd.com/shop/ ✅
+5. Contact — https://hithiumbd.com/contact/ ✅
+6. Lithium IPS pillar — https://hithiumbd.com/best-lithium-ips-bangladesh/ ✅
+7. Battery pillar — https://hithiumbd.com/best-lithium-battery-for-ips-in-bangladesh/ ✅
+8. Terminal maintenance guide — https://hithiumbd.com/clean-maintain-lithium-ips-battery-terminals-bangladesh/ ✅
 
-### Post 3119 — Depression
-- **Title:** ডিপ্রেশন রোগ - লক্ষণ, কারণ ও চিকিৎসা | BD Doctor List (58 chars)
-- **Description:** ডিপ্রেশন কী? এর লক্ষণ, কারণ ও বাংলাদেশে চিকিৎসার সব তথ্য। মানসিক রোগ বিশেষজ্ঞের পরামর্শ। (118 chars)
-- **Focus Keyword:** ডিপ্রেশন
+## Verification Results
+- Yoast meta confirmed via REST API ✅
+- No JSON-LD in content.raw ✅
+- No JSON-LD in <article> zone on frontend ✅
+- Excerpt clean ✅
+- Featured image rendered with wp-post-image class ✅
+- OG image set correctly ✅
+- Frontend title and meta description match ✅
+- All product page links return 200 ✅
 
-### Post 3120 — Liver Disease
-- **Title:** লিভার রোগ - লক্ষণ, কারণ ও চিকিৎসা | BD Doctor List (56 chars)
-- **Description:** লিভার রোগের লক্ষণ, কারণ ও বাংলাদেশে চিকিৎসার সব তথ্য। গাস্ট্রোএন্টারোলজিস্টের পরামর্শ। (115 chars)
-- **Focus Keyword:** লিভার রোগ
+## Content Structure
+- Problem intro + Bangladesh context
+- Why seasonal maintenance matters
+- Monthly maintenance checklist (5 items)
+- Monsoon season tips (humidity + surge protection)
+- Summer season tips (heat management + load table + charging optimization)
+- Winter season tips (cold warnings + pre-winter inspection)
+- Annual deep maintenance checklist
+- Common mistakes table
+- When to replace battery
+- FAQ section (6 Q&A pairs)
+- CTA to shop/contact
 
----
+## Issues Encountered
+- SEO title initially 67 chars, truncated to 55 chars for compliance
+- cairosvg unavailable (cffi import error in cron venv) — switched to Pillow-only generation successfully
 
-## Action Required
-
-These posts are saved as DRAFTS. Please review and publish from:
-- https://bddoctorlist.com/wp-admin/post.php?action=edit&post=3118
-- https://bddoctorlist.com/wp-admin/post.php?action=edit&post=3119
-- https://bddoctorlist.com/wp-admin/post.php?action=edit&post=3120
-
----
-
-## Next Topics Available
-
-1. Anxiety disorder symptoms treatment Bangladesh (priority 1, vol: 4200)
-2. Diabetes diet plan Bangladesh (priority 1, vol: 4800)
-3. Stress management techniques Bangladesh (priority 2, vol: 3600)
-
----
-
-## Email Notification
-✅ Sent to: santosarker00@gmail.com
+## State Updates
+- Content plan updated: item marked [x] with Post ID 35855
+- Backlog now at 4 unchecked items (down from 5)

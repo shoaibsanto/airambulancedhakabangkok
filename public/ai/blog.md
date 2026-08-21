@@ -18,7 +18,7 @@ Published: 2026-01-01
 ## [Ventilator Patient Air Ambulance](https://airambulancedhakabangkok.com/blog/ventilator-patient-air-ambulance)
 Published: 2026-01-01
 
-## [Stroke Air Ambulance Dhaka to Bumrungrad — Family Guide (2026)](https://airambulancedhakabangkok.com/blog/stroke-air-ambulance-dhaka-bumrungrad)
+## [Stroke Air Ambulance Dhaka to Bumrungrad | Golden Hour ICU Jet 24/7](https://airambulancedhakabangkok.com/blog/stroke-air-ambulance-dhaka-bumrungrad)
 Published: 2026-01-01
 
 ## [Post-Surgery Patient Transfer](https://airambulancedhakabangkok.com/blog/post-surgery-patient-transfer-dhaka)
@@ -48,7 +48,7 @@ Published: 2026-01-01
 ## [Book Air Ambulance Dhaka to Bumrungrad](https://airambulancedhakabangkok.com/blog/how-to-book-air-ambulance-dhaka-bumrungrad)
 Published: 2026-01-01
 
-## [Emergency Medical Evacuation](https://airambulancedhakabangkok.com/blog/emergency-medical-evacuation-dhaka-to-bangkok)
+## [Emergency Medical Evacuation Dhaka to Bangkok | ICU Jet 24/7](https://airambulancedhakabangkok.com/blog/emergency-medical-evacuation-dhaka-to-bangkok)
 Published: 2026-01-01
 
 ## [Emergency Air Ambulance Dhaka](https://airambulancedhakabangkok.com/blog/emergency-air-ambulance-when-to-call)
@@ -63,7 +63,7 @@ Published: 2026-01-01
 ## [Bed-to-Bed Transfer Dhaka to Bangkok](https://airambulancedhakabangkok.com/blog/bed-to-bed-transfer-dhaka-bangkok)
 Published: 2026-01-01
 
-## [Bangkok Hospital Comparison for BD Patients | Bumrungrad vs Samitivej](https://airambulancedhakabangkok.com/blog/bangkok-hospitals-comparison-bangladeshi-patients)
+## [Bangkok Hospitals for BD Patients | ICU Air Ambulance 24/7](https://airambulancedhakabangkok.com/blog/bangkok-hospitals-comparison-bangladeshi-patients)
 Published: 2026-01-01
 
 ## [Bumrungrad Admission Dhaka | Air Ambulance Bumrungrad](https://airambulancedhakabangkok.com/blog/bangkok-hospital-admission-bangladeshi-patients)

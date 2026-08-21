@@ -1,5 +1,5 @@
 # HiTHIUM Content Plan — 9 Target Keywords
-Last updated: 2026-07-31
+Last updated: 2026-08-21
 
 ## Pillar Pages (already exist)
 - [x] best ips → /what-makes-ips-best-bangladesh/ (POST)
@@ -87,11 +87,12 @@ Fresh topics to maintain pipeline (backlog dropped to 2):
 - [x] IPS for mobile financial service (bKash/Nagad) agent shops Bangladesh ← published 2026-08-20 (Post ID 35849)
 - [ ] Winter vs summer IPS backup performance in Bangladesh — what changes and why
 - [ ] Lithium IPS for pharmacy and medicine cold storage Bangladesh
+
 ## 2026-08-21 Replenishment Suggestions
 Fresh topics to maintain pipeline (backlog at 5 unchecked items):
 - [ ] How to choose the right IPS capacity for a Bangladeshi home — 500VA to 5kVA guide
 - [ ] Best lithium battery for home IPS in Bangladesh 2026 — LiFePO4 vs lead-acid comparison
 - [ ] Solar IPS vs normal IPS for Bangladesh homes — which saves more money long-term
-- [ ] How to maintain lithium IPS battery in Bangladesh — monsoon, summer & winter care tips
+- [x] How to maintain lithium IPS battery in Bangladesh — monsoon, summer & winter care tips ← published 2026-08-21 (Post ID 35855)
 - [ ] Portable power station vs wall-mounted IPS for Bangladesh homes — which is right for you
 - [ ] Best IPS for home in Bangladesh under 20,000 BDT — budget options that actually work
