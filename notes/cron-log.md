@@ -6159,3 +6159,87 @@ High-ROI targets for optimization:
 - 28-day: 844 impressions / 9 clicks / 1.07% CTR / pos 10.0
 - 7-day: 182 impressions / 1 click / 0.55% CTR / pos 14.5
 - **Note:** Clicks declined significantly vs previous baseline (20 clicks / 2.89% CTR). Monitor closely over next 7 days.
+# Daily SEO Cron Log - August 22, 2026 (Cycle 26)
+
+## GSC Performance Overview (Last 7 Days: Aug 14-21, 2026)
+| Metric | Current | Baseline | Status |
+|--------|---------|----------|--------|
+| Impressions | 185 | 200 | Stable (-7.5%) |
+| Clicks | 1 | 7 | DECLINING (-86%) |
+| CTR | 0.55% | 3.5% | CRITICAL DROP |
+| Position | 15.0 | - | Down from 7.9 |
+
+**Daily Trend:**
+- Aug 14: 29 imps, 0 clicks (pos 10.1)
+- Aug 15: 26 imps, 0 clicks (pos 19)
+- Aug 16: 36 imps, 1 click (pos 19.5)
+- Aug 17: 30 imps, 0 clicks (pos 16.2)
+- Aug 18: 21 imps, 0 clicks (pos 12.8)
+- Aug 19: 16 imps, 0 clicks (pos 19)
+- Aug 20: 27 imps, 0 clicks (pos 8.7)
+
+## GSC 28-Day Performance (Jul 24 - Aug 21, 2026)
+| Metric | Current | Baseline (Jul 17) | Status |
+|--------|---------|-------------------|--------|
+| Impressions | 847 | 693 | +22.2% |
+| Clicks | 9 | 20 | -55% |
+| CTR | 1.06% | 2.89% | CRITICAL DROP |
+| Position | 10.2 | 9.6 | Slight decline |
+
+**Key Finding:** Impressions UP (+22.2%) but clicks DOWN (-55%). Strong AI Overview cannibalization signal.
+
+## Indexing Hygiene Audit
+| Page | Status | Last Crawled |
+|------|--------|-------------|
+| Homepage (/) | Submitted and indexed | 2026-08-17 |
+| /services | Discovered - not indexed | NEVER (cycle 26) |
+| /bangkok-hospitals | Submitted and indexed | 2026-07-21 |
+| /guides/air-ambulance-dhaka-bangkok | Submitted and indexed | 2026-07-29 |
+| /air-ambulance-cost | Submitted and indexed | 2026-08-16 |
+
+**Note:** /services now has 2 referring URLs (blog/air-ambulance-dhaka-to-chennai-india + sitemap.xml) — slight progress but still unindexed after 26 cycles.
+
+## GSC Token Status
+- Expiry: 2026-08-21T09:42:40 UTC (PAST)
+- Refresh token present: Yes
+- GSC calls: Working (refresh_token still functional)
+- Owner should re-authenticate proactively before next cycle fails
+
+## Technical Audit
+- Files: 56
+- Duplicate OG/Twitter tags: CLEAN
+- Missing canonicals: NONE
+- Long titles (>62c): 4 pages (all owner-initiated, per policy not trimmed)
+- Blog listing gaps: NONE (33 posts all listed)
+- Sitemap gaps: NONE (59 entries, all pages covered)
+- Low-link pages: 0
+
+## Actions Taken
+1. ✅ Completed GSC pulse analysis
+2. ✅ Completed indexing hygiene audit (5 key pages)
+3. ✅ Technical audit clean — no fixes needed
+4. ✅ Build verified (56 pages generated, no errors)
+5. ⚠️ /services page still unindexed — needs owner action (cycle 26)
+
+## 🔴 Owner Action Required
+
+**1. Request Indexing for `/services` (26th cycle — persistent crawl budget issue):**
+https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+→ Inspect https://airambulancedhakabangkok.com/services → "Request Indexing"
+
+**2. Re-authenticate GSC token (expiry: 2026-08-21 — already past):**
+Follow standard re-auth flow via browser at /root/.config/mcp-gsc/.
+
+## Site Status Summary
+- Total Pages: 56 (stable)
+- Indexed Key Pages: 4/5 (80%) — /services pending (cycle 26)
+- GSC Access: Marginal — token expired, refresh still functional
+- OG/Twitter Coverage: 100% clean
+- FAQPage Coverage: 100% complete
+- 7-day CTR: 0.55% (regression signal — 2.38% baseline)
+- 28-day CTR: 1.06% (regression signal — 2.89% baseline)
+- Critical Issues: 1 (/services indexing — 26 cycles), 1 (GSC token expiry)
+- Deploy Needed: No (technical audit clean)
+
+---
+*Next cycle: Monitor CTR rebound. If /services still unindexed after manual Request Indexing, escalate to owner. Check if GSC token re-auth was completed.*

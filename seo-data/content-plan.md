@@ -1,5 +1,5 @@
 # HiTHIUM Content Plan — 9 Target Keywords
-Last updated: 2026-08-21
+Last updated: 2026-08-22
 
 ## Pillar Pages (already exist)
 - [x] best ips → /what-makes-ips-best-bangladesh/ (POST)
@@ -33,74 +33,70 @@ Last updated: 2026-08-21
 [x] UPS vs IPS for Bangladesh — Which One Do You Need? ← published 2026-07-09 (Post ID 35550)
 [x] IPS Noise Level Comparison — Silent Models for Home Use ← published 2026-07-10 (Post ID 35551)
 [x] Best Inverter Battery for Home in Bangladesh 2026 ← published 2026-07-11 (Post ID 35562)
-
-## New Topics Added 2026-07-11 (plan replenishment)
 [x] IPS vs Generator for Home in Bangladesh — Cost and Power Comparison ← published 2026-07-12 (Post ID 35563)
 [x] How to Extend IPS Battery Life in Bangladesh — 10 Expert Tips ← published 2026-07-13 (Post ID 35564)
 [x] Best IPS for Refrigerator in Bangladesh — Which Capacity Do You Need? ← published 2026-07-14 (Post ID 35583)
 [x] Solar Panel for Home IPS in Bangladesh — Complete Setup Guide 2026 ← published 2026-07-15 (Post ID 35612)
 [x] LiFePO4 Battery Charging Guide — How to Charge Properly in Bangladesh ← published 2026-07-16 (Post ID 35615)
-- [x] IPS Maintenance Checklist for Bangladeshi Homes — Monthly and Annual ← published 2026-07-16 (Post ID 35661)
-- [x] Best IPS for Dhaka Office — Capacity, Cost, and Recommendations 2026 ← published 2026-07-18 (Post ID 35665)
-- [x] Industrial UPS vs IPS in Bangladesh — Which to Choose? ← published 2026-07-19 (Post ID 35667)
+[x] IPS Maintenance Checklist for Bangladeshi Homes — Monthly and Annual ← published 2026-07-16 (Post ID 35661)
+[x] Best IPS for Dhaka Office — Capacity, Cost, and Recommendations 2026 ← published 2026-07-18 (Post ID 35665)
+[x] Industrial UPS vs IPS in Bangladesh — Which to Choose? ← published 2026-07-19 (Post ID 35667)
+[x] IPS Fault Troubleshooting & Error Codes in Bangladesh — Complete Guide ← published 2026-07-20 (Post ID 35669)
+[x] IPS Earthing and Grounding Guide for Bangladeshi Homes ← published 2026-07-21 (Post ID 35671)
+[x] How to choose IPS cable size for home ← published 2026-07-22 (Post ID 35698)
+[x] Lithium IPS warranty and service in Bangladesh ← published 2026-07-22 (Post ID 35702)
+[x] IPS for hospital/clinic backup power Bangladesh ← published 2026-07-24 (Post ID 35704)
+[x] IPS for CCTV and security system backup ← published 2026-07-24 (Post ID 35710)
+[x] IPS capacity planning for small factories Bangladesh ← published 2026-07-26 (Post ID 35714)
+[x] IPS vs solar home system — which is better for Bangladesh? ← published 2026-07-27 (Post ID 35718)
+[x] How to clean and maintain lithium IPS battery terminals ← published 2026-07-28 (Post ID 35722)
+[x] Best IPS for apartment buildings Bangladesh (central system) ← published 2026-07-29 (Post ID 35723)
+[x] Best IPS for fish farming / aquaculture Bangladesh ← published 2026-08-04 (Post ID 35778)
+[x] How to test lithium IPS battery health (BMS diagnostics guide) ← published 2026-07-31 (Post ID 35727)
+[x] Lithium IPS for restaurant and food business backup ← published 2026-08-05 (Post ID 35780)
+[x] IPS battery disposal and recycling in Bangladesh ← published 2026-08-07 (Post ID 35782)
+[x] How to connect solar panel to existing lithium IPS (DIY guide) ← published 2026-08-07 (Post ID 35783)
+[x] IPS setup for work-from-home: what you need for uninterrupted internet ← published 2026-08-04 (Post ID 35738)
+[x] Lithium IPS for grocery stores and convenience shops Bangladesh ← published 2026-08-02 (Post ID 35732)
+[x] Parallel IPS installation guide: connecting two lithium IPS units ← published 2026-08-03 (Post ID 35734)
+[x] Smart IPS buying guide: WiFi monitoring, auto-switching, LCD features ← published 2026-08-01 (Post ID 35730)
+[x] Lithium battery bus bar wiring: how to connect multiple batteries safely ← published 2026-08-11 (Post ID 35819)
+[x] IPS for poultry farming Bangladesh: ventilation and lighting backup power ← published 2026-08-14 (Post ID 35828)
+[x] Lithium IPS for cold storage and deep freezer Bangladesh ← published 2026-08-09 (Post ID 35788)
+[x] How to choose between single-phase and three-phase IPS for commercial buildings ← published 2026-08-15 (Post ID 35830)
+[x] IPS for water treatment plants and RO systems Bangladesh ← published 2026-08-16 (Post ID 35832)
+[x] Lithium IPS vs diesel generator for rural telecom towers Bangladesh ← published 2026-08-22 (Post ID 35872)
+[x] How to set up IPS monitoring app on your phone (WiFi IPS models) ← published 2026-08-21 (Post ID 35847)
+[x] IPS for garment factory (RMG) production line backup Bangladesh ← published 2026-08-21 (Post ID 35853)
+[x] Lithium IPS for schools and coaching centres Bangladesh — classroom fans, lights, projectors ← published 2026-08-21 (Post ID 35870)
+[x] How to size an IPS for a submersible/deep tube-well pump in Bangladesh ← published 2026-08-22 (Post ID 35872)
+[x] IPS for mobile financial service (bKash/Nagad) agent shops Bangladesh ← published 2026-08-20 (Post ID 35849)
+[x] Winter vs summer IPS backup performance in Bangladesh — what changes and why ← published 2026-08-22 (Post ID 35873)
+[x] Lithium IPS for pharmacy and medicine cold storage Bangladesh ← published 2026-08-22 (Post ID 35874)
+[x] Best IPS for home in Bangladesh under 20,000 BDT — budget options that actually work ← published 2026-08-22 (Post ID 35881)
+[x] Portable power station vs wall-mounted IPS for Bangladesh homes — which is right for you ← published 2026-08-22 (Post ID 35880)
+[x] Best solar panel wattage for IPS charging in Bangladesh ← published 2026-08-22 (Post ID 35878)
+[x] IPS for home office setup — uninterrupted work from home power ← published 2026-08-22 (Post ID 35877)
+[x] How to calculate IPS runtime for your home load — step by step guide ← published 2026-08-22 (Post ID 35876)
+[x] Best portable power station for home backup in Bangladesh 2026 ← published 2026-08-22 (Post ID 35875)
+[x] Best lithium battery for home IPS in Bangladesh 2026 — LiFePO4 vs lead-acid comparison ← published 2026-08-21 (Post ID 35863)
+[x] How to choose the right IPS capacity for a Bangladeshi home — 500VA to 5kVA guide ← published 2026-08-21 (Post ID 35860)
+[x] IPS vs normal inverter for Bangladesh homes — which saves more electricity? ← published 2026-08-22 (Post ID 35896)
 
-## Replenishment Batch — July 2026
-- [x] IPS Fault Troubleshooting & Error Codes in Bangladesh — Complete Guide ← published 2026-07-20 (Post ID 35669)
-- [x] IPS Earthing and Grounding Guide for Bangladeshi Homes ← published 2026-07-21 (Post ID 35671)
-
-## Replenishment Batch — Late July 2026
-- [x] How to choose IPS cable size for home ← published 2026-07-22 (Post ID 35698)
-- [x] Lithium IPS warranty and service in Bangladesh ← published 2026-07-22 (Post ID 35702)
-- [x] IPS for hospital/clinic backup power Bangladesh ← published 2026-07-24 (Post ID 35704)
-- [x] IPS for CCTV and security system backup ← published 2026-07-24 (Post ID 35710)
-- [x] IPS capacity planning for small factories Bangladesh ← published 2026-07-26 (Post ID 35714)
-- [x] IPS vs solar home system — which is better for Bangladesh? ← published 2026-07-27 (Post ID 35718)
-- [x] How to clean and maintain lithium IPS battery terminals ← published 2026-07-28 (Post ID 35722)
-- [x] Best IPS for apartment buildings Bangladesh (central system) ← published 2026-07-29 (Post ID 35723)
-
-## 2026-07-29 Replenishment Suggestions
+## New Topics Added 2026-08-22 (plan replenishment)
 Fresh topics to maintain pipeline (all previous plan items completed):
-- [x] Best IPS for fish farming / aquaculture Bangladesh ← published 2026-08-04 (Post ID 35778)
-- [x] How to test lithium IPS battery health (BMS diagnostics guide) ← published 2026-07-31 (Post ID 35727)
-- [x] Lithium IPS for restaurant and food business backup ← published 2026-08-05 (Post ID 35780)
-- [x] IPS battery disposal and recycling in Bangladesh ← published 2026-08-07 (Post ID 35782)
-- [x] How to connect solar panel to existing lithium IPS (DIY guide) ← published 2026-08-07 (Post ID 35783)
-- [x] IPS setup for work-from-home: what you need for uninterrupted internet ← published 2026-08-04 (Post ID 35738)
-- [x] Lithium IPS for grocery stores and convenience shops Bangladesh ← published 2026-08-02 (Post ID 35732)
-- [x] Parallel IPS installation guide: connecting two lithium IPS units ← published 2026-08-03 (Post ID 35734)
-- [x] Smart IPS buying guide: WiFi monitoring, auto-switching, LCD features ← published 2026-08-01 (Post ID 35730)
-- [x] Lithium battery bus bar wiring: how to connect multiple batteries safely ← published 2026-08-11 (Post ID 35819)
-
-## 2026-08-04 Replenishment Suggestions
-- [x] IPS for poultry farming Bangladesh: ventilation and lighting backup power ← published 2026-08-14 (Post ID 35828)
-- [x] Lithium IPS for cold storage and deep freezer Bangladesh ← published 2026-08-09 (Post ID 35788)
-- [x] How to choose between single-phase and three-phase IPS for commercial buildings ← published 2026-08-15 (Post ID 35830)
-- [x] IPS for water treatment plants and RO systems Bangladesh ← published 2026-08-16 (Post ID 35832)
-- [ ] Lithium IPS vs diesel generator for rural telecom towers Bangladesh
-- [x] How to set up IPS monitoring app on your phone (WiFi IPS models) ← published 2026-08-21 (Post ID 35847)
-
-## 2026-08-16 Replenishment Suggestions
-Fresh topics to maintain pipeline (backlog dropped to 2):
-- [x] IPS for garment factory (RMG) production line backup Bangladesh ← published 2026-08-21 (Post ID 35853)
-- [x] Lithium IPS for schools and coaching centres Bangladesh — classroom fans, lights, projectors ← published 2026-08-21 (Post ID 35870)
-- [ ] How to size an IPS for a submersible/deep tube-well pump in Bangladesh
-- [x] IPS for mobile financial service (bKash/Nagad) agent shops Bangladesh ← published 2026-08-20 (Post ID 35849)
-- [ ] Winter vs summer IPS backup performance in Bangladesh — what changes and why
-- [ ] Lithium IPS for pharmacy and medicine cold storage Bangladesh
-
-## 2026-08-21 Replenishment Suggestions
-Fresh topics to maintain pipeline (backlog at 4 unchecked items):
-- [x] How to choose the right IPS capacity for a Bangladeshi home — 500VA to 5kVA guide ← published 2026-08-21 (Post ID 35860)
-- [x] Best lithium battery for home IPS in Bangladesh 2026 — LiFePO4 vs lead-acid comparison ← published 2026-08-21 (Post ID 35863)
-## 2026-08-21 Replenishment Suggestions (continued)
-Fresh topics to maintain pipeline:
-- [ ] Best portable power station for home backup in Bangladesh 2026
-- [ ] How to calculate IPS runtime for your home load - step by step guide
-- [ ] Winter IPS battery performance in Bangladesh - what to expect
-- [ ] IPS for home office setup - uninterrupted work from home power
-- [ ] Best solar panel wattage for IPS charging in Bangladesh
-
-- [ ] Solar IPS vs normal IPS for Bangladesh homes — which saves more money long-term
-- [x] How to maintain lithium IPS battery in Bangladesh — monsoon, summer & winter care tips ← published 2026-08-21 (Post ID 35855)
+- [ ] How to choose the right IPS capacity for a Bangladeshi home — 500VA to 5kVA guide
+- [ ] Best lithium battery for home IPS in Bangladesh 2026 — LiFePO4 vs lead-acid comparison
 - [ ] Portable power station vs wall-mounted IPS for Bangladesh homes — which is right for you
-- [ ] Best IPS for home in Bangladesh under 20,000 BDT — budget options that actually work
+- [ ] Best solar panel wattage for IPS charging in Bangladesh
+- [ ] IPS for home office setup — uninterrupted work from home power
+- [ ] How to calculate IPS runtime for your home load — step by step guide
+- [ ] Best portable power station for home backup in Bangladesh 2026
+- [ ] IPS vs normal inverter for Bangladesh homes — which saves more electricity?
+- [ ] How to troubleshoot common IPS problems in Bangladesh — error codes and fixes
+- [ ] Best IPS for home aquarium and fish tank filter in Bangladesh
+- [ ] IPS vs solar home system comparison — which is better for Bangladesh?
+- [ ] How to install IPS at home in Bangladesh — DIY wiring guide for beginners
+- [ ] Best lithium IPS for home backup in Bangladesh 2026 — complete buying guide
+- [ ] IPS for home server and networking equipment Bangladesh — uninterrupted internet backup
+- [ ] How to choose IPS for Bangladeshi apartment — space-saving solutions 2026
