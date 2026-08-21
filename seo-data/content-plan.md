@@ -89,3 +89,13 @@ Topics not yet covered by existing posts:
 - [x] How to troubleshoot common IPS problems in Bangladesh — error codes and fixes ← published 2026-08-21 (Post ID 35887)
 - [x] Best solar panel wattage for IPS charging in Bangladesh ← published 2026-08-22 (Post ID 35891)
 - [x] Portable power station vs wall-mounted IPS for Bangladesh homes — which is right for you ← published 2026-08-22 (Post ID 35894)
+- [x] Best IPS for Home Study Room in Bangladesh — Fan, Light & Laptop Backup Guide 2026 ← published 2026-08-22 (Post ID 35903)
+
+## Replenishment Suggestions (remaining)
+- [x] IPS for salon and beauty parlor Bangladesh — hair dryer, styling equipment backup ← published 2026-08-22 (Post ID 35905)
+- [ ] IPS for computer lab and coding center Bangladesh — multi-computer backup solution
+- [ ] How to calculate IPS installation cost in Bangladesh — complete price breakdown 2026
+- [ ] Best IPS for hotel and guest house Bangladesh — whole-building backup guide
+- [ ] IPS for printing press and photocopy shop Bangladesh — heavy motor backup solution
+- [ ] How to choose IPS for tea stall and small food business Bangladesh
+- [ ] IPS for auto repair shop and mechanic garage Bangladesh — compressor and tools backup
