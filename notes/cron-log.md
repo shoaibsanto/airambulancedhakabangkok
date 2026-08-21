@@ -6243,3 +6243,81 @@ Follow standard re-auth flow via browser at /root/.config/mcp-gsc/.
 
 ---
 *Next cycle: Monitor CTR rebound. If /services still unindexed after manual Request Indexing, escalate to owner. Check if GSC token re-auth was completed.*
+
+
+## Cycle 27 — August 22, 2026 (afternoon)
+
+### GSC Pulse (7-day: Aug 14–21)
+| Metric | Value | Baseline (Jul 17) | Delta |
+|--------|-------|-------------------|-------|
+| Impressions | 186 | ~168 | +10.7% |
+| Clicks | 1 | ~4 | **-75%** |
+| CTR | 0.54% | 2.38% | **CRITICAL DROP** |
+| Position | 15.0 | 11.3 | Worse |
+
+**28-day (Jul 24–Aug 21):** 847 impressions / 9 clicks / 1.06% CTR / pos 10.2
+→ Previous cycle (26): 844 imps / 9 clicks / 1.07% CTR — stable but declining vs Jul baseline
+
+**Critical alert:** 7-day clicks dropped from 4 to 1, CTR collapsed to 0.54%. Homepage holds at 333 imps/7 clk. AI Overview cannibalization intensifying on commercial keywords.
+
+### Indexing Status
+| Page | Status | Last Crawled |
+|------|--------|-------------|
+| Homepage (/) | ✅ Indexed | 2026-08-17 |
+| /services | ⚠️ Discovered — not indexed | NEVER (cycle 27) |
+| /bangkok-hospitals | ✅ Indexed | 2026-07-21 |
+| /guides/air-ambulance-dhaka-bangkok | ✅ Indexed | 2026-07-29 |
+| /air-ambulance-cost | ✅ Indexed | 2026-08-16 |
+| /blog/air-ambulance-dhaka-to-myanmar | ⚠️ Discovered — not indexed | NEVER |
+
+Note: /services now shows 2 referring URLs (chennai blog post + sitemap). Slight crawl signal improvement but still unindexed. /blog/air-ambulance-dhaka-to-myanmar is new gap — likely needs stronger internal links from cluster peers.
+
+### Technical Audit
+- Files: 56 (stable)
+- Build: 114 static pages generated (no errors)
+- Duplicate OG/Twitter tags: CLEAN
+- Missing canonicals: NONE
+- Long titles (>62c): 4 pages — ALL OWNER-INITIATED (per policy, not trimmed)
+  - bangkok-hospitals: 64c (owner diff for cannibalization)
+  - stroke-air-ambulance-dhaka-bumrungrad: 67c (owner)
+  - cardiac-emergency-transfer: 69c (owner)
+  - guides/air-ambulance-dhaka-bangkok: 73c (owner, &amp; entity)
+- Blog listing gaps: NONE (33 posts all listed)
+- Sitemap gaps: NONE (59 entries)
+- Low-link pages: 0
+- Root-path expansion-route links: CLEAN
+
+### Content Quality Notes
+- /icu-vs-medical-escort: pos 38.2, 45 imps, 0 clk — 3-cycle threshold reached. Content refresh scheduled for next cycle with entity enrichment (cost table, aircraft names, Bumrungrad ICU specs).
+- /cardiac-emergency-transfer: pos 23, 10 imps, 0 clk — borderline, continue monitoring.
+- /blog/bangkok-hospitals-comparison-bangladeshi-patients: pos 8.8, 64 imps, 0 clk — Tier B AI Overview cannibalization, FAQ schema already present.
+
+### Actions Taken
+1. ✅ GSC pulse retrieved (token still functional despite expiry)
+2. ✅ Indexing audit for 6 key pages
+3. ✅ Technical audit (titles, canonicals, OG dupes, sitemap gaps)
+4. ✅ Build verified (114 pages, no errors)
+5. ⚠️ No content fixes needed — all title overages are owner-initiated
+6. ⚠️ No deploy needed — technical state is clean
+
+### 🔴 Owner Action Required
+
+**1. Request Indexing for `/services` (27th consecutive cycle):**
+https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+→ Inspect https://airambulancedhakabangkok.com/services → Click "Request Indexing"
+
+**2. Request Indexing for `/blog/air-ambulance-dhaka-to-myanmar`:**
+→ Inspect https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-myanmar → Click "Request Indexing"
+
+**3. Re-authenticate GSC token (expiry: 2026-08-21 — already past):**
+Refresh token still working but will expire soon. Follow standard re-auth flow.
+
+### Site Status Summary
+- Total Pages: 56 content files / 114 static build pages
+- Indexed Key Pages: 4/5 (80%) — /services pending (cycle 27), /blog/myanmar new gap
+- GSC Access: Marginal — token expired but refresh_token functional
+- 7-day CTR: 0.54% (severe regression from 2.38% baseline)
+- Critical Issues: 2 persistent (services indexing cycle 27, myanmar indexing), 1 declining metric (CTR)
+- Deploy Needed: No (technical audit clean)
+
+---

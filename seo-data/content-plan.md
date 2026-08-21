@@ -82,21 +82,9 @@ Last updated: 2026-08-22
 [x] Best lithium battery for home IPS in Bangladesh 2026 — LiFePO4 vs lead-acid comparison ← published 2026-08-21 (Post ID 35863)
 [x] How to choose the right IPS capacity for a Bangladeshi home — 500VA to 5kVA guide ← published 2026-08-21 (Post ID 35860)
 [x] IPS vs normal inverter for Bangladesh homes — which saves more electricity? ← published 2026-08-22 (Post ID 35896)
-
-## New Topics Added 2026-08-22 (plan replenishment)
-Fresh topics to maintain pipeline (all previous plan items completed):
-- [ ] How to choose the right IPS capacity for a Bangladeshi home — 500VA to 5kVA guide
-- [ ] Best lithium battery for home IPS in Bangladesh 2026 — LiFePO4 vs lead-acid comparison
-- [ ] Portable power station vs wall-mounted IPS for Bangladesh homes — which is right for you
-- [ ] Best solar panel wattage for IPS charging in Bangladesh
-- [ ] IPS for home office setup — uninterrupted work from home power
-- [ ] How to calculate IPS runtime for your home load — step by step guide
-- [ ] Best portable power station for home backup in Bangladesh 2026
-- [ ] IPS vs normal inverter for Bangladesh homes — which saves more electricity?
-- [ ] How to troubleshoot common IPS problems in Bangladesh — error codes and fixes
-- [ ] Best IPS for home aquarium and fish tank filter in Bangladesh
-- [ ] IPS vs solar home system comparison — which is better for Bangladesh?
-- [ ] How to install IPS at home in Bangladesh — DIY wiring guide for beginners
-- [ ] Best lithium IPS for home backup in Bangladesh 2026 — complete buying guide
+## New Topics Added 2026-08-22 (plan cleanup)
+Topics not yet covered by existing posts:
 - [ ] IPS for home server and networking equipment Bangladesh — uninterrupted internet backup
-- [ ] How to choose IPS for Bangladeshi apartment — space-saving solutions 2026
+- [ ] How to troubleshoot common IPS problems in Bangladesh — error codes and fixes
+- [ ] Best solar panel wattage for IPS charging in Bangladesh
+- [ ] Portable power station vs wall-mounted IPS for Bangladesh homes — which is right for you
