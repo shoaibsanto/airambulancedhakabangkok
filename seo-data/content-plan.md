@@ -84,7 +84,7 @@ Last updated: 2026-08-22
 [x] IPS vs normal inverter for Bangladesh homes — which saves more electricity? ← published 2026-08-22 (Post ID 35896)
 ## New Topics Added 2026-08-22 (plan cleanup)
 Topics not yet covered by existing posts:
-- [ ] IPS for home server and networking equipment Bangladesh — uninterrupted internet backup
+- [x] IPS for home server and networking equipment Bangladesh — uninterrupted internet backup ← published 2026-08-21 (Post ID 35885)
 - [ ] How to troubleshoot common IPS problems in Bangladesh — error codes and fixes
 - [ ] Best solar panel wattage for IPS charging in Bangladesh
 - [ ] Portable power station vs wall-mounted IPS for Bangladesh homes — which is right for you

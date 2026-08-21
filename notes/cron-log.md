@@ -6321,3 +6321,115 @@ Refresh token still working but will expire soon. Follow standard re-auth flow.
 - Deploy Needed: No (technical audit clean)
 
 ---
+# Daily SEO Cron Log - August 23, 2026
+
+## GSC Performance Overview (Last 7 Days: Aug 14-21, 2026)
+
+| Metric | Current | Baseline | Status |
+|--------|---------|----------|--------|
+| Impressions | 189 | 200 | Stable (-5.5%) |
+| Clicks | 1 | 7 | CRITICAL (-86%) |
+| CTR | 0.53% | 3.5% | SEVERE DROP |
+| Position | 14.8 | 8-9 | DROPPED |
+
+**Daily Trend:**
+- Aug 14: 29 imps, 0 clicks (pos 10.1)
+- Aug 15: 26 imps, 0 clicks (pos 18.7)
+- Aug 16: 36 imps, 1 click (pos 19.5) ← Only click day
+- Aug 17: 30 imps, 0 clicks (pos 16.2)
+- Aug 18: 21 imps, 0 clicks (pos 12.8)
+- Aug 19: 16 imps, 0 clicks (pos 19.0)
+- Aug 20: 28 imps, 0 clicks (pos 8.7)
+
+## 28-Day Performance Overview (Jul 24 - Aug 21, 2026)
+
+| Page | Impressions | Clicks | CTR | Position |
+|------|-------------|--------|-----|----------|
+| Homepage (/) | 335 | 7 | 2.09% | 8.0 |
+| /air-ambulance-cost | 131 | 1 | 0.76% | 11.8 |
+| /guides/air-ambulance-dhaka-bangkok | 193 | 0 | 0% | 6.6 |
+| /blog/bangkok-hospitals-comparison | 64 | 0 | 0% | 8.8 |
+| /icu-vs-medical-escort | 45 | 0 | 0% | 38.2 |
+| /blog/medical-visa-thailand | 44 | 0 | 0% | 11.6 |
+| /cardiac-emergency-transfer | 10 | 0 | 0% | 23.0 |
+
+## Indexing Hygiene Audit
+
+| Page | Status | Last Crawled |
+|------|--------|--------------|
+| Homepage (/) | ✅ Submitted and indexed | 2026-08-17 |
+| /guides/air-ambulance-dhaka-bangkok | ✅ Submitted and indexed | 2026-07-29 |
+| /air-ambulance-cost | ✅ Submitted and indexed | 2026-08-16 |
+| /icu-vs-medical-escort | ✅ Submitted and indexed | 2026-07-21 |
+| /cardiac-emergency-transfer | ✅ Submitted and indexed | 2026-06-26 |
+
+**Note:** /services still showing "Discovered - not indexed" (cycle 28)
+
+## Technical Audit
+
+### Title Length Issues (4 pages over 62c)
+- content/bangkok-hospitals.html: 64c (owner-set, monitor)
+- content/blog/stroke-air-ambulance-dhaka-bumrungrad.html: 67c (owner-set, monitor)
+- content/cardiac-emergency-transfer.html: 69c (owner-set, monitor)
+- content/guides/air-ambulance-dhaka-bangkok.html: 73c (owner-set, monitor)
+
+### Duplicate OG/Image Tags
+- All content files have correct single og:image property tags
+- Previous duplicate detection was false positive (matching alt/width/height variants)
+- Status: ALL CLEAN
+
+### Canonical Tags
+- All 56 content files have canonical tags
+- No missing canonicals detected
+
+### Low-Link Pages
+- All pages have 2+ inbound links
+- No orphan pages detected
+
+## CTR Regression Analysis
+
+**Critical Finding:** 7-day CTR dropped to 0.53% (baseline: 3.5%)
+
+**Possible causes:**
+1. AI Overview cannibalization on top queries
+2. SERP feature expansion (knowledge panels, featured snippets)
+3. Competitive pressure from new entrants
+4. Position drift to page 2+ for key queries
+
+**Pages with 0 CTR despite impressions:**
+- /guides/air-ambulance-dhaka-bangkok: 193 imps, 0 clicks (pos 6.6)
+- /blog/bangkok-hospitals-comparison: 64 imps, 0 clicks (pos 8.8)
+- /icu-vs-medical-escort: 45 imps, 0 clicks (pos 38.2)
+
+## Actions Taken
+
+1. ✅ GSC performance data collected and analyzed
+2. ✅ Indexing status verified for 5 key pages
+3. ✅ Technical audit completed (titles, OG tags, canonicals, orphans)
+4. ✅ Duplicate og:image detection confirmed as false positive
+5. ⚠️ No fixes applied (technical audit clean, no critical issues)
+
+## Owner Action List
+
+### 🔴 TIER 1 (URGENT)
+**Request Indexing for `/services` page (28th consecutive cycle):**
+https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+→ Inspect https://airambulancedhakabangkok.com/services → Click "Request Indexing"
+
+### 🟡 TIER 2 (IMPORTANT)
+1. Monitor CTR recovery over next 7 days
+2. If CTR remains below 1%, consider FAQ schema enrichment for /guides/air-ambulance-dhaka-bangkok (193 imps, 0 clicks)
+
+### 🟢 TIER 3 (NORMAL)
+- /blog/air-ambulance-dhaka-to-myanmar indexing status (previous cycle gap)
+- Token re-authentication (expiry: 2026-08-21, refresh still working)
+
+## Site Status Summary
+- Total Pages: 56 content files / 114 static build pages
+- Indexed Key Pages: 5/5 inspected (100%)
+- Critical Pending: /services indexing (cycle 28)
+- GSC Access: Functional (token expired but refresh working)
+- 7-day CTR: 0.53% (severe regression from 2.38% baseline)
+- Deploy Needed: No (technical audit clean)
+
+---
