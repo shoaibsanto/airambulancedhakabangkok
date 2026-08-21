@@ -5989,3 +5989,85 @@ Click each URL → "URL Inspection" → "Request Indexing":
 
 ---
 *Next cycle: Monitor 7-day CTR rebound. If /services still unindexed after 24h from manual Request Indexing, escalate to owner.*
+## Cycle 24 — 2026-08-21
+**Time:** 8:30 AM BST
+
+### GSC Pulse
+- **28-day (Jul 24–Aug 21):** 837 impressions / 9 clicks / 1.08% CTR / pos 10.1
+  - vs Jul 17 baseline: 693 imps / 20 clicks / 2.89% CTR → **impressions +21%, clicks -55%, CTR collapsed**
+- **7-day (Aug 14–20):** 172 impressions / 1 click / 0.58% CTR / pos 11.8
+  - vs Jul 17 baseline 7-day: 168 imps / 4 clicks / 2.38% CTR
+  - **CTR regression continues** — only 1 click in 7 days
+- **Token status:** expiry field at 2026-08-21T06:14 UTC (past). GSC calls succeeded via refresh_token. Owner should re-authenticate proactively.
+
+### Indexing Status
+| Page | Status | Last Crawled | Referring URLs |
+|------|--------|-------------|----------------|
+| `/` (homepage) | ✅ Indexed | — | — |
+| `/services` | ⚠️ Discovered-not-indexed | **NEVER** (cycle 24) | sitemap.xml + blog/air-ambulance-dhaka-to-chennai-india (new!) |
+| `/bangkok-hospitals` | ✅ Indexed | 2026-07-21 | services, blog link |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Indexed | 2026-07-29 | blog/air-ambulance-cardiac-patients |
+| `/air-ambulance-cost` | ✅ Indexed | 2026-08-16 | services |
+| `/cardiac-emergency-transfer` | ✅ Indexed | 2026-06-26 | sitemap only |
+
+**Note:** `/services` now has an additional referring URL (blog/air-ambulance-dhaka-to-chennai-india) — progress from sitemap-only, but still unindexed after 24 cycles.
+
+### GSC Page Performance (28-day, pages with data)
+| Page | Impts | Clicks | CTR | Pos |
+|------|-------|--------|-----|-----|
+| `/` | 327 | 7 | 2.14% | 7.9 |
+| `/guides/air-ambulance-dhaka-bangkok` | 193 | 0 | 0% | 6.6 |
+| `/air-ambulance-cost` | 128 | 1 | 0.78% | 12.0 |
+| `/icu-vs-medical-escort` | 44 | 0 | 0% | 37.8 |
+| `/blog/bangkok-hospitals-comparison` | 63 | 0 | 0% | 8.8 |
+| `/blog/medical-visa-thailand` | 43 | 0 | 0% | 11.7 |
+| `/cardiac-emergency-transfer` | 10 | 0 | 0% | 23.0 |
+| `/guides/icu-air-ambulance-dhaka` | 12 | 0 | 0% | 8.9 |
+| `/trauma-accident-evacuation` | 4 | 0 | 0% | 11.8 |
+| `/bangkok-hospitals` | 7 | 0 | 0% | 12.3 |
+
+### Key Observations
+1. **CTR collapse is the dominant issue:** 1.08% CTR over 28 days (vs 2.89% baseline). Clicks dropped from 20 to 9 despite impressions increasing 21%. This is AI Overview cannibalization at scale.
+2. **Pillar page `/guides/air-ambulance-dhaka-bangkok` (193 imps, pos 6.6, 0 clicks):** Classic AI Overview cannibalization. Owner differentiated title in cycle 22 (commit f303195) — monitoring for CTR impact. Title is 73c (owner-set, not trimmed per policy).
+3. **`/icu-vs-medical-escort` at pos 37.8 (44 imps, 0 clicks):** Now at cycle 4 of severe position regression (Jul 13: pos 56→Jul 15: pos 55→Jul 20: pos 23→Aug 21: pos 37.8). Position is volatile — content refresh already executed in cycle 10. Monitor further.
+4. **`/cardiac-emergency-transfer` at pos 23 (10 imps, 0 clicks):** Consistent with Jul 2026 baseline observation. borderline — will monitor 1 more cycle before content refresh.
+5. **Homepage strong:** 327 imps, 7 clicks, pos 7.9 — primary traffic source. CTR 2.14% is decent.
+6. **Title differentiation by owner (cycle 22):** `/guides/air-ambulance-dhaka-bangkok` title changed to "Air Ambulance Dhaka to Bangkok — Complete 2026 Guide | Cost & Process" — longer, differentiated from homepage. Also `/air-ambulance-cost-bangladesh-2026` retitled. Monitoring CTR impact.
+
+### Technical Audit
+- **56 content files scanned** — all clean (no duplicate OG/Twitter tags, no missing canonicals)
+- **4 long titles (>62c file-level):** All owner-set, per policy not trimmed:
+  - `/bangkok-hospitals` 64c
+  - `/blog/stroke-air-ambulance-dhaka-bumrungrad` 67c
+  - `/cardiac-emergency-transfer` 69c
+  - `/guides/air-ambulance-dhaka-bangkok` 73c (owner-set for cannibalization differentiation)
+- **FAQPage coverage:** Complete for all eligible content pages
+- **Related-articles sections:** Present on 54/56 eligible pages
+- **No sitemap gaps** — all blog posts accounted for (33 blog files, all in sitemap and listing)
+- **No root-path 404s** — no stale links detected
+- **Low-link pages:** 0 (all pages have 2+ inbound links)
+- **Build:** ✅ 56 pages generated, no errors
+
+### Actions Taken
+None — technical audit clean, no fixable issues identified. GSC token expires today but refresh still functional. Owner has already applied title differentiation in cycle 22.
+
+### 🔴 Owner Action Required
+**1. Request Indexing for `/services`** (24th cycle — longest persistent indexing failure):
+   https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**2. Re-authenticate GSC token** (expiry: 2026-08-21T06:14 UTC — already past, refresh currently working but will fail soon):
+   Follow standard re-auth flow via browser.
+
+### Site Status Summary
+- Total Pages: 56 (stable)
+- Indexed Key Pages: 4/5 (80%) — /services pending (cycle 24)
+- GSC Access: Marginal — token expired today, refresh still functional
+- OG/Twitter Coverage: 100% clean
+- FAQPage Coverage: 100% complete
+- 7-day CTR: 0.58% (regression signal — 2.38% baseline)
+- 28-day CTR: 1.08% (regression signal — 2.89% baseline)
+- Critical Issues: 1 (/services indexing — 24 cycles), 1 (GSC token expiry)
+- Deploy Needed: No
+
+---
+*Next cycle: Monitor CTR rebound post-title-differentiation. If `/services` still unindexed after manual Request Indexing, escalate to owner. Check if GSC token re-auth was completed.*

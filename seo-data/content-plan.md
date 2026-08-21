@@ -91,7 +91,7 @@ Fresh topics to maintain pipeline (backlog dropped to 2):
 ## 2026-08-21 Replenishment Suggestions
 Fresh topics to maintain pipeline (backlog at 4 unchecked items):
 - [x] How to choose the right IPS capacity for a Bangladeshi home — 500VA to 5kVA guide ← published 2026-08-21 (Post ID 35860)
-- [ ] Best lithium battery for home IPS in Bangladesh 2026 — LiFePO4 vs lead-acid comparison
+- [x] Best lithium battery for home IPS in Bangladesh 2026 — LiFePO4 vs lead-acid comparison ← published 2026-08-21 (Post ID 35863)
 - [ ] Solar IPS vs normal IPS for Bangladesh homes — which saves more money long-term
 - [x] How to maintain lithium IPS battery in Bangladesh — monsoon, summer & winter care tips ← published 2026-08-21 (Post ID 35855)
 - [ ] Portable power station vs wall-mounted IPS for Bangladesh homes — which is right for you
