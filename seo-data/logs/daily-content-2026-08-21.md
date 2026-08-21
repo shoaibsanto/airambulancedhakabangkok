@@ -1,58 +1,36 @@
-# Daily Content Log — 2026-08-21
+# Daily Content Log - 2026-08-21
 
-## Post Published
-- **Post ID**: 35855
-- **Title**: How to Maintain Lithium IPS Battery in Bangladesh — Monsoon, Summer & Winter Care Tips
-- **Slug**: maintain-lithium-ips-battery-bangladesh-monsoon-summer-winter
-- **URL**: https://hithiumbd.com/maintain-lithium-ips-battery-bangladesh-monsoon-summer-winter/
-- **Category**: IPS & Battery (ID=233)
-- **Word count**: 2,425 words
-- **Featured media ID**: 35854
-- **Featured image**: /wp-content/uploads/2026/08/maintain-lithium-ips-battery-bangladesh-monsoon-summer-winter.webp (23 KB, Pillow-generated)
+## Published Post
+- **Post ID:** 35860
+- **Title:** How to Choose the Right IPS Capacity for Your Bangladeshi Home — 500VA to 5kVA Guide
+- **URL:** https://hithiumbd.com/choose-ips-capacity-home-guide-bangladesh/
+- **Slug:** choose-ips-capacity-home-guide-bangladesh
+- **Category:** IPS & Battery (ID: 233)
+- **Featured Image ID:** 35859
+- **Yoast Title:** Choose IPS Capacity for Home Bangladesh | HiTHIUM Guide (55 chars)
+- **Yoast Description:** Complete guide to choosing IPS capacity for your Bangladeshi home. Learn to calculate load, match IPS size, and pick the right lithium battery system.
+- **Focus Keyword:** ips capacity bangladesh
 
-## Yoast SEO Meta
-- **Title**: Lithium IPS Battery Care Guide Bangladesh — All Seasons (55 chars)
-- **Description**: Learn how to maintain your lithium IPS battery in Bangladesh through monsoon, summer, and winter. Expert tips to extend battery life and prevent damage. (152 chars)
-- **Focus keyword**: maintain lithium IPS battery Bangladesh
-- **JSON-LD**: Clean (none in post_content, Yoast auto-injects into <head>)
+## Product References
+- HiTHIUM HeroEE Light 1: https://hithiumbd.com/product/hithium-heroee-light-1-portable-intelligent-ips/ ✓ (HTTP 200)
+- HiTHIUM HeroEE 2: https://hithiumbd.com/product/hithium-heroee-2-portable-ips-station-2-kwh/ ✓ (HTTP 200)
+- HiTHIUM MaxPower 8 AIO: https://hithiumbd.com/product/hithium-heroee-maxpower-8-aio/ ✓ (HTTP 200)
+- HiTHIUM HeroEE 16: https://hithiumbd.com/product/hithium-heroee-16-16kwh-lifepo4-portable-battery-pack/ ✓ (HTTP 200)
 
-## Product Links Included
-1. HeroEE Light 1 — https://hithiumbd.com/product/hithium-heroee-light-1-portable-intelligent-ips/ ✅
-2. HeroEE 2 — https://hithiumbd.com/product/hithium-heroee-2-portable-ips-station-2-kwh/ ✅
-3. MaxPower 8 AIO — https://hithiumbd.com/product/hithium-heroee-maxpower-8-aio/ ✅ (x2)
-4. Shop CTA — https://hithiumbd.com/shop/ ✅
-5. Contact — https://hithiumbd.com/contact/ ✅
-6. Lithium IPS pillar — https://hithiumbd.com/best-lithium-ips-bangladesh/ ✅
-7. Battery pillar — https://hithiumbd.com/best-lithium-battery-for-ips-in-bangladesh/ ✅
-8. Terminal maintenance guide — https://hithiumbd.com/clean-maintain-lithium-ips-battery-terminals-bangladesh/ ✅
+## Internal Links
+- https://hithiumbd.com/how-to-calculate-ips-backup-time-home-bangladesh/ ✓
+- https://hithiumbd.com/best-lithium-ips-bangladesh/ ✓
+- https://hithiumbd.com/contact-us/ ✓
+- https://hithiumbd.com/shop/ ✓
 
-## Verification Results
-- Yoast meta confirmed via REST API ✅
-- No JSON-LD in content.raw ✅
-- No JSON-LD in <article> zone on frontend ✅
-- Excerpt clean ✅
-- Featured image rendered with wp-post-image class ✅
-- OG image set correctly ✅
-- Frontend title and meta description match ✅
-- All product page links return 200 ✅
+## Schema & Technical
+- No JSON-LD in post_content ✓
+- FAQPage schema via HTML div format ✓
+- Featured image: Pillow WebP pipeline
+- Image alt text: "IPS capacity sizing guide for Bangladeshi homes - HiTHIUM Bangladesh"
 
-## Content Structure
-- Problem intro + Bangladesh context
-- Why seasonal maintenance matters
-- Monthly maintenance checklist (5 items)
-- Monsoon season tips (humidity + surge protection)
-- Summer season tips (heat management + load table + charging optimization)
-- Winter season tips (cold warnings + pre-winter inspection)
-- Annual deep maintenance checklist
-- Common mistakes table
-- When to replace battery
-- FAQ section (6 Q&A pairs)
-- CTA to shop/contact
-
-## Issues Encountered
-- SEO title initially 67 chars, truncated to 55 chars for compliance
-- cairosvg unavailable (cffi import error in cron venv) — switched to Pillow-only generation successfully
-
-## State Updates
-- Content plan updated: item marked [x] with Post ID 35855
-- Backlog now at 4 unchecked items (down from 5)
+## Notes
+- Title shortened from 75 to 55 chars to meet Yoast recommendation
+- Post published successfully with all Yoast meta fields set
+- Featured image assigned and alt text set
+- No email notification (HiTHIUM client does not use this workflow)
