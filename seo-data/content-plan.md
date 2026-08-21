@@ -82,7 +82,7 @@ Fresh topics to maintain pipeline (all previous plan items completed):
 ## 2026-08-16 Replenishment Suggestions
 Fresh topics to maintain pipeline (backlog dropped to 2):
 - [x] IPS for garment factory (RMG) production line backup Bangladesh ← published 2026-08-21 (Post ID 35853)
-- [ ] Lithium IPS for schools and coaching centres Bangladesh — classroom fans, lights, projectors
+- [x] Lithium IPS for schools and coaching centres Bangladesh — classroom fans, lights, projectors ← published 2026-08-21 (Post ID 35870)
 - [ ] How to size an IPS for a submersible/deep tube-well pump in Bangladesh
 - [x] IPS for mobile financial service (bKash/Nagad) agent shops Bangladesh ← published 2026-08-20 (Post ID 35849)
 - [ ] Winter vs summer IPS backup performance in Bangladesh — what changes and why
@@ -92,6 +92,14 @@ Fresh topics to maintain pipeline (backlog dropped to 2):
 Fresh topics to maintain pipeline (backlog at 4 unchecked items):
 - [x] How to choose the right IPS capacity for a Bangladeshi home — 500VA to 5kVA guide ← published 2026-08-21 (Post ID 35860)
 - [x] Best lithium battery for home IPS in Bangladesh 2026 — LiFePO4 vs lead-acid comparison ← published 2026-08-21 (Post ID 35863)
+## 2026-08-21 Replenishment Suggestions (continued)
+Fresh topics to maintain pipeline:
+- [ ] Best portable power station for home backup in Bangladesh 2026
+- [ ] How to calculate IPS runtime for your home load - step by step guide
+- [ ] Winter IPS battery performance in Bangladesh - what to expect
+- [ ] IPS for home office setup - uninterrupted work from home power
+- [ ] Best solar panel wattage for IPS charging in Bangladesh
+
 - [ ] Solar IPS vs normal IPS for Bangladesh homes — which saves more money long-term
 - [x] How to maintain lithium IPS battery in Bangladesh — monsoon, summer & winter care tips ← published 2026-08-21 (Post ID 35855)
 - [ ] Portable power station vs wall-mounted IPS for Bangladesh homes — which is right for you

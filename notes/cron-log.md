@@ -6071,3 +6071,91 @@ None — technical audit clean, no fixable issues identified. GSC token expires 
 
 ---
 *Next cycle: Monitor CTR rebound post-title-differentiation. If `/services` still unindexed after manual Request Indexing, escalate to owner. Check if GSC token re-auth was completed.*
+---
+
+# Daily SEO Cron Log - August 21, 2026 (Cycle 25)
+
+## GSC Performance Overview (Last 7 Days: Aug 14-21, 2026)
+| Metric | Current | Baseline | Status |
+|--------|---------|----------|--------|
+| Impressions | 182 | 200 | Stable (-9%) |
+| Clicks | 1 | 7 | DECLINING (-86%) |
+| CTR | 0.55% | 3.5% | CRITICAL DROP |
+| Position | 14.5 | - | Slightly down |
+
+**Daily Trend:**
+- Aug 14: 29 imps, 0 clicks (pos 10.1)
+- Aug 15: 26 imps, 0 clicks (pos 19)
+- Aug 16: 36 imps, 1 click (pos 19.5)
+- Aug 17: 30 imps, 0 clicks (pos 16.2)
+- Aug 18: 21 imps, 0 clicks (pos 12.8)
+- Aug 19: 16 imps, 0 clicks (pos 19)
+- Aug 20: 24 imps, 0 clicks (pos 3.5) — best position but 0 clicks
+
+## GSC 28-Day Performance (Jul 24 - Aug 21, 2026)
+| Metric | Current | Baseline (Jul 17) | Status |
+|--------|---------|-------------------|--------|
+| Impressions | 844 | 693 | +21.8% |
+| Clicks | 9 | 20 | -55% |
+| CTR | 1.07% | 2.89% | CRITICAL DROP |
+| Position | 10.0 | 9.6 | Slight decline |
+
+**Key Finding:** Impressions are UP significantly (+21.8%) but clicks are DOWN sharply (-55%). This is a strong signal of AI Overview cannibalization — Google is showing our site more often in AI Overview but the click is not coming to the blue link.
+
+## Indexing Hygiene Audit
+| Page | Status | Last Crawled |
+|------|--------|--------------|
+| Homepage (/) | Submitted and indexed | 2026-08-17 |
+| /services | Discovered - not indexed | **Never** |
+| /guides/air-ambulance-dhaka-bangkok | Submitted and indexed | 2026-07-29 |
+| /bangkok-hospitals | Submitted and indexed | 2026-07-21 |
+| /air-ambulance-cost | Submitted and indexed | 2026-08-16 |
+
+**Note:** /services remains "Discovered - not indexed" with never been crawled. This is now a MONTH+ persistent issue requiring owner action.
+
+## CTR Quick-Win Pages (28-Day Data, Pos 1-10, >=5 imps, 0% CTR)
+High-ROI targets for optimization:
+
+1. `/guides/air-ambulance-dhaka-bangkok` — 193 imps, pos 6.6, 0 clicks ⭐ PILLAR
+2. `/blog/bangkok-hospitals-comparison-bangladeshi-patients` — 63 imps, pos 8.8, 0 clicks
+3. `/icu-vs-medical-escort` — 44 imps, pos 37.8, 0 clicks
+4. `/cardiac-emergency-transfer` — 10 imps, pos 23, 0 clicks
+5. `/blog/medical-visa-thailand-for-bangladeshi-patients` — 43 imps, pos 11.7, 0 clicks
+
+## Technical Audit
+- Files: 56
+- Duplicate OG/Twitter tags: CLEAN
+- Missing canonicals: NONE
+- Long titles (>62c): 4 pages flagged (all owner-initiated, not touched)
+- Blog listing gaps: NONE (33 posts all listed)
+- Sitemap gaps: NONE (59 entries, all pages covered)
+
+## Actions Taken
+1. ✅ Completed GSC pulse analysis
+2. ✅ Completed indexing hygiene audit (5 key pages)
+3. ✅ Technical audit clean — no fixes needed
+4. ✅ Build verified (54+ pages generated)
+5. ⚠️ /services page still unindexed — needs owner action
+
+## Owner Action Required
+🔴 **TIER 1 (URGENT):** `/services` page needs manual "Request Indexing" in GSC
+- This has been "Discovered - not indexed" for 4+ weeks
+- Page has static body links from homepage, proper meta, 56+ internal hrefs
+- Only reliable fix: owner clicks "Request Indexing" button in GSC URL Inspection
+
+🔴 **TIER 2 (CTR OPTIMIZATION):** Priority pages with high impressions but 0 clicks:
+- `/guides/air-ambulance-dhaka-bangkok` — 193 imps, 0 clicks, pos 6.6
+- `/blog/bangkok-hospitals-comparison-bangladeshi-patients` — 63 imps, 0 clicks, pos 8.8
+- Consider FAQ schema enrichment or content refresh for these pages
+
+## Site Status
+- **Total Pages in Sitemap:** 59 entries
+- **Indexed Key Pages:** 4/5 (80%)
+- **Traffic Level:** Low (844 imps / 9 clicks / 28d)
+- **Critical Issues:** 1 (services page indexing — 4+ weeks persistent)
+- **SEO Trend:** Impressions UP (+21.8%) but clicks DOWN (-55%) — AI Overview cannibalization suspected
+
+## Baseline Update (Aug 21, 2026)
+- 28-day: 844 impressions / 9 clicks / 1.07% CTR / pos 10.0
+- 7-day: 182 impressions / 1 click / 0.55% CTR / pos 14.5
+- **Note:** Clicks declined significantly vs previous baseline (20 clicks / 2.89% CTR). Monitor closely over next 7 days.
