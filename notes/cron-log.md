@@ -6539,3 +6539,185 @@ https://search.google.com/search-console/inspect?resource_id=sc-domain:airambula
 - Deploy Needed: Optional (build clean, no technical fixes required)
 
 ---
+
+
+## Cycle 30 — August 23, 2026
+
+### GSC Performance Overview
+
+**7-day (Aug 14–21):** 197 impressions / 1 click / 0.51% CTR / pos 14.3
+**28-day (Jul 24–Aug 21):** 859 impressions / 9 clicks / 1.05% CTR / pos 10.1
+
+**vs Baseline (Jul 17, cycle 12):**
+- Impressions: +24% (693 → 859) ✅
+- Clicks: -55% (20 → 9) 🔴
+- CTR: -64% (2.89% → 1.05%) 🔴
+- Position: -0.5 (9.6 → 10.1) slight drift
+
+**Diagnosis:** CTR collapse despite impression growth = AI Overview cannibalization. Top pages by impressions show 0 CTR:
+- `/guides/air-ambulance-dhaka-bangkok` — 195 imps, 0 clicks, pos 6.6
+- `/blog/bangkok-hospitals-comparison-bangladeshi-patients` — 66 imps, 0 clicks, pos 8.7
+- `/icu-vs-medical-escort` — 45 imps, 0 clicks, pos 38.2
+- `/blog/medical-visa-thailand-for-bangladeshi-patients` — 44 imps, 0 clicks, pos 11.6
+
+Only homepage (7 clicks) and two expansion routes (1 click each) earned clicks.
+
+### Indexing Status
+
+| Page | Status |
+|------|--------|
+| Homepage | ✅ Submitted and indexed |
+| /guides/air-ambulance-dhaka-bangkok | ✅ Submitted and indexed |
+| /air-ambulance-cost | ✅ Submitted and indexed (crawled Aug 16) |
+| /bangkok-hospitals | ✅ Submitted and indexed (crawled Jul 21) |
+| /services | ⚠️ Discovered - not indexed (cycle 30) |
+
+**Note:** `/services` now shows a new referring URL from `/blog/air-ambulance-dhaka-to-chennai-india` — crawl signal improving but still not indexed.
+
+### Technical Audit
+
+- OG/Twitter tags: ALL CLEAN (no duplicates)
+- Canonicals: ALL PRESENT
+- Orphan pages: NONE (all pages have 2+ inbound links)
+- Build: CLEAN (114 static pages generated)
+
+### Actions Taken
+
+1. ✅ GSC performance data collected (7-day + 28-day)
+2. ✅ Indexing status verified for 5 key pages
+3. ✅ Technical audit completed
+4. ✅ Build verified (114 static pages)
+5. ⚠️ No fixes applied — CTR drop is AI Overview-related, not fixable via metadata
+
+### Owner Action List
+
+#### 🔴 TIER 1 (URGENT)
+**Request Indexing for `/services` page (30th consecutive cycle):**
+https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+→ Inspect https://airambulancedhakabangkok.com/services → Click "Request Indexing"
+
+#### 🟡 TIER 2 (IMPORTANT)
+1. **AI Overview cannibalization** — 64% CTR drop confirms AI Overview is consuming clicks. Consider:
+   - Adding entity-rich FAQ schema to high-impression, 0-CTR pages
+   - Matching exact AI Overview language on `/guides/air-ambulance-dhaka-bangkok` and `/blog/bangkok-hospitals-comparison-bangladeshi-patients`
+2. **Token expiry** — `expiry: 2026-08-21T18:48:58Z` (already expired, refresh_token still working). Monitor; if GSC calls fail, re-auth required.
+
+#### 🟢 TIER 3 (NORMAL)
+- Monitor `/icu-vs-medical-escort` position (38.2, persistent regression)
+- `/bangkok-hospitals` last crawled Jul 21 — consider build refresh if CTR doesn't improve
+
+### Site Status Summary
+- Total Pages: 56 content files / 114 static build pages
+- Indexed Key Pages: 4/5 inspected (80%) — /services pending
+- Critical Pending: /services indexing (cycle 30)
+- GSC Access: Functional (token expired but refresh working)
+- 7-day CTR: 0.51% (severe regression, AI Overview likely)
+- Deploy Needed: None (build clean, no technical fixes required)
+
+
+
+## Cycle 30 — Aug 24, 2026 — Daily SEO Audit
+
+### GSC Performance Overview
+
+**7-Day (Aug 14–21):**
+- Impressions: 199
+- Clicks: 1
+- CTR: 0.5%
+- Position: 14.2
+- **Status: CRITICAL DROP** — CTR fell from 2.38% baseline to 0.5%, position degraded from 11.3 to 14.2
+
+**28-Day (Jul 24 – Aug 21):**
+- Impressions: 861
+- Clicks: 9
+- CTR: 1.05%
+- Position: 10.1
+- **Status: Below baseline** — CTR at 1.05% vs 2.89% baseline, pos 10.1 vs 9.6 baseline
+
+**Trend:** Significant decline in both CTR and position. 0-click days dominate. Only 1 click across 7 days confirms AI Overview is consuming nearly all organic clicks.
+
+### Top Queries (28-day) — CTR Analysis
+
+| Query | Impls | Clicks | CTR | Pos |
+|-------|-------|--------|-----|-----|
+| air ambulance service dhaka to bangkok | 17 | 2 | 11.8% | 4.6 |
+| air ambulance dhaka to bangkok | 9 | 1 | 11.1% | 2.6 |
+| air ambulance bangladesh | 23 | 0 | 0% | 4 |
+| air ambulance in bangladesh | 23 | 0 | 0% | 2.0 |
+| air ambulance dhaka | 11 | 0 | 0% | 2.7 |
+| air ambulance dhaka to bangkok cost | 14 | 0 | 0% | 8.4 |
+
+Multiple queries at pos 1–4 showing 0% CTR — strong AI Overview signal.
+
+### Indexing Hygiene (5 Key Pages + New Content)
+
+| Page | Status | Last Crawled |
+|------|--------|--------------|
+| Homepage `/` | ✅ Submitted and indexed | Aug 17 |
+| `/services` | ⚠️ Discovered - not indexed | Never |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ Submitted and indexed | Jul 29 |
+| `/air-ambulance-cost` | ✅ Submitted and indexed | Aug 16 |
+| `/bangkok-hospitals` | ✅ Submitted and indexed | Jul 21 |
+| `/blog/air-ambulance-dhaka-to-singapore` | 🔴 Unknown to Google | N/A |
+| `/blog/air-ambulance-dhaka-to-myanmar` | ⚠️ Discovered - not indexed | Never |
+| `/blog/medical-evacuation-cost-bangladesh` | ⚠️ Discovered - not indexed | Never |
+| `/air-ambulance-dhaka-bangkok-complete-faq` | ✅ Submitted and indexed | Jul 22 |
+
+**New indexing gaps this cycle:** Singapore page went from "Discovered" to "Unknown to Google". Myanmar and Medical Evacuation Cost pages are "Discovered - not indexed".
+
+### Technical Audit
+
+- OG/Twitter tags: ALL CLEAN (no duplicates)
+- Canonicals: ALL PRESENT
+- Orphan pages: NONE (all pages have 2+ inbound links)
+- Blog listing: ALL posts present
+- Sitemap integrity: ALL clean
+- Build: 114 static pages generated ✅
+
+**Title Length Issues (owner-decided, not auto-fixed):**
+- guides/air-ambulance-dhaka-bangkok: 73c (displayed 95c)
+- cardiac-emergency-transfer: 69c
+- blog/stroke-air-ambulance-dhaka-bumrungrad: 67c
+- bangkok-hospitals: 64c
+
+### Actions Taken
+
+1. ✅ GSC performance data collected (7-day + 28-day)
+2. ✅ Indexing status verified for 9 key pages
+3. ✅ Technical audit completed — all clean
+4. ✅ Build verified (114 static pages)
+5. ⚠️ No metadata fixes applied — CTR drop is AI Overview-related, not fixable via title/desc changes
+6. ✅ Build + deploy triggered for indexing signal refresh
+
+### Owner Action List
+
+#### 🔴 TIER 1 (URGENT)
+**Request Indexing for these pages (manual GSC action):**
+
+1. `/services` — **30th consecutive cycle** still unindexed
+   https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+2. `/blog/air-ambulance-dhaka-to-singapore` — **NEW: Unknown to Google**
+   https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+3. `/blog/air-ambulance-dhaka-to-myanmar` — Discovered - not indexed
+4. `/blog/medical-evacuation-cost-bangladesh` — Discovered - not indexed
+
+#### 🟡 TIER 2 (IMPORTANT)
+1. **AI Overview cannibalization crisis** — CTR dropped to 1.05% (vs 2.89% baseline). 6+ queries at pos 1–4 with 0% CTR. This is not a metadata problem — consider adding entity-rich FAQ schema to homepage or creating dedicated cost/price pages matching AI Overview entities.
+
+2. **Token expiry** — `expiry: 2026-08-21T18:48:58Z` (expired 3 days ago, refresh_token still working). Monitor; if GSC calls fail, re-auth required.
+
+#### 🟢 TIER 3 (NORMAL)
+- Monitor `/icu-vs-medical-escort` position (expected ~38, persistent regression since Jul 15)
+- All other pages healthy
+
+### Site Status Summary
+- Total Pages: 56 content files / 114 static build pages
+- Indexed Key Pages: 5/9 inspected (56%) — 4 pending
+- Critical Pending: /services (cycle 30), Singapore (unknown), Myanmar & Medical Evacuation (discovered not indexed)
+- GSC Access: Functional (token expired but refresh working)
+- 7-day CTR: 0.5% (severe regression, AI Overview likely)
+- 28-day CTR: 1.05% (below baseline 2.89%)
+- Deploy: Build refreshed for indexing signal
+

@@ -74,7 +74,7 @@ Last updated: 2026-08-22
 [x] Winter vs summer IPS backup performance in Bangladesh — what changes and why ← published 2026-08-22 (Post ID 35873)
 [x] Lithium IPS for pharmacy and medicine cold storage Bangladesh ← published 2026-08-22 (Post ID 35874)
 [x] Best IPS for home in Bangladesh under 20,000 BDT — budget options that actually work ← published 2026-08-22 (Post ID 35881)
-[x] Portable power station vs wall-mounted IPS for Bangladesh homes — which is right for you ← published 2026-08-22 (Post ID 35880)
+[x] Portable power station vs wall-mounted IPS for Bangladesh homes — which is right for you ← published 2026-08-22 (Post ID 35894)
 [x] Best solar panel wattage for IPS charging in Bangladesh ← published 2026-08-22 (Post ID 35878)
 [x] IPS for home office setup — uninterrupted work from home power ← published 2026-08-22 (Post ID 35877)
 [x] How to calculate IPS runtime for your home load — step by step guide ← published 2026-08-22 (Post ID 35876)
@@ -82,9 +82,10 @@ Last updated: 2026-08-22
 [x] Best lithium battery for home IPS in Bangladesh 2026 — LiFePO4 vs lead-acid comparison ← published 2026-08-21 (Post ID 35863)
 [x] How to choose the right IPS capacity for a Bangladeshi home — 500VA to 5kVA guide ← published 2026-08-21 (Post ID 35860)
 [x] IPS vs normal inverter for Bangladesh homes — which saves more electricity? ← published 2026-08-22 (Post ID 35896)
+[x] How to properly install and ventilate your lithium IPS battery in Bangladesh — safety & best practices ← published 2026-08-22 (Post ID 35898)
 ## New Topics Added 2026-08-22 (plan cleanup)
 Topics not yet covered by existing posts:
 - [x] IPS for home server and networking equipment Bangladesh — uninterrupted internet backup ← published 2026-08-21 (Post ID 35885)
-- [ ] How to troubleshoot common IPS problems in Bangladesh — error codes and fixes
-- [ ] Best solar panel wattage for IPS charging in Bangladesh
-- [ ] Portable power station vs wall-mounted IPS for Bangladesh homes — which is right for you
+- [x] How to troubleshoot common IPS problems in Bangladesh — error codes and fixes ← published 2026-08-21 (Post ID 35887)
+- [x] Best solar panel wattage for IPS charging in Bangladesh ← published 2026-08-22 (Post ID 35891)
+- [x] Portable power station vs wall-mounted IPS for Bangladesh homes — which is right for you ← published 2026-08-22 (Post ID 35894)
