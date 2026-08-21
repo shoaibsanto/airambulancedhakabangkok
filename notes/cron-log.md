@@ -6433,3 +6433,109 @@ https://search.google.com/search-console/inspect?resource_id=sc-domain:airambula
 - Deploy Needed: No (technical audit clean)
 
 ---
+
+
+---
+## Cycle 29 — Daily SEO Audit (Aug 23, 2026)
+
+### GSC Performance Summary
+
+**7-Day (Aug 14–21, 2026):**
+- Impressions: 193
+- Clicks: 1
+- CTR: 0.52%
+- Position: 14.5
+- **vs Baseline (168 imps / 4 clicks / 2.38% CTR): CTR declining**
+
+**28-Day (Jul 24 – Aug 21, 2026):**
+- Impressions: 855
+- Clicks: 9
+- CTR: 1.05%
+- Position: 10.1
+- **vs Baseline (693 imps / 20 clicks / 2.89% CTR): clicks -55%, CTR -64%**
+
+### Top Pages by Impressions (28-day)
+
+| Page | Impressions | Clicks | CTR | Position |
+|------|-------------|--------|-----|----------|
+| Homepage (/) | 336 | 7 | 2.08% | 8.0 |
+| /air-ambulance-cost | 131 | 1 | 0.76% | 11.7 |
+| /guides/air-ambulance-dhaka-bangkok | 195 | 0 | 0% | 6.6 |
+| /blog/bangkok-hospitals-comparison | 65 | 0 | 0% | 8.7 |
+| /icu-vs-medical-escort | 45 | 0 | 0% | 38.2 |
+| /blog/medical-visa-thailand | 44 | 0 | 0% | 11.6 |
+
+### Indexing Status (5 Key Pages)
+
+| Page | Status | Last Crawled |
+|------|--------|--------------|
+| Homepage (/) | ✅ Submitted and indexed | 2026-08-17 |
+| /guides/air-ambulance-dhaka-bangkok | ✅ Submitted and indexed | 2026-07-29 |
+| /air-ambulance-cost | ✅ Submitted and indexed | 2026-08-16 |
+| /blog/bangkok-hospitals-comparison | ✅ Submitted and indexed | 2026-06-23 ⚠️ OLD |
+| /services | ⚠️ Discovered - not indexed | null (never) |
+
+**Note:** /services still not indexed (cycle 29 consecutive). Last crawled page /blog/bangkok-hospitals-comparison was Jun 23 — may need fresh crawl signal.
+
+### Technical Audit
+
+**Title Length (4 owner-set pages >62c, monitoring):**
+- bangkok-hospitals.html: 64c (owner-set, do not trim)
+- blog/stroke-air-ambulance-dhaka-bumrungrad.html: 67c (owner-set)
+- cardiac-emergency-transfer.html: 69c (owner-set)
+- guides/air-ambulance-dhaka-bangkok.html: 73c (owner-set)
+
+**OG/Twitter Tags:**
+- All files have single og:title, twitter:title, og:description, twitter:description
+- No duplicates detected
+- All OG titles match file titles
+
+**Canonicals:**
+- All 56 content files have canonical tags
+- No missing canonicals
+
+**Orphan Pages:**
+- All pages have 2+ inbound links
+- No orphan pages detected
+
+**Blog Listing & Sitemap:**
+- All 34 blog posts present in blog/index.html
+- All 34 blog posts present in app/sitemap.js
+- No gaps detected
+
+**FAQPage Schema:**
+- Present on: /guides/air-ambulance-dhaka-bangkok, /cardiac-emergency-transfer, /bangkok-hospitals, /blog/bangkok-hospitals-comparison
+- Coverage: COMPLETE for eligible pages
+
+### Actions Taken
+
+1. ✅ GSC performance data collected (7-day + 28-day)
+2. ✅ Indexing status verified for 5 key pages
+3. ✅ Technical audit completed (titles, OG tags, canonicals, orphans, sitemap)
+4. ✅ Build verified (114 static pages generated)
+5. ⚠️ No fixes applied — technical audit clean, titles are owner-set
+
+### Owner Action List
+
+#### 🔴 TIER 1 (URGENT)
+**Request Indexing for `/services` page (29th consecutive cycle):**
+https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+→ Inspect https://airambulancedhakabangkok.com/services → Click "Request Indexing"
+
+#### 🟡 TIER 2 (IMPORTANT)
+1. **CTR regression monitoring** — 7-day CTR at 0.52% vs 2.38% baseline. AI Overview cannibalization likely. Monitor for 2 more cycles before considering FAQ schema enrichment.
+2. **/blog/bangkok-hospitals-comparison** last crawled Jun 23 — push a build to refresh lastmod and trigger Google re-crawl.
+
+#### 🟢 TIER 3 (NORMAL)
+- Token expiry: 2026-08-21T16:41:59Z (refresh_token present, GSC calls still working)
+- Monitor /icu-vs-medical-escort position (38.2, 45 imps, 0 clicks)
+
+### Site Status Summary
+- Total Pages: 56 content files / 114 static build pages
+- Indexed Key Pages: 4/5 inspected (80%) — /services pending
+- Critical Pending: /services indexing (cycle 29)
+- GSC Access: Functional (token expired but refresh working)
+- 7-day CTR: 0.52% (severe regression, monitor)
+- Deploy Needed: Optional (build clean, no technical fixes required)
+
+---
