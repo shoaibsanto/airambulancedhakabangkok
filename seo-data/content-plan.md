@@ -99,10 +99,10 @@ Topics not yet covered by existing posts:
 - [x] How to calculate IPS installation cost in Bangladesh — complete price breakdown 2026 ← published 2026-08-22 (Post ID 35911)
 - [x] Best IPS for hotel and guest house Bangladesh — whole-building backup guide ← published 2026-08-22 (Post ID 35913)
 - [x] Best Portable IPS in Bangladesh 2026 — Complete Buying Guide with HiTHIUM HeroEE Review ← published 2026-08-22 (Post ID 35914)
+[x] IPS for clinic and medical equipment backup Bangladesh — critical power supply guide ← published 2026-08-22 (Post ID 35920)
 - [ ] IPS for printing press and photocopy shop Bangladesh — heavy motor backup solution
 - [ ] How to choose IPS for tea stall and small food business Bangladesh
 - [ ] IPS for auto repair shop and mechanic garage Bangladesh — compressor and tools backup
-- [ ] IPS for clinic and medical equipment backup Bangladesh — critical power supply guide
 - [ ] Best IPS for home aquarium and fish tank Bangladesh — reliable backup power guide
 - [ ] How to choose IPS for small shop and retail store Bangladesh — cash register and lights backup
 - [ ] IPS for wedding hall and event venue Bangladesh — temporary power backup solutions

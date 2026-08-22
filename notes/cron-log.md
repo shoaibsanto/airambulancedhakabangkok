@@ -7126,3 +7126,62 @@ Complete OAuth re-authentication for airambulancedhakabangkok.com
 - Jul 17 baseline: 693 imps / 20 clicks / 2.89% CTR (28-day)
 - Aug 26 baseline: ~100 imps / 5 clicks / 0.57% CTR (7-day)
 - Trend: CTR collapsed ~75%, impressions stable — AI Overview structural shift
+
+
+## Cycle 34 — 2026-08-28 (Thursday)
+
+### GSC Status
+**AUTH EXPIRED** — Token expired 2026-08-22. Refresh token present but server cannot exchange it. All GSC calls returning "Authentication failed". Owner must re-authenticate via browser at https://search.google.com/search-console/
+
+### Indexing Status (from previous cycles)
+Based on cycle 33 data (Aug 27):
+- ✅ Homepage: Indexed
+- ⚠️ `/services`: Discovered - not indexed (33rd cycle)
+- ✅ `/bangkok-hospitals`: Indexed
+- ✅ `/guides/air-ambulance-dhaka-bangkok`: Indexed
+- ✅ `/air-ambulance-cost`: Indexed
+- ⚠️ `/blog/air-ambulance-dhaka-to-singapore`: Discovered - not indexed
+- ⚠️ `/blog/air-ambulance-dhaka-to-myanmar`: Discovered - not indexed
+
+### Technical Audit
+- **Files checked**: 56 HTML content files
+- **Duplicate OG/Twitter tags**: NONE ✅
+- **Missing canonicals**: NONE ✅
+- **Title length issues**: 1 (pillar guide at 69c — owner-modified, left unchanged per policy)
+- **Meta description length issues**: NONE ✅
+- **Blog listing integrity**: ALL 33 posts present ✅
+- **Sitemap integrity**: ALL 33 posts present ✅
+- **Low-link pages**: 0 (only 404 utility page, expected)
+- **Root-path route leaks**: NONE ✅
+- **Build**: PASS (114 pages generated)
+
+### Actions Taken
+1. ✅ Full technical audit completed — all clean except 1 title length note
+2. ✅ Build verified (114 pages, no errors)
+3. ❌ No content changes required
+4. ❌ GSC pulse skipped — auth expired
+5. ❌ Indexing inspection skipped — auth expired
+6. ❌ CTR scan skipped — auth expired
+
+### Owner Actions Required
+
+**TIER 0 — GSC Re-auth (CRITICAL)**
+Visit: https://search.google.com/search-console/
+Complete OAuth re-authentication for airambulancedhakabangkok.com
+Without this, no GSC data (performance, indexing status) is available.
+
+**TIER 1 (URGENT):**
+1. `/services` — **34th cycle still unindexed.** Cluster 1 pillar page.
+   → https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**TIER 2 (IMPORTANT):**
+2. `/blog/air-ambulance-dhaka-to-singapore` — Discovered but not indexed
+3. `/blog/air-ambulance-dhaka-to-myanmar` — Discovered but not indexed
+
+### Notes
+- Site is technically healthy — no duplicate tags, no missing canonicals, build passes
+- Title on `/guides/air-ambulance-dhaka-bangkok` is 69c (file) / ~91c displayed — owner-approved per b0038bf shortening cycle, left unchanged
+- CTR baseline from Jul 17: 693 imps / 20 clicks / 2.89% CTR (28-day)
+- Aug 26 7-day data: ~100 imps / 5 clicks / 0.57% CTR — significant CTR drop, likely AI Overview cannibalization
+- No new content gaps identified this cycle
+
