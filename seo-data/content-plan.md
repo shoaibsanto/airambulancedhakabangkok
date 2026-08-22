@@ -93,7 +93,7 @@ Topics not yet covered by existing posts:
 
 ## Replenishment Suggestions (remaining)
 - [x] IPS for salon and beauty parlor Bangladesh — hair dryer, styling equipment backup ← published 2026-08-22 (Post ID 35905)
-- [ ] IPS for computer lab and coding center Bangladesh — multi-computer backup solution
+- [x] IPS for computer lab and coding center Bangladesh — multi-computer backup solution ← published 2026-08-22 (Post ID 35909)
 - [ ] How to calculate IPS installation cost in Bangladesh — complete price breakdown 2026
 - [ ] Best IPS for hotel and guest house Bangladesh — whole-building backup guide
 - [ ] IPS for printing press and photocopy shop Bangladesh — heavy motor backup solution
