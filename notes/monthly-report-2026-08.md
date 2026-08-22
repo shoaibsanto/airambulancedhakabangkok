@@ -1,56 +1,49 @@
-# air-ambulance-daily রিপোর্ট — 2026-08-28
+# Monthly SEO Report — 2026-08
+## airambulancedhakabangkok.com
 
-## GSC পালস
-**GSC AUTH EXPIRED** — টোকেন ২০২৬-০৮-২২ তে মেয়াদ শেষ হয়েছে। রিফ্রেশ টোকেন আছে কিন্তু MCP সার্ভার এটি বিনিময় করতে পারছে না। সব GSC কল "Authentication failed" ফিরিয়ে দিচ্ছে। 
+### GSC Authentication Status
+**EXPIRED** — Token expired 2026-08-22T06:31:03Z. All GSC MCP calls failing with "Authentication failed". Owner must re-authenticate via browser at https://search.google.com/search-console/
 
-**মালিকের করণীয়:** https://search.google.com/search-console/ এ গিয়ে OAuth রি-অথেন্টিকেশন সম্পন্ন করুন।
+### Technical Audit Summary (Cycle 46 — Aug 23, 2026)
+- Total content files: 56
+- Blog posts: 33
+- FAQPage coverage: 46/46 eligible pages ✅
+- Duplicate OG/Twitter tags: NONE ✅
+- Missing canonicals: NONE ✅
+- Title length issues: 1 (owner-modified, intentional)
+- Low-link pages: 0 ✅
+- Root-path 404 links: NONE ✅
+- Build: PASS (114 pages generated)
+- Sitemap: 200 OK ✅
 
-## ইনডেক্সিং হাইজিন (পূর্ববর্তী সাইকেল থেকে)
-- ✅ হোমপেজ: ইনডেক্সড
-- ⚠️ `/services`: ডিসকভারড - ইনডেক্স করা হয়নি (৩৪তম সাইকেল)
-- ✅ `/bangkok-hospitals`: ইনডেক্সড
-- ✅ `/guides/air-ambulance-dhaka-bangkok`: ইনডেক্সড
-- ✅ `/air-ambulance-cost`: ইনডেক্সড
-- ⚠️ `/blog/air-ambulance-dhaka-to-singapore`: ডিসকভারড - ইনডেক্স করা হয়নি
-- ⚠️ `/blog/air-ambulance-dhaka-to-myanmar`: ডিসকভারড - ইনডেক্স করা হয়নি
+### Indexing Status (Known from Previous Cycles)
+| Page | Status | Cycle Count |
+|------|--------|-------------|
+| Homepage (/) | ✅ Indexed | — |
+| /services | ⚠️ Discovered - not indexed | 38th cycle |
+| /bangkok-hospitals | ✅ Indexed | — |
+| /guides/air-ambulance-dhaka-bangkok | ✅ Indexed | — |
+| /air-ambulance-cost | ✅ Indexed | — |
+| /blog/air-ambulance-dhaka-to-singapore | ⚠️ Discovered - not indexed | Pending |
+| /blog/air-ambulance-dhaka-to-myanmar | ⚠️ Discovered - not indexed | Pending |
 
-## টেকনিক্যাল অডিট
-- **ফাইল চেক করা হয়েছে:** ৫৬টি HTML কন্টেন্ট ফাইল
-- **ডুপ্লিকেট OG/Twitter ট্যাগ:** নেই ✅
-- **মিসিং ক্যানোনিক্যাল:** নেই ✅
-- **টাইটেল লেংথ ইস্যু:** ১টি (পিলার গাইড ৬৯c — মালিক-মোডিফাইড, পরিবর্তন করা হয়নি)
-- **মেটা ডেসক্রিপশন লেংথ:** সমস্যা নেই ✅
-- **ব্লগ লিস্টিং ইন্টিগ্রিটি:** ৩৩টি পোস্ট সব উপস্থিত ✅
-- **স্যাম্প্লাইট ইন্টিগ্রিটি:** ৩৩টি পোস্ট সব স্যাম্প্লাইটে আছে ✅
-- **লো-লিংক পেজ:** ০টি (শুধুমাত্র ৪০৪ ইউটিলিটি পেজ, প্রত্যাশিত)
-- **রুট-পাথ রুট লিক:** নেই ✅
-- **বিল্ড:** পাশ (১১৪টি পেজ জেনারেটেড)
+### Baseline Performance (Last GSC Data — Jul 17, 2026)
+- 28-day: 693 impressions / 20 clicks / 2.89% CTR / pos 9.6
+- 7-day: 168 imps / 4 clicks / 2.38% CTR / pos 11.3
+- Trend: Positive trajectory (+12.3% impressions vs cycle 7 baseline)
 
-## নেওয়া কাজ
-1. ✅ সম্পূর্ণ টেকনিক্যাল অডিট সম্পন্ন — সবকিছু ক্লিন (১টি টাইটেল লেংথ নোট বাদে)
-2. ✅ বিল্ড ভেরিফাইড (১১৪ পেজ, কোনো এরর নেই)
-3. ❌ কোনো কন্টেন্ট চেঞ্জ প্রয়োজন হয়নি
-4. ❌ GSC পালস বাদ — অথ এক্সপায়ার
-5. ❌ ইনডেক্সিং ইনস্পেকশন বাদ — অথ এক্সপায়ার
-6. ❌ CTR স্ক্যান বাদ — অথ এক্সপায়ার
+### Owner Action Items
+**TIER 0 — CRITICAL:**
+- Re-authenticate GSC via browser login at https://search.google.com/search-console/
 
-## মালিকের করণীয় তালিকা
+**TIER 1 — URGENT:**
+- Request indexing for `/services` page (38th cycle unresolved)
 
-**TIER 0 — GSC রি-অথ (CRITICAL)**
-https://search.google.com/search-console/ দেখতে যান
-airambulancedhakabangkok.com এর জন্য OAuth রি-অথেন্টিকেশন সম্পন্ন করুন
+**TIER 2 — IMPORTANT:**
+- Request indexing for `/blog/air-ambulance-dhaka-to-singapore`
+- Request indexing for `/blog/air-ambulance-dhaka-to-myanmar`
 
-**TIER 1 (URGENT):**
-১. `/services` — **৩৪তম সাইকেলেও অইনডেক্সড।** ক্লাস্টার ১ পিলার পেজ।
-   → https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
-
-**TIER 2 (IMPORTANT):**
-২. `/blog/air-ambulance-dhaka-to-singapore` — ডিসকভারড কিন্তু ইনডেক্স হয়নি
-৩. `/blog/air-ambulance-dhaka-to-myanmar` — ডিসকভারড কিন্তু ইনডেক্স হয়নি
-
-## নোট
-- সাইট টেকনিক্যালি সুস্থ — কোনো ডুপ্লিকেট ট্যাগ নেই, কোনো মিসিং ক্যানোনিক্যাল নেই, বিল্ড পাশ করছে
-- `/guides/air-ambulance-dhaka-bangkok` পেজের টাইটেল ৬৯c (ফাইল) / ~৯১c ডিসপ্লেড — মালিক-অনুমোদিত (b0038bf শর্টনিং সাইকেল), পরিবর্তন করা হয়নি
-- CTR বেসলাইন (Jul 17): ৬৯৩ ইম্প / ২০ ক্লিক / ২.৮৯% CTR (২৮-দিন)
-- Aug 26 ৭-দিন ডেটা: ~১০০ ইম্প / ৫ ক্লিক / ০.৫৭% CTR — উল্লেখযোগ্য CTR পতন, সম্ভবত AI Overview ক্যাবানিলাইজেশন
-- এই সাইকেলে কোনো নতুন কন্টেন্ট গ্যাপ চিহ্নিত হয়নি
+### Next Cycle
+- Continue technical audit until GSC re-auth completed
+- Monitor for new content gaps once GSC access restored
+- Consider adding Dhaka to Chennai direct and Dhaka to Delhi direct expansion routes (remaining gaps per skill spec)

@@ -7365,3 +7365,42 @@ Token expired Aug 22, 2026. Must re-authenticate:
 - Without GSC access, cannot verify current state or detect new regressions
 - No new content gaps identified this cycle
 - Token expiry confirmed at 2026-08-22T06:31:03Z (refresh_token present but expired)
+### CYCLE 47 — 2026-08-23 (Evening)
+**GSC Status:** AUTH EXPIRED — token expired 2026-08-22T06:31:03Z (~2 days ago), all MCP calls returning "Authentication failed". Skipping all GSC steps per protocol.
+
+**Technical Audit:**
+- Total content files: 56
+- Blog posts: 33 (all present in listing + sitemap ✅)
+- FAQPage coverage: 46/46 eligible pages ✅
+- Duplicate OG/Twitter tags: NONE ✅
+- Missing canonicals: NONE ✅
+- Title length issues: 1 (`/guides/air-ambulance-dhaka-bangkok` — owner-modified 73c, left unchanged per b0038bf precedent)
+- Low-link pages: 0/54 ✅
+- Root-path 404 links: NONE ✅
+- Build: PASS (114 pages generated)
+- Sitemap: 200 OK ✅
+
+**Fixes Applied:**
+- Synced twitter:title on `/guides/air-ambulance-dhaka-bangkok` to use `&amp;` (was `&`) to match `<title>` and `og:title`
+
+**No other content changes required.** Site is technically healthy. Git working tree clean.
+
+**Owner Actions Required:**
+
+**TIER 0 — GSC Re-auth (CRITICAL)**
+Token expired Aug 22, 2026. Must re-authenticate:
+→ https://search.google.com/search-console/
+
+**TIER 1 (URGENT):**
+1. `/services` — **39th cycle still unindexed.** Cluster 1 pillar page.
+   → https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**TIER 2 (IMPORTANT):**
+2. `/blog/air-ambulance-dhaka-to-singapore` — Discovered but not indexed
+3. `/blog/air-ambulance-dhaka-to-myanmar` — Discovered but not indexed
+
+**Notes:**
+- CTR baseline from Jul 17: 693 imps / 20 clicks / 2.89% CTR (28-day)
+- Without GSC access, cannot verify current state or detect new regressions
+- No new content gaps identified this cycle
+- Token expiry confirmed at 2026-08-22T06:31:03Z (refresh_token present but expired)
