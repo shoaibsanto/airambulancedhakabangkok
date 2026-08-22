@@ -7219,3 +7219,37 @@ Token expired today (Aug 22, 2026). Must re-authenticate:
 - Aug 26 7-day data showed ~100 imps / 5 clicks / 0.57% CTR — significant drop, likely AI Overview cannibalization
 - Without GSC access, cannot verify current state or detect new regressions
 - No new content gaps identified this cycle
+### CYCLE 43 — 2026-08-22
+**GSC Status:** AUTH EXPIRED — token expired today (2026-08-22T06:31:03Z). No GSC data available.
+
+**Technical Audit:**
+- Total content files: 56
+- Blog posts: 33 (all present in listing + sitemap ✅)
+- FAQPage coverage: 46/46 eligible pages ✅
+- Duplicate OG/Twitter tags: NONE ✅
+- Missing canonicals: NONE ✅
+- Title length issues: 1 (`/guides/air-ambulance-dhaka-bangkok` at 69c decoded — owner-modified per b0038bf, left unchanged)
+- Build: PASS (114 pages generated)
+- Sitemap: 200 OK ✅
+
+**No content changes required.** Site is technically healthy.
+
+**Owner Actions Required:**
+
+**TIER 0 — GSC Re-auth (CRITICAL)**
+Token expired today (Aug 22, 2026). Must re-authenticate:
+→ https://search.google.com/search-console/
+
+**TIER 1 (URGENT):**
+1. `/services` — **35th cycle still unindexed.** Cluster 1 pillar page.
+   → https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**TIER 2 (IMPORTANT):**
+2. `/blog/air-ambulance-dhaka-to-singapore` — Discovered but not indexed
+3. `/blog/air-ambulance-dhaka-to-myanmar` — Discovered but not indexed
+
+**Notes:**
+- CTR baseline from Jul 17: 693 imps / 20 clicks / 2.89% CTR (28-day)
+- Aug 26 7-day data showed ~100 imps / 5 clicks / 0.57% CTR — significant drop, likely AI Overview cannibalization
+- Without GSC access, cannot verify current state or detect new regressions
+- No new content gaps identified this cycle
