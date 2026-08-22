@@ -83,6 +83,8 @@ Last updated: 2026-08-22
 [x] How to choose the right IPS capacity for a Bangladeshi home — 500VA to 5kVA guide ← published 2026-08-21 (Post ID 35860)
 [x] IPS vs normal inverter for Bangladesh homes — which saves more electricity? ← published 2026-08-22 (Post ID 35896)
 [x] How to properly install and ventilate your lithium IPS battery in Bangladesh — safety & best practices ← published 2026-08-22 (Post ID 35898)
+[x] Best IPS for Hotel and Guest House Bangladesh — power backup guide (published 2026-08-22 as post ID 35913)
+
 ## New Topics Added 2026-08-22 (plan cleanup)
 Topics not yet covered by existing posts:
 - [x] IPS for home server and networking equipment Bangladesh — uninterrupted internet backup ← published 2026-08-21 (Post ID 35885)
@@ -94,8 +96,15 @@ Topics not yet covered by existing posts:
 ## Replenishment Suggestions (remaining)
 - [x] IPS for salon and beauty parlor Bangladesh — hair dryer, styling equipment backup ← published 2026-08-22 (Post ID 35905)
 - [x] IPS for computer lab and coding center Bangladesh — multi-computer backup solution ← published 2026-08-22 (Post ID 35909)
-- [ ] How to calculate IPS installation cost in Bangladesh — complete price breakdown 2026
-- [ ] Best IPS for hotel and guest house Bangladesh — whole-building backup guide
+- [x] How to calculate IPS installation cost in Bangladesh — complete price breakdown 2026 ← published 2026-08-22 (Post ID 35911)
+- [x] Best IPS for hotel and guest house Bangladesh — whole-building backup guide ← published 2026-08-22 (Post ID 35913)
+- [x] Best Portable IPS in Bangladesh 2026 — Complete Buying Guide with HiTHIUM HeroEE Review ← published 2026-08-22 (Post ID 35914)
 - [ ] IPS for printing press and photocopy shop Bangladesh — heavy motor backup solution
 - [ ] How to choose IPS for tea stall and small food business Bangladesh
 - [ ] IPS for auto repair shop and mechanic garage Bangladesh — compressor and tools backup
+- [ ] IPS for clinic and medical equipment backup Bangladesh — critical power supply guide
+- [ ] Best IPS for home aquarium and fish tank Bangladesh — reliable backup power guide
+- [ ] How to choose IPS for small shop and retail store Bangladesh — cash register and lights backup
+- [ ] IPS for wedding hall and event venue Bangladesh — temporary power backup solutions
+- [ ] Best portable power station for camping and outdoor activities Bangladesh
+- [ ] IPS for barber shop and salon Bangladesh — clippers and styling equipment backup

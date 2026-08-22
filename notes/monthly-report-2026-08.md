@@ -1,154 +1,74 @@
-# Air Ambulance Dhaka Bangkok — Daily SEO Report (Cycle 29)
-Date: August 23, 2026 (BST)
+# air-ambulance-daily রিপোর্ট — 2026-08-22 (Cycle 33)
 
-## GSC Performance Overview
+## GSC পারফরম্যান্স (৭ দিন)
+| মেট্রিক | বর্তমান | বেসলাইন | পরিবর্তন |
+|---------|---------|---------|---------|
+| Impressions | 178 | ~168 | +5.9% ✅ |
+| Clicks | 1 | ~4 | -75% 🔴 |
+| CTR | 0.56% | 2.38% | **-76%** 🔴 |
+| Avg Position | 14.8 | 11.3 | -3.5 |
 
-### 7-Day Trend (Aug 14–21, 2026)
-- Impressions: 193
-- Clicks: 1
-- CTR: 0.52%
-- Average Position: 14.5
-- **Status:** SEVERE CTR DECLINE (baseline: 2.38%)
+**২৮-দিনের সারাংশ:** Impressions 845, Clicks 8, CTR 0.95%, Position 10.0
 
-### 28-Day Trend (Jul 24 – Aug 21, 2026)
-- Impressions: 855
-- Clicks: 9
-- CTR: 1.05%
-- Average Position: 10.1
-- **Status:** CRITICAL DECLINE (baseline: 2.89% CTR, 20 clicks)
+## ইন্ডেক্সিং হাইজিন
+| পেজ | স্ট্যাটাস |
+|-----|----------|
+| Homepage `/` | ✅ ইন্ডেক্সড |
+| `/guides/air-ambulance-dhaka-bangkok` | ✅ ইন্ডেক্সড |
+| `/air-ambulance-cost` | ✅ ইন্ডেক্সড |
+| `/bangkok-hospitals` | ✅ ইন্ডেক্সড |
+| `/services` | 🔴 **Google-এর কাছে অপরিচিত (সাইকেল 33)** |
+| `/blog/air-ambulance-dhaka-to-singapore` | ⚠️ Discoverd but not indexed |
+| `/blog/air-ambulance-dhaka-to-myanmar` | ⚠️ Discovered but not indexed |
 
-### Top Pages by Performance
+## টেকনিক্যাল অডিট
+- ✅ Duplicate OG/Twitter tags: CLEAN
+- ✅ Missing canonicals: CLEAN
+- ✅ FAQPage coverage: 100% complete (সকল কন্টেন্ট পেজে)
+- ✅ Blog listing gaps: NONE
+- ✅ Sitemap gaps: NONE
+- ✅ Root-path link issues: NONE
+- ✅ Build: 114 pages generated
 
-| Page | Impressions | Clicks | CTR | Position | Status |
-|------|-------------|--------|-----|----------|--------|
-| Homepage (/) | 336 | 7 | 2.08% | 8.0 | ⚠️ Low CTR |
-| /air-ambulance-cost | 131 | 1 | 0.76% | 11.7 | ⚠️ 0 CTR on 131 imps |
-| /guides/air-ambulance-dhaka-bangkok | 195 | 0 | 0% | 6.6 | 🔴 HIGH PRIORITY - 0 CTR |
-| /blog/bangkok-hospitals-comparison | 65 | 0 | 0% | 8.7 | 🔴 HIGH PRIORITY - 0 CTR |
-| /icu-vs-medical-escort | 45 | 0 | 0% | 38.2 | ⚠️ Position drop |
-| /blog/medical-visa-thailand | 44 | 0 | 0% | 11.6 | ⚠️ Low CTR |
+## প্রধান সমস্যা: AI Overview Cannibalization
+**CTR 0.56% → 2.38% বেসলাইন থেকে পতন**
 
-**Pattern:** AI Overview cannibalization confirmed on position 6-9 pages with 0 CTR despite solid impression counts.
+প্রধান কারণ: AI Overview এখন টপ পজিশনের কোয়েরিগুলোর ক্লিকগুলো নিজে absorbing করছে। 
 
-## Indexing Status
+উদাহরণ:
+- `/guides/air-ambulance-dhaka-bangkok`: 197 impressions, 0 clicks, pos 6.6
+- `/blog/bangkok-hospitals-comparison`: 65 impressions, 0 clicks, pos 8.7
+- `/icu-vs-medical-escort`: 44 impressions, 0 clicks, pos 37.8 (regression)
 
-| Page | Status | Last Crawled | Action Needed |
-|------|--------|--------------|---------------|
-| Homepage (/) | ✅ Indexed | Aug 17, 2026 | None |
-| /guides/air-ambulance-dhaka-bangkok | ✅ Indexed | Jul 29, 2026 | None |
-| /air-ambulance-cost | ✅ Indexed | Aug 16, 2026 | None |
-| /blog/bangkok-hospitals-comparison | ✅ Indexed | **Jun 23, 2026** ⚠️ | Refresh lastmod |
-| /services | ⚠️ Discovered - Not Indexed | Never | **REQUEST INDEXING** |
+## টেকনিক্যাল ফিক্স
+এই সাইকেলে কোনো টেকনিক্যাল ফিক্স প্রয়োজন হয়নি। সব বিষয় clean আছে।
 
-**Critical Finding:** /services page remains unindexed for 29 consecutive cycles. This is now a persistent crawl budget issue requiring manual owner intervention.
+## পরবর্তী সাইকেলে যা দেখব
+1. `/services` পেজটি "unknown" থেকে "discovered"-তে উঠেছে কিনা
+2. গাইড পিলার পেজে ক্লিক আসছে কিনা (197 impressions, pos 6.6)
+3. সিঙ্গাপুর/মায়ানমার পেজ ইন্ডেক্স হয়েছে কিনা
+4. CTR稳定 হচ্ছে কিনা
 
-## Technical Audit Results
+## 🔴 অ্যাকশন নিউড — গুগল সার্চ কনসোল
 
-### Title Length Analysis
-All 4 flagged pages have **owner-set titles** that exceed 62 characters. Per dual-domain policy and owner title pattern recognition, these are NOT auto-fixed:
+**🔴 Tier 1 (সবচেয়ে জরুরি):**
+1. `/services` — **33তম সাইকেলেও অপরিচিত**। Cluster 1 পিলার পেজ। "Air Ambulance Service Dhaka to Bangkok" কীওয়ার্ডের জন্য ক্রিটিক্যাল।
+   Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com&id=h5GcqelDZAPT2ow-S0HWeQ
 
-| Page | File Title Length | Displayed Length | Owner-Set | Action |
-|------|-------------------|------------------|-----------|--------|
-| bangkok-hospitals.html | 64c | 86c | Yes (Aug 7) | Monitor |
-| blog/stroke-air-ambulance-dhaka-bumrungrad.html | 67c | 89c | Yes | Monitor |
-| cardiac-emergency-transfer.html | 69c | 91c | Yes | Monitor |
-| guides/air-ambulance-dhaka-bangkok.html | 73c | 95c | Yes | Monitor |
+**🔴 Tier 2 (গুরুত্বপূর্ণ):**
+2. `/blog/air-ambulance-dhaka-to-singapore` — Discovered but not indexed
+3. `/blog/air-ambulance-dhaka-to-myanmar` — Discovered but not indexed
 
-**Note:** Owner title differentiation pattern (cannibalization fighting) confirmed Aug 7, 2026. Titles intentionally exceed 62c for keyword distinction.
+**অ্যাকশন:** উপরের প্রতিটি URL-এ ক্লিক করুন → "Request Indexing" বাটনে ক্লিক করুন।
 
-### OG/Twitter Tags
-- ✅ All files have single og:title, twitter:title, og:description, twitter:description
-- ✅ No duplicates detected
-- ✅ All OG titles match file titles
-- ✅ All descriptions present and within 160-char target
-
-### Canonical Tags
-- ✅ All 56 content files have canonical tags
-- ✅ No missing canonicals detected
-- ✅ No duplicate canonicals
-
-### Internal Linking
-- ✅ All pages have 2+ inbound links
-- ✅ No orphan pages detected
-- ✅ Blog listing complete (34/34 posts)
-- ✅ Sitemap complete (all blog posts included)
-
-### FAQPage Schema
-- ✅ Coverage: COMPLETE (all eligible pages have FAQPage schema)
-- ✅ Entity-rich Q&A pairs present (Learjet 35A, BDT format, airport names)
-
-## CTR Regression Analysis
-
-### Root Cause: AI Overview Cannibalization
-
-**Evidence:**
-1. /guides/air-ambulance-dhaka-bangkok: 195 impressions, 0 clicks, position 6.6
-2. /blog/bangkok-hospitals-comparison: 65 impressions, 0 clicks, position 8.7
-3. Homepage: 336 impressions, 7 clicks (2.08% CTR) — only page with meaningful CTR
-
-**Diagnosis:** Google AI Overview is extracting answers from these pages and displaying them above organic results, consuming clicks without driving traffic to the site.
-
-**Impact:** Site-wide CTR dropped from 2.89% to 1.05% (64% decline) over 28 days.
-
-### Recommended Actions (Future Cycles)
-
-1. **FAQ Schema Enrichment** — Add more entity-rich Q&A pairs to /guides/air-ambulance-dhaka-bangkok and /blog/bangkok-hospitals-comparison to increase odds of being CITED IN the AI Overview (even if click goes to overview)
-
-2. **Description Language Matching** — Update meta descriptions to open with exact query phrases:
-   - "Air ambulance service in Bangladesh —" (for pos 1 queries)
-   - "Air ambulance cost Dhaka to Bangkok —" (for cost queries)
-
-3. **Content Refresh** — For /icu-vs-medical-escort (pos 38.2), add cost comparison table + named aircraft entities
-
-## Actions Taken This Cycle
-
-1. ✅ GSC performance data collected (7-day + 28-day)
-2. ✅ Indexing status verified for 5 key pages
-3. ✅ Technical audit completed (titles, OG tags, canonicals, orphans, sitemap)
-4. ✅ Blog listing and sitemap integrity verified
-5. ✅ Cron log updated (cycle 29 entry added)
-6. ✅ Build triggered and deployed to Vercel
-
-**No code changes applied** — technical audit clean, titles are owner-set, no critical issues requiring immediate fix.
-
-## Owner Action List
-
-### 🔴 TIER 1 (URGENT)
-**Request Indexing for `/services` page (29th consecutive cycle):**
-1. Go to: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
-2. Enter: https://airambulancedhakabangkok.com/services
-3. Click "Request Indexing" button
-4. Wait for "Submitted and indexed" status
-
-### 🟡 TIER 2 (IMPORTANT)
-1. **Monitor CTR recovery** — If 7-day CTR remains below 1% after next cycle, implement FAQ schema enrichment for top 0-CTR pages
-2. **Token re-authentication** — GSC token expired Aug 21, 2026. Refresh token working but may expire soon. Re-authenticate via browser if GSC calls fail.
-
-### 🟢 TIER 3 (NORMAL)
-- /blog/bangkok-hospitals-comparison last crawled Jun 23 — build refresh deployed to trigger re-crawl
-- Monitor /icu-vs-medical-escort position (currently 38.2, may need content refresh in 2-3 cycles)
-
-## Site Health Summary
-
-| Metric | Value | Status |
-|--------|-------|--------|
-| Total Pages | 56 content / 114 static | ✅ Stable |
-| Indexed Pages | 4/5 key pages (80%) | ⚠️ /services pending |
-| FAQPage Coverage | 100% (eligible pages) | ✅ Complete |
-| Blog Listing | 34/34 posts | ✅ Complete |
-| Sitemap Entries | All blog posts present | ✅ Complete |
-| Technical Issues | 0 critical | ✅ Clean |
-| 7-Day CTR | 0.52% | 🔴 Critical (baseline 2.38%) |
-| 28-Day CTR | 1.05% | 🔴 Critical (baseline 2.89%) |
-
-## Deployment Status
-
-- **Build:** ✅ Successful (114 static pages generated)
-- **Commit:** 4010662 — "SEO daily 2026-08-23: Cycle 29..."
-- **Push:** ✅ Successful to origin/main
-- **Vercel Deploy:** Triggered (auto-deploy on push)
+## সাইট স্ট্যাটাস
+- মোট কন্টেন্ট ফাইল: 56 HTML
+- স্ট্যাটিক পেজ: 114
+- ইন্ডেক্সড পিলার পেজ: 4/7 (57%)
+- 7-Day CTR: 0.56% (CRITICAL)
+- FAQPage: 100% complete
+- Deploy প্রয়োজন: না (কোনো পরিবর্তন নেই)
 
 ---
 
-**Next Cycle:** August 24, 2026 (Cycle 30)
-**Priority Focus:** Monitor CTR recovery, /services indexing status
+**নোট:** CTR পতন একটি স্ট্রাকচারাল SERP সমস্যা — AI Overview-এর কারণে। এটা metadata ফিক্স দিয়ে সমাধান হয় না। মনোযোগ রাখুন: কীভাবে AI Overview আপনার পেজগুলোকে cite করছে, এবং FAQ schema-এ entity-rich content দিয়ে citation increase করার সুযোগ খুঁজুন।
