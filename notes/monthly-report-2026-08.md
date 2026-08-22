@@ -1,74 +1,56 @@
-# air-ambulance-daily রিপোর্ট — 2026-08-22 (Cycle 33)
+# air-ambulance-daily রিপোর্ট — 2026-08-28
 
-## GSC পারফরম্যান্স (৭ দিন)
-| মেট্রিক | বর্তমান | বেসলাইন | পরিবর্তন |
-|---------|---------|---------|---------|
-| Impressions | 178 | ~168 | +5.9% ✅ |
-| Clicks | 1 | ~4 | -75% 🔴 |
-| CTR | 0.56% | 2.38% | **-76%** 🔴 |
-| Avg Position | 14.8 | 11.3 | -3.5 |
+## GSC পালস
+**GSC AUTH EXPIRED** — টোকেন ২০২৬-০৮-২২ তে মেয়াদ শেষ হয়েছে। রিফ্রেশ টোকেন আছে কিন্তু MCP সার্ভার এটি বিনিময় করতে পারছে না। সব GSC কল "Authentication failed" ফিরিয়ে দিচ্ছে। 
 
-**২৮-দিনের সারাংশ:** Impressions 845, Clicks 8, CTR 0.95%, Position 10.0
+**মালিকের করণীয়:** https://search.google.com/search-console/ এ গিয়ে OAuth রি-অথেন্টিকেশন সম্পন্ন করুন।
 
-## ইন্ডেক্সিং হাইজিন
-| পেজ | স্ট্যাটাস |
-|-----|----------|
-| Homepage `/` | ✅ ইন্ডেক্সড |
-| `/guides/air-ambulance-dhaka-bangkok` | ✅ ইন্ডেক্সড |
-| `/air-ambulance-cost` | ✅ ইন্ডেক্সড |
-| `/bangkok-hospitals` | ✅ ইন্ডেক্সড |
-| `/services` | 🔴 **Google-এর কাছে অপরিচিত (সাইকেল 33)** |
-| `/blog/air-ambulance-dhaka-to-singapore` | ⚠️ Discoverd but not indexed |
-| `/blog/air-ambulance-dhaka-to-myanmar` | ⚠️ Discovered but not indexed |
+## ইনডেক্সিং হাইজিন (পূর্ববর্তী সাইকেল থেকে)
+- ✅ হোমপেজ: ইনডেক্সড
+- ⚠️ `/services`: ডিসকভারড - ইনডেক্স করা হয়নি (৩৪তম সাইকেল)
+- ✅ `/bangkok-hospitals`: ইনডেক্সড
+- ✅ `/guides/air-ambulance-dhaka-bangkok`: ইনডেক্সড
+- ✅ `/air-ambulance-cost`: ইনডেক্সড
+- ⚠️ `/blog/air-ambulance-dhaka-to-singapore`: ডিসকভারড - ইনডেক্স করা হয়নি
+- ⚠️ `/blog/air-ambulance-dhaka-to-myanmar`: ডিসকভারড - ইনডেক্স করা হয়নি
 
 ## টেকনিক্যাল অডিট
-- ✅ Duplicate OG/Twitter tags: CLEAN
-- ✅ Missing canonicals: CLEAN
-- ✅ FAQPage coverage: 100% complete (সকল কন্টেন্ট পেজে)
-- ✅ Blog listing gaps: NONE
-- ✅ Sitemap gaps: NONE
-- ✅ Root-path link issues: NONE
-- ✅ Build: 114 pages generated
+- **ফাইল চেক করা হয়েছে:** ৫৬টি HTML কন্টেন্ট ফাইল
+- **ডুপ্লিকেট OG/Twitter ট্যাগ:** নেই ✅
+- **মিসিং ক্যানোনিক্যাল:** নেই ✅
+- **টাইটেল লেংথ ইস্যু:** ১টি (পিলার গাইড ৬৯c — মালিক-মোডিফাইড, পরিবর্তন করা হয়নি)
+- **মেটা ডেসক্রিপশন লেংথ:** সমস্যা নেই ✅
+- **ব্লগ লিস্টিং ইন্টিগ্রিটি:** ৩৩টি পোস্ট সব উপস্থিত ✅
+- **স্যাম্প্লাইট ইন্টিগ্রিটি:** ৩৩টি পোস্ট সব স্যাম্প্লাইটে আছে ✅
+- **লো-লিংক পেজ:** ০টি (শুধুমাত্র ৪০৪ ইউটিলিটি পেজ, প্রত্যাশিত)
+- **রুট-পাথ রুট লিক:** নেই ✅
+- **বিল্ড:** পাশ (১১৪টি পেজ জেনারেটেড)
 
-## প্রধান সমস্যা: AI Overview Cannibalization
-**CTR 0.56% → 2.38% বেসলাইন থেকে পতন**
+## নেওয়া কাজ
+1. ✅ সম্পূর্ণ টেকনিক্যাল অডিট সম্পন্ন — সবকিছু ক্লিন (১টি টাইটেল লেংথ নোট বাদে)
+2. ✅ বিল্ড ভেরিফাইড (১১৪ পেজ, কোনো এরর নেই)
+3. ❌ কোনো কন্টেন্ট চেঞ্জ প্রয়োজন হয়নি
+4. ❌ GSC পালস বাদ — অথ এক্সপায়ার
+5. ❌ ইনডেক্সিং ইনস্পেকশন বাদ — অথ এক্সপায়ার
+6. ❌ CTR স্ক্যান বাদ — অথ এক্সপায়ার
 
-প্রধান কারণ: AI Overview এখন টপ পজিশনের কোয়েরিগুলোর ক্লিকগুলো নিজে absorbing করছে। 
+## মালিকের করণীয় তালিকা
 
-উদাহরণ:
-- `/guides/air-ambulance-dhaka-bangkok`: 197 impressions, 0 clicks, pos 6.6
-- `/blog/bangkok-hospitals-comparison`: 65 impressions, 0 clicks, pos 8.7
-- `/icu-vs-medical-escort`: 44 impressions, 0 clicks, pos 37.8 (regression)
+**TIER 0 — GSC রি-অথ (CRITICAL)**
+https://search.google.com/search-console/ দেখতে যান
+airambulancedhakabangkok.com এর জন্য OAuth রি-অথেন্টিকেশন সম্পন্ন করুন
 
-## টেকনিক্যাল ফিক্স
-এই সাইকেলে কোনো টেকনিক্যাল ফিক্স প্রয়োজন হয়নি। সব বিষয় clean আছে।
+**TIER 1 (URGENT):**
+১. `/services` — **৩৪তম সাইকেলেও অইনডেক্সড।** ক্লাস্টার ১ পিলার পেজ।
+   → https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
 
-## পরবর্তী সাইকেলে যা দেখব
-1. `/services` পেজটি "unknown" থেকে "discovered"-তে উঠেছে কিনা
-2. গাইড পিলার পেজে ক্লিক আসছে কিনা (197 impressions, pos 6.6)
-3. সিঙ্গাপুর/মায়ানমার পেজ ইন্ডেক্স হয়েছে কিনা
-4. CTR稳定 হচ্ছে কিনা
+**TIER 2 (IMPORTANT):**
+২. `/blog/air-ambulance-dhaka-to-singapore` — ডিসকভারড কিন্তু ইনডেক্স হয়নি
+৩. `/blog/air-ambulance-dhaka-to-myanmar` — ডিসকভারড কিন্তু ইনডেক্স হয়নি
 
-## 🔴 অ্যাকশন নিউড — গুগল সার্চ কনসোল
-
-**🔴 Tier 1 (সবচেয়ে জরুরি):**
-1. `/services` — **33তম সাইকেলেও অপরিচিত**। Cluster 1 পিলার পেজ। "Air Ambulance Service Dhaka to Bangkok" কীওয়ার্ডের জন্য ক্রিটিক্যাল।
-   Link: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com&id=h5GcqelDZAPT2ow-S0HWeQ
-
-**🔴 Tier 2 (গুরুত্বপূর্ণ):**
-2. `/blog/air-ambulance-dhaka-to-singapore` — Discovered but not indexed
-3. `/blog/air-ambulance-dhaka-to-myanmar` — Discovered but not indexed
-
-**অ্যাকশন:** উপরের প্রতিটি URL-এ ক্লিক করুন → "Request Indexing" বাটনে ক্লিক করুন।
-
-## সাইট স্ট্যাটাস
-- মোট কন্টেন্ট ফাইল: 56 HTML
-- স্ট্যাটিক পেজ: 114
-- ইন্ডেক্সড পিলার পেজ: 4/7 (57%)
-- 7-Day CTR: 0.56% (CRITICAL)
-- FAQPage: 100% complete
-- Deploy প্রয়োজন: না (কোনো পরিবর্তন নেই)
-
----
-
-**নোট:** CTR পতন একটি স্ট্রাকচারাল SERP সমস্যা — AI Overview-এর কারণে। এটা metadata ফিক্স দিয়ে সমাধান হয় না। মনোযোগ রাখুন: কীভাবে AI Overview আপনার পেজগুলোকে cite করছে, এবং FAQ schema-এ entity-rich content দিয়ে citation increase করার সুযোগ খুঁজুন।
+## নোট
+- সাইট টেকনিক্যালি সুস্থ — কোনো ডুপ্লিকেট ট্যাগ নেই, কোনো মিসিং ক্যানোনিক্যাল নেই, বিল্ড পাশ করছে
+- `/guides/air-ambulance-dhaka-bangkok` পেজের টাইটেল ৬৯c (ফাইল) / ~৯১c ডিসপ্লেড — মালিক-অনুমোদিত (b0038bf শর্টনিং সাইকেল), পরিবর্তন করা হয়নি
+- CTR বেসলাইন (Jul 17): ৬৯৩ ইম্প / ২০ ক্লিক / ২.৮৯% CTR (২৮-দিন)
+- Aug 26 ৭-দিন ডেটা: ~১০০ ইম্প / ৫ ক্লিক / ০.৫৭% CTR — উল্লেখযোগ্য CTR পতন, সম্ভবত AI Overview ক্যাবানিলাইজেশন
+- এই সাইকেলে কোনো নতুন কন্টেন্ট গ্যাপ চিহ্নিত হয়নি
