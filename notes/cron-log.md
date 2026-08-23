@@ -7603,3 +7603,65 @@ Token expired Aug 22, 2026. Must re-authenticate:
 - Without GSC access, cannot verify current state or detect regressions
 - No new content gaps identified this cycle
 - Cycle 51 — GSC auth expired, technical audit clean
+
+---
+
+## Cycle 52 — August 30, 2026 (7:07 AM BST)
+
+**GSC AUTH EXPIRED — All GSC calls returned `invalid_grant`.** Token expired Aug 22, 2026. Refresh_token present but server cannot exchange it. All GSC-driven steps (pulse, indexing inspection, quick-win scan) skipped.
+
+### Technical Audit Results
+- Files audited: 56 content HTML
+- Duplicate OG/Twitter tags: 0 ✅
+- Missing canonical: 0 ✅
+- Title length issues: 1 (`/guides/air-ambulance-dhaka-bangkok` — 73c owner-modified, all 3 tags match, left unchanged)
+- Low-link pages: 0/54 (404 page excluded — expected)
+- Blog listing completeness: 33/33 ✅
+- Sitemap completeness: 33/33 ✅
+- Build: PASS (54 static pages generated, no errors)
+
+**No changes made.** Site is technically healthy. No new commits needed.
+
+**No urgent issues — GSC stable.** Owner must re-authenticate GSC to resume data-driven optimization.
+
+### Owner Actions Required
+
+**TIER 0 — GSC Re-auth (CRITICAL)**
+Token expired Aug 22, 2026. Must re-authenticate:
+→ https://search.google.com/search-console/
+
+**TIER 1 (URGENT):**
+1. `/services` — **44th cycle still unindexed.** Cluster 1 pillar page.
+   → https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**TIER 2 (IMPORTANT):**
+2. `/blog/air-ambulance-dhaka-to-singapore` — Discovered but not indexed
+3. `/blog/air-ambulance-dhaka-to-myanmar` — Discovered but not indexed
+
+### Notes
+- Last known GSC baseline (Jul 17 cycle 12): 693 imps / 20 clicks / 2.89% CTR (28-day)
+- Without GSC access, cannot verify current state or detect regressions
+- No new content gaps identified this cycle
+- Cycle 52 — GSC auth expired, technical audit clean, no changes needed
+
+---
+
+## Cycle 52 — August 31, 2026 (7:00 AM BST)
+
+**GSC STATUS:** AUTH EXPIRED — all 6 calls (performance overview + 5 URL inspections) returned "Authentication failed". Token expiry: 2026-08-22 (9 days past). Refresh token present but MCP server cannot exchange it. Owner must re-authenticate via browser.
+
+**TECHNICAL AUDIT (GSC-independent):**
+- Files scanned: 56 content HTML
+- Duplicate OG/Twitter tags: NONE
+- Missing canonicals: NONE
+- Title lengths >62c: 1 file — `guides/air-ambulance-dhaka-bangkok.html` (73c: "Air Ambulance Dhaka to Bangkok — Complete 2026 Guide | Cost & Process") — owner-initiated title per Aug 7 2026 pattern, do NOT revert
+- Description lengths >165c: NONE
+- Blog listing integrity: ALL 33 blog posts present in blog/index.html
+- Sitemap integrity: ALL blog posts present in sitemap.js ENTRIES array
+- Build: SUCCESS — 114 static pages generated (no errors)
+
+**NO CODE CHANGES THIS CYCLE** — no critical issues found, GSC unavailable for data-driven decisions.
+
+**OWNER TASK LIST:**
+1. TIER 0: Re-authenticate GSC — visit https://search.google.com/search-console/ → Settings → Re-authenticate. Token expired Aug 22.
+2. TIER 1: Request Indexing for `/services` — still "Discovered - not indexed" per last known cycle (51). Manual action required.
