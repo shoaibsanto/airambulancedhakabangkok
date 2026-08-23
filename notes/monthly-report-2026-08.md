@@ -1,44 +1,47 @@
-# Monthly SEO Report — 2026-08
-## airambulancedhakabangkok.com
+# Air Ambulance Dhaka Bangkok — Daily SEO Report
+**Date:** 2026-08-25 (Morning Cycle)
+**Cycle:** 49
 
-### GSC Authentication Status
-**EXPIRED** — Token expired 2026-08-22T06:31:03Z. All GSC MCP calls failing with "Authentication failed". Owner must re-authenticate via browser at https://search.google.com/search-console/
+## GSC Status
+⚠️ **AUTH EXPIRED** — Token expired Aug 22, 2026 (~4 days ago). All GSC API calls returning "Authentication failed". Skipping all GSC-dependent steps per protocol.
 
-### Technical Audit Summary (Cycle 47 — Aug 23, 2026)
-- Total content files: 56
-- Blog posts: 33
-- FAQPage coverage: 46/46 eligible pages ✅
-- Duplicate OG/Twitter tags: NONE ✅
-- Missing canonicals: NONE ✅
-- Title length issues: 1 (owner-modified, intentional)
-- Low-link pages: 0 ✅
-- Root-path 404 links: NONE ✅
-- Build: PASS (114 pages generated)
-- Sitemap: 200 OK ✅
+## Technical Audit Results
+- ✅ Content files: 56 (stable)
+- ✅ Blog posts: 32 (all in listing + sitemap)
+- ✅ FAQPage coverage: 100% COMPLETE
+- ✅ Duplicate OG/Twitter tags: NONE
+- ✅ Missing canonicals: NONE
+- ⚠️ Title length: 1 page over 62c (`/guides/air-ambulance-dhaka-bangkok` — 73c, owner-modified, left unchanged per precedent)
+- ✅ Low-link pages: 0/54
+- ✅ Root-path 404 links: NONE
+- ✅ Build: PASS (54+ pages)
+- ✅ Sitemap: 200 OK
 
-### Indexing Status (Known from Previous Cycles)
-| Page | Status | Cycle Count |
-|------|--------|-------------|
-| Homepage (/) | ✅ Indexed | — |
-| /services | ⚠️ Discovered - not indexed | 39th cycle |
-| /bangkok-hospitals | ✅ Indexed | — |
-| /guides/air-ambulance-dhaka-bangkok | ✅ Indexed | — |
-| /air-ambulance-cost | ✅ Indexed | — |
-| /blog/air-ambulance-dhaka-to-singapore | ⚠️ Discovered - not indexed | Pending |
-| /blog/air-ambulance-dhaka-to-myanmar | ⚠️ Discovered - not indexed | Pending |
+## Actions Taken
+- No changes made — site is technically healthy
+- Git working tree clean — no commits needed
+- Log entry appended to notes/cron-log.md
 
-### Baseline Performance (Last GSC Data — Jul 17, 2026)
-- 28-day: ~693 impressions / 20 clicks / 2.89% CTR / pos 9.6
-- 7-day: ~168 imps / 4 clicks / 2.38% CTR / pos 11.3
-- Note: GSC access lost since Aug 22, cannot verify current metrics
+## Owner Actions Required
 
-### Changes This Cycle
-- Fixed `twitter:title` entity sync on `/guides/air-ambulance-dhaka-bangkok` (ampersand entity mismatch)
-- No new pages created, no content gaps identified
-- Site technically healthy across all audit dimensions
+**TIER 0 — GSC Re-auth (CRITICAL)**
+Token expired Aug 22, 2026. Re-authenticate:
+→ https://search.google.com/search-console/
 
-### Next Cycle
-- Continue technical audit until GSC re-auth completed
-- Monitor for new content gaps once GSC access restored
-- Consider adding Dhaka to Chennai direct and Dhaka to Delhi direct expansion routes (remaining gaps per skill spec)
-- `/services` indexing remains the top persistent owner action (39 cycles unresolved)
+**TIER 1 (URGENT):**
+1. `/services` — 41st consecutive cycle unindexed. Cluster 1 pillar page.
+   Request Indexing: https://search.google.com/search-console/inspect?resource_id=sc-domain:airambulancedhakabangkok.com
+
+**TIER 2 (IMPORTANT):**
+2. `/blog/air-ambulance-dhaka-to-singapore` — Discovered but not indexed
+3. `/blog/air-ambulance-dhaka-to-myanmar` — Discovered but not indexed
+
+## Baseline Reference
+- Jul 17, 2026 (last successful GSC): 693 imps / 20 clicks / 2.89% CTR (28-day)
+- Content files: 56 (stable)
+- FAQPage: COMPLETE
+
+## Notes
+- No GSC data available this cycle due to token expiry
+- No new content gaps identified
+- Site infrastructure healthy — awaiting GSC re-auth to resume data-driven optimization
