@@ -51,6 +51,21 @@ const COMPARISON_WHITELIST = new Set([
 // capitalization as a proper noun. Matched case-sensitively.
 const CASE_SENSITIVE_HOSPITALS = ["Bangkok Hospital", "Bangkok Heart Hospital"];
 
+// Abbreviations are why a name-based audit is not sufficient on its own.
+// "Bangkok (Bumrungrad/BH, approx. USD)" named a second hospital in a table
+// header using two letters, which no name list and no plain-text grep for
+// "Bangkok Hospital" could catch. Separate list so it can be tightened
+// without touching the proper-noun rules.
+const HOSPITAL_ABBREVIATIONS = ["BH", "Bumrungrad/BH"];
+
+// Abbreviations cannot use .includes(): "BH" would match inside "BHMC" and
+// inside any word containing those two letters. Match on a word-boundary
+// regex instead. Only the short form is matched, so a line carrying both
+// "BH" and "Bumrungrad/BH" is reported once.
+function findAbbreviation(line) {
+  return HOSPITAL_ABBREVIATIONS.find((a) => new RegExp("\\b" + a + "\\b").test(line)) || null;
+}
+
 // Other hospitals/clinics that have appeared in past violations on this
 // site. Not exhaustive — extend this list if a new name surfaces. These are
 // distinctive enough names that case-insensitive matching is safe.
@@ -303,7 +318,8 @@ function checkFile(file) {
       seenText.add(sentence);
       const hospitalHit =
         OTHER_HOSPITALS.find((h) => sentence.toLowerCase().includes(h.toLowerCase())) ||
-        CASE_SENSITIVE_HOSPITALS.find((h) => sentence.includes(h));
+        CASE_SENSITIVE_HOSPITALS.find((h) => sentence.includes(h)) ||
+        findAbbreviation(sentence);
       if (!hospitalHit) continue;
       if (EXEMPT_SENTENCE_PATTERNS.some((re) => re.test(sentence))) continue;
 
@@ -359,7 +375,8 @@ function checkFile(file) {
     if (EXEMPT_SENTENCE_PATTERNS.some((re) => re.test(sentence))) continue;
     const hospitalHit =
       OTHER_HOSPITALS.find((h) => sentence.toLowerCase().includes(h.toLowerCase())) ||
-      CASE_SENSITIVE_HOSPITALS.find((h) => sentence.includes(h));
+      CASE_SENSITIVE_HOSPITALS.find((h) => sentence.includes(h)) ||
+      findAbbreviation(sentence);
     if (!hospitalHit) continue;
     findings.push({
       severity: whitelisted ? "WARN" : "HARD_FAIL",
@@ -388,7 +405,8 @@ function checkFile(file) {
       if (EXEMPT_SENTENCE_PATTERNS.some((re) => re.test(node))) return;
       const hospitalHit =
         OTHER_HOSPITALS.find((h) => node.toLowerCase().includes(h.toLowerCase())) ||
-        CASE_SENSITIVE_HOSPITALS.find((h) => node.includes(h));
+        CASE_SENSITIVE_HOSPITALS.find((h) => node.includes(h)) ||
+        findAbbreviation(node);
       if (!hospitalHit) return;
       findings.push({
         severity: whitelisted ? "WARN" : "HARD_FAIL",
@@ -415,6 +433,48 @@ function checkFile(file) {
       rule: "operational-claim-for-other-destination",
       detail: `Mentions "${destHit}" alongside first-person service language: "${sentence.trim().slice(0, 220)}"`,
     });
+  }
+
+  // Multi-destination / multi-hospital claims. Deliberately separate from the
+  // other-hospital rules above: this branch fires on phrasing that names no
+  // second hospital at all, which is the exact shape of the violation that
+  // reached production. Exempt patterns are NOT applied here — a "beyond
+  // Bangkok" service claim is not made acceptable by an overflight note.
+  //
+  // Two structural points, both learned the hard way:
+  //
+  // 1. Units, not splitSentences(text). `text` is stripTags(html) collapsed
+  //    to a single line, so <head> merges with the first body paragraph and a
+  //    title like "Air Ambulance Service Dhaka to Bangkok" ended up in the
+  //    same sentence as "Home Services" from the navigation — and "Services"
+  //    satisfied the \s+(?:leading|...) quantifier in MULTI_HOSPITAL_SET_RE.
+  //    htmlToUnits() already exists to prevent exactly this.
+  //
+  // 2. No whitelist skip. COMPARISON_WHITELIST covers pages that legitimately
+  //    discuss how Bumrungrad compares with staying in Bangladesh. The
+  //    /bangkok-hospitals page carries the owner's corrected statement — "our
+  //    own air ambulance coordination and bed-to-bed admission service is
+  //    exclusively with Bumrungrad International Hospital" — and downgrading
+  //    that page to WARN would silence the site's single most important
+  //    compliance sentence. An exclusivity claim is not a comparison.
+  const seenUnit = new Set();
+  for (const unit of htmlToUnits(html)) {
+    if (seenUnit.has(unit)) continue;
+    seenUnit.add(unit);
+    for (const sentence of splitSentences(unit)) {
+      if (!SERVICE_CONTEXT_RE.test(sentence)) continue;
+      const mdHit = MULTI_DESTINATION_PATTERNS.find((re) => re.test(sentence));
+      const setHit = !mdHit && MULTI_HOSPITAL_SET_RE.test(sentence);
+      if (!mdHit && !setHit) continue;
+      // Pointing at our own /bangkok-hospitals explainer is not a claim to
+      // serve those hospitals; that page argues the opposite.
+      if (!mdHit && SELF_PAGE_REFERENCE_RE.test(sentence)) continue;
+      findings.push({
+        severity: "HARD_FAIL",
+        rule: mdHit ? "multi-destination-service-claim" : "multi-hospital-set-claim",
+        detail: `Implies service beyond Bumrungrad-only: "${sentence.trim().slice(0, 220)}"`,
+      });
+    }
   }
 
   // Dedupe identical findings (the text/html double-pass above can repeat
@@ -478,6 +538,78 @@ function isRedirectSourceOnly(line) {
   return REDIRECT_SOURCE_SLUGS.some((slug) => line.includes(slug));
 }
 
+// A multi-destination claim is a violation that names NO other hospital, which
+// is precisely why it survived earlier audits: every rule below keys off an
+// other-hospital token, so phrasing that implies a wider scope than
+// Bumrungrad-only passes all of them. "Dhaka to Bangkok and beyond" claims
+// destinations we do not serve; "Bangkok hospitals including Bumrungrad"
+// claims a partner set. Both state, and neither names, a second hospital.
+// This shipped to production in components/Footer.jsx — a file that was
+// scanned on every run and reported clean, because no rule could match it.
+const MULTI_DESTINATION_PATTERNS = [
+  /\band\s+(?:further|beyond|more)\b/i,
+  /\bbeyond\s+Bangkok\b/i,
+  /\b(?:any|other|various|multiple)\s+Thai\s+(?:hospitals?|clinics?|facilities)\b/i,
+  // Singular required on purpose: the compliant form on this site is "the
+  // Bangkok hospital" / "a Bangkok hospital" (one facility = Bumrungrad).
+  // "Bangkok hospital and cannot fly" is that same singular noun followed by
+  // an ordinary conjunction — it is NOT a multi-hospital claim, and matching
+  // `hospitals?` here flagged it. Plural only.
+  /\bBangkok\s+hospitals\s+(?:including|such as|and)\b/i,
+  /\bhospitals?\s+(?:including|such as)\s+[^.?!]{0,80}Bumrungrad/i,
+  // \s+ swallows the possessive, so without the lookahead "across Bangkok's
+  // hospitals" matches as "across Bangkok" — a possessive is a reference to
+  // the city's institutions, not a destination we fly to. A real destination
+  // claim names the city outright: "and beyond Bangkok", "across Bangkok".
+  // A negative lookahead rejects the possessive in either quote style; an
+  // ASCII-only version would miss the curly apostrophe this site uses.
+  /\b(?:across|throughout|all(?:\s+over)?)\s+(?:Thailand|Bangkok|South-?East Asia)(?!['\u2019]s\b)/i,
+];
+
+// The PLURAL is the violation and the SINGULAR is compliant. This distinction
+// is the whole rule. "We transfer the patient to the Bangkok hospital" names
+// one facility — that is exactly the Bumrungrad-only wording we want, since
+// the site never names the receiving hospital in running prose. "Many Bangkok
+// hospitals, including Bumrungrad" asserts a set of destinations and is not.
+//
+// Each branch is QUANTIFIER-FIRST on purpose. Without a quantifier this
+// matched the site's own compliant copy ("Bangkok's hospital landscape",
+// "Bangkok's hospitals offer depth") and produced 60+ false positives. A
+// violation asserts a SET of alternatives the patient could choose between,
+// and that always arrives with a determiner: many/several/other/various/
+// multiple/leading/top/major/flagship.
+//
+// The possessive branch carries its OWN determiner rather than borrowing one
+// from the front. Two earlier attempts at this, both wrong in instructive
+// ways:
+//   1. A bare possessive (no determiner) matched the site's own compliant
+//      copy — "Bangkok's hospitals offer depth across exactly the
+//      specialties..." — so it had to go.
+//   2. Guarding it with a negative lookahead for but/however/although/whereas
+//      cannot work here, and not just because those words are rare: this
+//      rule is evaluated per SENTENCE (see the splitSentences loop above),
+//      and the contrast on this page sits in the NEXT sentence —
+//      "…landscape across Bangkok's hospitals; our own air ambulance
+//      coordination…is exclusively with Bumrungrad International Hospital."
+//      A lookahead anchored at the possessive can only ever see the rest of
+//      its own sentence.
+// So the discriminant has to live inside the phrase. The possessive form
+// asserts a set only when it quantifies the set itself: "Bangkok's MANY
+// hospitals", "Bangkok's TOP hospitals". Both apostrophe forms are matched —
+// the site mixes ASCII and curly.
+const MULTI_HOSPITAL_SET_RE = /\b(?:(?:many|several|multiple|various|other|most|all|leading|major|top|flagship|numerous|nearby)\s+(?:Bangkok|Thai|Thailand)[- ]?(?:based\s+)?(?:hospitals?|clinics?|facilities?)|Bangkok['\u2019]s\s+(?:many|several|multiple|various|other|leading|major|top|flagship|numerous|nearby)\s+hospitals|(?:leading|major|top|flagship|several|many|various|multiple|other)\s+Thai\s+hospitals)\b/i;
+
+// Only decisive in a first-person service sentence. Deliberately narrow: the
+// earlier broad form matched "admission"/"receiving"/"we" in almost every
+// paragraph on the site, which is what turned a quiet check into 62 hits.
+const SERVICE_CONTEXT_RE =
+  /\b(?:we|our|us)\b[^.?!]{0,90}\b(?:transfer(?:s|red)?|coordinate(?:s|d)?|arrange(?:s|d)?|admit(?:s|ted)?|partner(?:s|ed)?|operate(?:s|d)?|serve(?:s|d)?|work(?:ing)?\s+with|send(?:s)?\s+(?:patients?|the\s+patient))\b|\b(?:air\s+ambulance|medical\s+flight|bed-to-bed)\b[^.?!]{0,60}\b(?:to|for|into)\b/i;
+
+// A sentence that only points at our own explanatory page about the
+// exclusivity is not a claim about serving other hospitals.
+const SELF_PAGE_REFERENCE_RE =
+  /\b(?:our\s+)?(?:Bangkok\s+hospitals\s+page|Bangkok\s+hospitals\s+guide|Bangkok\s+hospitals\s+transfer\s+page|guide\s+to\s+Bangkok\s+hospitals)\b/i;
+
 function scanSharedSurfaces() {
   const out = [];
   for (const rel of SHARED_SURFACES) {
@@ -488,9 +620,29 @@ function scanSharedSurfaces() {
     // line-level context to report a hit.
     const lines = src.split("\n");
     lines.forEach((line, i) => {
+      // Shared surfaces are line-level and JSX has no sentence boundaries, so
+      // strip comment markers before testing to avoid matching prose that
+      // explains the rule itself.
+      const code = line.replace(/^\s*\{?\/\*|\*\/\}?\s*$|^\s*\/\/\s*/g, "");
+
+      // Multi-destination phrasing. This must be checked BEFORE the
+      // other-hospital branch and must not return early on it, because a
+      // single line can contain both a Bumrungrad mention (harmless, and
+      // skipped by the name branch below) and a destination claim (harmful).
+      for (const re of MULTI_DESTINATION_PATTERNS) {
+        if (!re.test(code)) continue;
+        out.push({
+          severity: "HARD_FAIL",
+          rule: "multi-destination-in-shared-surface",
+          detail: `${rel}:${i + 1} claims service beyond Bumrungrad-only across every route: "${code.trim().slice(0, 180)}"`,
+        });
+        break;
+      }
+
       const hospitalHit =
         OTHER_HOSPITALS.find((h) => line.toLowerCase().includes(h.toLowerCase())) ||
-        CASE_SENSITIVE_HOSPITALS.find((h) => line.includes(h));
+        CASE_SENSITIVE_HOSPITALS.find((h) => line.includes(h)) ||
+        findAbbreviation(line);
       if (!hospitalHit) return;
       if (EXEMPT_SENTENCE_PATTERNS.some((re) => re.test(line))) return;
       // Redirect sources are logged as INFO, not violations: the token lives

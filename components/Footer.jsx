@@ -20,7 +20,7 @@ export default function Footer() {
             </Link>
             <p style={{ marginTop: "1rem", maxWidth: "34ch" }}>
               Dedicated air ambulance and medical escort service for safe, monitored patient
-              transfers from Dhaka, Bangladesh to Bangkok, Thailand and beyond.
+              transfers from Dhaka, Bangladesh to Bangkok, Thailand for Bumrungrad International Hospital.
             </p>
           </div>
           <div>
