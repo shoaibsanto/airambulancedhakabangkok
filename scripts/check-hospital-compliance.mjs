@@ -38,8 +38,11 @@ const ROOT = path.resolve(__dirname, "..");
 // page's actual, legitimate purpose. Hits here are reported but don't fail
 // the build by default — they still need a human to confirm the page never
 // crosses from "here's how they differ" into "we transfer you to either."
+// The Bumrungrad-vs-others comparison article was removed on 2026-10-15 (it
+// marketed other Bangkok hospitals as equivalent destinations). Only the
+// admission guide remains whitelisted, and only for its residual editorial
+// framing — it must never claim the company serves another hospital.
 const COMPARISON_WHITELIST = new Set([
-  "blog/bangkok-hospitals-comparison-bangladeshi-patients",
   "blog/bangkok-hospital-admission-bangladeshi-patients",
 ]);
 
@@ -83,6 +86,19 @@ const NO_FALLBACK_PATTERNS = [
   /alternative,?\s+JCI-accredited/i,
   /different hospital/i,
   /another hospital/i,
+];
+
+// Sentences that name another country/hospital but are NOT service claims.
+// These are either (a) explicit disclaimers the owner asked us to keep, or
+// (b) aviation-logistics facts about the flight path (overflight/ATC
+// clearances), which do not represent any other hospital as a destination.
+// Kept deliberately narrow so a real claim can't hide behind them.
+const EXEMPT_SENTENCE_PATTERNS = [
+  /we do not operate/i,
+  /do not (?:have|hold|maintain) (?:any )?(?:affiliation|partnership|agreement)/i,
+  /not a substitute for (?:professional )?medical advice/i,
+  /\b(?:ATC|airspace|overflight|route clearance|flight path|flight-plan|flight plan)\b/i,
+  /general information about/i,
 ];
 
 // The five pages deleted for advertising service to India/Myanmar/
@@ -161,6 +177,7 @@ function checkFile(file) {
         CASE_SENSITIVE_HOSPITALS.find((h) => sentence.includes(h));
       if (!hospitalHit) continue;
       if (!OPERATIONAL_VERB_RE.test(sentence)) continue;
+      if (EXEMPT_SENTENCE_PATTERNS.some((re) => re.test(sentence))) continue;
 
       findings.push({
         severity: whitelisted ? "WARN" : "HARD_FAIL",
@@ -180,6 +197,7 @@ function checkFile(file) {
     );
     if (!destHit) continue;
     if (!OPERATIONAL_VERB_RE.test(sentence)) continue;
+    if (EXEMPT_SENTENCE_PATTERNS.some((re) => re.test(sentence))) continue;
     findings.push({
       severity: "WARN",
       rule: "operational-claim-for-other-destination",

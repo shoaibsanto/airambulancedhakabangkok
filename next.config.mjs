@@ -64,6 +64,7 @@ const nextConfig = {
   async redirects() {
     return [
       { source: "/guides", destination: "/blog", permanent: true },
+      { source: "/blog/bangkok-hospitals-comparison-bangladeshi-patients", destination: "/bangkok-hospitals", permanent: true },
       { source: "/air-ambulance-guide", destination: "/blog", permanent: true },
       { source: "/cost-and-pricing", destination: "/air-ambulance-cost", permanent: true },
       { source: "/medical-support", destination: "/services", permanent: true },

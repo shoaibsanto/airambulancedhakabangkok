@@ -29,7 +29,7 @@ export default function Footer() {
               <li><Link href="/services">ICU Air Ambulance</Link></li>
               <li><Link href="/air-ambulance-cost">Cost & Pricing</Link></li>
               <li><Link href="/icu-vs-medical-escort">ICU vs Medical Escort</Link></li>
-              <li><Link href="/bangkok-hospitals">Bangkok Hospitals</Link></li>
+              <li><Link href="/bangkok-hospitals">Bumrungrad Hospital</Link></li>
               <li><Link href="/services">Repatriation</Link></li>
             </ul>
           </div>

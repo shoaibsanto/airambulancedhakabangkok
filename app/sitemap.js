@@ -39,7 +39,6 @@ export default async function sitemap() {
     ["/blog/bed-to-bed-transfer-dhaka-bangkok", "weekly", 0.7],
     ["/blog/emergency-air-ambulance-when-to-call", "weekly", 0.7],
     ["/blog/air-ambulance-cardiac-patients", "weekly", 0.7],
-    ["/blog/bangkok-hospitals-comparison-bangladeshi-patients", "weekly", 0.7],
     ["/blog/admit-patient-bumrungrad-dhaka-guide", "weekly", 0.7],
     ["/blog/neonatal-pediatric-air-ambulance-dhaka-bangkok", "weekly", 0.7],
     ["/blog/medical-visa-thailand-for-bangladeshi-patients", "weekly", 0.7],

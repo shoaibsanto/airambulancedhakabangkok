@@ -1,0 +1,313 @@
+{
+  "generatedAt": "2026-10-15T07:55:05.017Z",
+  "pagesScanned": 49,
+  "hardFailCount": 2,
+  "warnCount": 0,
+  "results": [
+    {
+      "slug": "about",
+      "path": "/about",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "air-ambulance-cost",
+      "path": "/air-ambulance-cost",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "air-ambulance-dhaka-bangkok-complete-faq",
+      "path": "/air-ambulance-dhaka-bangkok-complete-faq",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "bangkok-hospitals",
+      "path": "/bangkok-hospitals",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "cancer-treatment-bangkok",
+      "path": "/cancer-treatment-bangkok",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "cardiac-emergency-transfer",
+      "path": "/cardiac-emergency-transfer",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "contact",
+      "path": "/contact",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "faq",
+      "path": "/faq",
+      "whitelisted": false,
+      "findings": [
+        {
+          "severity": "HARD_FAIL",
+          "rule": "operational-claim-for-other-hospital",
+          "detail": "Mentions \"BNH\" alongside first-person service language: \"We coordinate transfers to Samitivej Hospital and BNH.\""
+        },
+        {
+          "severity": "HARD_FAIL",
+          "rule": "operational-claim-for-other-hospital",
+          "detail": "Mentions \"BNH\" alongside first-person service language: \"While final visa approval rests with the authorities, our experience with the Dhaka to Bangkok route helps families assemble the right paperwork and avoid common delays.</div></div></div>\n</div>\n\n<div class=\"section-head\""
+        }
+      ]
+    },
+    {
+      "slug": "gallery",
+      "path": "/gallery",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "icu-vs-medical-escort",
+      "path": "/icu-vs-medical-escort",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "index",
+      "path": "/",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "insurance-coverage",
+      "path": "/insurance-coverage",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "privacy",
+      "path": "/privacy",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "process",
+      "path": "/process",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "routes",
+      "path": "/routes",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "services",
+      "path": "/services",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "stroke-neurology-evacuation",
+      "path": "/stroke-neurology-evacuation",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "terms",
+      "path": "/terms",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "trauma-accident-evacuation",
+      "path": "/trauma-accident-evacuation",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/admit-patient-bumrungrad-dhaka-guide",
+      "path": "/blog/admit-patient-bumrungrad-dhaka-guide",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/air-ambulance-cardiac-patients",
+      "path": "/blog/air-ambulance-cardiac-patients",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/air-ambulance-cost-bangladesh-2026",
+      "path": "/blog/air-ambulance-cost-bangladesh-2026",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/air-ambulance-dhaka-bangkok-bumrungrad-cost",
+      "path": "/blog/air-ambulance-dhaka-bangkok-bumrungrad-cost",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/air-ambulance-insurance-payment-dhaka-bumrungrad",
+      "path": "/blog/air-ambulance-insurance-payment-dhaka-bumrungrad",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/air-ambulance-vs-commercial-medical-flight",
+      "path": "/blog/air-ambulance-vs-commercial-medical-flight",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/bangkok-hospital-admission-bangladeshi-patients",
+      "path": "/blog/bangkok-hospital-admission-bangladeshi-patients",
+      "whitelisted": true,
+      "findings": []
+    },
+    {
+      "slug": "blog/bed-to-bed-transfer-dhaka-bangkok",
+      "path": "/blog/bed-to-bed-transfer-dhaka-bangkok",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/bumrungrad-international-hospital-dhaka-guide",
+      "path": "/blog/bumrungrad-international-hospital-dhaka-guide",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/dialysis-patient-air-ambulance-dhaka-bangkok",
+      "path": "/blog/dialysis-patient-air-ambulance-dhaka-bangkok",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/emergency-air-ambulance-when-to-call",
+      "path": "/blog/emergency-air-ambulance-when-to-call",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/emergency-medical-evacuation-dhaka-to-bangkok",
+      "path": "/blog/emergency-medical-evacuation-dhaka-to-bangkok",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/how-to-book-air-ambulance-dhaka-bumrungrad",
+      "path": "/blog/how-to-book-air-ambulance-dhaka-bumrungrad",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/icu-flight-bangladesh-to-bumrungrad-bangkok",
+      "path": "/blog/icu-flight-bangladesh-to-bumrungrad-bangkok",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog",
+      "path": "/blog",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/liver-disease-air-ambulance-dhaka-bangkok",
+      "path": "/blog/liver-disease-air-ambulance-dhaka-bangkok",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/medical-evacuation-cost-bangladesh",
+      "path": "/blog/medical-evacuation-cost-bangladesh",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/medical-repatriation-to-bangladesh",
+      "path": "/blog/medical-repatriation-to-bangladesh",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/medical-tourism-thailand-bangladesh",
+      "path": "/blog/medical-tourism-thailand-bangladesh",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/medical-visa-thailand-for-bangladeshi-patients",
+      "path": "/blog/medical-visa-thailand-for-bangladeshi-patients",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/neonatal-pediatric-air-ambulance-dhaka-bangkok",
+      "path": "/blog/neonatal-pediatric-air-ambulance-dhaka-bangkok",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/post-surgery-patient-transfer-dhaka",
+      "path": "/blog/post-surgery-patient-transfer-dhaka",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/stroke-air-ambulance-dhaka-bumrungrad",
+      "path": "/blog/stroke-air-ambulance-dhaka-bumrungrad",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/ventilator-patient-air-ambulance",
+      "path": "/blog/ventilator-patient-air-ambulance",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/what-is-an-air-ambulance",
+      "path": "/blog/what-is-an-air-ambulance",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/what-to-expect-dhaka-bumrungrad-air-ambulance",
+      "path": "/blog/what-to-expect-dhaka-bumrungrad-air-ambulance",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "blog/why-bangladeshi-patients-choose-bangkok",
+      "path": "/blog/why-bangladeshi-patients-choose-bangkok",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "author/tawhid-iqbal",
+      "path": "/author/tawhid-iqbal",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "guides/air-ambulance-dhaka-bangkok",
+      "path": "/guides/air-ambulance-dhaka-bangkok",
+      "whitelisted": false,
+      "findings": []
+    },
+    {
+      "slug": "guides/icu-air-ambulance-dhaka",
+      "path": "/guides/icu-air-ambulance-dhaka",
+      "whitelisted": false,
+      "findings": []
+    }
+  ]
+}

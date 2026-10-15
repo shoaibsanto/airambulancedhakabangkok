@@ -18,7 +18,7 @@ Published: 2026-01-01
 ## [Ventilator Patient Air Ambulance](https://airambulancedhakabangkok.com/blog/ventilator-patient-air-ambulance)
 Published: 2026-01-01
 
-## [Stroke Air Ambulance Dhaka to Bumrungrad | Golden Hour ICU Jet 24/7](https://airambulancedhakabangkok.com/blog/stroke-air-ambulance-dhaka-bumrungrad)
+## [Stroke Air Ambulance Dhaka to Bangkok | Golden Hour ICU Jet](https://airambulancedhakabangkok.com/blog/stroke-air-ambulance-dhaka-bumrungrad)
 Published: 2026-01-01
 
 ## [Post-Surgery Patient Transfer](https://airambulancedhakabangkok.com/blog/post-surgery-patient-transfer-dhaka)
@@ -63,9 +63,6 @@ Published: 2026-01-01
 ## [Bed-to-Bed Transfer Dhaka to Bangkok](https://airambulancedhakabangkok.com/blog/bed-to-bed-transfer-dhaka-bangkok)
 Published: 2026-01-01
 
-## [Bangkok Hospitals for BD Patients | ICU Air Ambulance 24/7](https://airambulancedhakabangkok.com/blog/bangkok-hospitals-comparison-bangladeshi-patients)
-Published: 2026-01-01
-
 ## [Bumrungrad Admission Dhaka | Air Ambulance Bumrungrad](https://airambulancedhakabangkok.com/blog/bangkok-hospital-admission-bangladeshi-patients)
 Published: 2026-01-01
 
@@ -73,21 +70,6 @@ Published: 2026-01-01
 Published: 2026-01-01
 
 ## [Air Ambulance Insurance and Payment](https://airambulancedhakabangkok.com/blog/air-ambulance-insurance-payment-dhaka-bumrungrad)
-Published: 2026-01-01
-
-## [Air Ambulance to Singapore](https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-singapore)
-Published: 2026-01-01
-
-## [Air Ambulance Dhaka to Myanmar | ICU Medical Evacuation 24/7](https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-myanmar)
-Published: 2026-01-01
-
-## [Air Ambulance Dhaka to India | Vellore, Chennai, Delhi ICU Jet](https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi)
-Published: 2026-01-01
-
-## [Air Ambulance Dhaka to Delhi India | ICU](https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-delhi-india)
-Published: 2026-01-01
-
-## [Air Ambulance Dhaka to Chennai India | ICU](https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-to-chennai-india)
 Published: 2026-01-01
 
 ## [Air Ambulance to Bumrungrad | Cost, Insurance & Payment](https://airambulancedhakabangkok.com/blog/air-ambulance-dhaka-bangkok-bumrungrad-cost)
