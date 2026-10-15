@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-15T07:55:05.017Z",
+  "generatedAt": "2026-10-15T12:28:03.210Z",
   "pagesScanned": 49,
-  "hardFailCount": 2,
+  "hardFailCount": 0,
   "warnCount": 0,
   "results": [
     {
@@ -50,18 +50,7 @@
       "slug": "faq",
       "path": "/faq",
       "whitelisted": false,
-      "findings": [
-        {
-          "severity": "HARD_FAIL",
-          "rule": "operational-claim-for-other-hospital",
-          "detail": "Mentions \"BNH\" alongside first-person service language: \"We coordinate transfers to Samitivej Hospital and BNH.\""
-        },
-        {
-          "severity": "HARD_FAIL",
-          "rule": "operational-claim-for-other-hospital",
-          "detail": "Mentions \"BNH\" alongside first-person service language: \"While final visa approval rests with the authorities, our experience with the Dhaka to Bangkok route helps families assemble the right paperwork and avoid common delays.</div></div></div>\n</div>\n\n<div class=\"section-head\""
-        }
-      ]
+      "findings": []
     },
     {
       "slug": "gallery",
@@ -308,6 +297,14 @@
       "path": "/guides/icu-air-ambulance-dhaka",
       "whitelisted": false,
       "findings": []
+    }
+  ],
+  "sharedFindings": [
+    {
+      "url": "[shared]",
+      "severity": "INFO",
+      "rule": "redirect-source-mention",
+      "detail": "next.config.mjs:107 mentions \"Vellore\" only as a redirect source path (308 → /routes, never rendered as text): \"source: \"/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi\",\""
     }
   ]
 }

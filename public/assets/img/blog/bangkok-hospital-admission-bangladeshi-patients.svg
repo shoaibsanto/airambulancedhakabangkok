@@ -183,8 +183,7 @@
   
   <!-- Title -->
   
-        <text x="80" y="230" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="54" fill="#ffffff">Bangkok Hospital</text>
-        <text x="80" y="300" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="54" fill="#ffffff">Admission</text>
+        <text x="600" y="265" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="54" fill="#ffffff">Bumrungrad Admission</text>
         
   
   <!-- Accent underline below title -->
