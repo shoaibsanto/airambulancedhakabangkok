@@ -75,27 +75,56 @@ const nextConfig = {
         destination: "/blog/air-ambulance-cardiac-patients",
         permanent: true,
       },
-      // Expansion-route pages live under /blog/. Google indexed root-path
-      // variants (from stale internal links in faq/routes) that 404 despite
-      // earning clicks — 301 them to the real blog URLs to preserve equity.
+      // Removed: the company's only receiving-hospital partner is Bumrungrad
+      // International Hospital, Bangkok. These pages previously advertised
+      // (non-existent) direct transfer/admission arrangements to hospitals in
+      // India, Myanmar and Singapore. The pages were deleted; both their
+      // root-path and /blog/ URLs now redirect to the real, compliant
+      // Routes & Coverage page instead of 404ing or preserving equity for a
+      // removed claim.
       {
         source: "/air-ambulance-dhaka-to-chennai-india",
-        destination: "/blog/air-ambulance-dhaka-to-chennai-india",
+        destination: "/routes",
+        permanent: true,
+      },
+      {
+        source: "/blog/air-ambulance-dhaka-to-chennai-india",
+        destination: "/routes",
         permanent: true,
       },
       {
         source: "/air-ambulance-dhaka-to-delhi-india",
-        destination: "/blog/air-ambulance-dhaka-to-delhi-india",
+        destination: "/routes",
+        permanent: true,
+      },
+      {
+        source: "/blog/air-ambulance-dhaka-to-delhi-india",
+        destination: "/routes",
+        permanent: true,
+      },
+      {
+        source: "/blog/air-ambulance-dhaka-to-india-vellore-chennai-delhi",
+        destination: "/routes",
         permanent: true,
       },
       {
         source: "/air-ambulance-dhaka-to-singapore",
-        destination: "/blog/air-ambulance-dhaka-to-singapore",
+        destination: "/routes",
+        permanent: true,
+      },
+      {
+        source: "/blog/air-ambulance-dhaka-to-singapore",
+        destination: "/routes",
         permanent: true,
       },
       {
         source: "/air-ambulance-dhaka-to-myanmar",
-        destination: "/blog/air-ambulance-dhaka-to-myanmar",
+        destination: "/routes",
+        permanent: true,
+      },
+      {
+        source: "/blog/air-ambulance-dhaka-to-myanmar",
+        destination: "/routes",
         permanent: true,
       },
     ];
