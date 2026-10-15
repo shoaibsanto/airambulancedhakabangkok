@@ -1,3 +1,16 @@
+> **SUPERSEDED — see `FINAL-HOSPITAL-NAME-FORENSIC-AUDIT.md`.**
+> This is the Round-2 report. A subsequent independent Round-3 forensic audit
+> (15 Oct 2026) re-examined the site from scratch, found and corrected **233**
+> non-Bumrungrad occurrences this report had left behind — most consequentially
+> the live `/blog/bangkok-hospitals-comparison-bangladeshi-patients` article
+> (103 occurrences, linked from 15 pages, still in the sitemap), which Round 2
+> had classified as a legitimate comparison and kept. That page is now removed
+> with a 301 to `/bangkok-hospitals`. Final state, verified against live
+> production: **0** non-Bumrungrad hospital occurrences across all 52
+> discoverable URLs. Do not rely on the totals below.
+
+---
+
 # Hospital-Exclusivity Compliance Audit — 2026-10-15
 
 **Business rule under audit:** The company provides Air Ambulance services exclusively for Bumrungrad International Hospital, Bangkok. No other hospital is an authorized receiving-hospital destination. There is no fallback arrangement if Bumrungrad cannot accept a patient (confirmed by the owner).
