@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "airambulance-dhaka-bangkok",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-11-21",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "r2_buckets": [
+    {
+      "bucket_name": "airambulance-cache",
+      "binding": "NEXT_INC_CACHE_R2_BUCKET"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

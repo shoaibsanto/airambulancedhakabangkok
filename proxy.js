@@ -61,6 +61,18 @@ function wantsMarkdownByAccept(acceptHeader) {
 }
 
 export function proxy(request) {
+  // www -> apex canonical redirect. Previously handled by Vercel's
+  // project-domain settings; replicated here at the app level so it keeps
+  // working regardless of hosting platform (Cloudflare Workers included).
+  const host = request.headers.get("host") || "";
+  if (host.startsWith("www.")) {
+    const url = request.nextUrl.clone();
+    url.hostname = host.slice(4);
+    url.port = "";
+    url.protocol = "https";
+    return NextResponse.redirect(url, 301);
+  }
+
   if (!AI_MARKDOWN_ENABLED) return NextResponse.next();
 
   const { pathname, searchParams } = request.nextUrl;
