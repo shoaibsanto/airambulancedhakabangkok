@@ -206,7 +206,7 @@ Professional computer repair and laptop servicing in Dhaka. On-site home service
     domain: 'airambulancedhakabangkok.com',
     name: 'Air Ambulance Dhaka to Bangkok',
     tagline: '24/7 ICU medical flights — Dhaka to Bangkok',
-    root: path.resolve('/root/airambulancedhakabangkok'),
+    root: path.resolve(__dirname, '..'),
     contentDirs: {},
     pageDataFile: null,
     htmlContentDir: 'content',
